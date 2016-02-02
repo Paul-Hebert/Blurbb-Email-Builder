@@ -1,0 +1,384 @@
+/***********************************************************************************************************************/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	Imports
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/***********************************************************************************************************************/
+
+@import 'reset';
+
+/***********************************************************************************************************************/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	Variables
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/***********************************************************************************************************************/
+
+$main-color:#2A2B3D;
+
+$auxiliary-color:#F78336;
+
+$interactable-color:$auxiliary-color;
+
+$interacting-color:#CD0000;
+
+$error-color:$interactable-color;
+
+$subtle-color-1:#ddd;
+
+$subtle-color-2:#ccc;
+
+$off-white:#f9f9f9;
+
+$off-black:#222;
+
+$header-height:80px;
+
+/***********************************************************************************************************************/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	Mixins
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/***********************************************************************************************************************/
+
+@mixin radius($radius) {
+	-o-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin transition_mixin($transition) {
+	-o-transition: $transition;
+	-ms-transition: $transition;
+	-webkit-transition: $transition;
+	transition: $transition;
+}
+
+/***********************************************************************************************************************/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	General Rules
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/***********************************************************************************************************************/
+
+*{
+	font-family:'Roboto';
+	box-sizing:border-box;
+}
+
+body{ 
+	width:100% !important; 
+	min-width: 100%;
+	-webkit-text-size-adjust:100%; 
+	-ms-text-size-adjust:100%; 
+	margin:0; 
+	padding:0;
+}
+
+/***********************************************************************************************************************/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	Page Sections
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/***********************************************************************************************************************/
+
+header#main{
+	height:$header-height;
+	background:$main-color;
+	position:absolute;
+	z-index:10;
+	width:100%;
+	color:$off-white;
+	border-bottom:5px solid $auxiliary-color;
+
+	*{
+		color:$off-white;
+
+		&:hover{
+			color:#fff;
+		}
+	}
+
+	a{
+		padding:20px;
+		text-decoration:none;
+		display:inline-block;
+		h1{
+			margin:0px;
+			font-size:24pt;
+			font-family:'Roboto Slab';
+		}
+	}
+
+	nav{
+		float:right;
+		padding:10px;
+
+	}
+}
+
+#preview, #dashboard{
+	padding-top:$header-height;
+	height:100vh;
+	z-index:0;
+}
+
+#preview{
+	float:left;
+	width:60%;
+	overflow:scroll;
+}
+
+
+*{
+	box-sizing:border-box;
+	line-height:140%;
+}
+
+#dashboard{
+	width:40%;
+	overflow:scroll;
+	float:right;
+	background:#f0f0f0;
+	overflow:scroll;
+
+	header{
+		width:100%;
+		background:$main-color;
+		padding:20px;
+
+		h2{
+			color:$off-white;
+			font-size:21pt;
+		}
+	}
+
+	section{
+		padding-top:20px;
+		margin:0px 20px;
+
+		h3{
+			cursor:pointer;
+			font-size:16pt;
+			width:100%;
+			background:	$main-color;
+			color:$off-white;
+			padding:20px;
+			position:relative;
+			left:0%;
+			@include transition_mixin(all 300ms);
+
+			&:after{
+				content:'+';
+				float:right;
+				@include transition_mixin(all 300ms);
+			}
+
+			&.open{
+				left:-2.5%;
+				width:102.5%;
+
+				&:after{
+					@extend .rotated;
+				}
+			}
+		}
+
+		fieldset{
+			border:0px;
+			padding:20px;
+			background:$subtle-color-1;
+			@include transition_mixin(all 300ms);
+
+			.subsection:not(:last-of-type){
+				padding-bottom:10px;
+				margin-bottom:10px;
+				border-bottom:1px solid $subtle-color-2;
+			}
+		}
+	}
+
+	.interactable{
+		background:$interactable-color;
+		color:$off-white;	
+		cursor:pointer;
+		@include transition_mixin(background 300ms);
+
+		&:hover{
+			background:$interacting-color;
+		}	
+	}
+
+	h1,h2,h3{
+		font-family:'Roboto Slab';
+		font-weight:lighter;
+		margin:0px;
+	}
+
+	label{
+		//padding-top:5px;
+		padding-bottom:2px;
+		display:block;
+	}
+
+	input:not([type=checkbox]), textarea, select{
+		width:100%;
+		padding:5px;
+		margin:5px auto;
+		font-family: sans-serif;
+		font-size:11pt;
+		border:1px solid $subtle-color-2;
+		background:$off-white;
+		@include radius(6px);
+	
+		&[type="submit"]{
+			@extend .interactable;
+			padding:20px;
+			cursor:pointer;
+			@include radius(6px);
+			font-size:16pt;
+		}
+
+		option{
+			padding:5px;
+		}
+
+		&:focus{
+			-webkit-box-shadow: 0px 0px 5px 2px rgba(0, 126, 255, 0.25);
+			-moz-box-shadow:    0px 0px 5px 2px rgba(0, 126, 255, 0.25);
+			box-shadow:         0px 0px 5px 2px rgba(0, 126, 255, 0.25);
+		}
+
+		&.error{
+			-webkit-box-shadow: 0px 0px 5px 2px $error-color;
+			-moz-box-shadow:    0px 0px 5px 2px $error-color;
+			box-shadow:         0px 0px 5px 2px $error-color;			
+		}
+	}
+
+	.required_asterisk{
+		color:$interactable-color;
+	}
+
+	.color-selector-wrapper{
+		label{
+			display:block;
+		}
+
+		.colorpicker-wrapper{
+			margin:0px;
+
+			.colorpicker{
+				@include transition_mixin(all 300ms);
+				max-height:100%;
+				max-width:100%;
+				padding:15px;
+			}
+		}
+
+		.color-swatch{
+			display:inline-block;
+			background:$subtle-color-1;
+			height:20px;
+			width:20px;
+			padding:5px;
+			border:1px solid $subtle-color-2;
+			cursor:pointer;
+			margin-right:2.5px;
+			@include radius(3px);
+		
+			&.picker{
+				background:url("../imgs/colorpicker/slider.png");
+				background-size:20px 20px;
+			}
+		}
+	}
+
+	.theme_thumbnail{
+		margin:10px;
+		width:100px;
+		height:161.8px;
+		position:relative;
+		background:$main-color;
+		display:inline-block;
+		cursor:pointer;
+
+		div{
+			position:absolute;
+			bottom:0px;
+			right:0px;
+			left:0px;
+			background:$off-white;
+			text-align: center;
+			padding:5px 0px;
+			border:1px solid $subtle-color-2;
+		}
+	}
+}
+
+.icon_toggle{
+	*{
+		color:$off-white;
+	}
+
+	.icon{
+		@extend .interactable;
+		text-align:center;
+		width:20px;
+		height:20px;
+		display:inline-block;
+		@include radius(50%);
+
+		&.toggled{
+			content:'X';
+		}
+	}
+	.toggled_text{
+		background:$interactable-color;
+		@include transition_mixin(all 300ms);
+		overflow:hidden;
+		padding:15px;
+		@include radius(6px);
+
+		p{
+			margin-top:0px;
+			margin-bottom:10px;
+		}
+
+		a, a:link, a:visited, a:active{
+			color:$off-white;
+			text-decoration:underline;
+		}
+
+		a:hover{
+			color:#fff;
+		}
+	}
+}
+
+/***********************************************************************************************************************/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	Utility classes (triggered via javascript)
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/***********************************************************************************************************************/
+
+.hidden{
+	height:0px !important;
+	padding-top:0px !important;
+	padding-bottom:0px !important;
+	overflow:hidden;
+}
+
+.rotated{
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
