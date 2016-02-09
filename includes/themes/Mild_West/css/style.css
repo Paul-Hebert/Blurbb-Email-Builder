@@ -516,7 +516,7 @@
     #preview table[class="body"] .hide-for-desktop {
       display: inherit !important; } }
   #preview table.body {
-    background: #000;
+    background: #141414;
     width: 100%;
     min-width: 760px;
     font-family: Open Sans, sans-serif; }

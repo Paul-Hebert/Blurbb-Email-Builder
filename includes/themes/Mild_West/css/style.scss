@@ -1,3 +1,16 @@
+$primary-color:#fff;
+
+$primary-background:#0C3D56;
+
+
+
+$secondary-color:#000;
+
+$secondary-background:#70BBA8;
+
+
+$body-background:#141414;
+
 #preview{
   /**********************************************
   * Ink v1.0.5 - Copyright 2013 ZURB Inc        *
@@ -630,7 +643,7 @@
   }
 
   table.body{
-    background:#000;
+    background:$body-background;
     width:100%;
     min-width:760px;
     font-family:Open Sans, sans-serif;
@@ -672,8 +685,8 @@
   }
 
   .primary{
-    background:#0C3D56;
-    color:#fff;
+    background:$primary-background;
+    color:$primary-color;
   }
 
   .secondary a, .primary a{
@@ -686,8 +699,8 @@
   }
 
   .secondary{
-    background:#70BBA8;
-    color:#000;
+    background:$secondary-background;
+    color:$secondary-color;
   }
 
   table.row{
@@ -727,7 +740,7 @@
   }
 
   .primary a[href^=tel], .primary a[href^=tel]:hover{
-    color:#fff;
+    color:$primary-color;
     text-decoration: none;
   }
 

@@ -54,7 +54,7 @@
                 </td>
                 <td>
                   <div id="csv_holder">
-                    <?php include('includes/csv_as_table.php');?>
+                    <?php include('includes/utilities/csv_as_table.php');?>
                   </div>
                 </td>
               </tr>

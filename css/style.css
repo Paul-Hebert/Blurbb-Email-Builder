@@ -83,12 +83,12 @@ body {
 /***********************************************************************************************************************/
 header#main {
   height: 80px;
-  background: #2A2B3D;
+  background: #333338;
   position: absolute;
   z-index: 10;
   width: 100%;
   color: #f9f9f9;
-  border-bottom: 5px solid #F78336; }
+  border-bottom: 5px solid #E85520; }
   header#main * {
     color: #f9f9f9; }
     header#main *:hover {
@@ -127,7 +127,7 @@ header#main {
   overflow: scroll; }
   #dashboard header {
     width: 100%;
-    background: #2A2B3D;
+    background: #333338;
     padding: 20px; }
     #dashboard header h2 {
       color: #f9f9f9;
@@ -139,7 +139,7 @@ header#main {
       cursor: pointer;
       font-size: 16pt;
       width: 100%;
-      background: #2A2B3D;
+      background: #333338;
       color: #f9f9f9;
       padding: 20px;
       position: relative;
@@ -154,7 +154,19 @@ header#main {
         -o-transition: all 300ms;
         -ms-transition: all 300ms;
         -webkit-transition: all 300ms;
-        transition: all 300ms; }
+        transition: all 300ms;
+        -o-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        background: #E85520; }
+      #dashboard section h3:hover {
+        background: #F78336; }
+        #dashboard section h3:hover:after {
+          background: #F78336; }
       #dashboard section h3.open {
         left: -2.5%;
         width: 102.5%; }
@@ -171,7 +183,7 @@ header#main {
         margin-bottom: 10px;
         border-bottom: 1px solid #ccc; }
   #dashboard .interactable, #dashboard input[type="submit"]:not([type=checkbox]), #dashboard textarea[type="submit"], #dashboard select[type="submit"], #dashboard .icon_toggle .icon, .icon_toggle #dashboard .icon {
-    background: #F78336;
+    background: #E85520;
     color: #f9f9f9;
     cursor: pointer;
     -o-transition: background 300ms;
@@ -179,7 +191,7 @@ header#main {
     -webkit-transition: background 300ms;
     transition: background 300ms; }
     #dashboard .interactable:hover, #dashboard input[type="submit"]:hover:not([type=checkbox]), #dashboard textarea[type="submit"]:hover, #dashboard select[type="submit"]:hover, #dashboard .icon_toggle .icon:hover, .icon_toggle #dashboard .icon:hover {
-      background: #CD0000; }
+      background: #F78336; }
   #dashboard h1, #dashboard h2, #dashboard h3 {
     font-family: 'Roboto Slab';
     font-weight: lighter;
@@ -214,11 +226,11 @@ header#main {
       -moz-box-shadow: 0px 0px 5px 2px rgba(0, 126, 255, 0.25);
       box-shadow: 0px 0px 5px 2px rgba(0, 126, 255, 0.25); }
     #dashboard input:not([type=checkbox]).error, #dashboard textarea.error, #dashboard select.error {
-      -webkit-box-shadow: 0px 0px 5px 2px #F78336;
-      -moz-box-shadow: 0px 0px 5px 2px #F78336;
-      box-shadow: 0px 0px 5px 2px #F78336; }
+      -webkit-box-shadow: 0px 0px 5px 2px #E85520;
+      -moz-box-shadow: 0px 0px 5px 2px #E85520;
+      box-shadow: 0px 0px 5px 2px #E85520; }
   #dashboard .required_asterisk {
-    color: #F78336; }
+    color: #E85520; }
   #dashboard .color-selector-wrapper label {
     display: block; }
   #dashboard .color-selector-wrapper .colorpicker-wrapper {
@@ -234,8 +246,8 @@ header#main {
   #dashboard .color-selector-wrapper .color-swatch {
     display: inline-block;
     background: #ddd;
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     padding: 5px;
     border: 1px solid #ccc;
     cursor: pointer;
@@ -246,13 +258,15 @@ header#main {
     border-radius: 3px; }
     #dashboard .color-selector-wrapper .color-swatch.picker {
       background: url("../imgs/colorpicker/slider.png");
-      background-size: 20px 20px; }
+      background-size: 25px 25px; }
+    #dashboard .color-selector-wrapper .color-swatch.selected {
+      border: 2px solid #222; }
   #dashboard .theme_thumbnail {
     margin: 10px;
     width: 100px;
     height: 161.8px;
     position: relative;
-    background: #2A2B3D;
+    background: #333338;
     display: inline-block;
     cursor: pointer; }
     #dashboard .theme_thumbnail div {
@@ -279,7 +293,7 @@ header#main {
   .icon_toggle .icon.toggled {
     content: 'X'; }
 .icon_toggle .toggled_text {
-  background: #F78336;
+  background: #E85520;
   -o-transition: all 300ms;
   -ms-transition: all 300ms;
   -webkit-transition: all 300ms;

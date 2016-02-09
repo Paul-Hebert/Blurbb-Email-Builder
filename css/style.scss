@@ -16,13 +16,13 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /***********************************************************************************************************************/
 
-$main-color:#2A2B3D;
+$main-color:#333338;//#2A2B3D;
 
-$auxiliary-color:#F78336;
+$auxiliary-color:#E85520;
 
 $interactable-color:$auxiliary-color;
 
-$interacting-color:#CD0000;
+$interacting-color:#F78336;
 
 $error-color:$interactable-color;
 
@@ -178,6 +178,19 @@ header#main{
 				content:'+';
 				float:right;
 				@include transition_mixin(all 300ms);
+				@include radius(50%);
+				width:30px;
+				height:30px;
+				text-align:center;
+				background:$interactable-color;
+			}
+
+			&:hover{
+				background:$interacting-color;
+
+				&:after{
+					background:$interacting-color;
+				}
 			}
 
 			&.open{
@@ -285,8 +298,8 @@ header#main{
 		.color-swatch{
 			display:inline-block;
 			background:$subtle-color-1;
-			height:20px;
-			width:20px;
+			height:25px;
+			width:25px;
 			padding:5px;
 			border:1px solid $subtle-color-2;
 			cursor:pointer;
@@ -295,7 +308,11 @@ header#main{
 		
 			&.picker{
 				background:url("../imgs/colorpicker/slider.png");
-				background-size:20px 20px;
+				background-size:25px 25px;
+			}
+
+			&.selected{
+				border:2px solid $off-black;
 			}
 		}
 	}

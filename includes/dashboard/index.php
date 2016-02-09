@@ -3,7 +3,7 @@
         <h2>Invoice Builder</h1>
       </header>
 
-      <form id="invoice_form" action="includes/send_mail.php" enctype='multipart/form-data'>
+      <form id="invoice_form" action="includes/utilities/send_mail.php" enctype='multipart/form-data'>
         <section>
           <h3 class="open">Profile</h3>
 
@@ -86,10 +86,10 @@
 
           <fieldset class="hidden">
             <div class="subsection">
-              <label for="to_email">To: (Separate multiple emails with commas) <span class="required_asterisk">*</span></label>
+              <label for="to_email">To (Separate multiple emails with commas) <span class="required_asterisk">*</span></label>
               <input type='text' placeholder="johndoe@mildwestdesigns.com" name="to_email" id="to_email" required>
 
-              <label for="from_email">From: <span class="required_asterisk">*</span></label>
+              <label for="from_email">From <span class="required_asterisk">*</span></label>
               <input type='email' placeholder="invoices@invoice-out.com" name="from_email" id="from_email" required>
 
               <input type="checkbox" checked name="copy_me" id="copy_me" value="copy"><span>Email yourself a copy</span>

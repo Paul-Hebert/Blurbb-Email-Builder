@@ -13,11 +13,6 @@ $(function(){
 		$(this).children('div').toggleClass('hidden');
 		$(this).siblings('.toggled_text').toggleClass('hidden');
 	});
-	
-	$('#dashboard section h3').click(function(){
-		$(this).toggleClass('open');
-		$(this).siblings('fieldset').toggleClass('hidden');
-	});
 });
 
 
@@ -30,6 +25,8 @@ $(function(){
 /***********************************************************************************************************************/
 
 function initialize_dashboard(){
+	initialize_modular_sections();
+
 	initialize_submit_button();
 
 	initialize_theme_picker();
@@ -48,6 +45,13 @@ function initialize_dashboard(){
 /************************************************************************************************************************
 	Dashboard Sections
 /***********************************************************************************************************************/
+
+function initialize_modular_sections(){
+	$('#dashboard section h3').click(function(){
+		$(this).toggleClass('open');
+		$(this).siblings('fieldset').toggleClass('hidden');
+	});
+}
 
 function initialize_submit_button(){
 	$('#invoice_form').submit(function(){
@@ -122,18 +126,26 @@ function initialize_colorpickers(){
 
 	$('.colorpicker').addClass('hidden');
 
+
 	$('.color-swatch').each(function(){
 		if ( $(this).attr('data-color') != 'picker' ){
 			$(this).css('background',$(this).attr('data-color')).click( function(){
-				 var css_targets = $(this).parent().attr('id').split('-');
+				var css_targets = $(this).parent().attr('id').split('-');
+				
 				$('#addedCSS').append('#preview .' + css_targets[0] + '{' + css_targets[1] + ':' + $(this).attr('data-color') + '}');
+				
 				if(! $(this).siblings('p').children('.colorpicker').hasClass('hidden') ){
 					$(this).siblings('p').children('.colorpicker').addClass('hidden')
 				}
+
+				$(this).siblings('.selected').removeClass('selected');
+				$(this).addClass('selected');
 			});
 		} else{
 			$(this).click(function(){
 				$(this).siblings('p').children('.colorpicker').toggleClass('hidden');
+				$(this).siblings('.selected').removeClass('selected');
+				$(this).addClass('selected');
 			})
 		}
 	});
@@ -181,7 +193,7 @@ function submit_invoice() {
 
     var request = $.ajax({
 	     type: "POST",
-	     url: 'includes/send_mail.php',
+	     url: 'includes/utilities/send_mail.php',
   		 data: { 
   		 	message: $('#preview').html(), 
   		 	subject: $('#subject').val(), 
@@ -220,7 +232,7 @@ function readURL2(input) {
         reader.onload = function (e) {
             $.ajax({
 			     type: "GET",
-			     url: 'includes/csv_as_table.php',
+			     url: 'includes/utilities/csv_as_table.php',
 			     data: "path=" + e.target.result,
 			     success: function(data) {
 			          $('#csv_holder').html(data);
