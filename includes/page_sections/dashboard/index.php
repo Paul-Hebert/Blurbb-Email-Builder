@@ -12,6 +12,11 @@
               <label for="logo_input">Upload Your Logo</label>
               <input type='file' name="logo_input" id="logo_input">
 
+              <label for="logo_size">Logo size</label>
+              <input type="range">
+            </div>
+
+            <div class="subsection">
               <label for="business_name">Business Name</label>
               <input type='text' placeholder="Invoice-Out" name="business_name" class="text_input" data_target="business_name">
 
@@ -46,7 +51,7 @@
                 include('includes/page_sections/dashboard/color_picker.php');
 
                 $include_name = 'Secondary text color';
-                $include_css = ['.secondary','background'];
+                $include_css = ['.secondary','color'];
                 include('includes/page_sections/dashboard/color_picker.php');                
               echo '</div>';
 

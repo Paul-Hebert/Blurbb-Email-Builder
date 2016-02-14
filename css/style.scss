@@ -242,7 +242,7 @@ header#main{
 		display:block;
 	}
 
-	input:not([type=checkbox]), textarea, select{
+	input:not([type=checkbox]):not([type=range]), textarea, select{
 		width:100%;
 		padding:5px;
 		margin:5px auto;

@@ -344,7 +344,7 @@ header#main {
         padding-bottom: 10px;
         margin-bottom: 10px;
         border-bottom: 1px solid #ccc; }
-  #dashboard .interactable, #dashboard input[type="submit"]:not([type=checkbox]), #dashboard textarea[type="submit"], #dashboard select[type="submit"], #dashboard .icon_toggle .icon, .icon_toggle #dashboard .icon {
+  #dashboard .interactable, #dashboard input[type="submit"]:not([type=checkbox]):not([type=range]), #dashboard textarea[type="submit"], #dashboard select[type="submit"], #dashboard .icon_toggle .icon, .icon_toggle #dashboard .icon {
     background: #E85520;
     color: #f9f9f9;
     cursor: pointer;
@@ -352,7 +352,7 @@ header#main {
     -ms-transition: background 300ms;
     -webkit-transition: background 300ms;
     transition: background 300ms; }
-    #dashboard .interactable:hover, #dashboard input[type="submit"]:hover:not([type=checkbox]), #dashboard textarea[type="submit"]:hover, #dashboard select[type="submit"]:hover, #dashboard .icon_toggle .icon:hover, .icon_toggle #dashboard .icon:hover {
+    #dashboard .interactable:hover, #dashboard input[type="submit"]:hover:not([type=checkbox]):not([type=range]), #dashboard textarea[type="submit"]:hover, #dashboard select[type="submit"]:hover, #dashboard .icon_toggle .icon:hover, .icon_toggle #dashboard .icon:hover {
       background: #F78336; }
   #dashboard h1, #dashboard h2, #dashboard h3 {
     font-family: 'Roboto Slab';
@@ -361,7 +361,7 @@ header#main {
   #dashboard label {
     padding-bottom: 2px;
     display: block; }
-  #dashboard input:not([type=checkbox]), #dashboard textarea, #dashboard select {
+  #dashboard input:not([type=checkbox]):not([type=range]), #dashboard textarea, #dashboard select {
     width: 100%;
     padding: 5px;
     margin: 5px auto;
@@ -373,7 +373,7 @@ header#main {
     -ms-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px; }
-    #dashboard input:not([type=checkbox])[type="submit"], #dashboard textarea[type="submit"], #dashboard select[type="submit"] {
+    #dashboard input:not([type=checkbox]):not([type=range])[type="submit"], #dashboard textarea[type="submit"], #dashboard select[type="submit"] {
       padding: 20px;
       cursor: pointer;
       -o-border-radius: 6px;
@@ -381,13 +381,13 @@ header#main {
       -webkit-border-radius: 6px;
       border-radius: 6px;
       font-size: 16pt; }
-    #dashboard input:not([type=checkbox]) option, #dashboard textarea option, #dashboard select option {
+    #dashboard input:not([type=checkbox]):not([type=range]) option, #dashboard textarea option, #dashboard select option {
       padding: 5px; }
-    #dashboard input:not([type=checkbox]):focus, #dashboard textarea:focus, #dashboard select:focus {
+    #dashboard input:not([type=checkbox]):not([type=range]):focus, #dashboard textarea:focus, #dashboard select:focus {
       -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 126, 255, 0.25);
       -moz-box-shadow: 0px 0px 5px 2px rgba(0, 126, 255, 0.25);
       box-shadow: 0px 0px 5px 2px rgba(0, 126, 255, 0.25); }
-    #dashboard input:not([type=checkbox]).error, #dashboard textarea.error, #dashboard select.error {
+    #dashboard input:not([type=checkbox]):not([type=range]).error, #dashboard textarea.error, #dashboard select.error {
       -webkit-box-shadow: 0px 0px 5px 2px #E85520;
       -moz-box-shadow: 0px 0px 5px 2px #E85520;
       box-shadow: 0px 0px 5px 2px #E85520; }
