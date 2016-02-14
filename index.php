@@ -10,6 +10,6 @@
         include('includes/themes/' . $theme . '/index.php');
       ?>
     </div>
-    <?php include('includes/dashboard/index.php'); ?>
+    <?php include('includes/page_sections/dashboard/index.php'); ?>
   </body>
 </html>

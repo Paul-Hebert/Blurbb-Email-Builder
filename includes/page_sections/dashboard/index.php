@@ -26,28 +26,28 @@
           
           <fieldset class="hidden">
             <?php
-              include('includes/dashboard/theme_picker.php'); 
+              include('includes/page_sections/dashboard/theme_picker.php'); 
 
-              include('includes/dashboard/font_picker.php'); 
+              include('includes/page_sections/dashboard/font_picker.php'); 
 
               echo '<div class="subsection">';
                 $include_name = 'Primary';
                 $include_prop = 'background';
-                include('includes/dashboard/color_picker.php');
+                include('includes/page_sections/dashboard/color_picker.php');
 
                 $include_name = 'Primary';
                 $include_prop = 'color';
-                include('includes/dashboard/color_picker.php');
+                include('includes/page_sections/dashboard/color_picker.php');
               echo '</div>';
 
               echo '<div class="subsection">';
                 $include_name = 'Secondary';
                 $include_prop = 'color';
-                include('includes/dashboard/color_picker.php');
+                include('includes/page_sections/dashboard/color_picker.php');
 
                 $include_name = 'Secondary';
                 $include_prop = 'background';
-                include('includes/dashboard/color_picker.php');
+                include('includes/page_sections/dashboard/color_picker.php');
               echo '</div>';
             ?>
           </fieldset>
