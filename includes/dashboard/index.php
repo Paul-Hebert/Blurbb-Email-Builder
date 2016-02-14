@@ -105,6 +105,8 @@
         <section>
           <!--<div class="g-recaptcha" data-sitekey="6LdINhYTAAAAALuvkN9vU8wJHP8ae1HcR0BLqiWc"></div>-->
 
+          <input type="submit" value="Export HTML">
+
           <input type="submit" value="Send Invoice">
         </section>
       </form>

@@ -31,7 +31,7 @@
               <tr>
                 <td align="center" valign="middle">
                 <a href="http://invoice-out.com/">
-                    <img src="imgs/logo.png" id="logo_preview">
+                    <img src="http://www.invoice-out.com/includes/themes/Blast_Off/imgs/logo.png" id="logo_preview">
                     <h1 id="title" class="business_name"><?php echo $business_name; ?></h1>
                 </td>
               </tr>
