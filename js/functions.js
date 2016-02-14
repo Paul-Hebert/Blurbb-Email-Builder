@@ -109,8 +109,16 @@ function pick_theme(){
 	  		 	logo: logo_src
 	  		 },
   		     success: function(data) {
-		          $('#preview').html(data);
-		          $('#csv_holder').html(old_spreadsheet);
+  		     		$('#preview').css({'display':'none','opacity':'0'});
+  		     		setTimeout(function(){
+			            $('#preview').html(data);
+			            $('#csv_holder').html(old_spreadsheet);
+			            $('#preview').css('display','block');
+
+			            setTimeout(function(){
+	  		     			$('#preview').animate({'opacity':'1'},300);
+	  		     		},300);
+  		     		},300);
 		     }
 		});
 
