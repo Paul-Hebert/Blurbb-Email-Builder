@@ -61,35 +61,29 @@ function initialize_submit_button(){
 }
 
 function initialize_theme_picker(){
-	/*$('#theme_picker').change(function(){
-		var theme_name = $(this).val().replace(' ','_');
-
-		var old_spreadsheet = $('#csv_holder').html();
-
-        $.ajax({
-		     type: "GET",
-		     url: 'includes/themes/' + theme_name + '/index.php',
-	  		 data: { 
-	  		 	heading1: $('.heading1').html(), 
-	  		 	message1: $('.message1').html(), 
-	  		 	heading2: $('.heading2').html(), 
-	  		 	message2: $('.message2').html(),
-	  		 	business_name: $('.business_name').html(),
-	  		 	website_url: $('.website_url').html()
-	  		 },
-  		     success: function(data) {
-		          $('#preview').html(data);
-		          $('#csv_holder').html(old_spreadsheet);
-		     }
-		});
-
-		$('#theme_CSS').attr('href','includes/themes/' + theme_name + '/css/style.css');
-	});*/
-
 	theme_name = 'Mild_West';
 
+	$('#' + theme_name).addClass('selected');
+
+	$('#theme_picker').change(function(){
+		theme_name = $(this).val().replace(' ','_');
+
+		pick_theme();
+	});
+
 	$('.theme_thumbnail').click(function(){
-		theme_name = $(this).children('div').text().replace(' ','_');
+		theme_name = $(this).attr('id');
+
+		pick_theme();
+	});
+}
+
+function pick_theme(){
+	$('.theme_thumbnail.selected').removeClass('selected');
+		$('#' + theme_name).addClass('selected')
+		//$('#theme_picker').prop( 'value', theme_name );
+		console.log(theme_name)
+		$('#theme_picker option').prop('selected','false').filter('[value="' + theme_name.replace(' ','_') + '"]').prop('selected', 'true');
 
 		var old_spreadsheet = $('#csv_holder').html();
 
@@ -111,7 +105,6 @@ function initialize_theme_picker(){
 		});
 
 		$('#theme_CSS').attr('href','includes/themes/' + theme_name + '/css/style.css');
-	});
 }
 
 function initialize_colorpickers(){

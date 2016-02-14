@@ -22,9 +22,9 @@
         </section>
 
         <section>
-          <h3>Design</h3>
+          <h3 class="open">Design</h3>
           
-          <fieldset class="hidden">
+          <fieldset>
             <?php
               include('includes/page_sections/dashboard/theme_picker.php'); 
 
@@ -103,9 +103,9 @@
         </section>
 
         <section>
-          <!--<div class="g-recaptcha" data-sitekey="6LdINhYTAAAAALuvkN9vU8wJHP8ae1HcR0BLqiWc"></div>-->
+          <!--<div class="g-recaptcha" data-sitekey="6LdINhYTAAAAALuvkN9vU8wJHP8ae1HcR0BLqiWc"></div>
 
-          <input type="submit" value="Export HTML">
+          <input type="submit" value="Export HTML">-->
 
           <input type="submit" value="Send Invoice">
         </section>

@@ -269,6 +269,8 @@ header#main {
     background: #333338;
     display: inline-block;
     cursor: pointer; }
+    #dashboard .theme_thumbnail.selected {
+      border: 2px solid #222; }
     #dashboard .theme_thumbnail div {
       position: absolute;
       bottom: 0px;

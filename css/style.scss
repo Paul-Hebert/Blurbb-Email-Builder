@@ -326,6 +326,10 @@ header#main{
 		display:inline-block;
 		cursor:pointer;
 
+		&.selected{
+			border:2px solid $off-black;	
+		}
+
 		div{
 			position:absolute;
 			bottom:0px;
