@@ -31,22 +31,28 @@
               include('includes/page_sections/dashboard/font_picker.php'); 
 
               echo '<div class="subsection">';
-                $include_name = 'Primary';
-                $include_prop = 'background';
+                $include_name = 'Primary background';
+                $include_css = ['.primary','background'];
                 include('includes/page_sections/dashboard/color_picker.php');
 
-                $include_name = 'Primary';
-                $include_prop = 'color';
+                $include_name = 'Primary text color';
+                $include_css = ['.primary','color'];
                 include('includes/page_sections/dashboard/color_picker.php');
               echo '</div>';
 
               echo '<div class="subsection">';
-                $include_name = 'Secondary';
-                $include_prop = 'color';
+                $include_name = 'Secondary background';
+                $include_css = ['.secondary','background'];
                 include('includes/page_sections/dashboard/color_picker.php');
 
-                $include_name = 'Secondary';
-                $include_prop = 'background';
+                $include_name = 'Secondary text color';
+                $include_css = ['.secondary','background'];
+                include('includes/page_sections/dashboard/color_picker.php');                
+              echo '</div>';
+
+              echo '<div class="subsection">';
+                $include_name = 'Body background';
+                $include_css = ['table.body','background'];
                 include('includes/page_sections/dashboard/color_picker.php');
               echo '</div>';
             ?>

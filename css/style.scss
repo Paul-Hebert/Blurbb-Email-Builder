@@ -276,6 +276,10 @@ header#main{
 		}
 	}
 
+	select{
+		cursor:pointer
+	}
+
 	.required_asterisk{
 		color:$interactable-color;
 	}

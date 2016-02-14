@@ -521,7 +521,7 @@
     #preview table[class="body"] .hide-for-desktop {
       display: inherit !important; } }
   #preview table.body {
-    background: #000;
+    background: #225378;
     width: 100%;
     min-width: 760px;
     font-family: Open Sans, sans-serif; }
@@ -545,7 +545,7 @@
     float: right;
     padding-left: 20px; }
   #preview .primary {
-    background: #1695A3;
+    background: #EB7F00;
     color: #fff; }
   #preview .secondary a, #preview .primary a {
     color: inherit; }
@@ -553,7 +553,7 @@
     background: #fff;
     color: #000; }
   #preview .secondary {
-    background: #225378;
+    background: #736A6A;
     color: #fff; }
   #preview table.row {
     padding: 20px; }

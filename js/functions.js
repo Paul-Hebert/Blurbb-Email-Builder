@@ -123,9 +123,9 @@ function initialize_colorpickers(){
 	$('.colorpicker-wrapper').ColorPicker({
 		flat: true,
 		onChange: function (hsb, hex, rgb) {
-			var css_targets = $(this).parent().parent().attr('id').split('-');
+			var css_targets = $(this).parent().parent().attr('data-css').split('-');
 
-			$('#addedCSS').append('#preview .' + css_targets[0] + '{' + css_targets[1] + ': #' + hex + ';}');
+			$('#addedCSS').append('#preview ' + css_targets[0] + '{' + css_targets[1] + ': #' + hex + ';}');
 		}
 	});
 
@@ -135,9 +135,9 @@ function initialize_colorpickers(){
 	$('.color-swatch').each(function(){
 		if ( $(this).attr('data-color') != 'picker' ){
 			$(this).css('background',$(this).attr('data-color')).click( function(){
-				var css_targets = $(this).parent().attr('id').split('-');
+				var css_targets = $(this).parent().attr('data-css').split('-');
 				
-				$('#addedCSS').append('#preview .' + css_targets[0] + '{' + css_targets[1] + ':' + $(this).attr('data-color') + '}');
+				$('#addedCSS').append('#preview ' + css_targets[0] + '{' + css_targets[1] + ':' + $(this).attr('data-color') + '}');
 				
 				if(! $(this).siblings('p').children('.colorpicker').hasClass('hidden') ){
 					$(this).siblings('p').children('.colorpicker').addClass('hidden')

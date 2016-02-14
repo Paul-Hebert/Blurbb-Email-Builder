@@ -390,6 +390,8 @@ header#main {
       -webkit-box-shadow: 0px 0px 5px 2px #E85520;
       -moz-box-shadow: 0px 0px 5px 2px #E85520;
       box-shadow: 0px 0px 5px 2px #E85520; }
+  #dashboard select {
+    cursor: pointer; }
   #dashboard .required_asterisk {
     color: #E85520; }
   #dashboard .color-selector-wrapper label {
