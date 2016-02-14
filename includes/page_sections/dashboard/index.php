@@ -13,7 +13,7 @@
               <input type='file' name="logo_input" id="logo_input">
 
               <label for="logo_size">Logo size</label>
-              <input type="range">
+              <input type="range" data-min="20" data-max="580" data-css="#logo_preview-width">
             </div>
 
             <div class="subsection">
