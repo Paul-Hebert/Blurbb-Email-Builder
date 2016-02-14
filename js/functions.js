@@ -64,6 +64,7 @@ function initialize_theme_picker(){
 	theme_name = 'Mild_West';
 
 	$('#' + theme_name).addClass('selected');
+	$('#theme_picker option').prop('selected','false').filter('[value="' + theme_name.replace(' ','_') + '"]').prop('selected', 'true');
 
 	$('#theme_picker').change(function(){
 		theme_name = $(this).val().replace(' ','_');
@@ -81,11 +82,15 @@ function initialize_theme_picker(){
 function pick_theme(){
 	$('.theme_thumbnail.selected').removeClass('selected');
 		$('#' + theme_name).addClass('selected')
-		//$('#theme_picker').prop( 'value', theme_name );
-		console.log(theme_name)
 		$('#theme_picker option').prop('selected','false').filter('[value="' + theme_name.replace(' ','_') + '"]').prop('selected', 'true');
 
 		var old_spreadsheet = $('#csv_holder').html();
+
+		if ( $('#logo_input').val() !== "" ){
+			var logo_src = $('#logo_preview').attr('src');
+		} else{
+			var logo_src = null;
+		}
 
         $.ajax({
 		     type: "GET",
@@ -96,7 +101,8 @@ function pick_theme(){
 	  		 	heading2: $('.heading2').html(), 
 	  		 	message2: $('.message2').html(),
 	  		 	business_name: $('.business_name').html(),
-	  		 	website_url: $('.website_url').html()
+	  		 	website_url: $('.website_url').html(),
+	  		 	logo: logo_src
 	  		 },
   		     success: function(data) {
 		          $('#preview').html(data);

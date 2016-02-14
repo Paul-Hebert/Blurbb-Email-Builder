@@ -17,6 +17,9 @@
   if (! isset($website_url)){
     $website_url = $_GET['website_url'];
   }
+  if (! isset($logo)){
+    $logo = $_GET['logo'];
+  }
 ?>
 
 <table class="body">
@@ -30,9 +33,16 @@
             <table class="row primary">
               <tr>
                 <td align="center" valign="middle">
-                <a href="http://invoice-out.com/">
-                    <img src="http://www.invoice-out.com/includes/themes/Mild_West/imgs/logo.png" id="logo_preview">
-                    <h1 id="title" class="business_name"><?php echo $business_name; ?></h1>
+                  <a href="http://invoice-out.com/">
+                      <?php 
+                        if ($logo == ""){
+                          echo '<img src="http://www.invoice-out.com/includes/themes/Mild_West/imgs/logo.png" id="logo_preview">'; 
+                        } else{
+                          echo '<img src="' . $logo . '" id="logo_preview">'; 
+                        }
+                      ?> 
+                      <h1 id="title" class="business_name"><?php echo $business_name; ?></h1>
+                    </a>
                 </td>
               </tr>
             </table>

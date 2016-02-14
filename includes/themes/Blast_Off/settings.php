@@ -7,4 +7,6 @@
 
 	$heading2 = 'Thank You';
 	$message2 = 'We\'ve enjoyed working with you and look forward to collaborating in the future!';
+
+	$logo = 'http://www.invoice-out.com/includes/themes/Blast_Off/imgs/logo.png';
 ?>
