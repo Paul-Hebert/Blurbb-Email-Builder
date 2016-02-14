@@ -429,7 +429,8 @@ header#main {
     position: relative;
     background: #333338;
     display: inline-block;
-    cursor: pointer; }
+    cursor: pointer;
+    background-size: 100px; }
     #dashboard .theme_thumbnail.selected {
       border: 2px solid #222; }
     #dashboard .theme_thumbnail div {

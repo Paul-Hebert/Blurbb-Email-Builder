@@ -326,6 +326,7 @@ header#main{
 		background:$main-color;
 		display:inline-block;
 		cursor:pointer;
+		background-size:100px;
 
 		&.selected{
 			border:2px solid $off-black;	
