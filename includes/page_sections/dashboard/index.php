@@ -12,8 +12,8 @@
               <label for="logo_input">Upload Your Logo</label>
               <input type='file' name="logo_input" id="logo_input">
 
-              <label for="business_name">Business Name <span class="required_asterisk">*</span></label>
-              <input type='text' placeholder="Invoice-Out" name="business_name" class="text_input" data_target="business_name" required>
+              <label for="business_name">Business Name</label>
+              <input type='text' placeholder="Invoice-Out" name="business_name" class="text_input" data_target="business_name">
 
               <label for="website_url">Website URL</label>
               <input type='text' placeholder="www.invoice-out.com" name="website_url" class="text_input" data_target="website_url">
@@ -54,9 +54,9 @@
         </section>
 
         <section>
-          <h3>Content</h3>
+          <h3 class="open">Content</h3>
 
-          <fieldset class="hidden">
+          <fieldset>
             <div class="subsection">
               <label for="heading1">Heading 1</label>
               
@@ -75,16 +75,16 @@
             </div>
 
             <div class="subsection">
-              <label for="csv_input">Upload your CSV <span class="required_asterisk">*</span></label>
-              <input type='file' name="csv_input" id="csv_input" required>
+              <label for="csv_input">Upload your CSV</label>
+              <input type='file' name="csv_input" id="csv_input">
             </div>
           </fieldset>
         </section>
 
         <section>
-          <h3>Email</h3>
+          <h3 class="open">Email</h3>
 
-          <fieldset class="hidden">
+          <fieldset>
             <div class="subsection">
               <label for="to_email">To (Separate multiple emails with commas) <span class="required_asterisk">*</span></label>
               <input type='text' placeholder="johndoe@mildwestdesigns.com" name="to_email" id="to_email" required>

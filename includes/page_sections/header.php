@@ -9,7 +9,6 @@
         <![endif]-->
 
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Roboto+Slab' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="css/colorpicker.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         
         <?php
