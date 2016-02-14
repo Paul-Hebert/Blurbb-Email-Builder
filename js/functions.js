@@ -62,13 +62,13 @@ function initialize_submit_button(){
 
 function initialize_theme_picker(){
 	/*$('#theme_picker').change(function(){
-		var theme = $(this).val().replace(' ','_');
+		var theme_name = $(this).val().replace(' ','_');
 
 		var old_spreadsheet = $('#csv_holder').html();
 
         $.ajax({
 		     type: "GET",
-		     url: 'includes/themes/' + theme + '/index.php',
+		     url: 'includes/themes/' + theme_name + '/index.php',
 	  		 data: { 
 	  		 	heading1: $('.heading1').html(), 
 	  		 	message1: $('.message1').html(), 
@@ -83,17 +83,19 @@ function initialize_theme_picker(){
 		     }
 		});
 
-		$('#theme_CSS').attr('href','includes/themes/' + theme + '/css/style.css');
+		$('#theme_CSS').attr('href','includes/themes/' + theme_name + '/css/style.css');
 	});*/
 
+	theme_name = 'Mild_West';
+
 	$('.theme_thumbnail').click(function(){
-		var theme = $(this).children('div').text().replace(' ','_');
+		theme_name = $(this).children('div').text().replace(' ','_');
 
 		var old_spreadsheet = $('#csv_holder').html();
 
         $.ajax({
 		     type: "GET",
-		     url: 'includes/themes/' + theme + '/index.php',
+		     url: 'includes/themes/' + theme_name + '/index.php',
 	  		 data: { 
 	  		 	heading1: $('.heading1').html(), 
 	  		 	message1: $('.message1').html(), 
@@ -108,7 +110,7 @@ function initialize_theme_picker(){
 		     }
 		});
 
-		$('#theme_CSS').attr('href','includes/themes/' + theme + '/css/style.css');
+		$('#theme_CSS').attr('href','includes/themes/' + theme_name + '/css/style.css');
 	});
 }
 
@@ -195,7 +197,9 @@ function submit_invoice() {
 	     type: "POST",
 	     url: 'includes/utilities/send_mail.php',
   		 data: { 
-  		 	message: $('#preview').html(), 
+  		 	message: '<div id="preview">' + $('#preview').html() + '</div>', 
+  		 	theme: theme_name,
+  		 	addedCSS: $('#addedCSS').text(),
   		 	subject: $('#subject').val(), 
   		 	from_email: $('#from_email').val(), 
   		 	to_email: $('#to_email').val(),
