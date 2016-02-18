@@ -12,8 +12,11 @@
               <label for="logo_input">Upload Your Logo</label>
               <input type='file' name="logo_input" id="logo_input">
 
-              <label for="logo_size">Logo size</label>
-              <input type="range" data-min="20" data-max="580" data-css="#logo_preview-width">
+              <div class="range-slider-wrapper">
+                <label for="logo_size">Logo size</label>
+                <input type="range" min="20" max="580" data-css="#logo_preview-width" value="0">
+                <input type="text" value="20"> px
+              </div>
             </div>
 
             <div class="subsection">

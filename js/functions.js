@@ -174,18 +174,17 @@ function initialize_logo_input(){
 
 function initialize_range_sliders(){
 	$('input[type=range]').change(function(){
-		var max_range = $(this).attr('data-max');
-		console.log(max_range);
-		var min_range = $(this).attr('data-min');
-		console.log(min_range);
-		var range = max_range - min_range;
-		console.log(range);
-		var range_value = $(this).val() * range/100 + min_range/1;
-		console.log(range_value);
+		var range_value = $(this).val();
 
 		var css_targets = $(this).attr('data-css').split('-');
 
 		$( css_targets[0] ).css( css_targets[1], range_value + 'px' );
+
+		$(this).siblings('input').val(range_value);
+	});
+
+	$('.range-slider-wrapper input[type=text]').change(function(){
+		$(this).siblings('input').val( $(this).val() ).change();	
 	});
 }
 

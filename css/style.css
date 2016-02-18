@@ -361,8 +361,6 @@ header#main {
   #dashboard label {
     padding-bottom: 2px;
     display: block; }
-  #dashboard input[type=range] {
-    width: 100%; }
   #dashboard input:not([type=checkbox]):not([type=range]), #dashboard textarea, #dashboard select {
     width: 100%;
     padding: 5px;
@@ -397,6 +395,12 @@ header#main {
     cursor: pointer; }
   #dashboard .required_asterisk {
     color: #E85520; }
+  #dashboard .range-slider-wrapper input {
+    display: inline-block; }
+    #dashboard .range-slider-wrapper input[type=range] {
+      width: 60%; }
+    #dashboard .range-slider-wrapper input[type=text] {
+      width: 25%; }
   #dashboard .color-selector-wrapper label {
     display: block; }
   #dashboard .color-selector-wrapper .colorpicker-wrapper {
@@ -426,7 +430,7 @@ header#main {
       background: url("../imgs/colorpicker/slider.png");
       background-size: 25px 25px; }
     #dashboard .color-selector-wrapper .color-swatch.selected {
-      border: 2px solid #222; }
+      border: 1px solid #222; }
   #dashboard .theme_thumbnail {
     margin: 10px;
     width: 100px;
@@ -437,7 +441,7 @@ header#main {
     cursor: pointer;
     background-size: 100px; }
     #dashboard .theme_thumbnail.selected {
-      border: 2px solid #222; }
+      border: 1px solid #E85520; }
     #dashboard .theme_thumbnail div {
       position: absolute;
       bottom: 0px;
