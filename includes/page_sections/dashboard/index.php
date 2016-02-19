@@ -15,7 +15,7 @@
               <div class="range-slider-wrapper">
                 <label for="logo_size">Logo size</label>
                 <input type="range" min="20" max="580" data-css="#logo_preview-width" value="0">
-                <input type="text" value="20"> px
+                <input type="text" value="20"><span> px</span>
               </div>
             </div>
 

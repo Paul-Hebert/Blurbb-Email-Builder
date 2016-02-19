@@ -235,7 +235,7 @@ function submit_invoice() {
   		 	copy_me: checked
   		 },
 	     success: function() {
-			//$("#dashboard").html('<h1>Success!</h1><p>Your email has been sent. Sit back and wait to get paid!</p><p>If you do not receive payment make sure to follow up. It\'s possible this email was blocked by a spam filter.');			
+			modal('<h1>Success!</h1><p>Your email has been sent. Sit back and wait to get paid!</p><p>If you do not receive payment make sure to follow up. It\'s possible this email was blocked by a spam filter.');			
 		}
 	});
 
@@ -285,6 +285,15 @@ function readURL2(input) {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /***********************************************************************************************************************/
+
+function modal(content){
+	$('body').append('<div class="modal background"></div><div class="modal content">' + content + '</div>');
+	
+	$('.modal.background').click(function(){
+		$('.modal').remove();
+	})
+}
+
 
 var MAP = { '&': '&amp;',
             '<': '&lt;',

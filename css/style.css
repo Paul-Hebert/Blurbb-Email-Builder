@@ -401,6 +401,9 @@ header#main {
       width: 60%; }
     #dashboard .range-slider-wrapper input[type=text] {
       width: 25%; }
+  #dashboard .range-slider-wrapper input[type=text], #dashboard .range-slider-wrapper span {
+    position: relative;
+    top: -8px; }
   #dashboard .color-selector-wrapper label {
     display: block; }
   #dashboard .color-selector-wrapper .colorpicker-wrapper {
@@ -505,5 +508,24 @@ header#main {
   -webkit-transform: rotate(45deg);
   /* Chrome, Safari, Opera */
   transform: rotate(45deg); }
+
+.modal.background {
+  width: 100%;
+  height: 100%;
+  padding: 50%;
+  background: #222;
+  opacity: .85;
+  position: fixed;
+  z-index: 20; }
+
+.modal.content {
+  position: fixed;
+  left: 25%;
+  right: 25%;
+  top: 35%;
+  bottom: 35%;
+  background: #f9f9f9;
+  z-index: 30;
+  padding: 20px; }
 
 /*# sourceMappingURL=style.css.map */
