@@ -1,0 +1,157 @@
+#dashboard{
+	width:40%;
+	overflow:scroll;
+	float:right;
+	background:#f0f0f0;
+	overflow:scroll;
+
+	header{
+		width:100%;
+		background:$main-color;
+		padding:20px;
+
+		h2{
+			color:$off-white;
+		}
+	}
+	
+	section{
+		padding-top:20px;
+		margin:0px 20px;
+
+		h3{
+			cursor:pointer;
+			width:100%;
+			background:	$main-color;
+			color:$off-white;
+			padding:20px;
+			position:relative;
+			left:0%;
+			@include transition_mixin(all 300ms);
+
+			&:after{
+				content:'+';
+				float:right;
+				@include transition_mixin(all 300ms);
+				@include radius(50%);
+				width:30px;
+				height:30px;
+				text-align:center;
+				background:$interactable-color;
+			}
+
+			&:hover{
+				background:$interacting-color;
+
+				&:after{
+					background:$interacting-color;
+				}
+			}
+
+			&.open{
+				left:-2.5%;
+				width:102.5%;
+
+				&:after{
+					@extend .rotated;
+				}
+			}
+		}
+
+		fieldset{
+			border:0px;
+			padding:20px;
+			background:$subtle-color-1;
+			@include transition_mixin(all 300ms);
+
+			.subsection:not(:last-of-type){
+				padding-bottom:10px;
+				margin-bottom:10px;
+				border-bottom:1px solid $subtle-color-2;
+			}
+		}
+	}
+}
+
+.range-slider-wrapper{
+	input{
+		display:inline-block;
+
+		&[type=range]{
+			width:60%;
+		}	
+		
+		&[type=text]{
+			display:inline;
+		}	
+	}
+
+	input[type=text],span{
+		position:relative;
+		top:-8px;
+	}
+}
+
+.color-selector-wrapper{
+	label{
+		display:block;
+	}
+
+	.colorpicker-wrapper{
+		margin:0px;
+
+		.colorpicker{
+			@include transition_mixin(all 300ms);
+			max-height:100%;
+			max-width:100%;
+			padding:15px;
+		}
+	}
+
+	.color-swatch{
+		display:inline-block;
+		background:$subtle-color-1;
+		height:25px;
+		width:25px;
+		padding:5px;
+		border:1px solid $subtle-color-2;
+		cursor:pointer;
+		margin-right:2.5px;
+		@include radius(3px);
+	
+		&.picker{
+			background:url("../imgs/colorpicker/slider.png");
+			background-size:25px 25px;
+		}
+
+		&.selected{
+			border:1px solid $off-black;
+		}
+	}
+}
+
+.theme_thumbnail{
+	margin:10px;
+	width:100px;
+	height:161.8px;
+	position:relative;
+	background:$main-color;
+	display:inline-block;
+	cursor:pointer;
+	background-size:100px;
+
+	&.selected{
+		border:1px solid $auxiliary-color;	
+	}
+
+	div{
+		position:absolute;
+		bottom:0px;
+		right:0px;
+		left:0px;
+		background:$off-white;
+		text-align: center;
+		padding:5px 0px;
+		border:1px solid $subtle-color-2;
+	}
+}

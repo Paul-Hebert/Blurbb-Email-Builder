@@ -1,0 +1,42 @@
+/*
+This grid system was generated using the Gridley Grid Generator.
+Gridley is a free service brought to you by Paul Hebert of Mild West Designs.
+Try it out at at www.mildwestdesigns.com/gridley/
+You're welcome to use or modify this code in any way, including removing these comments.
+*/
+ 
+.row{
+    clear: both;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+ 
+[class^="col-"]{
+    float: left;
+    margin: 0 1.25% 0 0;
+    list-style: none;
+    position: relative;
+    box-sizing: border-box;
+    white-space: normal;
+}
+ 
+.row:last-child{
+    margin-right:0px;
+}
+ 
+.col-1{ width: 7.1875%; }
+.col-2{ width: 15.625%; }
+.col-3{ width: 24.0625%; }
+.col-4{ width: 32.5%; }
+.col-5{ width: 40.9375%; }
+.col-6{ width: 49.375%; }
+.col-7{ width: 57.8125%; }
+.col-8{ width: 66.25%; }
+.col-9{ width: 74.6875%; }
+.col-10{ width: 83.125%; }
+.col-11{ width: 91.5625%; }
+.col-12{ width: 100%; margin:0% }
+ 
+/* End Gridley Grid Generator */

@@ -1,0 +1,34 @@
+.hidden{
+	height:0px !important;
+	padding-top:0px !important;
+	padding-bottom:0px !important;
+	overflow:hidden;
+}
+
+.rotated{
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+.modal.background{
+	width:100%;
+	height:100%;
+	padding:50%;
+	background:$off-black;
+	opacity:.85;
+	position:fixed;
+	z-index:20;
+}
+
+.modal.content{
+	position:fixed;
+	left:25%;
+	right:25%;
+	top:35%;
+	bottom:35%;
+	background:$off-white;
+	z-index:30;
+	padding:20px;
+	overflow:scroll;
+}
