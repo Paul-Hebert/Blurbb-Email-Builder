@@ -60,6 +60,11 @@ function initialize_submit_button(){
 		submit_invoice();
 		return false;
 	});
+
+	$('#export_HTML').click(function(){
+		export_HTML();
+		return false;
+	});
 }
 
 function initialize_theme_picker(){
@@ -235,7 +240,7 @@ function submit_invoice() {
   		 	copy_me: checked
   		 },
 	     success: function() {
-			modal('<h1>Success!</h1><p>Your email has been sent. Sit back and wait to get paid!</p><p>If you do not receive payment make sure to follow up. It\'s possible this email was blocked by a spam filter.');			
+			modal('html','<h1>Success!</h1><p>Your email has been sent. Sit back and wait to get paid!</p><p>If you do not receive payment make sure to follow up. It\'s possible this email was blocked by a spam filter.');			
 		}
 	});
 
@@ -243,6 +248,7 @@ function submit_invoice() {
 		console.log( "Request failed: " + textStatus );
 	});
 }
+
 
 function readURL(input) {
     if (input.files && input.files[0]) {
@@ -286,8 +292,21 @@ function readURL2(input) {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /***********************************************************************************************************************/
 
-function modal(content){
-	$('body').append('<div class="modal background"></div><div class="modal content">' + content + '</div>');
+function export_HTML() {
+  	var exported_HTML = '<style type="text/css">' + $('#addedCSS').text() + '</style>';
+  	exported_HTML = exported_HTML + '<div id="preview">' + $('#preview').html() + '</div>'; 
+
+  	modal('text', exported_HTML);
+}
+
+function modal(type,content){
+	$('body').append('<div class="modal background"></div><div class="modal content"></div>');
+
+	if (type === 'text'){
+		$('.modal.content').text(content);
+	} else{
+		$('.modal.content').html(content);		
+	}
 	
 	$('.modal.background').click(function(){
 		$('.modal').remove();
