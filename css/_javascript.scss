@@ -5,10 +5,18 @@
 	overflow:hidden;
 }
 
+.transparent{
+	opacity:0 !important;
+}
+
 .rotated{
     -ms-transform: rotate(45deg); /* IE 9 */
     -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
     transform: rotate(45deg);
+}
+
+.modal{
+	@include transition_mixin(opacity 300ms);
 }
 
 .modal.background{

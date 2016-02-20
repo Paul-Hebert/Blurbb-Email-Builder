@@ -101,18 +101,16 @@ header#main{
 	color:$off-white;
 	border-bottom:5px solid $auxiliary-color;
 
-	*{
+	a{
 		color:$off-white;
+		padding:20px;
+		text-decoration:none;
+		display:inline-block;
 
 		&:hover{
 			color:#fff;
 		}
-	}
 
-	a{
-		padding:20px;
-		text-decoration:none;
-		display:inline-block;
 		h1{
 			margin:0px;
 			font-family:'Roboto Slab';

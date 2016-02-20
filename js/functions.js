@@ -300,16 +300,24 @@ function export_HTML() {
 }
 
 function modal(type,content){
-	$('body').append('<div class="modal background"></div><div class="modal content"></div>');
+	$('body').append('<div class="modal background transparent"></div><div class="modal content transparent"></div>');
 
 	if (type === 'text'){
 		$('.modal.content').text(content);
 	} else{
 		$('.modal.content').html(content);		
 	}
+
+	setTimeout(function(){
+		$('.modal').removeClass('transparent');
+	},20);
 	
 	$('.modal.background').click(function(){
-		$('.modal').remove();
+		$('.modal').addClass('transparent');
+
+		setTimeout(function(){
+			$('.modal').remove();
+		},300);
 	})
 }
 
