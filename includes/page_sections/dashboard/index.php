@@ -1,6 +1,6 @@
     <div id="dashboard">
       <header>
-        <h2>Invoice Builder</h1>
+        <h2>Email Dashboard</h1>
       </header>
 
       <form id="invoice_form" action="includes/utilities/send_mail.php" enctype='multipart/form-data'>

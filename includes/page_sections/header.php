@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Invoice Builder</title>
+        <title><?php echo $title ?></title>
 
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -32,7 +32,7 @@
         	</nav>
            	<a href="#">
             	<h1>
-    	    		Invoice Out
+    	    		<?php echo $title ?>
     	    	</h1>
         	</a>
         </header>

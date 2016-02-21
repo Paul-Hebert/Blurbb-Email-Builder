@@ -1,4 +1,5 @@
     <?php
+      $title = 'Email Builder';
       $theme = 'Mild_West';
 
       include('includes/page_sections/header.php');
