@@ -10,8 +10,7 @@ $(function(){
 	initialize_dashboard();
 
 	$('.icon_toggle .icon').click(function(){
-		$(this).children('div').toggleClass('hidden');
-		$(this).siblings('.toggled_text').toggleClass('hidden');
+		modal ('html', $(this).siblings('.toggled_text').html() );
 	});
 });
 
@@ -293,10 +292,24 @@ function readURL2(input) {
 /***********************************************************************************************************************/
 
 function export_HTML() {
-  	var exported_HTML = '<style type="text/css">' + $('#addedCSS').text() + '</style>';
-  	exported_HTML = exported_HTML + '<div id="preview">' + $('#preview').html() + '</div>'; 
+	modal('html','<img src="imgs/loading.png" class="loading">');
 
-  	modal('text', exported_HTML);
+    var request = $.ajax({
+	     type: "POST",
+	     url: 'includes/utilities/return_html.php',
+  		 data: { 
+  		 	message: '<div id="preview">' + $('#preview').html() + '</div>', 
+  		 	theme: theme_name,
+  		 	addedCSS: $('#addedCSS').text()
+  		 },
+	     success: function(data) {
+			$('.modal.content').html('<pre>' + data + '</pre>');			
+		}
+	});
+
+	request.fail(function(jqXHR, textStatus) {
+		console.log( "Request failed: " + textStatus );
+	});
 }
 
 function modal(type,content){
