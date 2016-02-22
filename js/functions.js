@@ -73,7 +73,7 @@ function initialize_theme_picker(){
 	$('#theme_picker option').prop('selected','false').filter('[value="' + theme_name.replace(' ','_') + '"]').prop('selected', 'true');
 
 	$('.theme_thumbnail').each(function(){
-		$(this).css('background-image','url("../includes/themes/' + $(this).attr('id') + '/imgs/thumbnail.png")');
+		$(this).css('background-image','url("../../includes/themes/' + $(this).attr('id') + '/imgs/thumbnail.png")');
 	});
 
 	$('#theme_picker').change(function(){
@@ -104,7 +104,7 @@ function pick_theme(){
 
         $.ajax({
 		     type: "GET",
-		     url: '../includes/themes/' + theme_name + '/index.php',
+		     url: '../../includes/themes/' + theme_name + '/index.php',
 	  		 data: { 
 	  		 	heading1: $('.heading1').html(), 
 	  		 	message1: $('.message1').html(), 
@@ -128,7 +128,7 @@ function pick_theme(){
 		     }
 		});
 
-		$('#theme_CSS').attr('href','../includes/themes/' + theme_name + '/css/style.css');
+		$('#theme_CSS').attr('href','../../includes/themes/' + theme_name + '/css/style.css');
 }
 
 function initialize_colorpickers(){
@@ -228,7 +228,7 @@ function submit_invoice() {
 
     var request = $.ajax({
 	     type: "POST",
-	     url: '../includes/utilities/send_mail.php',
+	     url: '../../includes/utilities/send_mail.php',
   		 data: { 
   		 	message: '<div id="preview">' + $('#preview').html() + '</div>', 
   		 	theme: theme_name,
@@ -270,7 +270,7 @@ function readURL2(input) {
         reader.onload = function (e) {
             $.ajax({
 			     type: "GET",
-			     url: '../includes/utilities/csv_as_table.php',
+			     url: '../../includes/utilities/csv_as_table.php',
 			     data: "path=" + e.target.result,
 			     success: function(data) {
 			          $('#csv_holder').html(data);
@@ -292,11 +292,11 @@ function readURL2(input) {
 /***********************************************************************************************************************/
 
 function export_HTML() {
-	modal('Code','<pre><img src="../imgs/loading.png" class="loading"></pre>');
+	modal('Code','<pre><img src="../../imgs/loading.png" class="loading"></pre>');
 
     var request = $.ajax({
 	     type: "POST",
-	     url: '../includes/utilities/return_html.php',
+	     url: '../../includes/utilities/return_html.php',
   		 data: { 
   		 	message: '<div id="preview">' + $('#preview').html() + '</div>', 
   		 	theme: theme_name,

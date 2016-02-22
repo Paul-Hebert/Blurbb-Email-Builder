@@ -1,3 +1,18 @@
+    <?php
+      $title = 'Email Builder';
+      $base_url = '../../';
+
+      $theme = 'Mild_West';
+
+      include($base_url . 'includes/page_sections/header.php');
+      include($base_url . 'includes/themes/' . $theme . '/settings.php');
+    ?>
+    <div id="preview">
+      <?php 
+        include($base_url . 'includes/themes/' . $theme . '/index.php');
+      ?>
+    </div>
+
     <div id="dashboard">
       <header>
         <h2>Email Dashboard</h1>
@@ -34,34 +49,34 @@
           
           <fieldset>
             <?php
-              include($base_url .  'includes/page_sections/dashboard/theme_picker.php'); 
+              include('theme_picker.php'); 
 
-              include($base_url .  'includes/page_sections/dashboard/font_picker.php'); 
+              include('font_picker.php'); 
 
               echo '<div class="subsection">';
                 $include_name = 'Primary background';
                 $include_css = ['.primary','background'];
-                include($base_url .  'includes/page_sections/dashboard/color_picker.php');
+                include('color_picker.php');
 
                 $include_name = 'Primary text color';
                 $include_css = ['.primary','color'];
-                include($base_url .  'includes/page_sections/dashboard/color_picker.php');
+                include('color_picker.php');
               echo '</div>';
 
               echo '<div class="subsection">';
                 $include_name = 'Secondary background';
                 $include_css = ['.secondary','background'];
-                include($base_url .  'includes/page_sections/dashboard/color_picker.php');
+                include('color_picker.php');
 
                 $include_name = 'Secondary text color';
                 $include_css = ['.secondary','color'];
-                include($base_url .  'includes/page_sections/dashboard/color_picker.php');                
+                include('color_picker.php');                
               echo '</div>';
 
               echo '<div class="subsection">';
                 $include_name = 'Body background';
                 $include_css = ['table.body','background'];
-                include($base_url .  'includes/page_sections/dashboard/color_picker.php');
+                include('color_picker.php');
               echo '</div>';
             ?>
           </fieldset>
@@ -123,3 +138,5 @@
         </section>
       </form>
     </div>
+  </body>
+</html>    
