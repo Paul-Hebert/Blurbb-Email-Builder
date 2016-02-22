@@ -34,7 +34,7 @@ select{
 	cursor:pointer
 }
 
-input[type=submit], button{
+input[type=submit], button, .button{
 	width:100%;
 	padding:20px;
 	cursor:pointer;
@@ -44,6 +44,7 @@ input[type=submit], button{
 	background:$interactable-color;
 	border:0px;
 	@include radius(6px);
+	text-decoration:none;
 
 	@extend .interactable;
 }

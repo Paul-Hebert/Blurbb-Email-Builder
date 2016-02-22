@@ -2,16 +2,11 @@
       $title = 'Email Builder';
       $base_url = '../';
 
-      $theme = 'Mild_West';
-
       include('../includes/page_sections/header.php');
-      include('../includes/themes/' . $theme . '/settings.php');
     ?>
-    <div id="preview">
-      <?php 
-        include('../includes/themes/' . $theme . '/index.php');
-      ?>
+    <div class="main_content">
+      <?php include('dashboard/theme_picker.php'); ?>
+      <a href='dashboard' class="button">Dashboard</a>
     </div>
-    <?php include('../includes/page_sections/dashboard/index.php'); ?>
   </body>
 </html>

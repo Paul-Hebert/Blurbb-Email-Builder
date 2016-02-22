@@ -239,7 +239,7 @@ input:not([type=checkbox]):not([type=range]):not([type=submit]), textarea, selec
 select {
   cursor: pointer; }
 
-input[type=submit], button {
+input[type=submit], button, .button {
   width: 100%;
   padding: 20px;
   cursor: pointer;
@@ -251,7 +251,8 @@ input[type=submit], button {
   -o-border-radius: 6px;
   -ms-border-radius: 6px;
   -webkit-border-radius: 6px;
-  border-radius: 6px; }
+  border-radius: 6px;
+  text-decoration: none; }
 
 .required_asterisk {
   color: #E85520; }
@@ -564,7 +565,7 @@ header#main {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /***********************************************************************************************************************/
-.interactable, input[type=submit], button, .icon_toggle .icon {
+.interactable, input[type=submit], button, .button, .icon_toggle .icon {
   background: #E85520;
   color: #f9f9f9;
   cursor: pointer;
@@ -572,7 +573,7 @@ header#main {
   -ms-transition: background 300ms;
   -webkit-transition: background 300ms;
   transition: background 300ms; }
-  .interactable:hover, input[type=submit]:hover, button:hover, .icon_toggle .icon:hover {
+  .interactable:hover, input[type=submit]:hover, button:hover, .button:hover, .icon_toggle .icon:hover {
     background: #F78336; }
 
 .icon_toggle * {
