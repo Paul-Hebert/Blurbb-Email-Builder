@@ -24,12 +24,7 @@
 
     <body>
         <header id="main">
-        	<nav>
-           		<a href="#">Builder</a>
-                <a href="#">Resources</a>
-        		<a href="#">Profile</a>
-        		<a href="#">Support</a>
-        	</nav>
+        	<?php include('includes/page_sections/nav.php'); ?>
            	<a href="#">
             	<h1>
     	    		<?php echo $title ?>
