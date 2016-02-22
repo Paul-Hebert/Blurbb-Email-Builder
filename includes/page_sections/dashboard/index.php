@@ -34,34 +34,34 @@
           
           <fieldset>
             <?php
-              include('includes/page_sections/dashboard/theme_picker.php'); 
+              include($base_url .  'includes/page_sections/dashboard/theme_picker.php'); 
 
-              include('includes/page_sections/dashboard/font_picker.php'); 
+              include($base_url .  'includes/page_sections/dashboard/font_picker.php'); 
 
               echo '<div class="subsection">';
                 $include_name = 'Primary background';
                 $include_css = ['.primary','background'];
-                include('includes/page_sections/dashboard/color_picker.php');
+                include($base_url .  'includes/page_sections/dashboard/color_picker.php');
 
                 $include_name = 'Primary text color';
                 $include_css = ['.primary','color'];
-                include('includes/page_sections/dashboard/color_picker.php');
+                include($base_url .  'includes/page_sections/dashboard/color_picker.php');
               echo '</div>';
 
               echo '<div class="subsection">';
                 $include_name = 'Secondary background';
                 $include_css = ['.secondary','background'];
-                include('includes/page_sections/dashboard/color_picker.php');
+                include($base_url .  'includes/page_sections/dashboard/color_picker.php');
 
                 $include_name = 'Secondary text color';
                 $include_css = ['.secondary','color'];
-                include('includes/page_sections/dashboard/color_picker.php');                
+                include($base_url .  'includes/page_sections/dashboard/color_picker.php');                
               echo '</div>';
 
               echo '<div class="subsection">';
                 $include_name = 'Body background';
                 $include_css = ['table.body','background'];
-                include('includes/page_sections/dashboard/color_picker.php');
+                include($base_url .  'includes/page_sections/dashboard/color_picker.php');
               echo '</div>';
             ?>
           </fieldset>

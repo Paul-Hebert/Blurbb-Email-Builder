@@ -64,7 +64,7 @@
                 </td>
                 <td>
                   <div id="csv_holder">
-                    <?php include('includes/utilities/csv_as_table.php');?>
+                    <?php include($base_url . 'includes/utilities/csv_as_table.php');?>
                   </div>
                 </td>
               </tr>

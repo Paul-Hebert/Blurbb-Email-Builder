@@ -9,25 +9,24 @@
         <![endif]-->
 
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Roboto+Slab' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
         
         <?php
-            echo '<link id="theme_CSS" rel="stylesheet" type="text/css" href="includes/themes/' . $theme . '/css/style.css">';
+            echo '<link rel="stylesheet" type="text/css" href="' . $base_url . 'css/style.css">';
+            echo '<link id="theme_CSS" rel="stylesheet" type="text/css" href="' . $base_url . 'includes/themes/' . $theme . '/css/style.css">';
+            echo '<script src="' . $base_url . 'js/jQuery_v1.11.1.min.js"></script>';
+            echo '<script src="' . $base_url . 'js/colorpicker.js"></script>';
+            echo '<script src="' . $base_url . 'js/functions.js"></script>';        
         ?>
-
-
-        <script src="js/jQuery_v1.11.1.min.js"></script>
-        <script src="js/colorpicker.js"></script>
-        <script src="js/functions.js"></script>
-        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
 
     <body>
         <header id="main">
-        	<?php include('includes/page_sections/nav.php'); ?>
-           	<a href="#">
+        	<?php 
+                include($base_url . 'includes/page_sections/nav.php'); 
+                echo '<a href="' . $base_url . '">';
+            ?>
             	<h1>
-    	    		<?php echo $title ?>
+    	    		Email Builder
     	    	</h1>
         	</a>
         </header>

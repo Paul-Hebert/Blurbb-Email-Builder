@@ -1,6 +1,6 @@
 <?php
     if ( isset($theme) ){
-      $contents = file('includes/themes/' . $theme . '/timesheet.csv');
+      $contents = file($base_url . 'includes/themes/' . $theme . '/timesheet.csv');
     } else{
       $file = $_GET['path'];
       $contents = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);

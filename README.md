@@ -19,3 +19,6 @@ Planned features
 - One script for email build, export and send
 - Format code for export (format text and format code modal)
 - Modal close button
+- Set image src to url
+- Make separate directories for major site areas. E.g. Builder, resources, support
+- More resources in resource page
