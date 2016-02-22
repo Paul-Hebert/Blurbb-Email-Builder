@@ -9,8 +9,8 @@
 $(function(){
 	initialize_dashboard();
 
-	$('.icon_toggle .icon').click(function(){
-		modal('', $(this).siblings('.toggled_text').html() );
+	$('.icon_toggle').click(function(){
+		modal( $(this).attr('data-heading'), $(this).children('.toggled_text').html() );
 	});
 });
 
