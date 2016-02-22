@@ -35,10 +35,20 @@
 	bottom:25%;
 	background:$off-white;
 	z-index:30;
-	padding:20px;
 	overflow:scroll;
+	padding:20px;	
+	padding-top:70px;
 
 	@include transition_mixin(opacity 300ms);	
+
+	h1{
+		left:20%;
+		right:20%;
+		top:25%;
+		background:$subtle-color-1;
+		padding:10px 20px;
+		position:fixed;
+	}
 }
 
 .loading{

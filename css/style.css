@@ -417,12 +417,20 @@ input[type=submit], button {
   bottom: 25%;
   background: #f9f9f9;
   z-index: 30;
-  padding: 20px;
   overflow: scroll;
+  padding: 20px;
+  padding-top: 70px;
   -o-transition: opacity 300ms;
   -ms-transition: opacity 300ms;
   -webkit-transition: opacity 300ms;
   transition: opacity 300ms; }
+  .modal.content h1 {
+    left: 20%;
+    right: 20%;
+    top: 25%;
+    background: #ddd;
+    padding: 10px 20px;
+    position: fixed; }
 
 .loading {
   position: absolute;

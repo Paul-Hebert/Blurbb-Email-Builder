@@ -10,7 +10,7 @@ $(function(){
 	initialize_dashboard();
 
 	$('.icon_toggle .icon').click(function(){
-		modal ('html', $(this).siblings('.toggled_text').html() );
+		modal('', $(this).siblings('.toggled_text').html() );
 	});
 });
 
@@ -239,7 +239,7 @@ function submit_invoice() {
   		 	copy_me: checked
   		 },
 	     success: function() {
-			modal('html','<h1>Success!</h1><p>Your email has been sent. Sit back and wait to get paid!</p><p>If you do not receive payment make sure to follow up. It\'s possible this email was blocked by a spam filter.');			
+			modal('Success','<p>Your email has been sent. Sit back and wait to get paid!</p><p>If you do not receive payment make sure to follow up. It\'s possible this email was blocked by a spam filter.');			
 		}
 	});
 
@@ -292,7 +292,7 @@ function readURL2(input) {
 /***********************************************************************************************************************/
 
 function export_HTML() {
-	modal('html','<img src="imgs/loading.png" class="loading">');
+	modal('Code','<pre><img src="imgs/loading.png" class="loading"></pre>');
 
     var request = $.ajax({
 	     type: "POST",
@@ -303,7 +303,7 @@ function export_HTML() {
   		 	addedCSS: $('#addedCSS').text()
   		 },
 	     success: function(data) {
-			$('.modal.content').html('<pre>' + data + '</pre>');			
+			$('.modal.content pre').html(data);			
 		}
 	});
 
@@ -312,20 +312,16 @@ function export_HTML() {
 	});
 }
 
-function modal(type,content){
+function modal(heading,content){
 	$('body').append('<div class="modal background transparent"></div><div class="modal content transparent"></div>');
 
-	if (type === 'text'){
-		$('.modal.content').text(content);
-	} else{
-		$('.modal.content').html(content);		
-	}
+	$('.modal.content').html('<h1 class="open tab">' + heading + '</h1>' + content);		
 
 	setTimeout(function(){
 		$('.modal').removeClass('transparent');
-	},20);
+	},1);
 	
-	$('.modal.background').click(function(){
+	$('.modal.background, .modal .tab:after').click(function(){
 		$('.modal').addClass('transparent');
 
 		setTimeout(function(){

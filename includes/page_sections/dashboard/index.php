@@ -95,7 +95,7 @@
           </fieldset>
         </section>
 
-        <section>
+        <!--<section>
           <h3 class="open">Email</h3>
 
           <fieldset>
@@ -114,12 +114,12 @@
               <input type='text' placeholder="Invoice Out" name="subject" id="subject" required>
             </div>
           </fieldset> 
-        </section>
+        </section>-->
 
         <section>
           <!--<div class="g-recaptcha" data-sitekey="6LdINhYTAAAAALuvkN9vU8wJHP8ae1HcR0BLqiWc"></div>-->
           <button id="export_HTML">Export HTML</button>
-          <input type="submit" value="Send Invoice">
+          <!--<input type="submit" value="Send Invoice">-->
         </section>
       </form>
     </div>
