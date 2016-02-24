@@ -2,7 +2,7 @@
       $title = 'Email Builder';
       $base_url = '../../';
 
-      $theme = 'Mild_West';
+      $theme = $_GET['theme'];
 
       include($base_url . 'includes/page_sections/header.php');
       include($base_url . 'includes/themes/' . $theme . '/settings.php');

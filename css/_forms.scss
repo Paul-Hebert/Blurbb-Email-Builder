@@ -45,6 +45,7 @@ input[type=submit], button, .button{
 	border:0px;
 	@include radius(6px);
 	text-decoration:none;
+	display:inline-block;
 
 	@extend .interactable;
 }

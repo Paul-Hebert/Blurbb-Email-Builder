@@ -252,7 +252,8 @@ input[type=submit], button, .button {
   -ms-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  text-decoration: none; }
+  text-decoration: none;
+  display: inline-block; }
 
 .required_asterisk {
   color: #E85520; }
@@ -537,7 +538,8 @@ header#main {
     padding: 10px; }
 
 .main_content {
-  padding-top: 80px;
+  padding: 20px;
+  padding-top: 100px;
   background: #f9f9f9;
   min-height: 100vh; }
 

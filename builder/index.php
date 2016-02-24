@@ -6,7 +6,7 @@
     ?>
     <div class="main_content">
       <?php include('dashboard/theme_picker.php'); ?>
-      <a href='dashboard' class="button">Dashboard</a>
+      <button id="theme_selection_button">Get Started</button>
     </div>
   </body>
 </html>

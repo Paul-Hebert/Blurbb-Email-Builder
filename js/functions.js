@@ -12,6 +12,10 @@ $(function(){
 	$('.icon_toggle').click(function(){
 		modal( $(this).attr('data-heading'), $(this).children('.toggled_text').html() );
 	});
+
+	$('#theme_selection_button').click(function(){
+		window.location = 'dashboard/?theme=' + $('#theme_picker').val();
+	});
 });
 
 
@@ -72,9 +76,6 @@ function initialize_theme_picker(){
 	$('#' + theme_name).addClass('selected');
 	$('#theme_picker option').prop('selected','false').filter('[value="' + theme_name.replace(' ','_') + '"]').prop('selected', 'true');
 
-	$('.theme_thumbnail').each(function(){
-		$(this).css('background-image','url("../../includes/themes/' + $(this).attr('id') + '/imgs/thumbnail.png")');
-	});
 
 	$('#theme_picker').change(function(){
 		theme_name = $(this).val().replace(' ','_');

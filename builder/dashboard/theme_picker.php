@@ -6,7 +6,7 @@
                         foreach($theme_array as $theme_name){
                                 $theme_name = str_replace($base_url . 'includes/themes/', '', $theme_name);
 
-                                echo '<div class="theme_thumbnail" id="' . $theme_name . '"><div>' . str_replace('_', ' ', $theme_name) . '</div></div>'; 
+                                echo '<div class="theme_thumbnail" id="' . $theme_name . '" style="background-image:url(' . $base_url . 'includes/themes/' . $theme_name . '/imgs/thumbnail.png);"><div>' . str_replace('_', ' ', $theme_name) . '</div></div>'; 
                         }
 
                         echo '<select id="theme_picker" name="theme_picker">';

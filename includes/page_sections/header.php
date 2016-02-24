@@ -26,7 +26,7 @@
                 echo '<a href="' . $base_url . '">';
             ?>
             	<h1>
-    	    		Email Builder
+    	    		Blurbb
     	    	</h1>
         	</a>
         </header>

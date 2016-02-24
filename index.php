@@ -1,5 +1,5 @@
     <?php
-      $title = 'Email Builder';
+      $title = 'Blurbb Email Builder';
       $base_url = '';
 
       include('includes/page_sections/header.php');
