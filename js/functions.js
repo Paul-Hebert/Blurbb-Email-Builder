@@ -52,8 +52,9 @@ function initialize_dashboard(){
 /***********************************************************************************************************************/
 
 function initialize_modular_sections(){
-	$('#dashboard section h3').click(function(){
-		$(this).toggleClass('open');
+	$('#dashboard .close, #dashboard h3').click(function(){
+		$(this).parent().children('.close').toggleClass('rotated');
+		$(this).parent().children('h3').toggleClass('open');		
 		$(this).siblings('fieldset').toggleClass('hidden');
 	});
 }
@@ -314,13 +315,13 @@ function export_HTML() {
 function modal(heading,content){
 	$('body').append('<div class="modal background transparent"></div><div class="modal content transparent"></div>');
 
-	$('.modal.content').html('<h1 class="open tab">' + heading + '</h1>' + content);		
+	$('.modal.content').html('<h1 class="open tab">' + heading + '</h1><div class="close">x</div>' + content);		
 
 	setTimeout(function(){
 		$('.modal').removeClass('transparent');
 	},1);
 	
-	$('.modal.background, .modal .tab:after').click(function(){
+	$('.modal.background, .modal .tab:after, .modal .close').click(function(){
 		$('.modal').addClass('transparent');
 
 		setTimeout(function(){

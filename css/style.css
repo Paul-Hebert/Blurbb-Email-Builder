@@ -270,7 +270,8 @@ input[type=submit], button, .button {
       color: #f9f9f9; }
   #dashboard section {
     padding-top: 20px;
-    margin: 0px 20px; }
+    margin: 0px 20px;
+    position: relative; }
     #dashboard section h3 {
       cursor: pointer;
       width: 100%;
@@ -283,21 +284,6 @@ input[type=submit], button, .button {
       -ms-transition: all 300ms;
       -webkit-transition: all 300ms;
       transition: all 300ms; }
-      #dashboard section h3:after {
-        content: '+';
-        float: right;
-        -o-transition: all 300ms;
-        -ms-transition: all 300ms;
-        -webkit-transition: all 300ms;
-        transition: all 300ms;
-        -o-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        background: #E85520; }
       #dashboard section h3:hover {
         background: #F78336; }
         #dashboard section h3:hover:after {
@@ -305,6 +291,8 @@ input[type=submit], button, .button {
       #dashboard section h3.open {
         left: -2.5%;
         width: 102.5%; }
+    #dashboard section .close {
+      top: 35px; }
     #dashboard section fieldset {
       border: 0px;
       padding: 20px;
@@ -382,6 +370,27 @@ input[type=submit], button, .button {
     padding: 5px 0px;
     border: 1px solid #ccc; }
 
+.close {
+  -o-transition: all 300ms;
+  -ms-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background: #E85520;
+  cursor: pointer;
+  color: #f9f9f9;
+  position: absolute;
+  right: 20px;
+  top: 20px; }
+  .close:hover {
+    background: #F78336; }
+
 .hidden {
   height: 0px !important;
   padding-top: 0px !important;
@@ -391,7 +400,7 @@ input[type=submit], button, .button {
 .transparent {
   opacity: 0 !important; }
 
-.rotated, #dashboard section h3.open:after {
+.rotated {
   -ms-transform: rotate(45deg);
   /* IE 9 */
   -webkit-transform: rotate(45deg);

@@ -1,5 +1,5 @@
-Email-Builder
-=============
+Blurbb
+======
 
 An HTML email generator
 -----------------------

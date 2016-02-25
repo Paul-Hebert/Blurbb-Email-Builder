@@ -18,6 +18,7 @@
 	section{
 		padding-top:20px;
 		margin:0px 20px;
+		position:relative;
 
 		h3{
 			cursor:pointer;
@@ -28,17 +29,6 @@
 			position:relative;
 			left:0%;
 			@include transition_mixin(all 300ms);
-
-			&:after{
-				content:'+';
-				float:right;
-				@include transition_mixin(all 300ms);
-				@include radius(50%);
-				width:30px;
-				height:30px;
-				text-align:center;
-				background:$interactable-color;
-			}
 
 			&:hover{
 				background:$interacting-color;
@@ -52,10 +42,13 @@
 				left:-2.5%;
 				width:102.5%;
 
-				&:after{
-					@extend .rotated;
-				}
 			}
+		}
+
+
+
+		.close{
+			top:35px;
 		}
 
 		fieldset{
