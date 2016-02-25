@@ -1,0 +1,585 @@
+/**********************************************
+* Ink v1.0.5 - Copyright 2013 ZURB Inc        *
+**********************************************/
+/* Client-specific Styles & Reset */
+#preview {
+  /* Responsive Grid */
+  /* Block Grid */
+  /* Alignment & Visibility Classes */
+  /* Typography */
+  /* Panels */
+  /* Buttons */
+  /* Outlook First */
+  /*  Media Queries */ }
+  #preview #outlook a {
+    padding: 0; }
+  #preview body {
+    width: 100% !important;
+    min-width: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0; }
+  #preview .ExternalClass {
+    width: 100%; }
+  #preview .ExternalClass,
+  #preview .ExternalClass p,
+  #preview .ExternalClass span,
+  #preview .ExternalClass font,
+  #preview .ExternalClass td,
+  #preview .ExternalClass div {
+    line-height: 100%; }
+  #preview #backgroundTable {
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    line-height: 100% !important; }
+  #preview img {
+    outline: none;
+    text-decoration: none;
+    -ms-interpolation-mode: bicubic;
+    width: auto;
+    max-width: 100%;
+    float: left;
+    clear: both;
+    display: block; }
+  #preview center {
+    width: 100%;
+    min-width: 580px; }
+  #preview a {
+    text-decoration: none; }
+  #preview a img {
+    border: none; }
+  #preview p {
+    margin: 0 0 0 10px; }
+  #preview table {
+    border-spacing: 0;
+    border-collapse: collapse; }
+  #preview td {
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    border-collapse: collapse !important; }
+  #preview table, #preview tr, #preview td {
+    padding: 0;
+    vertical-align: top;
+    text-align: left; }
+  #preview hr {
+    color: #d9d9d9;
+    background-color: #d9d9d9;
+    height: 1px;
+    border: none; }
+  #preview table.body {
+    height: 100%;
+    width: 100%; }
+  #preview table.container {
+    width: 580px;
+    margin: 0 auto;
+    text-align: inherit; }
+  #preview table.email_row {
+    padding: 0px;
+    width: 100%;
+    position: relative; }
+  #preview table.container table.email_row {
+    display: block; }
+  #preview td.wrapper {
+    padding: 10px 20px 0px 0px;
+    position: relative; }
+  #preview table.columns,
+  #preview table.column {
+    margin: 0 auto; }
+  #preview table.columns td,
+  #preview table.column td {
+    padding: 0px 0px 10px; }
+  #preview table.columns td.sub-columns,
+  #preview table.column td.sub-columns,
+  #preview table.columns td.sub-column,
+  #preview table.column td.sub-column {
+    padding-right: 10px; }
+  #preview td.sub-column, #preview td.sub-columns {
+    min-width: 0px; }
+  #preview table.email_row td.last,
+  #preview table.container td.last {
+    padding-right: 0px; }
+  #preview table.one {
+    width: 30px; }
+  #preview table.two {
+    width: 80px; }
+  #preview table.three {
+    width: 130px; }
+  #preview table.four {
+    width: 180px; }
+  #preview table.five {
+    width: 230px; }
+  #preview table.six {
+    width: 280px; }
+  #preview table.seven {
+    width: 330px; }
+  #preview table.eight {
+    width: 380px; }
+  #preview table.nine {
+    width: 430px; }
+  #preview table.ten {
+    width: 480px; }
+  #preview table.eleven {
+    width: 530px; }
+  #preview table.twelve {
+    width: 580px; }
+  #preview table.one center {
+    min-width: 30px; }
+  #preview table.two center {
+    min-width: 80px; }
+  #preview table.three center {
+    min-width: 130px; }
+  #preview table.four center {
+    min-width: 180px; }
+  #preview table.five center {
+    min-width: 230px; }
+  #preview table.six center {
+    min-width: 280px; }
+  #preview table.seven center {
+    min-width: 330px; }
+  #preview table.eight center {
+    min-width: 380px; }
+  #preview table.nine center {
+    min-width: 430px; }
+  #preview table.ten center {
+    min-width: 480px; }
+  #preview table.eleven center {
+    min-width: 530px; }
+  #preview table.twelve center {
+    min-width: 580px; }
+  #preview table.one .panel center {
+    min-width: 10px; }
+  #preview table.two .panel center {
+    min-width: 60px; }
+  #preview table.three .panel center {
+    min-width: 110px; }
+  #preview table.four .panel center {
+    min-width: 160px; }
+  #preview table.five .panel center {
+    min-width: 210px; }
+  #preview table.six .panel center {
+    min-width: 260px; }
+  #preview table.seven .panel center {
+    min-width: 310px; }
+  #preview table.eight .panel center {
+    min-width: 360px; }
+  #preview table.nine .panel center {
+    min-width: 410px; }
+  #preview table.ten .panel center {
+    min-width: 460px; }
+  #preview table.eleven .panel center {
+    min-width: 510px; }
+  #preview table.twelve .panel center {
+    min-width: 560px; }
+  #preview .body .columns td.one,
+  #preview .body .column td.one {
+    width: 8.333333%; }
+  #preview .body .columns td.two,
+  #preview .body .column td.two {
+    width: 16.666666%; }
+  #preview .body .columns td.three,
+  #preview .body .column td.three {
+    width: 25%; }
+  #preview .body .columns td.four,
+  #preview .body .column td.four {
+    width: 33.333333%; }
+  #preview .body .columns td.five,
+  #preview .body .column td.five {
+    width: 41.666666%; }
+  #preview .body .columns td.six,
+  #preview .body .column td.six {
+    width: 50%; }
+  #preview .body .columns td.seven,
+  #preview .body .column td.seven {
+    width: 58.333333%; }
+  #preview .body .columns td.eight,
+  #preview .body .column td.eight {
+    width: 66.666666%; }
+  #preview .body .columns td.nine,
+  #preview .body .column td.nine {
+    width: 75%; }
+  #preview .body .columns td.ten,
+  #preview .body .column td.ten {
+    width: 83.333333%; }
+  #preview .body .columns td.eleven,
+  #preview .body .column td.eleven {
+    width: 91.666666%; }
+  #preview .body .columns td.twelve,
+  #preview .body .column td.twelve {
+    width: 100%; }
+  #preview td.offset-by-one {
+    padding-left: 50px; }
+  #preview td.offset-by-two {
+    padding-left: 100px; }
+  #preview td.offset-by-three {
+    padding-left: 150px; }
+  #preview td.offset-by-four {
+    padding-left: 200px; }
+  #preview td.offset-by-five {
+    padding-left: 250px; }
+  #preview td.offset-by-six {
+    padding-left: 300px; }
+  #preview td.offset-by-seven {
+    padding-left: 350px; }
+  #preview td.offset-by-eight {
+    padding-left: 400px; }
+  #preview td.offset-by-nine {
+    padding-left: 450px; }
+  #preview td.offset-by-ten {
+    padding-left: 500px; }
+  #preview td.offset-by-eleven {
+    padding-left: 550px; }
+  #preview td.expander {
+    visibility: hidden;
+    width: 0px;
+    padding: 0 !important; }
+  #preview table.columns .text-pad,
+  #preview table.column .text-pad {
+    padding-left: 10px;
+    padding-right: 10px; }
+  #preview table.columns .left-text-pad,
+  #preview table.columns .text-pad-left,
+  #preview table.column .left-text-pad,
+  #preview table.column .text-pad-left {
+    padding-left: 10px; }
+  #preview table.columns .right-text-pad,
+  #preview table.columns .text-pad-right,
+  #preview table.column .right-text-pad,
+  #preview table.column .text-pad-right {
+    padding-right: 10px; }
+  #preview .block-grid {
+    width: 100%;
+    max-width: 580px; }
+  #preview .block-grid td {
+    display: inline-block;
+    padding: 10px; }
+  #preview .two-up td {
+    width: 270px; }
+  #preview .three-up td {
+    width: 173px; }
+  #preview .four-up td {
+    width: 125px; }
+  #preview .five-up td {
+    width: 96px; }
+  #preview .six-up td {
+    width: 76px; }
+  #preview .seven-up td {
+    width: 62px; }
+  #preview .eight-up td {
+    width: 52px; }
+  #preview table.center, #preview td.center {
+    text-align: center; }
+  #preview h1.center,
+  #preview h2.center,
+  #preview h2.center,
+  #preview h4.center,
+  #preview h5.center,
+  #preview h6.center {
+    text-align: center; }
+  #preview span.center {
+    display: block;
+    width: 100%;
+    text-align: center; }
+  #preview img.center {
+    margin: 0 auto;
+    float: none; }
+  #preview .show-for-small,
+  #preview .hide-for-desktop {
+    display: none; }
+  #preview body, #preview table.body, #preview h1, #preview h2, #preview h2, #preview h4, #preview h5, #preview h6, #preview p, #preview td {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    line-height: 1.3; }
+  #preview h1, #preview h2, #preview h2, #preview h4, #preview h5, #preview h6 {
+    word-break: normal; }
+  #preview h1 {
+    font-size: 40px; }
+  #preview h2 {
+    font-size: 36px; }
+  #preview h2 {
+    font-size: 32px; }
+  #preview h4 {
+    font-size: 28px; }
+  #preview h5 {
+    font-size: 24px; }
+  #preview h6 {
+    font-size: 20px; }
+  #preview body, #preview table.body, #preview p, #preview td {
+    font-size: 14px;
+    line-height: 19px; }
+  #preview p.lead, #preview p.lede, #preview p.leed {
+    font-size: 18px;
+    line-height: 21px; }
+  #preview p {
+    margin-bottom: 10px; }
+  #preview small {
+    font-size: 10px; }
+  #preview .panel {
+    background: #f2f2f2;
+    border: 1px solid #d9d9d9;
+    padding: 10px !important; }
+  #preview .sub-grid table {
+    width: 100%; }
+  #preview .sub-grid td.sub-columns {
+    padding-bottom: 0; }
+  #preview table.button,
+  #preview table.tiny-button,
+  #preview table.small-button,
+  #preview table.medium-button,
+  #preview table.large-button {
+    width: 100%;
+    overflow: hidden; }
+  #preview table.button td,
+  #preview table.tiny-button td,
+  #preview table.small-button td,
+  #preview table.medium-button td,
+  #preview table.large-button td {
+    display: block;
+    width: auto !important;
+    text-align: center;
+    background: #2ba6cb;
+    border: 1px solid #2284a1;
+    color: #ffffff;
+    padding: 8px 0; }
+  #preview table.tiny-button td {
+    padding: 5px 0 4px; }
+  #preview table.small-button td {
+    padding: 8px 0 7px; }
+  #preview table.medium-button td {
+    padding: 12px 0 10px; }
+  #preview table.large-button td {
+    padding: 21px 0 18px; }
+  #preview table.button td a,
+  #preview table.tiny-button td a,
+  #preview table.small-button td a,
+  #preview table.medium-button td a,
+  #preview table.large-button td a {
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    font-size: 16px; }
+  #preview table.tiny-button td a {
+    font-size: 12px;
+    font-weight: normal; }
+  #preview table.small-button td a {
+    font-size: 16px; }
+  #preview table.medium-button td a {
+    font-size: 20px; }
+  #preview table.large-button td a {
+    font-size: 24px; }
+  #preview table.button:hover td,
+  #preview table.button:visited td,
+  #preview table.button:active td {
+    background: #2795b6 !important; }
+  #preview table.button:hover td a,
+  #preview table.button:visited td a,
+  #preview table.button:active td a {
+    color: #fff !important; }
+  #preview table.button:hover td,
+  #preview table.tiny-button:hover td,
+  #preview table.small-button:hover td,
+  #preview table.medium-button:hover td,
+  #preview table.large-button:hover td {
+    background: #2795b6 !important; }
+  #preview table.button:hover td a,
+  #preview table.button:active td a,
+  #preview table.button td a:visited,
+  #preview table.tiny-button:hover td a,
+  #preview table.tiny-button:active td a,
+  #preview table.tiny-button td a:visited,
+  #preview table.small-button:hover td a,
+  #preview table.small-button:active td a,
+  #preview table.small-button td a:visited,
+  #preview table.medium-button:hover td a,
+  #preview table.medium-button:active td a,
+  #preview table.medium-button td a:visited,
+  #preview table.large-button:hover td a,
+  #preview table.large-button:active td a,
+  #preview table.large-button td a:visited {
+    color: #ffffff !important; }
+  #preview table.secondary td {
+    border-color: #d0d0d0; }
+  #preview table.secondary:hover td a,
+  #preview table.secondary td a:visited,
+  #preview table.secondary:active td a {
+    color: #555 !important; }
+  #preview table.success td {
+    background: #5da423;
+    border-color: #457a1a; }
+  #preview table.success:hover td {
+    background: #457a1a !important; }
+  #preview table.alert td {
+    background: #c60f13;
+    border-color: #970b0e; }
+  #preview table.alert:hover td {
+    background: #970b0e !important; }
+  #preview table.radius td {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px; }
+  #preview table.round td {
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    border-radius: 500px; }
+  #preview body.outlook p {
+    display: inline !important; }
+  @media only screen and (max-width: 600px) {
+    #preview table[class="body"] img {
+      width: auto !important;
+      height: auto !important; }
+    #preview table[class="body"] center {
+      min-width: 0 !important; }
+    #preview table[class="body"] .container {
+      width: 95% !important; }
+    #preview table[class="body"] .email_row {
+      width: 100% !important;
+      display: block !important; }
+    #preview table[class="body"] .wrapper {
+      display: block !important;
+      padding-right: 0 !important; }
+    #preview table[class="body"] .columns,
+    #preview table[class="body"] .column {
+      table-layout: fixed !important;
+      float: none !important;
+      width: 100% !important;
+      padding-right: 0px !important;
+      padding-left: 0px !important;
+      display: block !important; }
+    #preview table[class="body"] .wrapper.first .columns,
+    #preview table[class="body"] .wrapper.first .column {
+      display: table !important; }
+    #preview table[class="body"] table.columns td,
+    #preview table[class="body"] table.column td {
+      width: 100% !important; }
+    #preview table[class="body"] .columns td.one,
+    #preview table[class="body"] .column td.one {
+      width: 8.333333% !important; }
+    #preview table[class="body"] .columns td.two,
+    #preview table[class="body"] .column td.two {
+      width: 16.666666% !important; }
+    #preview table[class="body"] .columns td.three,
+    #preview table[class="body"] .column td.three {
+      width: 25% !important; }
+    #preview table[class="body"] .columns td.four,
+    #preview table[class="body"] .column td.four {
+      width: 33.333333% !important; }
+    #preview table[class="body"] .columns td.five,
+    #preview table[class="body"] .column td.five {
+      width: 41.666666% !important; }
+    #preview table[class="body"] .columns td.six,
+    #preview table[class="body"] .column td.six {
+      width: 50% !important; }
+    #preview table[class="body"] .columns td.seven,
+    #preview table[class="body"] .column td.seven {
+      width: 58.333333% !important; }
+    #preview table[class="body"] .columns td.eight,
+    #preview table[class="body"] .column td.eight {
+      width: 66.666666% !important; }
+    #preview table[class="body"] .columns td.nine,
+    #preview table[class="body"] .column td.nine {
+      width: 75% !important; }
+    #preview table[class="body"] .columns td.ten,
+    #preview table[class="body"] .column td.ten {
+      width: 83.333333% !important; }
+    #preview table[class="body"] .columns td.eleven,
+    #preview table[class="body"] .column td.eleven {
+      width: 91.666666% !important; }
+    #preview table[class="body"] .columns td.twelve,
+    #preview table[class="body"] .column td.twelve {
+      width: 100% !important; }
+    #preview table[class="body"] td.offset-by-one,
+    #preview table[class="body"] td.offset-by-two,
+    #preview table[class="body"] td.offset-by-three,
+    #preview table[class="body"] td.offset-by-four,
+    #preview table[class="body"] td.offset-by-five,
+    #preview table[class="body"] td.offset-by-six,
+    #preview table[class="body"] td.offset-by-seven,
+    #preview table[class="body"] td.offset-by-eight,
+    #preview table[class="body"] td.offset-by-nine,
+    #preview table[class="body"] td.offset-by-ten,
+    #preview table[class="body"] td.offset-by-eleven {
+      padding-left: 0 !important; }
+    #preview table[class="body"] table.columns td.expander {
+      width: 1px !important; }
+    #preview table[class="body"] .right-text-pad,
+    #preview table[class="body"] .text-pad-right {
+      padding-left: 10px !important; }
+    #preview table[class="body"] .left-text-pad,
+    #preview table[class="body"] .text-pad-left {
+      padding-right: 10px !important; }
+    #preview table[class="body"] .hide-for-small,
+    #preview table[class="body"] .show-for-desktop {
+      display: none !important; }
+    #preview table[class="body"] .show-for-small,
+    #preview table[class="body"] .hide-for-desktop {
+      display: inherit !important; } }
+  #preview table.body {
+    background: #225378;
+    width: 100%;
+    min-width: 760px;
+    font-family: Open Sans, sans-serif; }
+  #preview table.container {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  #preview * {
+    line-height: 150%; }
+  #preview #logo_preview {
+    width: 65px; }
+  #preview h1, #preview h2 {
+    font-weight: bold; }
+  #preview h1 {
+    font-size: 30pt; }
+  #preview h2 {
+    font-size: 24pt;
+    margin-bottom: 12px; }
+  #preview p {
+    font-size: 13pt; }
+  #preview #title {
+    float: right;
+    padding-left: 20px; }
+  #preview .primary {
+    background: #EB7F00;
+    color: #fff; }
+  #preview .secondary a, #preview .primary a {
+    color: inherit; }
+  #preview .light {
+    background: #fff;
+    color: #000; }
+  #preview .secondary {
+    background: #736A6A;
+    color: #fff; }
+  #preview table.email_row {
+    padding: 20px; }
+  #preview #invoice_details {
+    margin: 20px auto; }
+  #preview #invoice_details th, #preview #invoice_details td {
+    padding: 5px;
+    text-align: right; }
+  #preview #invoice_details th:first-of-type, #preview #invoice_details td:first-of-type {
+    text-align: left; }
+  #preview #invoice_details tr {
+    background: #eee; }
+  #preview #invoice_details tr:nth-of-type(even) {
+    background: #ddd; }
+  #preview #invoice_details tfoot td {
+    font-weight: bold; }
+  #preview .footer td div {
+    font-size: 14pt;
+    text-align: center;
+    width: 540px; }
+  #preview .primary a[href^=tel], #preview .primary a[href^=tel]:hover {
+    color: #fff;
+    text-decoration: none; }
+  #preview #invoice_details .false_border {
+    padding: 0px; }
+  #preview .website_url {
+    text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */

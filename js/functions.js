@@ -83,6 +83,18 @@ function initialize_theme_picker(){
 
 		pick_theme();
 	});
+
+	$('.arrow.left').click(function(){
+		$('.theme_thumbnail:last-of-type').insertBefore( $('.theme_thumbnail:first-of-type') ) ;
+		$('.theme_thumbnails').css('left', parseFloat($('.theme_thumbnails').css('left').replace('px','')) - 120 + 'px' );
+		$('.theme_thumbnails').animate({'left': parseFloat($('.theme_thumbnails').css('left').replace('px','')) + 120 + 'px' },300);
+
+	});
+
+	$('.arrow.right').click(function(){
+		$('.theme_thumbnail:first-of-type').insertBefore( $('.theme_thumbnail:last-of-type') ) ;
+		$('.theme_thumbnails').css('left', parseFloat($('.theme_thumbnails').css('left').replace('px','')) + 120 + 'px' );
+		$('.theme_thumbnails').animate({'left': parseFloat($('.theme_thumbnails').css('left').replace('px','')) - 120 + 'px' },300);	});	
 }
 
 function pick_theme(){

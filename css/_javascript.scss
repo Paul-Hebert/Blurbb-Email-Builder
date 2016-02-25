@@ -1,3 +1,16 @@
+.arrow{
+	font-size:80pt;
+	cursor:pointer;
+
+	&.right{
+		float:right;
+	}
+
+	&.left{
+		float:left;
+	}
+}
+
 .close{
 	@include transition_mixin(all 300ms);
 	@include radius(50%);

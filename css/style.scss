@@ -131,6 +131,7 @@ header#main{
 	padding-top:100px;
 	background:$off-white;
 	min-height:100vh;
+	@extend .row;
 
 	section{
 		padding:20px 0px;
