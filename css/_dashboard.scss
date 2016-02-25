@@ -71,6 +71,10 @@
 			}
 		}
 	}
+
+	button, input:not([type=checkbox]), textarea, select{
+		width:100%;
+	}
 }
 
 .range-slider-wrapper{

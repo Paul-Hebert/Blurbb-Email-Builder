@@ -129,6 +129,12 @@ header#main{
 	padding-top:100px;
 	background:$off-white;
 	min-height:100vh;
+
+	section{
+		padding:20px 0px;
+		margin:20px 0px;
+		border-top:1px solid $subtle-color-1;
+	}
 }
 
 /***********************************************************************************************************************/

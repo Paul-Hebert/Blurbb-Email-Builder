@@ -214,7 +214,6 @@ label {
   display: block; }
 
 input:not([type=checkbox]):not([type=range]):not([type=submit]), textarea, select {
-  width: 100%;
   padding: 5px;
   margin: 5px auto;
   font-family: sans-serif;
@@ -240,7 +239,6 @@ select {
   cursor: pointer; }
 
 input[type=submit], button, .button {
-  width: 100%;
   padding: 20px;
   cursor: pointer;
   font-size: 16pt;
@@ -319,6 +317,8 @@ input[type=submit], button, .button {
         padding-bottom: 10px;
         margin-bottom: 10px;
         border-bottom: 1px solid #ccc; }
+  #dashboard button, #dashboard input:not([type=checkbox]), #dashboard textarea, #dashboard select {
+    width: 100%; }
 
 .range-slider-wrapper input {
   display: inline-block; }
@@ -542,6 +542,10 @@ header#main {
   padding-top: 100px;
   background: #f9f9f9;
   min-height: 100vh; }
+  .main_content section {
+    padding: 20px 0px;
+    margin: 20px 0px;
+    border-top: 1px solid #ddd; }
 
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

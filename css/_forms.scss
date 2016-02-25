@@ -4,7 +4,6 @@ label{
 }
 
 input:not([type=checkbox]):not([type=range]):not([type=submit]), textarea, select{
-	width:100%;
 	padding:5px;
 	margin:5px auto;
 	font-family: sans-serif;
@@ -35,7 +34,6 @@ select{
 }
 
 input[type=submit], button, .button{
-	width:100%;
 	padding:20px;
 	cursor:pointer;
 	font-size:16pt;

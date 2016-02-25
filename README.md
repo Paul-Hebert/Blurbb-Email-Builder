@@ -22,3 +22,4 @@ Planned features
 - Set image src to url
 - Make separate directories for major site areas. E.g. Builder, resources, support
 - More resources in resource page
+- Create a better color palette for the color picker UI

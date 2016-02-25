@@ -71,11 +71,9 @@ function initialize_submit_button(){
 }
 
 function initialize_theme_picker(){
-	theme_name = 'Mild_West';
+	theme_name = 'Mild West';
 
-	$('#' + theme_name).addClass('selected');
-	$('#theme_picker option').prop('selected','false').filter('[value="' + theme_name.replace(' ','_') + '"]').prop('selected', 'true');
-
+	$('.theme_thumbnail:first-of-type').addClass('selected');
 
 	$('#theme_picker').change(function(){
 		theme_name = $(this).val().replace(' ','_');
