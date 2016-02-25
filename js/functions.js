@@ -72,10 +72,6 @@ function initialize_submit_button(){
 }
 
 function initialize_theme_picker(){
-	theme_name = 'Mild West';
-
-	$('.theme_thumbnail:first-of-type').addClass('selected');
-
 	$('#theme_picker').change(function(){
 		theme_name = $(this).val().replace(' ','_');
 
@@ -315,7 +311,7 @@ function export_HTML() {
 function modal(heading,content){
 	$('body').append('<div class="modal background transparent"></div><div class="modal content transparent"></div>');
 
-	$('.modal.content').html('<h1 class="open tab">' + heading + '</h1><div class="close">x</div>' + content);		
+	$('.modal.content').html('<h1 class="open tab">' + heading + '</h1><div class="close">&#x2715;</div>' + content);		
 
 	setTimeout(function(){
 		$('.modal').removeClass('transparent');

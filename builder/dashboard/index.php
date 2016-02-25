@@ -21,7 +21,7 @@
       <form id="invoice_form" action="includes/utilities/send_mail.php" enctype='multipart/form-data'>
         <section>
           <h3 class="open">Profile</h3>
-          <div class="close">x</div>
+          <div class="close">&#x2715;</div>
 
 
           <fieldset>
@@ -48,7 +48,7 @@
 
         <section>
           <h3 class="open">Design</h3>
-          <div class="close">x</div>
+          <div class="close">&#x2715;</div>
           
           <fieldset>
             <?php
@@ -87,7 +87,7 @@
 
         <section>
           <h3 class="open">Content</h3>
-          <div class="close">x</div>
+          <div class="close">&#x2715;</div>
 
           <fieldset>
             <div class="subsection">
