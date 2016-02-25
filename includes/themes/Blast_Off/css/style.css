@@ -77,11 +77,11 @@
     width: 580px;
     margin: 0 auto;
     text-align: inherit; }
-  #preview table.row {
+  #preview table.email_row {
     padding: 0px;
     width: 100%;
     position: relative; }
-  #preview table.container table.row {
+  #preview table.container table.email_row {
     display: block; }
   #preview td.wrapper {
     padding: 10px 20px 0px 0px;
@@ -99,7 +99,7 @@
     padding-right: 10px; }
   #preview td.sub-column, #preview td.sub-columns {
     min-width: 0px; }
-  #preview table.row td.last,
+  #preview table.email_row td.last,
   #preview table.container td.last {
     padding-right: 0px; }
   #preview table.one {
@@ -438,7 +438,7 @@
       min-width: 0 !important; }
     #preview table[class="body"] .container {
       width: 95% !important; }
-    #preview table[class="body"] .row {
+    #preview table[class="body"] .email_row {
       width: 100% !important;
       display: block !important; }
     #preview table[class="body"] .wrapper {
@@ -555,7 +555,7 @@
   #preview .secondary {
     background: #736A6A;
     color: #fff; }
-  #preview table.row {
+  #preview table.email_row {
     padding: 20px; }
   #preview #invoice_details {
     margin: 20px auto; }

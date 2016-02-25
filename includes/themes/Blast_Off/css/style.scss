@@ -105,13 +105,13 @@
     text-align: inherit;
   }
 
-  table.row { 
+  table.email_row { 
     padding: 0px; 
     width: 100%;
     position: relative;
   }
 
-  table.container table.row {
+  table.container table.email_row {
     display: block;
   }
 
@@ -141,7 +141,7 @@
     min-width: 0px;
   }
 
-  table.row td.last,
+  table.email_row td.last,
   table.container td.last {
     padding-right: 0px;
   }
@@ -542,7 +542,7 @@
       width: 95% !important;
     }
 
-    table[class="body"] .row {
+    table[class="body"] .email_row {
       width: 100% !important;
       display: block !important;
     }
@@ -697,7 +697,7 @@
     color:#fff;
   }
 
-  table.row{
+  table.email_row{
     padding:20px;
   }
 

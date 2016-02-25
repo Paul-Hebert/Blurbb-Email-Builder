@@ -1,3 +1,15 @@
+#preview, #dashboard{
+	padding-top:$header-height;
+	height:100vh;
+	z-index:0;
+}
+
+#preview{
+	float:left;
+	width:60%;
+	overflow:scroll;
+}
+
 #dashboard{
 	width:40%;
 	overflow:scroll;
@@ -44,8 +56,6 @@
 
 			}
 		}
-
-
 
 		.close{
 			top:35px;

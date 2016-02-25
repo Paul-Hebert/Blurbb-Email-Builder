@@ -30,7 +30,7 @@
         <tr>
           <td>
 
-            <table class="row primary">
+            <table class="email_row primary">
               <tr>
                 <td align="center" valign="middle">
                   <a href="http://invoice-out.com/">
@@ -54,7 +54,7 @@
               </tr>
             </table>
 
-            <table class="row light">
+            <table class="email_row light">
               <tr>
                 <td>
                   <h2 class="heading1"><?php echo $heading1; ?></h2>
@@ -69,7 +69,7 @@
               </tr>
             </table>
 
-            <table class="row primary">
+            <table class="email_row primary">
               <tr>
                 <td>
                   <h2 class="heading2"><?php echo $heading2; ?></h2>
@@ -80,7 +80,7 @@
               </tr>
             </table>
 
-            <table class="row secondary footer">
+            <table class="email_row secondary footer">
               <tr>
                 <td valign="middle">
                   <div>
