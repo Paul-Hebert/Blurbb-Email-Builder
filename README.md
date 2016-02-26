@@ -13,7 +13,7 @@ Planned features
 
 - Inlined css
 - Click an email section to edit it
-- Add and remove email sections
+- Add and remove email sections (OOP js prototypes)
 - Loading icon in modal
 - Blurred modal background
 - One script for email build, export and send
@@ -23,3 +23,4 @@ Planned features
 - Make separate directories for major site areas. E.g. Builder, resources, support
 - More resources in resource page
 - Create a better color palette for the color picker UI
+- Add alignment options for content

@@ -6,10 +6,12 @@
     ?>
     
     <div class="main_content">
-    	<h1>Blurbb</h1>
-    	<h3>Making HTML Email Easy</h3>
+      <div class="col-lg-6 col-lg-offset-3">      
+      	<h1>Blurbb</h1>
+      	<h3>Making HTML Email Easy</h3>
 
-    	<a href='builder/' class="button">Get Started</a>
+      	<a href='builder/' class="button col-lg-12">Get Started</a>
+      </div>
     </div>
   </body>
 </html>
