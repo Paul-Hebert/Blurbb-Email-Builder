@@ -45,7 +45,7 @@
 			&:hover{
 				background:$interacting-color;
 
-				&:after{
+				&+ .fa-close{
 					background:$interacting-color;
 				}
 			}
@@ -57,8 +57,8 @@
 			}
 		}
 
-		.close{
-			top:35px;
+		.fa-close{
+			top:36px;
 		}
 
 		fieldset{

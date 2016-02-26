@@ -28,6 +28,8 @@ $(function(){
 /***********************************************************************************************************************/
 
 function initialize_dashboard(){
+	theme_name = window.location.href.split('?theme=')[1];
+
 	initialize_modular_sections();
 
 	initialize_submit_button();
@@ -52,8 +54,8 @@ function initialize_dashboard(){
 /***********************************************************************************************************************/
 
 function initialize_modular_sections(){
-	$('#dashboard .close, #dashboard h3').click(function(){
-		$(this).parent().children('.close').toggleClass('rotated');
+	$('#dashboard .fa-close, #dashboard h3').click(function(){
+		$(this).parent().children('.fa-close').toggleClass('rotated');
 		$(this).parent().children('h3').toggleClass('open');		
 		$(this).siblings('fieldset').toggleClass('hidden');
 	});
@@ -300,7 +302,7 @@ function readURL2(input) {
 /***********************************************************************************************************************/
 
 function export_HTML() {
-	modal('Code','<pre><img src="../../imgs/loading.png" class="loading"></pre>');
+	modal('Code','<pre><i class="fa fa-spinner</pre>');
 
     var request = $.ajax({
 	     type: "POST",
@@ -323,13 +325,13 @@ function export_HTML() {
 function modal(heading,content){
 	$('body').append('<div class="modal background transparent"></div><div class="modal content transparent"></div>');
 
-	$('.modal.content').html('<h1 class="open tab">' + heading + '</h1><div class="close">&#x2715;</div>' + content);		
+	$('.modal.content').html('<h1 class="open tab">' + heading + '</h1><i class="fa fa-close"></i>' + content);		
 
 	setTimeout(function(){
 		$('.modal').removeClass('transparent');
 	},1);
 	
-	$('.modal.background, .modal .tab:after, .modal .close').click(function(){
+	$('.modal.background, .modal .tab:after, .modal .fa-close').click(function(){
 		$('.modal').addClass('transparent');
 
 		setTimeout(function(){

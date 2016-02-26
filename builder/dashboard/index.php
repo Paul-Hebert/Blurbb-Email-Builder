@@ -19,10 +19,10 @@
           <h2>Email Dashboard</h1>
         </header>
 
-        <form id="invoice_form" action="includes/utilities/send_mail.php" enctype='multipart/form-data'>
+        <menu id="invoice_form" enctype='multipart/form-data'>
           <section>
             <h3 class="open">Profile</h3>
-            <div class="close">&#x2715;</div>
+            <i class="fa fa-close"></i>
 
 
             <fieldset>
@@ -49,7 +49,7 @@
 
           <section>
             <h3 class="open">Design</h3>
-            <div class="close">&#x2715;</div>
+            <i class="fa fa-close"></i>
             
             <fieldset>
               <?php
@@ -88,7 +88,7 @@
 
           <section>
             <h3 class="open">Content</h3>
-            <div class="close">&#x2715;</div>
+            <i class="fa fa-close"></i>
 
             <fieldset>
               <div class="subsection">
@@ -141,7 +141,7 @@
             <button id="export_HTML">Export HTML</button>
             <!--<input type="submit" value="Send Invoice">-->
           </section>
-        </form>
+        </menu>
       </div>
     </div>
   </body>

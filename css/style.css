@@ -1139,13 +1139,13 @@ input[type=submit], button, .button {
       transition: all 300ms; }
       #dashboard section h3:hover {
         background: #F78336; }
-        #dashboard section h3:hover:after {
+        #dashboard section h3:hover + .fa-close {
           background: #F78336; }
       #dashboard section h3.open {
         left: -2.5%;
         width: 102.5%; }
-    #dashboard section .close {
-      top: 35px; }
+    #dashboard section .fa-close {
+      top: 36px; }
     #dashboard section fieldset {
       border: 0px;
       padding: 20px;
@@ -1245,7 +1245,7 @@ input[type=submit], button, .button {
   .arrow.left {
     float: left; }
 
-.close {
+.fa-close {
   -o-transition: all 300ms;
   -ms-transition: all 300ms;
   -webkit-transition: all 300ms;
@@ -1254,16 +1254,15 @@ input[type=submit], button, .button {
   -ms-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  padding: 10px 12px;
   text-align: center;
   background: #E85520;
   cursor: pointer;
   color: #f9f9f9;
   position: absolute;
   right: 20px;
-  top: 20px; }
-  .close:hover {
+  top: 15px; }
+  .fa-close:hover {
     background: #F78336; }
 
 .hidden {
@@ -1285,6 +1284,7 @@ input[type=submit], button, .button {
 .modal.background {
   width: 100%;
   height: 100%;
+  top: 0%;
   padding: 50%;
   background: #222;
   opacity: .85;
@@ -1318,44 +1318,14 @@ input[type=submit], button, .button {
     padding: 10px 20px;
     position: fixed; }
 
-.loading {
+.fa.fa-spinner {
   position: absolute;
-  width: 10%;
-  left: 45%;
-  top: 40%; }
-
-@-webkit-keyframes rotating /* Safari and Chrome */ {
-  from {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  to {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-@keyframes rotating {
-  from {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  to {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-.rotating, .loading {
-  -webkit-animation: rotating 1.5s linear infinite;
-  -moz-animation: rotating 1.5s linear infinite;
-  -ms-animation: rotating 1.5s linear infinite;
-  -o-animation: rotating 1.5s linear infinite;
-  animation: rotating 1.5s linear infinite; }
+  width: 100%;
+  top: 40%;
+  text-align: center;
+  font-size: 48pt;
+  color: #ccc;
+  cursor: default; }
 
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
