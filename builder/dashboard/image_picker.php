@@ -1,7 +1,10 @@
             <?php echo '<div class="subsection image_picker" data-target="' . $include_data .'">'; ?>              
-                <label>Upload Your <?php echo $include_name; ?></label>
-                <input type='file' class="image_upload">
-                <input type="text" placeholder="http://www.mildwestdesigns.com/imgs/logo.png">
+                <label>Choose a Picture for your Your <?php echo $include_name; ?></label>
+                <input type='file'>
+                <input type="text" placeholder="http://www.mildwestdesigns.com/imgs/logo.png" class="hidden">
+
+                <span class="col-xs-6 input_toggle selected">Upload</span>
+                <span class="col-xs-6 input_toggle">Enter URL</span>
 
                 <div class="range-slider-wrapper">
                   <?php 

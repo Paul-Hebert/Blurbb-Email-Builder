@@ -1,5 +1,5 @@
     <?php
-      $title = 'Theme Picker';
+      $title = 'Theme Selection';
       $base_url = '../';
 
       include('../includes/page_sections/header.php');

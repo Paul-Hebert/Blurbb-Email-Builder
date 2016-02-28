@@ -13,6 +13,11 @@ $(function(){
 		modal( $(this).attr('data-heading'), $(this).children('.toggled_text').html() );
 	});
 
+	$('.input_toggle').click(function(){
+		$(this).parent().children('.input_toggle').toggleClass('selected');
+		$(this).siblings('input').toggleClass('hidden');
+	});
+
 	$('#theme_selection_button').click(function(){
 		window.location = 'dashboard/?theme=' + $('#theme_picker').val();
 	});
@@ -57,7 +62,7 @@ function initialize_modular_sections(){
 	$('#dashboard .fa-close, #dashboard h3').click(function(){
 		$(this).parent().children('.fa-close').toggleClass('rotated');
 		$(this).parent().children('h3').toggleClass('open');		
-		$(this).siblings('fieldset').toggleClass('hidden');
+		$(this).siblings('fieldset').toggleClass('hidden_height');
 	});
 }
 
@@ -153,7 +158,7 @@ function initialize_colorpickers(){
 		}
 	});
 
-	$('.colorpicker').addClass('hidden');
+	$('.colorpicker').addClass('hidden_height');
 
 
 	$('.color-swatch').each(function(){
@@ -163,8 +168,8 @@ function initialize_colorpickers(){
 				
 				$('#addedCSS').append('#email ' + css_targets[0] + '{' + css_targets[1] + ':' + $(this).attr('data-color') + '}');
 				
-				if(! $(this).siblings('p').children('.colorpicker').hasClass('hidden') ){
-					$(this).siblings('p').children('.colorpicker').addClass('hidden')
+				if(! $(this).siblings('p').children('.colorpicker').hasClass('hidden_height') ){
+					$(this).siblings('p').children('.colorpicker').addClass('hidden_height')
 				}
 
 				$(this).siblings('.selected').removeClass('selected');
@@ -172,7 +177,7 @@ function initialize_colorpickers(){
 			});
 		} else{
 			$(this).click(function(){
-				$(this).siblings('p').children('.colorpicker').toggleClass('hidden');
+				$(this).siblings('p').children('.colorpicker').toggleClass('hidden_height');
 				$(this).siblings('.selected').removeClass('selected');
 				$(this).addClass('selected');
 			})
@@ -253,7 +258,7 @@ function submit_invoice() {
   		 	copy_me: checked
   		 },
 	     success: function() {
-			modal('Success','<p>Your email has been sent. Sit back and wait to get paid!</p><p>If you do not receive payment make sure to follow up. It\'s possible this email was blocked by a spam filter.');			
+			modal('Success','<p>Your email has been sent.</p><p>If you do not receive payment make sure to follow up. It\'s possible this email was blocked by a spam filter.');			
 		}
 	});
 
@@ -306,7 +311,11 @@ function readURL2(input) {
 /***********************************************************************************************************************/
 
 function export_HTML() {
-	modal('Code','<pre><i class="fa fa-spinner</pre>');
+	modal('Code','<span id="download_HTML">Download HTML</span><pre><i class="fa fa-spinner</pre>');
+
+	$('#download_HTML').click(function(){
+		download('email.html', $('.modal pre').text() );
+	});
 
     var request = $.ajax({
 	     type: "POST",
@@ -326,10 +335,25 @@ function export_HTML() {
 	});
 }
 
+function download(filename, text) {
+    var pom = document.createElement('a');
+    pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    pom.setAttribute('download', filename);
+
+    if (document.createEvent) {
+        var event = document.createEvent('MouseEvents');
+        event.initEvent('click', true, true);
+        pom.dispatchEvent(event);
+    }
+    else {
+        pom.click();
+    }
+}
+
 function modal(heading,content){
 	$('body').append('<div class="modal background transparent"></div><div class="modal content transparent"></div>');
 
-	$('.modal.content').html('<h1 class="open tab">' + heading + '</h1><i class="fa fa-close"></i>' + content);		
+	$('.modal.content').html('<h1>' + heading + '</h1><i class="fa fa-close"></i>' + content);		
 
 	setTimeout(function(){
 		$('.modal').removeClass('transparent');

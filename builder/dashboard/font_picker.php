@@ -4,7 +4,7 @@
               <span class="icon">
                 ?
               </span>
-              <div class="toggled_text hidden">
+              <div class="toggled_text">
                 <p>Web safe fonts have the best chance of displaying correctly for the email's recipient.</p>
                 <a href="http://www.fonts.com/content/learning/fyti/using-type-tools/fonts-on-the-web" target="_BLANK">Read More About Web Safe Fonts</a>
               </div>

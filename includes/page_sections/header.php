@@ -19,7 +19,7 @@
         ?>
     </head>
 
-    <body>
+    <?php echo '<body id="' . strtolower( str_replace(' ', '_', $title) ) . '">'; ?>
         <header id="main">
         	<?php 
                 include($base_url . 'includes/page_sections/nav.php'); 

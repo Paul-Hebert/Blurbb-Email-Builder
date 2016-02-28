@@ -1066,7 +1066,9 @@ input:not([type=checkbox]):not([type=range]):not([type=submit]), textarea, selec
   -o-border-radius: 6px;
   -ms-border-radius: 6px;
   -webkit-border-radius: 6px;
-  border-radius: 6px; }
+  border-radius: 6px;
+  position: relative;
+  z-index: 10; }
   input:not([type=checkbox]):not([type=range]):not([type=submit]) option, textarea option, select option {
     padding: 5px; }
   input:not([type=checkbox]):not([type=range]):not([type=submit]):focus, textarea:focus, select:focus {
@@ -1237,6 +1239,32 @@ input[type=submit], button, .button {
         padding: 5px 0px;
         border: 1px solid #ccc; }
 
+.toggled_text {
+  display: none; }
+
+.input_toggle {
+  text-align: center;
+  background: #333338;
+  padding: 8px;
+  padding-top: 10px;
+  position: relative;
+  top: -10px;
+  z-index: 0;
+  cursor: pointer;
+  color: #f9f9f9; }
+  .input_toggle:first-of-type {
+    -o-border-radius: 0px 0px 0px 5px;
+    -ms-border-radius: 0px 0px 0px 5px;
+    -webkit-border-radius: 0px 0px 0px 5px;
+    border-radius: 0px 0px 0px 5px; }
+  .input_toggle:last-of-type {
+    -o-border-radius: 0px 0px 5px 0px;
+    -ms-border-radius: 0px 0px 5px 0px;
+    -webkit-border-radius: 0px 0px 5px 0px;
+    border-radius: 0px 0px 5px 0px; }
+  .input_toggle.selected {
+    background: #E85520; }
+
 .arrow {
   font-size: 80pt;
   cursor: pointer; }
@@ -1266,6 +1294,9 @@ input[type=submit], button, .button {
     background: #F78336; }
 
 .hidden {
+  display: none; }
+
+.hidden_height {
   height: 0px !important;
   padding-top: 0px !important;
   padding-bottom: 0px !important;
@@ -1317,6 +1348,18 @@ input[type=submit], button, .button {
     background: #ddd;
     padding: 10px 20px;
     position: fixed; }
+  .modal.content .fa-close {
+    position: fixed;
+    top: 27%;
+    right: 21%; }
+  .modal.content span {
+    position: fixed;
+    top: 28%;
+    right: 25%;
+    cursor: pointer;
+    color: #E85520; }
+    .modal.content span:hover {
+      color: #F78336; }
 
 .fa.fa-spinner {
   position: absolute;
@@ -3420,7 +3463,7 @@ body {
   -ms-text-size-adjust: 100%;
   margin: 0;
   padding: 0;
-  background: #222; }
+  background: #f9f9f9; }
 
 h1, h2, h3 {
   font-family: 'Roboto Slab';

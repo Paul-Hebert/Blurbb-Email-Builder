@@ -11,6 +11,8 @@ input:not([type=checkbox]):not([type=range]):not([type=submit]), textarea, selec
 	border:1px solid $subtle-color-2;
 	background:$off-white;
 	@include radius(6px);
+	position:relative;
+	z-index:10;
 
 	option{
 		padding:5px;
