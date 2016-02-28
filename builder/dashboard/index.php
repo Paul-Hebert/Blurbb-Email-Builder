@@ -26,16 +26,12 @@
 
 
             <fieldset>
-              <div class="subsection">
-                <label for="logo_input">Upload Your Logo</label>
-                <input type='file' name="logo_input" id="logo_input">
+                <?php
+                  $include_name = 'Logo';
+                  $include_data = '#logo';
 
-                <div class="range-slider-wrapper">
-                  <label for="logo_size">Logo size</label>
-                  <input type="range" min="20" max="580" data-css="#logo-width" value="0">
-                  <input type="text" value="20"><span> px</span>
-                </div>
-              </div>
+                  include('image_picker.php')
+                ?>
 
               <div class="subsection">
                 <label for="business_name">Business Name</label>
@@ -59,27 +55,27 @@
 
                 echo '<div class="subsection">';
                   $include_name = 'Primary background';
-                  $include_css = ['.primary','background'];
+                  $include_data = ['.primary','background'];
                   include('color_picker.php');
 
                   $include_name = 'Primary text color';
-                  $include_css = ['.primary','color'];
+                  $include_data = ['.primary','color'];
                   include('color_picker.php');
                 echo '</div>';
 
                 echo '<div class="subsection">';
                   $include_name = 'Secondary background';
-                  $include_css = ['.secondary','background'];
+                  $include_data = ['.secondary','background'];
                   include('color_picker.php');
 
                   $include_name = 'Secondary text color';
-                  $include_css = ['.secondary','color'];
+                  $include_data = ['.secondary','color'];
                   include('color_picker.php');                
                 echo '</div>';
 
                 echo '<div class="subsection">';
                   $include_name = 'Body background';
-                  $include_css = ['body','background'];
+                  $include_data = ['table.body','background'];
                   include('color_picker.php');
                 echo '</div>';
               ?>

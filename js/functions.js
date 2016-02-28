@@ -147,7 +147,7 @@ function initialize_colorpickers(){
 	$('.colorpicker-wrapper').ColorPicker({
 		flat: true,
 		onChange: function (hsb, hex, rgb) {
-			var css_targets = $(this).parent().parent().attr('data-css').split('-');
+			var css_targets = $(this).parent().parent().attr('data-target').split('-');
 
 			$('#addedCSS').append('#email ' + css_targets[0] + '{' + css_targets[1] + ': #' + hex + ';}');
 		}
@@ -159,7 +159,7 @@ function initialize_colorpickers(){
 	$('.color-swatch').each(function(){
 		if ( $(this).attr('data-color') != 'picker' ){
 			$(this).css('background',$(this).attr('data-color')).click( function(){
-				var css_targets = $(this).parent().attr('data-css').split('-');
+				var css_targets = $(this).parent().attr('data-target').split('-');
 				
 				$('#addedCSS').append('#email ' + css_targets[0] + '{' + css_targets[1] + ':' + $(this).attr('data-color') + '}');
 				
@@ -181,8 +181,12 @@ function initialize_colorpickers(){
 }
 
 function initialize_logo_input(){
-	$("#logo_input").change(function(){
-	    readURL( this );
+	$(".image_picker input[type=file]").change(function(){
+	    readURL( this , $(this).parent().attr('data-target') );
+	});
+
+	$(".image_picker input[type=text]").change(function(){
+	    $( $(this).parent().attr('data-target') ).attr('src', $(this).val()); 
 	});
 }
 
@@ -190,7 +194,7 @@ function initialize_range_sliders(){
 	$('input[type=range]').change(function(){
 		var range_value = $(this).val();
 
-		var css_targets = $(this).attr('data-css').split('-');
+		var css_targets = $(this).attr('data-target').split('-');
 
 		$( css_targets[0] ).css( css_targets[1], range_value + 'px' );
 
@@ -259,12 +263,12 @@ function submit_invoice() {
 }
 
 
-function readURL(input) {
+function readURL(input,target) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
         reader.onload = function (e) {
-            $('#logo').attr('src', e.target.result);
+            $(target).attr('src', e.target.result);
         }
 
         reader.readAsDataURL(input.files[0]);

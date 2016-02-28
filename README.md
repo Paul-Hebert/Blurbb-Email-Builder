@@ -21,8 +21,9 @@ Planned features
 - Create a better color palette for the color picker UI
 - Add alignment options for content
 
-Issues
-======
+Issues and Bugs
+===============
 
 - Extra padding around the body
 - Awkward theme transition
+- Where to host images? When exporting HTML how will the user know to host and link their images?
