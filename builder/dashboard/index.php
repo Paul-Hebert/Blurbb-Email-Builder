@@ -8,7 +8,7 @@
       include($base_url . 'includes/themes/' . $theme . '/settings.php');
     ?>
     <div class="row">
-      <div id="preview" class="col-lg-8">
+      <div id="email" class="col-lg-8">
         <?php 
           include($base_url . 'includes/themes/' . $theme . '/index.php');
         ?>
@@ -32,7 +32,7 @@
 
                 <div class="range-slider-wrapper">
                   <label for="logo_size">Logo size</label>
-                  <input type="range" min="20" max="580" data-css="#logo_preview-width" value="0">
+                  <input type="range" min="20" max="580" data-css="#logo-width" value="0">
                   <input type="text" value="20"><span> px</span>
                 </div>
               </div>
@@ -79,7 +79,7 @@
 
                 echo '<div class="subsection">';
                   $include_name = 'Body background';
-                  $include_css = ['table.body','background'];
+                  $include_css = ['body','background'];
                   include('color_picker.php');
                 echo '</div>';
               ?>

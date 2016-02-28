@@ -14,13 +14,15 @@ Planned features
 - Inlined css
 - Click an email section to edit it
 - Add and remove email sections (OOP js prototypes)
-- Loading icon in modal
-- Blurred modal background
+- Blurred modal background (Not good enough support. Might need to rethink)
 - One script for email build, export and send
 - Format code for export (format text and format code modal)
-- Modal close button
-- Set image src to url
-- Make separate directories for major site areas. E.g. Builder, resources, support
 - More resources in resource page
 - Create a better color palette for the color picker UI
 - Add alignment options for content
+
+Issues
+======
+
+- Extra padding around the body
+- Awkward theme transition

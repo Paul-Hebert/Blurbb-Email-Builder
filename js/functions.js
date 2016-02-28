@@ -107,7 +107,7 @@ function pick_theme(){
 		var old_spreadsheet = $('#csv_holder').html();
 
 		if ( $('#logo_input').val() !== "" ){
-			var logo_src = $('#logo_preview').attr('src');
+			var logo_src = $('#logo').attr('src');
 		} else{
 			var logo_src = null;
 		}
@@ -125,14 +125,14 @@ function pick_theme(){
 	  		 	logo: logo_src
 	  		 },
   		     success: function(data) {
-  		     		$('#preview').css({'display':'none','opacity':'0'});
+  		     		$('#email').css({'display':'none','opacity':'0'});
   		     		setTimeout(function(){
-			            $('#preview').html(data);
+			            $('#email').html(data);
 			            $('#csv_holder').html(old_spreadsheet);
-			            $('#preview').css('display','block');
+			            $('#email').css('display','block');
 
 			            setTimeout(function(){
-	  		     			$('#preview').animate({'opacity':'1'},300);
+	  		     			$('#email').animate({'opacity':'1'},300);
 	  		     		},300);
   		     		},300);
 		     }
@@ -149,7 +149,7 @@ function initialize_colorpickers(){
 		onChange: function (hsb, hex, rgb) {
 			var css_targets = $(this).parent().parent().attr('data-css').split('-');
 
-			$('#addedCSS').append('#preview ' + css_targets[0] + '{' + css_targets[1] + ': #' + hex + ';}');
+			$('#addedCSS').append('#email ' + css_targets[0] + '{' + css_targets[1] + ': #' + hex + ';}');
 		}
 	});
 
@@ -161,7 +161,7 @@ function initialize_colorpickers(){
 			$(this).css('background',$(this).attr('data-color')).click( function(){
 				var css_targets = $(this).parent().attr('data-css').split('-');
 				
-				$('#addedCSS').append('#preview ' + css_targets[0] + '{' + css_targets[1] + ':' + $(this).attr('data-color') + '}');
+				$('#addedCSS').append('#email ' + css_targets[0] + '{' + css_targets[1] + ':' + $(this).attr('data-color') + '}');
 				
 				if(! $(this).siblings('p').children('.colorpicker').hasClass('hidden') ){
 					$(this).siblings('p').children('.colorpicker').addClass('hidden')
@@ -218,7 +218,7 @@ function initialize_font_selector(){
 	})
 
 	$('#font').change(function(){
-		$('#preview *').css('font-family', $(this).val());
+		$('#email *').css('font-family', $(this).val());
 		$(this).css('font-family', $(this).val());
 	});
 }
@@ -240,7 +240,7 @@ function submit_invoice() {
 	     type: "POST",
 	     url: '../../includes/utilities/send_mail.php',
   		 data: { 
-  		 	message: '<div id="preview">' + $('#preview').html() + '</div>', 
+  		 	message: '<div id="email">' + $('#email').html() + '</div>', 
   		 	theme: theme_name,
   		 	addedCSS: $('#addedCSS').text(),
   		 	subject: $('#subject').val(), 
@@ -264,7 +264,7 @@ function readURL(input) {
         var reader = new FileReader();
 
         reader.onload = function (e) {
-            $('#logo_preview').attr('src', e.target.result);
+            $('#logo').attr('src', e.target.result);
         }
 
         reader.readAsDataURL(input.files[0]);
@@ -308,7 +308,7 @@ function export_HTML() {
 	     type: "POST",
 	     url: '../../includes/utilities/return_html.php',
   		 data: { 
-  		 	message: '<div id="preview">' + $('#preview').html() + '</div>', 
+  		 	message: '<div id="email">' + $('#email').html() + '</div>', 
   		 	theme: theme_name,
   		 	addedCSS: $('#addedCSS').text()
   		 },

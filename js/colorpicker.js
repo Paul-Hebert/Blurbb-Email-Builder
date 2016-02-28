@@ -22,7 +22,7 @@
 				onChange: function () {},
 				onSubmit: function () {},
 				color: 'ff0000',
-				livePreview: true,
+				liveemail: true,
 				flat: false
 			},
 			fillRGBFields = function  (hsb, cal) {
@@ -64,7 +64,7 @@
 					return false;
 				}
 				var cal = $(this).parent().parent();
-				if (cal.data('colorpicker').livePreview === true) {
+				if (cal.data('colorpicker').liveemail === true) {
 					change.apply(this);
 				}
 			},
@@ -112,14 +112,14 @@
 					y: ev.pageY,
 					field: field,
 					val: parseInt(field.val(), 10),
-					preview: $(this).parent().parent().data('colorpicker').livePreview					
+					email: $(this).parent().parent().data('colorpicker').liveemail					
 				};
 				$(document).bind('mouseup', current, upIncrement);
 				$(document).bind('mousemove', current, moveIncrement);
 			},
 			moveIncrement = function (ev) {
 				ev.data.field.val(Math.max(0, Math.min(ev.data.max, parseInt(ev.data.val + ev.pageY - ev.data.y, 10))));
-				if (ev.data.preview) {
+				if (ev.data.email) {
 					change.apply(ev.data.field.get(0), [true]);
 				}
 				return false;
@@ -136,7 +136,7 @@
 					cal: $(this).parent(),
 					y: $(this).offset().top
 				};
-				current.preview = current.cal.data('colorpicker').livePreview;
+				current.email = current.cal.data('colorpicker').liveemail;
 				$(document).bind('mouseup', current, upHue);
 				$(document).bind('mousemove', current, moveHue);
 			},
@@ -147,7 +147,7 @@
 						.eq(4)
 						.val(parseInt(360*(150 - Math.max(0,Math.min(150,(ev.pageY - ev.data.y))))/150, 10))
 						.get(0),
-					[ev.data.preview]
+					[ev.data.email]
 				);
 				return false;
 			},
@@ -163,7 +163,7 @@
 					cal: $(this).parent(),
 					pos: $(this).offset()
 				};
-				current.preview = current.cal.data('colorpicker').livePreview;
+				current.email = current.cal.data('colorpicker').liveemail;
 				$(document).bind('mouseup', current, upSelector);
 				$(document).bind('mousemove', current, moveSelector);
 			},
@@ -177,7 +177,7 @@
 						.eq(5)
 						.val(parseInt(100*(Math.max(0,Math.min(150,(ev.pageX - ev.data.pos.left))))/150, 10))
 						.get(0),
-					[ev.data.preview]
+					[ev.data.email]
 				);
 				return false;
 			},

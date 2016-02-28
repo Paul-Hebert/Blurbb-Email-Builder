@@ -1,30 +1,30 @@
-#preview {
+#email {
   /* http://meyerweb.com/eric/tools/css/reset/ 
      v2.0 | 20110126
      License: none (public domain)
   */
   /* HTML5 display-role reset for older browsers */ }
-  #preview html, #preview body, #preview div, #preview span, #preview applet, #preview object, #preview iframe, #preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview h6, #preview p, #preview blockquote, #preview pre, #preview a, #preview abbr, #preview acronym, #preview address, #preview big, #preview cite, #preview code, #preview del, #preview dfn, #preview em, #preview img, #preview ins, #preview kbd, #preview q, #preview s, #preview samp, #preview small, #preview strike, #preview strong, #preview sub, #preview sup, #preview tt, #preview var, #preview b, #preview u, #preview i, #preview center, #preview dl, #preview dt, #preview dd, #preview ol, #preview ul, #preview li, #preview fieldset, #preview form, #preview label, #preview legend, #preview table, #preview caption, #preview tbody, #preview tfoot, #preview thead, #preview tr, #preview th, #preview td, #preview article, #preview aside, #preview canvas, #preview details, #preview embed, #preview figure, #preview figcaption, #preview footer, #preview header, #preview hgroup, #preview menu, #preview nav, #preview output, #preview ruby, #preview section, #preview summary, #preview time, #preview mark, #preview audio, #preview video {
+  #email html, #email body, #email div, #email span, #email applet, #email object, #email iframe, #email h1, #email h2, #email h3, #email h4, #email h5, #email h6, #email p, #email blockquote, #email pre, #email a, #email abbr, #email acronym, #email address, #email big, #email cite, #email code, #email del, #email dfn, #email em, #email img, #email ins, #email kbd, #email q, #email s, #email samp, #email small, #email strike, #email strong, #email sub, #email sup, #email tt, #email var, #email b, #email u, #email i, #email center, #email dl, #email dt, #email dd, #email ol, #email ul, #email li, #email fieldset, #email form, #email label, #email legend, #email table, #email caption, #email tbody, #email tfoot, #email thead, #email tr, #email th, #email td, #email article, #email aside, #email canvas, #email details, #email embed, #email figure, #email figcaption, #email footer, #email header, #email hgroup, #email menu, #email nav, #email output, #email ruby, #email section, #email summary, #email time, #email mark, #email audio, #email video {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     vertical-align: baseline; }
-  #preview article, #preview aside, #preview details, #preview figcaption, #preview figure, #preview footer, #preview header, #preview hgroup, #preview menu, #preview nav, #preview section {
+  #email article, #email aside, #email details, #email figcaption, #email figure, #email footer, #email header, #email hgroup, #email menu, #email nav, #email section {
     display: block; }
-  #preview body {
+  #email body {
     line-height: 1; }
-  #preview ol, #preview ul {
+  #email ol, #email ul {
     list-style: none; }
-  #preview blockquote, #preview q {
+  #email blockquote, #email q {
     quotes: none; }
-  #preview blockquote:before, #preview blockquote:after {
+  #email blockquote:before, #email blockquote:after {
     content: '';
     content: none; }
-  #preview q:before, #preview q:after {
+  #email q:before, #email q:after {
     content: '';
     content: none; }
-  #preview table {
+  #email table {
     border-collapse: collapse;
     border-spacing: 0; }
 
@@ -32,7 +32,7 @@
 * Ink v1.0.5 - Copyright 2013 ZURB Inc        *
 **********************************************/
 /* Client-specific Styles & Reset */
-#preview {
+#email {
   /* Responsive Grid */
   /* Block Grid */
   /* Alignment & Visibility Classes */
@@ -41,30 +41,30 @@
   /* Buttons */
   /* Outlook First */
   /*  Media Queries */ }
-  #preview #outlook a {
+  #email #outlook a {
     padding: 0; }
-  #preview body {
+  #email body {
     width: 100% !important;
     min-width: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     margin: 0;
     padding: 0; }
-  #preview .ExternalClass {
+  #email .ExternalClass {
     width: 100%; }
-  #preview .ExternalClass,
-  #preview .ExternalClass p,
-  #preview .ExternalClass span,
-  #preview .ExternalClass font,
-  #preview .ExternalClass td,
-  #preview .ExternalClass div {
+  #email .ExternalClass,
+  #email .ExternalClass p,
+  #email .ExternalClass span,
+  #email .ExternalClass font,
+  #email .ExternalClass td,
+  #email .ExternalClass div {
     line-height: 100%; }
-  #preview #backgroundTable {
+  #email #backgroundTable {
     margin: 0;
     padding: 0;
     width: 100% !important;
     line-height: 100% !important; }
-  #preview img {
+  #email img {
     outline: none;
     text-decoration: none;
     -ms-interpolation-mode: bicubic;
@@ -73,303 +73,303 @@
     float: left;
     clear: both;
     display: block; }
-  #preview center {
+  #email center {
     width: 100%;
     min-width: 580px; }
-  #preview a {
+  #email a {
     text-decoration: none; }
-  #preview a img {
+  #email a img {
     border: none; }
-  #preview p {
+  #email p {
     margin: 0 0 0 10px; }
-  #preview table {
+  #email table {
     border-spacing: 0;
     border-collapse: collapse; }
-  #preview td {
+  #email td {
     word-break: break-word;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto;
     border-collapse: collapse !important; }
-  #preview table, #preview tr, #preview td {
+  #email table, #email tr, #email td {
     padding: 0;
     vertical-align: top;
     text-align: left; }
-  #preview hr {
+  #email hr {
     color: #d9d9d9;
     background-color: #d9d9d9;
     height: 1px;
     border: none; }
-  #preview table.body {
+  #email table.body {
     height: 100%;
     width: 100%; }
-  #preview table.container {
+  #email table.container {
     width: 580px;
     margin: 0 auto;
     text-align: inherit; }
-  #preview table.email_row {
+  #email table.email_row {
     padding: 0px;
     width: 100%;
     position: relative; }
-  #preview table.container table.email_row {
+  #email table.container table.email_row {
     display: block; }
-  #preview td.wrapper {
+  #email td.wrapper {
     padding: 10px 20px 0px 0px;
     position: relative; }
-  #preview table.columns,
-  #preview table.column {
+  #email table.columns,
+  #email table.column {
     margin: 0 auto; }
-  #preview table.columns td,
-  #preview table.column td {
+  #email table.columns td,
+  #email table.column td {
     padding: 0px 0px 10px; }
-  #preview table.columns td.sub-columns,
-  #preview table.column td.sub-columns,
-  #preview table.columns td.sub-column,
-  #preview table.column td.sub-column {
+  #email table.columns td.sub-columns,
+  #email table.column td.sub-columns,
+  #email table.columns td.sub-column,
+  #email table.column td.sub-column {
     padding-right: 10px; }
-  #preview td.sub-column, #preview td.sub-columns {
+  #email td.sub-column, #email td.sub-columns {
     min-width: 0px; }
-  #preview table.email_row td.last,
-  #preview table.container td.last {
+  #email table.email_row td.last,
+  #email table.container td.last {
     padding-right: 0px; }
-  #preview table.one {
+  #email table.one {
     width: 30px; }
-  #preview table.two {
+  #email table.two {
     width: 80px; }
-  #preview table.three {
+  #email table.three {
     width: 130px; }
-  #preview table.four {
+  #email table.four {
     width: 180px; }
-  #preview table.five {
+  #email table.five {
     width: 230px; }
-  #preview table.six {
+  #email table.six {
     width: 280px; }
-  #preview table.seven {
+  #email table.seven {
     width: 330px; }
-  #preview table.eight {
+  #email table.eight {
     width: 380px; }
-  #preview table.nine {
+  #email table.nine {
     width: 430px; }
-  #preview table.ten {
+  #email table.ten {
     width: 480px; }
-  #preview table.eleven {
+  #email table.eleven {
     width: 530px; }
-  #preview table.twelve {
+  #email table.twelve {
     width: 580px; }
-  #preview table.one center {
+  #email table.one center {
     min-width: 30px; }
-  #preview table.two center {
+  #email table.two center {
     min-width: 80px; }
-  #preview table.three center {
+  #email table.three center {
     min-width: 130px; }
-  #preview table.four center {
+  #email table.four center {
     min-width: 180px; }
-  #preview table.five center {
+  #email table.five center {
     min-width: 230px; }
-  #preview table.six center {
+  #email table.six center {
     min-width: 280px; }
-  #preview table.seven center {
+  #email table.seven center {
     min-width: 330px; }
-  #preview table.eight center {
+  #email table.eight center {
     min-width: 380px; }
-  #preview table.nine center {
+  #email table.nine center {
     min-width: 430px; }
-  #preview table.ten center {
+  #email table.ten center {
     min-width: 480px; }
-  #preview table.eleven center {
+  #email table.eleven center {
     min-width: 530px; }
-  #preview table.twelve center {
+  #email table.twelve center {
     min-width: 580px; }
-  #preview table.one .panel center {
+  #email table.one .panel center {
     min-width: 10px; }
-  #preview table.two .panel center {
+  #email table.two .panel center {
     min-width: 60px; }
-  #preview table.three .panel center {
+  #email table.three .panel center {
     min-width: 110px; }
-  #preview table.four .panel center {
+  #email table.four .panel center {
     min-width: 160px; }
-  #preview table.five .panel center {
+  #email table.five .panel center {
     min-width: 210px; }
-  #preview table.six .panel center {
+  #email table.six .panel center {
     min-width: 260px; }
-  #preview table.seven .panel center {
+  #email table.seven .panel center {
     min-width: 310px; }
-  #preview table.eight .panel center {
+  #email table.eight .panel center {
     min-width: 360px; }
-  #preview table.nine .panel center {
+  #email table.nine .panel center {
     min-width: 410px; }
-  #preview table.ten .panel center {
+  #email table.ten .panel center {
     min-width: 460px; }
-  #preview table.eleven .panel center {
+  #email table.eleven .panel center {
     min-width: 510px; }
-  #preview table.twelve .panel center {
+  #email table.twelve .panel center {
     min-width: 560px; }
-  #preview .body .columns td.one,
-  #preview .body .column td.one {
+  #email .body .columns td.one,
+  #email .body .column td.one {
     width: 8.333333%; }
-  #preview .body .columns td.two,
-  #preview .body .column td.two {
+  #email .body .columns td.two,
+  #email .body .column td.two {
     width: 16.666666%; }
-  #preview .body .columns td.three,
-  #preview .body .column td.three {
+  #email .body .columns td.three,
+  #email .body .column td.three {
     width: 25%; }
-  #preview .body .columns td.four,
-  #preview .body .column td.four {
+  #email .body .columns td.four,
+  #email .body .column td.four {
     width: 33.333333%; }
-  #preview .body .columns td.five,
-  #preview .body .column td.five {
+  #email .body .columns td.five,
+  #email .body .column td.five {
     width: 41.666666%; }
-  #preview .body .columns td.six,
-  #preview .body .column td.six {
+  #email .body .columns td.six,
+  #email .body .column td.six {
     width: 50%; }
-  #preview .body .columns td.seven,
-  #preview .body .column td.seven {
+  #email .body .columns td.seven,
+  #email .body .column td.seven {
     width: 58.333333%; }
-  #preview .body .columns td.eight,
-  #preview .body .column td.eight {
+  #email .body .columns td.eight,
+  #email .body .column td.eight {
     width: 66.666666%; }
-  #preview .body .columns td.nine,
-  #preview .body .column td.nine {
+  #email .body .columns td.nine,
+  #email .body .column td.nine {
     width: 75%; }
-  #preview .body .columns td.ten,
-  #preview .body .column td.ten {
+  #email .body .columns td.ten,
+  #email .body .column td.ten {
     width: 83.333333%; }
-  #preview .body .columns td.eleven,
-  #preview .body .column td.eleven {
+  #email .body .columns td.eleven,
+  #email .body .column td.eleven {
     width: 91.666666%; }
-  #preview .body .columns td.twelve,
-  #preview .body .column td.twelve {
+  #email .body .columns td.twelve,
+  #email .body .column td.twelve {
     width: 100%; }
-  #preview td.offset-by-one {
+  #email td.offset-by-one {
     padding-left: 50px; }
-  #preview td.offset-by-two {
+  #email td.offset-by-two {
     padding-left: 100px; }
-  #preview td.offset-by-three {
+  #email td.offset-by-three {
     padding-left: 150px; }
-  #preview td.offset-by-four {
+  #email td.offset-by-four {
     padding-left: 200px; }
-  #preview td.offset-by-five {
+  #email td.offset-by-five {
     padding-left: 250px; }
-  #preview td.offset-by-six {
+  #email td.offset-by-six {
     padding-left: 300px; }
-  #preview td.offset-by-seven {
+  #email td.offset-by-seven {
     padding-left: 350px; }
-  #preview td.offset-by-eight {
+  #email td.offset-by-eight {
     padding-left: 400px; }
-  #preview td.offset-by-nine {
+  #email td.offset-by-nine {
     padding-left: 450px; }
-  #preview td.offset-by-ten {
+  #email td.offset-by-ten {
     padding-left: 500px; }
-  #preview td.offset-by-eleven {
+  #email td.offset-by-eleven {
     padding-left: 550px; }
-  #preview td.expander {
+  #email td.expander {
     visibility: hidden;
     width: 0px;
     padding: 0 !important; }
-  #preview table.columns .text-pad,
-  #preview table.column .text-pad {
+  #email table.columns .text-pad,
+  #email table.column .text-pad {
     padding-left: 10px;
     padding-right: 10px; }
-  #preview table.columns .left-text-pad,
-  #preview table.columns .text-pad-left,
-  #preview table.column .left-text-pad,
-  #preview table.column .text-pad-left {
+  #email table.columns .left-text-pad,
+  #email table.columns .text-pad-left,
+  #email table.column .left-text-pad,
+  #email table.column .text-pad-left {
     padding-left: 10px; }
-  #preview table.columns .right-text-pad,
-  #preview table.columns .text-pad-right,
-  #preview table.column .right-text-pad,
-  #preview table.column .text-pad-right {
+  #email table.columns .right-text-pad,
+  #email table.columns .text-pad-right,
+  #email table.column .right-text-pad,
+  #email table.column .text-pad-right {
     padding-right: 10px; }
-  #preview .block-grid {
+  #email .block-grid {
     width: 100%;
     max-width: 580px; }
-  #preview .block-grid td {
+  #email .block-grid td {
     display: inline-block;
     padding: 10px; }
-  #preview .two-up td {
+  #email .two-up td {
     width: 270px; }
-  #preview .three-up td {
+  #email .three-up td {
     width: 173px; }
-  #preview .four-up td {
+  #email .four-up td {
     width: 125px; }
-  #preview .five-up td {
+  #email .five-up td {
     width: 96px; }
-  #preview .six-up td {
+  #email .six-up td {
     width: 76px; }
-  #preview .seven-up td {
+  #email .seven-up td {
     width: 62px; }
-  #preview .eight-up td {
+  #email .eight-up td {
     width: 52px; }
-  #preview table.center, #preview td.center {
+  #email table.center, #email td.center {
     text-align: center; }
-  #preview h1.center,
-  #preview h2.center,
-  #preview h2.center,
-  #preview h4.center,
-  #preview h5.center,
-  #preview h6.center {
+  #email h1.center,
+  #email h2.center,
+  #email h2.center,
+  #email h4.center,
+  #email h5.center,
+  #email h6.center {
     text-align: center; }
-  #preview span.center {
+  #email span.center {
     display: block;
     width: 100%;
     text-align: center; }
-  #preview img.center {
+  #email img.center {
     margin: 0 auto;
     float: none; }
-  #preview .show-for-small,
-  #preview .hide-for-desktop {
+  #email .show-for-small,
+  #email .hide-for-desktop {
     display: none; }
-  #preview body, #preview table.body, #preview h1, #preview h2, #preview h2, #preview h4, #preview h5, #preview h6, #preview p, #preview td {
+  #email body, #email table.body, #email h1, #email h2, #email h2, #email h4, #email h5, #email h6, #email p, #email td {
     font-family: "Helvetica", "Arial", sans-serif;
     font-weight: normal;
     padding: 0;
     margin: 0;
     text-align: left;
     line-height: 1.3; }
-  #preview h1, #preview h2, #preview h2, #preview h4, #preview h5, #preview h6 {
+  #email h1, #email h2, #email h2, #email h4, #email h5, #email h6 {
     word-break: normal; }
-  #preview h1 {
+  #email h1 {
     font-size: 40px; }
-  #preview h2 {
+  #email h2 {
     font-size: 36px; }
-  #preview h2 {
+  #email h2 {
     font-size: 32px; }
-  #preview h4 {
+  #email h4 {
     font-size: 28px; }
-  #preview h5 {
+  #email h5 {
     font-size: 24px; }
-  #preview h6 {
+  #email h6 {
     font-size: 20px; }
-  #preview body, #preview table.body, #preview p, #preview td {
+  #email body, #email table.body, #email p, #email td {
     font-size: 14px;
     line-height: 19px; }
-  #preview p.lead, #preview p.lede, #preview p.leed {
+  #email p.lead, #email p.lede, #email p.leed {
     font-size: 18px;
     line-height: 21px; }
-  #preview p {
+  #email p {
     margin-bottom: 10px; }
-  #preview small {
+  #email small {
     font-size: 10px; }
-  #preview .panel {
+  #email .panel {
     background: #f2f2f2;
     border: 1px solid #d9d9d9;
     padding: 10px !important; }
-  #preview .sub-grid table {
+  #email .sub-grid table {
     width: 100%; }
-  #preview .sub-grid td.sub-columns {
+  #email .sub-grid td.sub-columns {
     padding-bottom: 0; }
-  #preview table.button,
-  #preview table.tiny-button,
-  #preview table.small-button,
-  #preview table.medium-button,
-  #preview table.large-button {
+  #email table.button,
+  #email table.tiny-button,
+  #email table.small-button,
+  #email table.medium-button,
+  #email table.large-button {
     width: 100%;
     overflow: hidden; }
-  #preview table.button td,
-  #preview table.tiny-button td,
-  #preview table.small-button td,
-  #preview table.medium-button td,
-  #preview table.large-button td {
+  #email table.button td,
+  #email table.tiny-button td,
+  #email table.small-button td,
+  #email table.medium-button td,
+  #email table.large-button td {
     display: block;
     width: auto !important;
     text-align: center;
@@ -377,239 +377,239 @@
     border: 1px solid #2284a1;
     color: #ffffff;
     padding: 8px 0; }
-  #preview table.tiny-button td {
+  #email table.tiny-button td {
     padding: 5px 0 4px; }
-  #preview table.small-button td {
+  #email table.small-button td {
     padding: 8px 0 7px; }
-  #preview table.medium-button td {
+  #email table.medium-button td {
     padding: 12px 0 10px; }
-  #preview table.large-button td {
+  #email table.large-button td {
     padding: 21px 0 18px; }
-  #preview table.button td a,
-  #preview table.tiny-button td a,
-  #preview table.small-button td a,
-  #preview table.medium-button td a,
-  #preview table.large-button td a {
+  #email table.button td a,
+  #email table.tiny-button td a,
+  #email table.small-button td a,
+  #email table.medium-button td a,
+  #email table.large-button td a {
     font-weight: bold;
     text-decoration: none;
     font-family: Helvetica, Arial, sans-serif;
     color: #ffffff;
     font-size: 16px; }
-  #preview table.tiny-button td a {
+  #email table.tiny-button td a {
     font-size: 12px;
     font-weight: normal; }
-  #preview table.small-button td a {
+  #email table.small-button td a {
     font-size: 16px; }
-  #preview table.medium-button td a {
+  #email table.medium-button td a {
     font-size: 20px; }
-  #preview table.large-button td a {
+  #email table.large-button td a {
     font-size: 24px; }
-  #preview table.button:hover td,
-  #preview table.button:visited td,
-  #preview table.button:active td {
+  #email table.button:hover td,
+  #email table.button:visited td,
+  #email table.button:active td {
     background: #2795b6 !important; }
-  #preview table.button:hover td a,
-  #preview table.button:visited td a,
-  #preview table.button:active td a {
+  #email table.button:hover td a,
+  #email table.button:visited td a,
+  #email table.button:active td a {
     color: #fff !important; }
-  #preview table.button:hover td,
-  #preview table.tiny-button:hover td,
-  #preview table.small-button:hover td,
-  #preview table.medium-button:hover td,
-  #preview table.large-button:hover td {
+  #email table.button:hover td,
+  #email table.tiny-button:hover td,
+  #email table.small-button:hover td,
+  #email table.medium-button:hover td,
+  #email table.large-button:hover td {
     background: #2795b6 !important; }
-  #preview table.button:hover td a,
-  #preview table.button:active td a,
-  #preview table.button td a:visited,
-  #preview table.tiny-button:hover td a,
-  #preview table.tiny-button:active td a,
-  #preview table.tiny-button td a:visited,
-  #preview table.small-button:hover td a,
-  #preview table.small-button:active td a,
-  #preview table.small-button td a:visited,
-  #preview table.medium-button:hover td a,
-  #preview table.medium-button:active td a,
-  #preview table.medium-button td a:visited,
-  #preview table.large-button:hover td a,
-  #preview table.large-button:active td a,
-  #preview table.large-button td a:visited {
+  #email table.button:hover td a,
+  #email table.button:active td a,
+  #email table.button td a:visited,
+  #email table.tiny-button:hover td a,
+  #email table.tiny-button:active td a,
+  #email table.tiny-button td a:visited,
+  #email table.small-button:hover td a,
+  #email table.small-button:active td a,
+  #email table.small-button td a:visited,
+  #email table.medium-button:hover td a,
+  #email table.medium-button:active td a,
+  #email table.medium-button td a:visited,
+  #email table.large-button:hover td a,
+  #email table.large-button:active td a,
+  #email table.large-button td a:visited {
     color: #ffffff !important; }
-  #preview table.secondary td {
+  #email table.secondary td {
     border-color: #d0d0d0; }
-  #preview table.secondary:hover td a,
-  #preview table.secondary td a:visited,
-  #preview table.secondary:active td a {
+  #email table.secondary:hover td a,
+  #email table.secondary td a:visited,
+  #email table.secondary:active td a {
     color: #555 !important; }
-  #preview table.success td {
+  #email table.success td {
     background: #5da423;
     border-color: #457a1a; }
-  #preview table.success:hover td {
+  #email table.success:hover td {
     background: #457a1a !important; }
-  #preview table.alert td {
+  #email table.alert td {
     background: #c60f13;
     border-color: #970b0e; }
-  #preview table.alert:hover td {
+  #email table.alert:hover td {
     background: #970b0e !important; }
-  #preview table.radius td {
+  #email table.radius td {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px; }
-  #preview table.round td {
+  #email table.round td {
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
     border-radius: 500px; }
-  #preview body.outlook p {
+  #email body.outlook p {
     display: inline !important; }
   @media only screen and (max-width: 600px) {
-    #preview table[class="body"] img {
+    #email table[class="body"] img {
       width: auto !important;
       height: auto !important; }
-    #preview table[class="body"] center {
+    #email table[class="body"] center {
       min-width: 0 !important; }
-    #preview table[class="body"] .container {
+    #email table[class="body"] .container {
       width: 95% !important; }
-    #preview table[class="body"] .email_row {
+    #email table[class="body"] .email_row {
       width: 100% !important;
       display: block !important; }
-    #preview table[class="body"] .wrapper {
+    #email table[class="body"] .wrapper {
       display: block !important;
       padding-right: 0 !important; }
-    #preview table[class="body"] .columns,
-    #preview table[class="body"] .column {
+    #email table[class="body"] .columns,
+    #email table[class="body"] .column {
       table-layout: fixed !important;
       float: none !important;
       width: 100% !important;
       padding-right: 0px !important;
       padding-left: 0px !important;
       display: block !important; }
-    #preview table[class="body"] .wrapper.first .columns,
-    #preview table[class="body"] .wrapper.first .column {
+    #email table[class="body"] .wrapper.first .columns,
+    #email table[class="body"] .wrapper.first .column {
       display: table !important; }
-    #preview table[class="body"] table.columns td,
-    #preview table[class="body"] table.column td {
+    #email table[class="body"] table.columns td,
+    #email table[class="body"] table.column td {
       width: 100% !important; }
-    #preview table[class="body"] .columns td.one,
-    #preview table[class="body"] .column td.one {
+    #email table[class="body"] .columns td.one,
+    #email table[class="body"] .column td.one {
       width: 8.333333% !important; }
-    #preview table[class="body"] .columns td.two,
-    #preview table[class="body"] .column td.two {
+    #email table[class="body"] .columns td.two,
+    #email table[class="body"] .column td.two {
       width: 16.666666% !important; }
-    #preview table[class="body"] .columns td.three,
-    #preview table[class="body"] .column td.three {
+    #email table[class="body"] .columns td.three,
+    #email table[class="body"] .column td.three {
       width: 25% !important; }
-    #preview table[class="body"] .columns td.four,
-    #preview table[class="body"] .column td.four {
+    #email table[class="body"] .columns td.four,
+    #email table[class="body"] .column td.four {
       width: 33.333333% !important; }
-    #preview table[class="body"] .columns td.five,
-    #preview table[class="body"] .column td.five {
+    #email table[class="body"] .columns td.five,
+    #email table[class="body"] .column td.five {
       width: 41.666666% !important; }
-    #preview table[class="body"] .columns td.six,
-    #preview table[class="body"] .column td.six {
+    #email table[class="body"] .columns td.six,
+    #email table[class="body"] .column td.six {
       width: 50% !important; }
-    #preview table[class="body"] .columns td.seven,
-    #preview table[class="body"] .column td.seven {
+    #email table[class="body"] .columns td.seven,
+    #email table[class="body"] .column td.seven {
       width: 58.333333% !important; }
-    #preview table[class="body"] .columns td.eight,
-    #preview table[class="body"] .column td.eight {
+    #email table[class="body"] .columns td.eight,
+    #email table[class="body"] .column td.eight {
       width: 66.666666% !important; }
-    #preview table[class="body"] .columns td.nine,
-    #preview table[class="body"] .column td.nine {
+    #email table[class="body"] .columns td.nine,
+    #email table[class="body"] .column td.nine {
       width: 75% !important; }
-    #preview table[class="body"] .columns td.ten,
-    #preview table[class="body"] .column td.ten {
+    #email table[class="body"] .columns td.ten,
+    #email table[class="body"] .column td.ten {
       width: 83.333333% !important; }
-    #preview table[class="body"] .columns td.eleven,
-    #preview table[class="body"] .column td.eleven {
+    #email table[class="body"] .columns td.eleven,
+    #email table[class="body"] .column td.eleven {
       width: 91.666666% !important; }
-    #preview table[class="body"] .columns td.twelve,
-    #preview table[class="body"] .column td.twelve {
+    #email table[class="body"] .columns td.twelve,
+    #email table[class="body"] .column td.twelve {
       width: 100% !important; }
-    #preview table[class="body"] td.offset-by-one,
-    #preview table[class="body"] td.offset-by-two,
-    #preview table[class="body"] td.offset-by-three,
-    #preview table[class="body"] td.offset-by-four,
-    #preview table[class="body"] td.offset-by-five,
-    #preview table[class="body"] td.offset-by-six,
-    #preview table[class="body"] td.offset-by-seven,
-    #preview table[class="body"] td.offset-by-eight,
-    #preview table[class="body"] td.offset-by-nine,
-    #preview table[class="body"] td.offset-by-ten,
-    #preview table[class="body"] td.offset-by-eleven {
+    #email table[class="body"] td.offset-by-one,
+    #email table[class="body"] td.offset-by-two,
+    #email table[class="body"] td.offset-by-three,
+    #email table[class="body"] td.offset-by-four,
+    #email table[class="body"] td.offset-by-five,
+    #email table[class="body"] td.offset-by-six,
+    #email table[class="body"] td.offset-by-seven,
+    #email table[class="body"] td.offset-by-eight,
+    #email table[class="body"] td.offset-by-nine,
+    #email table[class="body"] td.offset-by-ten,
+    #email table[class="body"] td.offset-by-eleven {
       padding-left: 0 !important; }
-    #preview table[class="body"] table.columns td.expander {
+    #email table[class="body"] table.columns td.expander {
       width: 1px !important; }
-    #preview table[class="body"] .right-text-pad,
-    #preview table[class="body"] .text-pad-right {
+    #email table[class="body"] .right-text-pad,
+    #email table[class="body"] .text-pad-right {
       padding-left: 10px !important; }
-    #preview table[class="body"] .left-text-pad,
-    #preview table[class="body"] .text-pad-left {
+    #email table[class="body"] .left-text-pad,
+    #email table[class="body"] .text-pad-left {
       padding-right: 10px !important; }
-    #preview table[class="body"] .hide-for-small,
-    #preview table[class="body"] .show-for-desktop {
+    #email table[class="body"] .hide-for-small,
+    #email table[class="body"] .show-for-desktop {
       display: none !important; }
-    #preview table[class="body"] .show-for-small,
-    #preview table[class="body"] .hide-for-desktop {
+    #email table[class="body"] .show-for-small,
+    #email table[class="body"] .hide-for-desktop {
       display: inherit !important; } }
-  #preview table.body {
+  #email table.body {
     background: #000;
     width: 100%;
     min-width: 760px;
     font-family: Open Sans, sans-serif; }
-  #preview table.container {
+  #email table.container {
     margin-top: 20px;
     margin-bottom: 20px; }
-  #preview * {
+  #email * {
     line-height: 150%; }
-  #preview #logo_preview {
+  #email #logo {
     width: 65px; }
-  #preview h1, #preview h2 {
+  #email h1, #email h2 {
     font-weight: bold; }
-  #preview h1 {
+  #email h1 {
     font-size: 30pt; }
-  #preview h2 {
+  #email h2 {
     font-size: 24pt;
     margin-bottom: 12px; }
-  #preview p {
+  #email p {
     font-size: 13pt; }
-  #preview #title {
+  #email #title {
     float: right;
     padding-left: 20px; }
-  #preview .primary {
+  #email .primary {
     background: #0C3D56;
     color: #fff; }
-  #preview .secondary a, #preview .primary a {
+  #email .secondary a, #email .primary a {
     color: inherit; }
-  #preview .light {
+  #email .light {
     background: #fff;
     color: #000; }
-  #preview .secondary {
+  #email .secondary {
     background: #70BBA8;
     color: #000; }
-  #preview table.email_row {
+  #email table.email_row {
     padding: 20px; }
-  #preview #invoice_details {
+  #email #invoice_details {
     margin: 20px auto; }
-  #preview #invoice_details th, #preview #invoice_details td {
+  #email #invoice_details th, #email #invoice_details td {
     padding: 5px;
     text-align: right; }
-  #preview #invoice_details th:first-of-type, #preview #invoice_details td:first-of-type {
+  #email #invoice_details th:first-of-type, #email #invoice_details td:first-of-type {
     text-align: left; }
-  #preview #invoice_details tr {
+  #email #invoice_details tr {
     background: #eee; }
-  #preview #invoice_details tr:nth-of-type(even) {
+  #email #invoice_details tr:nth-of-type(even) {
     background: #ddd; }
-  #preview #invoice_details tfoot td {
+  #email #invoice_details tfoot td {
     font-weight: bold; }
-  #preview .footer td div {
+  #email .footer td div {
     font-size: 14pt;
     text-align: center;
     width: 540px; }
-  #preview .primary a[href^=tel], #preview .primary a[href^=tel]:hover {
+  #email .primary a[href^=tel], #email .primary a[href^=tel]:hover {
     color: #fff;
     text-decoration: none; }
-  #preview #invoice_details .false_border {
+  #email #invoice_details .false_border {
     padding: 0px; }
-  #preview .website_url {
+  #email .website_url {
     text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */

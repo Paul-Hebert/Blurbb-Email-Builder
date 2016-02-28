@@ -36,9 +36,9 @@
                   <a href="http://invoice-out.com/">
                       <?php 
                         if ($logo == ""){
-                          echo '<img src="http://www.invoice-out.com/includes/themes/Mild_West/imgs/logo.png" id="logo_preview">'; 
+                          echo '<img src="http://www.invoice-out.com/includes/themes/Mild_West/imgs/logo.png" id="logo">'; 
                         } else{
-                          echo '<img src="' . $logo . '" id="logo_preview">'; 
+                          echo '<img src="' . $logo . '" id="logo">'; 
                         }
                       ?> 
                       <h1 id="title" class="business_name"><?php echo $business_name; ?></h1>

@@ -1099,12 +1099,12 @@ input[type=submit], button, .button {
 .required_asterisk {
   color: #E85520; }
 
-#preview, #dashboard {
+#email, #dashboard {
   padding-top: 80px;
   height: 100vh;
   z-index: 0; }
 
-#preview {
+#email {
   float: left;
   width: 60%;
   overflow: scroll; }
