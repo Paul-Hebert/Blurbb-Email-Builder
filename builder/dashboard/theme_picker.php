@@ -1,8 +1,8 @@
         <div class="subsection">
                 <label for="theme_picker">Choose Your Theme</label>
                 
-                <div class='left arrow'>&lsaquo;</div>
-                <div class="right arrow">&rsaquo;</div>
+                <i class='fa fa-chevron-left left arrow'></i>
+                <i class="fa fa-chevron-right right arrow"></i>
 
                 <?php 
                         echo '<div class="theme_thumbnails_wrapper">

@@ -1,10 +1,12 @@
 Blurbb
 ======
 
-An HTML email generator
------------------------
+Making HTML Email Easy
+----------------------
 
-As a minimum viable product I'm building out the HTML email/editor first. Later if this shows traction I'll build user sessions and email delivery.
+Coding HTML emails that look good in all the major email clients is hard and time consuming. Blurbb is a WYSIWYG email builder that makes it easy to build beautiful cross-client emails without ever having to touch code.
+
+Start with one of our many themes and then customize it to your heart's content. Blurbb is perfect for newsletters and invitations as well as automated and transactional emails.
 
 
 

@@ -1166,13 +1166,14 @@ input[type=submit], button, .button {
   #dashboard button, #dashboard input:not([type=checkbox]), #dashboard textarea, #dashboard select {
     width: 100%; }
 
-.range-slider-wrapper input {
+#dashboard .range-slider-wrapper input {
   display: inline-block; }
-  .range-slider-wrapper input[type=range] {
+  #dashboard .range-slider-wrapper input[type=range] {
     width: 60%; }
-  .range-slider-wrapper input[type=text] {
-    display: inline; }
-.range-slider-wrapper input[type=text], .range-slider-wrapper span {
+  #dashboard .range-slider-wrapper input[type=text] {
+    display: inline;
+    width: 20%; }
+#dashboard .range-slider-wrapper input[type=text], #dashboard .range-slider-wrapper span {
   position: relative;
   top: -8px; }
 
@@ -1292,12 +1293,15 @@ input[type=submit], button, .button {
     background: #E85520; }
 
 .arrow {
-  font-size: 80pt;
-  cursor: pointer; }
-  .arrow.right {
-    float: right; }
-  .arrow.left {
-    float: left; }
+  cursor: pointer;
+  padding-top: 60px;
+  color: #333338; }
+  .arrow.fa-chevron-right {
+    float: right;
+    font-size: 40pt; }
+  .arrow.fa-chevron-left {
+    float: left;
+    font-size: 40pt; }
 
 .fa-close {
   -o-transition: all 300ms;

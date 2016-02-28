@@ -55,15 +55,20 @@
 }
 
 .arrow{
-	font-size:80pt;
 	cursor:pointer;
+	padding-top:60px;
+	color:$main-color;
 
-	&.right{
+	&.fa-chevron-right{
 		float:right;
+			font-size:40pt;
+
 	}
 
-	&.left{
+	&.fa-chevron-left{
 		float:left;
+			font-size:40pt;
+
 	}
 }
 

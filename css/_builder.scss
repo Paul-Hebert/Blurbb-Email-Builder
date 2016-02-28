@@ -85,7 +85,7 @@
 }
 
 
-.range-slider-wrapper{
+#dashboard .range-slider-wrapper{
 	input{
 		display:inline-block;
 
@@ -95,6 +95,7 @@
 		
 		&[type=text]{
 			display:inline;
+			width:20%;
 		}	
 	}
 
