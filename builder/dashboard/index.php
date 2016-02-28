@@ -21,31 +21,39 @@
 
         <menu id="invoice_form" enctype='multipart/form-data'>
           <section>
-            <h3 class="open">Profile</h3>
-            <i class="fa fa-close"></i>
-
+            <?php
+              $include_name = 'Profile';
+              include('section_heading.php');
+            ?>
 
             <fieldset>
                 <?php
                   $include_name = 'Logo';
                   $include_data = '#logo';
-
                   include('image_picker.php')
                 ?>
 
               <div class="subsection">
-                <label for="business_name">Business Name</label>
-                <input type='text' placeholder="Invoice-Out" name="business_name" class="text_input" data_target="business_name">
+                <?php
+                  $include_name = 'Business Name';
+                  $include_data = '.business_name';
+                  $include_type = 'input';
+                  include('text_input.php');
 
-                <label for="website_url">Website URL</label>
-                <input type='text' placeholder="www.invoice-out.com" name="website_url" class="text_input" data_target="website_url">
+                  $include_name = 'Website URL';
+                  $include_data = '.website_url';
+                  $include_type = 'input';
+                  include('text_input.php');
+                ?>
               </div>
             </fieldset>
           </section>
 
           <section>
-            <h3 class="open">Design</h3>
-            <i class="fa fa-close"></i>
+            <?php
+              $include_name = 'Design';
+              include('section_heading.php');
+            ?>
             
             <fieldset>
               <?php
@@ -83,30 +91,44 @@
           </section>
 
           <section>
-            <h3 class="open">Content</h3>
-            <i class="fa fa-close"></i>
+            <?php
+              $include_name = 'Content';
+              include('section_heading.php');
+            ?>
 
             <fieldset>
               <div class="subsection">
-                <label for="heading1">Heading 1</label>
-                
-                <input type='text' placeholder="Contracting Invoice" name="heading1" class="text_input" data_target="heading1">
+                <?php 
+                  $include_name = 'Heading 1';
+                  $include_data = '.heading1';
+                  $include_type = 'input';
+                  include('text_input.php');
 
-                <label for="message1">Message Section 1</label>
-                <textarea placeholder="For contract work on the Invoice-Out invoice creation and delivery web-app." name="message1" class="text_input" data_target="message1"></textarea>
+                  $include_name = 'Message 1';
+                  $include_data = '.message1';
+                  $include_type = 'textarea';
+                  include('text_input.php');
+                ?>
               </div>
               
               <div class="subsection">
-                <label for="heading2">Heading 2</label>
-                <input type='text' placeholder="Thank You" name="heading2" class="text_input" data_target="heading2">
+                <?php 
+                  $include_name = 'Heading 2';
+                  $include_data = '.heading2';
+                  $include_type = 'input';
+                  include('text_input.php');
 
-                <label for="message_2">Message Section 2</label>
-                <textarea placeholder="We've enjoyed working with you and look forward to collaborating in the future!" name="message2" class="text_input" data_target="message2"></textarea>
+                  $include_name = 'Message 2';
+                  $include_data = '.message2';
+                  $include_type = 'textarea';
+                  include('text_input.php');                  
+                ?>
               </div>
 
               <div class="subsection">
-                <label for="csv_input">Upload your CSV</label>
-                <input type='file' name="csv_input" id="csv_input">
+                <?php
+                  include('csv_picker.php');
+                ?>
               </div>
             </fieldset>
           </section>
@@ -133,7 +155,6 @@
           </section>-->
 
           <section>
-            <!--<div class="g-recaptcha" data-sitekey="6LdINhYTAAAAALuvkN9vU8wJHP8ae1HcR0BLqiWc"></div>-->
             <button id="preview_HTML">Preview HTML</button>
             <button id="export_HTML">Export HTML</button>
             <!--<input type="submit" value="Send Invoice">-->

@@ -43,7 +43,7 @@ function initialize_dashboard(){
 
 	initialize_colorpickers();
 
-	initialize_logo_input();
+	initialize_image_pickers();
 
 	initialize_range_sliders();
 
@@ -190,12 +190,12 @@ function initialize_colorpickers(){
 	});
 }
 
-function initialize_logo_input(){
+function initialize_image_pickers(){
 	$(".image_picker input[type=file]").change(function(){
 	    readURL( this , $(this).parent().attr('data-target') );
 	});
 
-	$(".image_picker input[type=text]").change(function(){
+	$(".image_picker input[type=text]").keyup(function(){
 	    $( $(this).parent().attr('data-target') ).attr('src', $(this).val()); 
 	});
 }
@@ -218,7 +218,7 @@ function initialize_range_sliders(){
 
 function initialize_text_inputs(){
 	$('.text_input').keyup(function(){
-		var target = $('.' + $(this).attr('data_target') );
+		var target = $($(this).attr('data_target') );
 		var target_type = target.get(0).tagName;
 		var text =  $(this).val();
 		text = text.replace(/\n\r?/g, '</' + target_type + '>' + '<' + target_type + '>');
