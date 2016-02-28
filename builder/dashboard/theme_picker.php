@@ -10,7 +10,7 @@
                                         if ( isset($_GET['theme']) ){
                                                 $set_theme = $_GET['theme'];
                                         } else{
-                                                $set_theme = 'Blast_Off';
+                                                $set_theme = 'Board_in_hand';
                                         }
 
                                         $theme_array = glob($base_url . 'includes/themes/*' , GLOB_ONLYDIR);

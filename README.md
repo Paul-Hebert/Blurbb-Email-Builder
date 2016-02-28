@@ -20,6 +20,8 @@ Planned features
 - More resources in resource page
 - Create a better color palette for the color picker UI
 - Add alignment options for content
+- Simplified visual design
+- Final name and logo
 
 Issues and Bugs
 ===============

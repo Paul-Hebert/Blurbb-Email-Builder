@@ -1,10 +1,10 @@
-#email, #dashboard{
+#email.main_preview, #dashboard{
 	padding-top:$header-height;
 	height:100vh;
 	z-index:0;
 }
 
-#email{
+#email.main_preview{
 	float:left;
 	width:60%;
 	overflow:scroll;

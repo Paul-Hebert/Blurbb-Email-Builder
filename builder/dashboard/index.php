@@ -8,7 +8,7 @@
       include($base_url . 'includes/themes/' . $theme . '/settings.php');
     ?>
     <div class="row">
-      <div id="email" class="col-lg-8">
+      <div id="email" class="main_preview col-lg-8">
         <?php 
           include($base_url . 'includes/themes/' . $theme . '/index.php');
         ?>
@@ -134,6 +134,7 @@
 
           <section>
             <!--<div class="g-recaptcha" data-sitekey="6LdINhYTAAAAALuvkN9vU8wJHP8ae1HcR0BLqiWc"></div>-->
+            <button id="preview_HTML">Preview HTML</button>
             <button id="export_HTML">Export HTML</button>
             <!--<input type="submit" value="Send Invoice">-->
           </section>

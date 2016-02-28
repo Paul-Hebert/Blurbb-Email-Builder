@@ -1096,17 +1096,18 @@ input[type=submit], button, .button {
   -webkit-border-radius: 6px;
   border-radius: 6px;
   text-decoration: none;
-  display: inline-block; }
+  display: inline-block;
+  text-align: center; }
 
 .required_asterisk {
   color: #E85520; }
 
-#email, #dashboard {
+#email.main_preview, #dashboard {
   padding-top: 80px;
   height: 100vh;
   z-index: 0; }
 
-#email {
+#email.main_preview {
   float: left;
   width: 60%;
   overflow: scroll; }
@@ -1238,6 +1239,24 @@ input[type=submit], button, .button {
         text-align: center;
         padding: 5px 0px;
         border: 1px solid #ccc; }
+
+.preview {
+  position: absolute;
+  top: 20%;
+  z-index: 30; }
+  .preview div {
+    display: inline-block;
+    margin: 50px;
+    overflow: scroll; }
+  .preview .desktop {
+    width: 576px;
+    height: 360px; }
+  .preview .tablet {
+    width: 154px;
+    height: 205px; }
+  .preview .mobile {
+    width: 64px;
+    height: 96px; }
 
 .toggled_text {
   display: none; }
@@ -3478,6 +3497,9 @@ h2 {
 
 h3 {
   font-size: 16pt; }
+
+p {
+  padding: 6pt 0px; }
 
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -76,6 +76,11 @@ function initialize_submit_button(){
 		export_HTML();
 		return false;
 	});
+
+	$('#preview_HTML').click(function(){
+		preview_HTML();
+		return false;
+	});
 }
 
 function initialize_theme_picker(){
@@ -310,7 +315,27 @@ function readURL2(input) {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /***********************************************************************************************************************/
 
-function export_HTML() {
+function preview_HTML(){
+	$('body').append('<div class="modal background transparent"></div><div class="preview"><div class="desktop"></div><div class="tablet"></div><div class="mobile"></div></div>');
+
+	$('.preview div').each(function(){
+		$(this).html('<span id="email">' + $('#email').html() + '</span>');
+	});
+
+	setTimeout(function(){
+		$('.modal, .preview').removeClass('transparent');
+	},1);
+	
+	$('.modal.background').click(function(){
+		$('.modal, .preview').addClass('transparent');
+
+		setTimeout(function(){
+			$('.modal, .preview').remove();
+		},300);
+	})
+}
+
+function export_HTML(){
 	modal('Code','<span id="download_HTML">Download HTML</span><pre><i class="fa fa-spinner</pre>');
 
 	$('#download_HTML').click(function(){
@@ -335,7 +360,7 @@ function export_HTML() {
 	});
 }
 
-function download(filename, text) {
+function download(filename, text){
     var pom = document.createElement('a');
     pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
     pom.setAttribute('download', filename);
@@ -359,7 +384,7 @@ function modal(heading,content){
 		$('.modal').removeClass('transparent');
 	},1);
 	
-	$('.modal.background, .modal .tab:after, .modal .fa-close').click(function(){
+	$('.modal.background, .modal .fa-close').click(function(){
 		$('.modal').addClass('transparent');
 
 		setTimeout(function(){
