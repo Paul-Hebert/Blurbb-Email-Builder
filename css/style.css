@@ -1240,6 +1240,13 @@ input[type=submit], button, .button {
         padding: 5px 0px;
         border: 1px solid #ccc; }
 
+.alignment {
+  float: right; }
+  .alignment i {
+    padding-left: 10px;
+    cursor: pointer;
+    color: #333338; }
+
 .preview {
   position: absolute;
   top: 20%;

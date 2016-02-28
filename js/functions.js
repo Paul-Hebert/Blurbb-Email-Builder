@@ -224,6 +224,14 @@ function initialize_text_inputs(){
 		text = text.replace(/\n\r?/g, '</' + target_type + '>' + '<' + target_type + '>');
 		target.html( text );
 	});
+
+	$('.alignment i').click(function(){
+		var classes = $(this).attr('class').split(/\s+/);
+		var finalClass = classes[classes.length - 1].split('-');
+		var alignment = finalClass[finalClass.length - 1];
+
+		$('#addedCSS').append('#email ' + $(this).parent().attr('data_target') + ', #email ' + $(this).parent().attr('data_target') + ' *{text-align:' + alignment + '}');
+	});
 }
 
 function initialize_font_selector(){

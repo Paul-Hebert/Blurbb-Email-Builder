@@ -184,3 +184,13 @@
 		}
 	}
 }
+
+.alignment{
+	float:right;
+
+	i{
+		padding-left:10px;
+		cursor:pointer;
+		color:$main-color;
+	}
+}
