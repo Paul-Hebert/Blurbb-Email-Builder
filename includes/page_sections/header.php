@@ -8,8 +8,8 @@
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Roboto+Slab' rel='stylesheet' type='text/css'>
-        
+        <link href='https://fonts.googleapis.com/css?family=Sansita+One|Open+Sans' rel='stylesheet' type='text/css'>
+
         <?php
             echo '<link rel="stylesheet" type="text/css" href="' . $base_url . 'css/style.css">';
             echo '<link id="theme_CSS" rel="stylesheet" type="text/css" href="' . $base_url . 'includes/themes/' . $theme . '/css/style.css">';

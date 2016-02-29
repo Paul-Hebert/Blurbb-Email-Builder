@@ -1056,6 +1056,19 @@ label {
   padding-bottom: 2px;
   display: block; }
 
+fieldset {
+  border: 0px;
+  padding: 20px;
+  background: #ddd;
+  -o-transition: all 300ms;
+  -ms-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
+  fieldset .subsection:not(:last-of-type) {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc; }
+
 input:not([type=checkbox]):not([type=range]):not([type=submit]), textarea, select {
   padding: 5px;
   margin: 5px auto;
@@ -1098,6 +1111,9 @@ input[type=submit], button, .button {
   text-decoration: none;
   display: inline-block;
   text-align: center; }
+
+button, input:not([type=checkbox]), textarea, select {
+  width: 100%; }
 
 .required_asterisk {
   color: #E85520; }
@@ -1149,22 +1165,8 @@ input[type=submit], button, .button {
         width: 102.5%; }
     #dashboard section .fa-close {
       top: 36px; }
-    #dashboard section fieldset {
-      border: 0px;
-      padding: 20px;
-      background: #ddd;
-      -o-transition: all 300ms;
-      -ms-transition: all 300ms;
-      -webkit-transition: all 300ms;
-      transition: all 300ms; }
-      #dashboard section fieldset .subsection:not(:last-of-type) {
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-        border-bottom: 1px solid #ccc; }
-      #dashboard section fieldset .theme_thumbnails_wrapper {
-        width: 250px; }
-  #dashboard button, #dashboard input:not([type=checkbox]), #dashboard textarea, #dashboard select {
-    width: 100%; }
+    #dashboard section .theme_thumbnails_wrapper {
+      width: 250px; }
 
 #dashboard .range-slider-wrapper input {
   display: inline-block; }
@@ -3481,9 +3483,11 @@ input[type=submit], button, .button {
 
 #landing_heading h1 {
   font-size: 48pt;
-  padding-top: 30px; }
+  padding-top: 30px;
+  font-family: "Sansita One";
+  color: #333338; }
 #landing_heading h2 {
-  font-family: 'Roboto'; }
+  font-family: "Open Sans"; }
 
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -3493,7 +3497,7 @@ input[type=submit], button, .button {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /***********************************************************************************************************************/
 * {
-  font-family: 'Roboto';
+  font-family: "Open Sans";
   box-sizing: border-box;
   line-height: 140%; }
 
@@ -3507,7 +3511,7 @@ body {
   background: #f9f9f9; }
 
 h1, h2, h3 {
-  font-family: 'Roboto Slab';
+  font-family: "Open Sans";
   font-weight: lighter;
   margin: 0px; }
 
@@ -3541,6 +3545,7 @@ header#main {
   header#main a {
     color: #f9f9f9;
     padding: 10px;
+    padding-right: 40px;
     text-decoration: none;
     display: inline-block; }
     header#main a:hover {
@@ -3548,7 +3553,7 @@ header#main {
     header#main a h1 {
       padding: 10px;
       margin: 0px;
-      font-family: 'Roboto Slab';
+      font-family: "Sansita One";
       float: right; }
     header#main a #blurbb_logo {
       height: 60px; }

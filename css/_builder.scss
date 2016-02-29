@@ -61,26 +61,9 @@
 			top:36px;
 		}
 
-		fieldset{
-			border:0px;
-			padding:20px;
-			background:$subtle-color-1;
-			@include transition_mixin(all 300ms);
-
-			.subsection:not(:last-of-type){
-				padding-bottom:10px;
-				margin-bottom:10px;
-				border-bottom:1px solid $subtle-color-2;
-			}
-
-			.theme_thumbnails_wrapper{
-				width:250px;
-			}
-		}
-	}
-
-	button, input:not([type=checkbox]), textarea, select{
-		width:100%;
+		.theme_thumbnails_wrapper{
+			width:250px;
+		}	
 	}
 }
 

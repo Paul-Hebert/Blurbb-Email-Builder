@@ -27,6 +27,10 @@ $off-black:#222;
 $mid-tone:#ACACAC;
 
 
+$main-font:'Open Sans';
+$second-font:'Sansita One';
+
+
 $header-height:80px;
 
 /***********************************************************************************************************************/
@@ -57,7 +61,7 @@ $header-height:80px;
 /***********************************************************************************************************************/
 
 *{
-	font-family:'Roboto';
+	font-family:$main-font;
 	box-sizing:border-box;
 	line-height:140%;
 }
@@ -75,7 +79,7 @@ body{
 }
 
 h1,h2,h3{
-	font-family:'Roboto Slab';
+	font-family:$main-font;
 	font-weight:lighter;
 	margin:0px;
 }
@@ -116,6 +120,7 @@ header#main{
 	a{
 		color:$off-white;
 		padding:10px;
+		padding-right:40px;
 		text-decoration:none;
 		display:inline-block;
 
@@ -126,7 +131,7 @@ header#main{
 		h1{
 			padding:10px;
 			margin:0px;
-			font-family:'Roboto Slab';
+			font-family:$second-font;
 			float:right;
 		}
 

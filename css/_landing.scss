@@ -2,9 +2,11 @@
 	h1{
 		font-size:48pt;
 		padding-top:30px;
+		font-family:$second-font;
+		color:$main-color;;
 	}
 
 	h2{
-		font-family:'Roboto';
+		font-family:$main-font;
 	}
 }

@@ -3,6 +3,22 @@ label{
 	display:block;
 }
 
+
+fieldset{
+	border:0px;
+	padding:20px;
+	background:$subtle-color-1;
+	@include transition_mixin(all 300ms);
+
+	.subsection:not(:last-of-type){
+		padding-bottom:10px;
+		margin-bottom:10px;
+		border-bottom:1px solid $subtle-color-2;
+	}
+
+
+}
+
 input:not([type=checkbox]):not([type=range]):not([type=submit]), textarea, select{
 	padding:5px;
 	margin:5px auto;
@@ -49,6 +65,10 @@ input[type=submit], button, .button{
 	text-align:center;
 
 	@extend .interactable;
+}
+
+button, input:not([type=checkbox]), textarea, select{
+	width:100%;
 }
 
 .required_asterisk{
