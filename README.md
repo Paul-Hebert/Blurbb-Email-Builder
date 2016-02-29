@@ -13,7 +13,7 @@ Start with one of our many themes and then customize it to your heart's content.
 Planned features
 ================
 
-- Inlined css
+- More CSS export options. Inlined CSS and Sass
 - Click an email section to edit it
 - Add and remove email sections (OOP js prototypes)
 - Blurred modal background (Not good enough support. Might need to rethink)
@@ -21,7 +21,6 @@ Planned features
 - Format code for export (format text and format code modal)
 - More resources in resource page
 - Create a better color palette for the color picker UI
-- Add alignment options for content
 - Simplified visual design
 - Final name and logo
 
@@ -32,3 +31,5 @@ Issues and Bugs
 - Awkward theme transition
 - Where to host images? When exporting HTML how will the user know to host and link their images?
 - Exported code is formatted badly
+- Chosen theme needs to be in view
+- Range sliders need to start with theme values

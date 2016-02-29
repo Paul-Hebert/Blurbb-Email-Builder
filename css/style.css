@@ -1246,7 +1246,9 @@ input[type=submit], button, .button {
   .alignment i {
     padding-left: 10px;
     cursor: pointer;
-    color: #333338; }
+    color: #ACACAC; }
+    .alignment i.selected {
+      color: #333338; }
 
 .preview {
   position: absolute;
@@ -1295,7 +1297,7 @@ input[type=submit], button, .button {
 .arrow {
   cursor: pointer;
   padding-top: 60px;
-  color: #333338; }
+  color: #ACACAC; }
   .arrow.fa-chevron-right {
     float: right;
     font-size: 40pt; }
@@ -1382,14 +1384,17 @@ input[type=submit], button, .button {
     position: fixed;
     top: 27%;
     right: 21%; }
-  .modal.content span {
+  .modal.content .links {
     position: fixed;
     top: 28%;
-    right: 25%;
-    cursor: pointer;
-    color: #E85520; }
-    .modal.content span:hover {
-      color: #F78336; }
+    right: 25%; }
+    .modal.content .links li {
+      cursor: pointer;
+      color: #E85520;
+      display: inline-block;
+      padding-left: 30px; }
+      .modal.content .links li:hover {
+        color: #F78336; }
 
 .fa.fa-spinner {
   position: absolute;
@@ -3474,6 +3479,12 @@ input[type=submit], button, .button {
 .fa-percent:before {
   content: ""; }
 
+#landing_heading h1 {
+  font-size: 48pt;
+  padding-top: 30px; }
+#landing_heading h2 {
+  font-family: 'Roboto'; }
+
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -3529,22 +3540,25 @@ header#main {
   border-bottom: 5px solid #E85520; }
   header#main a {
     color: #f9f9f9;
-    padding: 20px;
+    padding: 10px;
     text-decoration: none;
     display: inline-block; }
     header#main a:hover {
       color: #fff; }
     header#main a h1 {
+      padding: 10px;
       margin: 0px;
-      font-family: 'Roboto Slab'; }
+      font-family: 'Roboto Slab';
+      float: right; }
+    header#main a #blurbb_logo {
+      height: 60px; }
   header#main nav {
     float: right;
-    padding: 10px; }
+    padding: 20px; }
 
 .main_content {
   padding: 20px;
   padding-top: 100px;
-  background: #f9f9f9;
   min-height: 100vh; }
   .main_content section {
     padding: 20px 0px;

@@ -57,7 +57,7 @@
 .arrow{
 	cursor:pointer;
 	padding-top:60px;
-	color:$main-color;
+	color:$mid-tone;
 
 	&.fa-chevron-right{
 		float:right;
@@ -152,15 +152,20 @@
 		right:21%;
 	}
 
-	span{
+	.links{
 		position:fixed;
 		top:28%;
 		right:25%;	
-		cursor:pointer;
-		color:$interactable-color;
 
-		&:hover{
-			color:$interacting-color;
+		li{
+			cursor:pointer;
+			color:$interactable-color;	
+			display:inline-block;
+			padding-left:30px;	
+
+			&:hover{
+				color:$interacting-color;
+			}			
 		}
 	}
 }

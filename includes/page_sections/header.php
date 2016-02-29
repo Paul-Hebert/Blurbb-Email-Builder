@@ -24,6 +24,7 @@
         	<?php 
                 include($base_url . 'includes/page_sections/nav.php'); 
                 echo '<a href="' . $base_url . '">';
+                echo '<img src="' . $base_url . 'imgs/blurbb_logo.svg" id="blurbb_logo">';
             ?>
             	<h1>
     	    		Blurbb

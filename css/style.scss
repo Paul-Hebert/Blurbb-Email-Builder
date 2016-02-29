@@ -24,6 +24,9 @@ $off-white:#f9f9f9;
 
 $off-black:#222;
 
+$mid-tone:#ACACAC;
+
+
 $header-height:80px;
 
 /***********************************************************************************************************************/
@@ -42,6 +45,8 @@ $header-height:80px;
 @import 'builder';
 @import 'javascript';
 @import 'font-awesome/font-awesome';
+@import 'landing';
+
 
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -110,7 +115,7 @@ header#main{
 
 	a{
 		color:$off-white;
-		padding:20px;
+		padding:10px;
 		text-decoration:none;
 		display:inline-block;
 
@@ -119,14 +124,20 @@ header#main{
 		}
 
 		h1{
+			padding:10px;
 			margin:0px;
 			font-family:'Roboto Slab';
+			float:right;
+		}
+
+		#blurbb_logo{
+			height:60px;
 		}
 	}
 
 	nav{
 		float:right;
-		padding:10px;
+		padding:20px;
 
 	}
 }
@@ -134,7 +145,6 @@ header#main{
 .main_content{
 	padding:20px;
 	padding-top:100px;
-	background:$off-white;
 	min-height:100vh;
 	@extend .row;
 

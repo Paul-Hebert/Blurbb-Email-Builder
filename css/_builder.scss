@@ -192,6 +192,10 @@
 	i{
 		padding-left:10px;
 		cursor:pointer;
-		color:$main-color;
+		color:$mid-tone;
+
+		&.selected{
+			color:$main-color;
+		}
 	}
 }

@@ -226,9 +226,13 @@ function initialize_text_inputs(){
 	});
 
 	$('.alignment i').click(function(){
+		$(this).parent().children('.alignment i').removeClass('selected');
+
 		var classes = $(this).attr('class').split(/\s+/);
 		var finalClass = classes[classes.length - 1].split('-');
 		var alignment = finalClass[finalClass.length - 1];
+
+		$(this).addClass('selected');		
 
 		$('#addedCSS').append('#email ' + $(this).parent().attr('data_target') + ', #email ' + $(this).parent().attr('data_target') + ' *{text-align:' + alignment + '}');
 	});
@@ -344,7 +348,7 @@ function preview_HTML(){
 }
 
 function export_HTML(){
-	modal('Code','<span id="download_HTML">Download HTML</span><pre><i class="fa fa-spinner</pre>');
+	modal('Code','<ul class="links"><li id="download_HTML">What is This?</li><li id="download_HTML">Download HTML</li></ul><pre><i class="fa fa-spinner</pre>');
 
 	$('#download_HTML').click(function(){
 		download('email.html', $('.modal pre').text() );
