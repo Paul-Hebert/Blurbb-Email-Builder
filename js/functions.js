@@ -66,6 +66,7 @@ function initialize_modular_sections(){
 	});
 }
 
+
 function initialize_submit_button(){
 	$('#invoice_form').submit(function(){
 		submit_invoice();
@@ -82,6 +83,7 @@ function initialize_submit_button(){
 		return false;
 	});
 }
+
 
 function initialize_theme_picker(){
 	$('#theme_picker').change(function(){
@@ -108,6 +110,7 @@ function initialize_theme_picker(){
 		$('.theme_thumbnails').css('left', parseFloat($('.theme_thumbnails').css('left').replace('px','')) + 120 + 'px' );
 		$('.theme_thumbnails').animate({'left': parseFloat($('.theme_thumbnails').css('left').replace('px','')) - 120 + 'px' },300);	});	
 }
+
 
 function pick_theme(){
 	$('.theme_thumbnail.selected').removeClass('selected');
@@ -151,6 +154,7 @@ function pick_theme(){
 		$('#theme_CSS').attr('href','../../includes/themes/' + theme_name + '/css/style.css');
 }
 
+
 function initialize_colorpickers(){
     $('head').append('<style id="addedCSS" type="text/css"></style>');
 
@@ -190,6 +194,7 @@ function initialize_colorpickers(){
 	});
 }
 
+
 function initialize_image_pickers(){
 	$(".image_picker input[type=file]").change(function(){
 	    readURL( this , $(this).parent().attr('data-target') );
@@ -198,7 +203,12 @@ function initialize_image_pickers(){
 	$(".image_picker input[type=text]").keyup(function(){
 	    $( $(this).parent().attr('data-target') ).attr('src', $(this).val()); 
 	});
+
+	$(".image_picker input[type=text]").each(function(){
+		$(this).attr( 'placeholder', $( $(this).parent().attr("data-target") ).attr('src') );
+	});
 }
+
 
 function initialize_range_sliders(){
 	$('input[type=range]').change(function(){
@@ -215,6 +225,7 @@ function initialize_range_sliders(){
 		$(this).siblings('input').val( $(this).val() ).change();	
 	});
 }
+
 
 function initialize_text_inputs(){
 	$('.text_input').keyup(function(){
@@ -238,6 +249,7 @@ function initialize_text_inputs(){
 	});
 }
 
+
 function initialize_font_selector(){
 	$('#font option').each(function(){
 		$(this).css('font-family',$(this).text());
@@ -249,11 +261,13 @@ function initialize_font_selector(){
 	});
 }
 
+
 function initialize_csv_reader(){
 	$('#csv_input').change(function(){
 		readURL2(this);
 	});
 }
+
 
 function submit_invoice() {
 	if ( $('#copy_me').is(":checked") ){
@@ -347,6 +361,7 @@ function preview_HTML(){
 	})
 }
 
+
 function export_HTML(){
 	modal('Code','<ul class="links"><li id="download_HTML">What is This?</li><li id="download_HTML">Download HTML</li></ul><pre><i class="fa fa-spinner</pre>');
 
@@ -372,6 +387,7 @@ function export_HTML(){
 	});
 }
 
+
 function download(filename, text){
     var pom = document.createElement('a');
     pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -386,6 +402,7 @@ function download(filename, text){
         pom.click();
     }
 }
+
 
 function modal(heading,content){
 	$('body').append('<div class="modal background transparent"></div><div class="modal content transparent"></div>');
