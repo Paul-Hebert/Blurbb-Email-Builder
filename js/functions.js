@@ -64,7 +64,7 @@ function initialize_modular_sections(){
 	$('#dashboard .fa-close, #dashboard h3').click(function(){
 		$(this).parent().children('.fa-close').toggleClass('rotated');
 		$(this).parent().children('h3').toggleClass('open');		
-		$(this).siblings('fieldset').toggleClass('hidden_height');
+		$(this).siblings('fieldset').toggleClass('hidden_y');
 	});
 }
 
@@ -169,7 +169,7 @@ function initialize_colorpickers(){
 		}
 	});
 
-	$('.colorpicker').addClass('hidden_height');
+	$('.colorpicker').addClass('hidden_y');
 
 
 	$('.color-swatch').each(function(){
@@ -179,8 +179,8 @@ function initialize_colorpickers(){
 				
 				$('#addedCSS').append('#email ' + css_targets[0] + '{' + css_targets[1] + ':' + $(this).attr('data-color') + '}');
 				
-				if(! $(this).siblings('p').children('.colorpicker').hasClass('hidden_height') ){
-					$(this).siblings('p').children('.colorpicker').addClass('hidden_height')
+				if(! $(this).siblings('p').children('.colorpicker').hasClass('hidden_y') ){
+					$(this).siblings('p').children('.colorpicker').addClass('hidden_y')
 				}
 
 				$(this).siblings('.selected').removeClass('selected');
@@ -188,7 +188,7 @@ function initialize_colorpickers(){
 			});
 		} else{
 			$(this).click(function(){
-				$(this).siblings('p').children('.colorpicker').toggleClass('hidden_height');
+				$(this).siblings('p').children('.colorpicker').toggleClass('hidden_y');
 				$(this).siblings('.selected').removeClass('selected');
 				$(this).addClass('selected');
 			})
@@ -236,6 +236,11 @@ function initialize_text_inputs(){
 		var text =  $(this).val();
 		text = text.replace(/\n\r?/g, '</' + target_type + '>' + '<' + target_type + '>');
 		target.html( text );
+	});
+
+	$('.text_styles .fa-cog').click(function(){
+		$(this).toggleClass('selected');
+		$(this).siblings().toggleClass('hidden_x_y');
 	});
 
 	$('.alignment i').click(function(){
@@ -292,14 +297,22 @@ function initialize_csv_reader(){
 
 
 function initialize_drag_and_drop(){
-	$('.content_picker .fa').mousedown(function(){
+	$('.content_picker .fa').mousedown(function(e){
+		var offset = $(this).offset();
+		var x_offset = e.pageX - offset.left;
+		var y_offset = e.pageY - offset.top;		
+		
 		$('.content_picker').append('<i class="selected"></i>');
 		$('.content_picker .selected').attr( 'class', $(this).attr('class') + ' selected' );
+		$('.content_picker .selected').css({
+			'left':e.pageX - x_offset,
+			'top':e.pageY - y_offset
+		});
 
 		$('body').mousemove(function(e){
 			$('.content_picker .selected').css({
-				'left':e.pageX - 10,
-				'top':e.pageY - 10
+				'left':e.pageX - x_offset,
+				'top':e.pageY - y_offset
 			});
 		}).mouseup(function(){
 			$('.content_picker .selected').fadeOut(200);	

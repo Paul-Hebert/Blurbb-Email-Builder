@@ -15,7 +15,7 @@ Planned features
 
 - More CSS export options. Inlined CSS and Sass
 - Click an email section to edit it
-- Add and remove email sections (OOP js prototypes)
+- Add and remove email sections via AJAX
 - Blurred modal background (Not good enough support. Might need to rethink)
 - One script for email build, export and send
 - Format code for export (format text and format code modal)

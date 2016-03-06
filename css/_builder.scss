@@ -68,14 +68,20 @@
 		.content_picker{
 			.fa{
 				margin:2px;
-				padding:20px;
+				padding:10px;
 				background:$main-color;
 				color:$off-white;
 				cursor:grab;
+				@include transition_mixin(background 200ms);
 
 				&.selected{
 					cursor:grabbing;
 					position:fixed;
+					background:$auxiliary-color;
+				}
+
+				&:hover{
+					background:$auxiliary-color;
 				}
 			}
 		}
@@ -189,6 +195,9 @@
 
 	.font_styles, .alignment{
 		display:inline-block;
+		padding-right:15px;
+		border-right:1px solid $subtle-color-2;
+		@include transition_mixin(all 1500ms);		
 	}
 
 	i{

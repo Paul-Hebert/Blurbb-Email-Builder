@@ -4,4 +4,5 @@
 	<i class="fa fa-font"></i>
 	<i class="fa fa-list"></i>
 	<i class="fa fa-image"></i>
+	<i class="fa fa-video-camera"></i>
 </div>

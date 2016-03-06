@@ -22,16 +22,24 @@
         <menu id="invoice_form" enctype='multipart/form-data'>
           <section>
             <?php
-              $include_name = 'Profile';
+              $include_name = 'Content';
               include('section_heading.php');
             ?>
 
             <fieldset>
+              <div class="subsection">
+                <?php
+                  include('content_picker.php');
+                ?>
+              </div>
+
+              <div class="subsection">
                 <?php
                   $include_name = 'Logo';
                   $include_data = '#logo';
                   include('image_picker.php')
                 ?>
+              </div>
 
               <div class="subsection">
                 <?php
@@ -44,62 +52,6 @@
                   $include_data = '.website_url';
                   $include_type = 'input';
                   include('text_input.php');
-                ?>
-              </div>
-            </fieldset>
-          </section>
-
-          <section>
-            <?php
-              $include_name = 'Design';
-              include('section_heading.php');
-            ?>
-            
-            <fieldset>
-              <?php
-                include('theme_picker.php'); 
-
-                include('font_picker.php'); 
-
-                echo '<div class="subsection">';
-                  $include_name = 'Primary background';
-                  $include_data = ['.primary','background'];
-                  include('color_picker.php');
-
-                  $include_name = 'Primary text color';
-                  $include_data = ['.primary','color'];
-                  include('color_picker.php');
-                echo '</div>';
-
-                echo '<div class="subsection">';
-                  $include_name = 'Secondary background';
-                  $include_data = ['.secondary','background'];
-                  include('color_picker.php');
-
-                  $include_name = 'Secondary text color';
-                  $include_data = ['.secondary','color'];
-                  include('color_picker.php');                
-                echo '</div>';
-
-                echo '<div class="subsection">';
-                  $include_name = 'Body background';
-                  $include_data = ['table.body','background'];
-                  include('color_picker.php');
-                echo '</div>';
-              ?>
-            </fieldset>
-          </section>
-
-          <section>
-            <?php
-              $include_name = 'Content';
-              include('section_heading.php');
-            ?>
-
-            <fieldset>
-              <div class="subsection">
-                <?php
-                  include('content_picker.php');
                 ?>
               </div>
 
@@ -136,6 +88,45 @@
                   include('csv_picker.php');
                 ?>
               </div>
+            </fieldset>
+          </section>
+          
+          <section>
+            <?php
+              $include_name = 'Design';
+              include('section_heading.php');
+            ?>
+            
+            <fieldset>
+              <?php
+                include('font_picker.php'); 
+
+                echo '<div class="subsection">';
+                  $include_name = 'Primary background';
+                  $include_data = ['.primary','background'];
+                  include('color_picker.php');
+
+                  $include_name = 'Primary text color';
+                  $include_data = ['.primary','color'];
+                  include('color_picker.php');
+                echo '</div>';
+
+                echo '<div class="subsection">';
+                  $include_name = 'Secondary background';
+                  $include_data = ['.secondary','background'];
+                  include('color_picker.php');
+
+                  $include_name = 'Secondary text color';
+                  $include_data = ['.secondary','color'];
+                  include('color_picker.php');                
+                echo '</div>';
+
+                echo '<div class="subsection">';
+                  $include_name = 'Body background';
+                  $include_data = ['table.body','background'];
+                  include('color_picker.php');
+                echo '</div>';
+              ?>
             </fieldset>
           </section>
 

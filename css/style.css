@@ -1169,13 +1169,20 @@ button, input:not([type=checkbox]), textarea, select {
       width: 250px; }
     #dashboard section .content_picker .fa {
       margin: 2px;
-      padding: 20px;
+      padding: 10px;
       background: #333338;
       color: #f9f9f9;
-      cursor: grab; }
+      cursor: grab;
+      -o-transition: background 200ms;
+      -ms-transition: background 200ms;
+      -webkit-transition: background 200ms;
+      transition: background 200ms; }
       #dashboard section .content_picker .fa.selected {
         cursor: grabbing;
-        position: fixed; }
+        position: fixed;
+        background: #E85520; }
+      #dashboard section .content_picker .fa:hover {
+        background: #E85520; }
 
 #dashboard .range-slider-wrapper input {
   display: inline-block; }
@@ -1255,7 +1262,13 @@ button, input:not([type=checkbox]), textarea, select {
 .text_styles {
   float: right; }
   .text_styles .font_styles, .text_styles .alignment {
-    display: inline-block; }
+    display: inline-block;
+    padding-right: 15px;
+    border-right: 1px solid #ccc;
+    -o-transition: all 1500ms;
+    -ms-transition: all 1500ms;
+    -webkit-transition: all 1500ms;
+    transition: all 1500ms; }
   .text_styles i {
     padding-left: 10px;
     cursor: pointer;
@@ -1341,8 +1354,17 @@ button, input:not([type=checkbox]), textarea, select {
 .hidden {
   display: none; }
 
-.hidden_height {
+.hidden_y {
+  max-height: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  overflow: hidden; }
+
+.hidden_x_y {
+  width: 0px !important;
   height: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
   padding-top: 0px !important;
   padding-bottom: 0px !important;
   overflow: hidden; }
