@@ -64,6 +64,21 @@
 		.theme_thumbnails_wrapper{
 			width:250px;
 		}	
+
+		.content_picker{
+			.fa{
+				margin:2px;
+				padding:20px;
+				background:$main-color;
+				color:$off-white;
+				cursor:grab;
+
+				&.selected{
+					cursor:grabbing;
+					position:fixed;
+				}
+			}
+		}
 	}
 }
 

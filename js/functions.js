@@ -52,6 +52,8 @@ function initialize_dashboard(){
 	initialize_font_selector();
 
 	initialize_csv_reader();
+
+	initialize_drag_and_drop();
 }
 
 /************************************************************************************************************************
@@ -268,6 +270,24 @@ function initialize_csv_reader(){
 	});
 }
 
+
+function initialize_drag_and_drop(){
+	$('.content_picker .fa').mousedown(function(){
+		$('.content_picker').append('<i class="selected"></i>');
+		$('.content_picker .selected').attr( 'class', $(this).attr('class') + ' selected' );
+
+		$('body').mousemove(function(e){
+			$('.content_picker .selected').css({
+				'left':e.pageX - 10,
+				'top':e.pageY - 10
+			});
+		}).mouseup(function(){
+			$('.content_picker .selected').fadeOut(200);	
+
+			$('body').unbind('mousemove').unbind('mouseup').removeClass('unselectable');		
+		}).addClass('unselectable');
+	})
+}
 
 function submit_invoice() {
 	if ( $('#copy_me').is(":checked") ){

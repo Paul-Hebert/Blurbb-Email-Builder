@@ -1167,6 +1167,15 @@ button, input:not([type=checkbox]), textarea, select {
       top: 36px; }
     #dashboard section .theme_thumbnails_wrapper {
       width: 250px; }
+    #dashboard section .content_picker .fa {
+      margin: 2px;
+      padding: 20px;
+      background: #333338;
+      color: #f9f9f9;
+      cursor: grab; }
+      #dashboard section .content_picker .fa.selected {
+        cursor: grabbing;
+        position: fixed; }
 
 #dashboard .range-slider-wrapper input {
   display: inline-block; }
@@ -1406,6 +1415,12 @@ button, input:not([type=checkbox]), textarea, select {
   font-size: 48pt;
   color: #ccc;
   cursor: default; }
+
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
 
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome

@@ -12,10 +12,7 @@
 
         <?php
             echo '<link rel="stylesheet" type="text/css" href="' . $base_url . 'css/style.css">';
-            echo '<link id="theme_CSS" rel="stylesheet" type="text/css" href="' . $base_url . 'includes/themes/' . $theme . '/css/style.css">';
-            echo '<script src="' . $base_url . 'js/jQuery_v1.11.1.min.js"></script>';
-            echo '<script src="' . $base_url . 'js/colorpicker.js"></script>';
-            echo '<script src="' . $base_url . 'js/functions.js"></script>';        
+            echo '<link id="theme_CSS" rel="stylesheet" type="text/css" href="' . $base_url . 'includes/themes/' . $theme . '/css/style.css">';    
         ?>
     </head>
 

@@ -8,13 +8,13 @@
       include($base_url . 'includes/themes/' . $theme . '/settings.php');
     ?>
     <div class="row">
-      <div id="email" class="main_preview col-lg-8">
+      <div id="email" class="main_preview col-lg-8 container">
         <?php 
           include($base_url . 'includes/themes/' . $theme . '/index.php');
         ?>
       </div>
 
-      <div id="dashboard" class="col-lg-4">
+      <div id="dashboard" class="col-lg-4 container">
         <header>
           <h2>Email Dashboard</h1>
         </header>
@@ -98,6 +98,12 @@
 
             <fieldset>
               <div class="subsection">
+                <?php
+                  include('content_picker.php');
+                ?>
+              </div>
+
+              <div class="subsection">
                 <?php 
                   $include_name = 'Heading 1';
                   $include_data = '.heading1';
@@ -162,5 +168,8 @@
         </menu>
       </div>
     </div>
+    <?php
+      include($base_url . 'includes/page_sections/scripts.php');
+    ?>
   </body>
 </html>    

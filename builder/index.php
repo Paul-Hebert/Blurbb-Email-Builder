@@ -11,5 +11,8 @@
         <button id="theme_selection_button" class="col-lg-12">Pick a Theme</button>
       </div>
     </div>
+    <?php
+      include($base_url . 'includes/page_sections/scripts.php');
+    ?>
   </body>
 </html>
