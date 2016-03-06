@@ -1252,13 +1252,15 @@ button, input:not([type=checkbox]), textarea, select {
         padding: 5px 0px;
         border: 1px solid #ccc; }
 
-.alignment {
+.text_styles {
   float: right; }
-  .alignment i {
+  .text_styles .font_styles, .text_styles .alignment {
+    display: inline-block; }
+  .text_styles i {
     padding-left: 10px;
     cursor: pointer;
     color: #ACACAC; }
-    .alignment i.selected {
+    .text_styles i.selected {
       color: #333338; }
 
 .preview {

@@ -161,7 +161,7 @@
           </section>-->
 
           <section>
-            <button id="preview_HTML">Preview HTML</button>
+            <!--<button id="preview_HTML">Preview HTML</button>-->
             <button id="export_HTML">Export HTML</button>
             <!--<input type="submit" value="Send Invoice">-->
           </section>

@@ -247,7 +247,27 @@ function initialize_text_inputs(){
 
 		$(this).addClass('selected');		
 
-		$('#addedCSS').append('#email ' + $(this).parent().attr('data_target') + ', #email ' + $(this).parent().attr('data_target') + ' *{text-align:' + alignment + '}');
+		$('#addedCSS').append('#email ' + $(this).parent().parent().attr('data_target') + ', #email ' + $(this).parent().parent().attr('data_target') + ' *{text-align:' + alignment + '}');
+	});
+
+	$('.fa-bold').click(function(){
+		$(this).toggleClass('selected');
+
+		if( $(this).hasClass('selected') ){
+			$('#addedCSS').append('#email ' + $(this).parent().parent().attr('data_target') + ', #email ' + $(this).parent().parent().attr('data_target') + ' *{font-weight:bold}');			
+		}	else{
+			$('#addedCSS').append('#email ' + $(this).parent().parent().attr('data_target') + ', #email ' + $(this).parent().parent().attr('data_target') + ' *{font-weight:normal}');						
+		}
+	});
+
+	$('.fa-italic').click(function(){
+		$(this).toggleClass('selected');
+
+		if( $(this).hasClass('selected') ){
+			$('#addedCSS').append('#email ' + $(this).parent().parent().attr('data_target') + ', #email ' + $(this).parent().parent().attr('data_target') + ' *{font-style:italic}');			
+		}	else{
+			$('#addedCSS').append('#email ' + $(this).parent().parent().attr('data_target') + ', #email ' + $(this).parent().parent().attr('data_target') + ' *{font-style:normal}');						
+		}	
 	});
 }
 
@@ -283,6 +303,10 @@ function initialize_drag_and_drop(){
 			});
 		}).mouseup(function(){
 			$('.content_picker .selected').fadeOut(200);	
+
+			setTimeout(function(){
+				$('.content_picker .selected').remove();
+			}, 200);
 
 			$('body').unbind('mousemove').unbind('mouseup').removeClass('unselectable');		
 		}).addClass('unselectable');
@@ -383,7 +407,7 @@ function preview_HTML(){
 
 
 function export_HTML(){
-	modal('Code','<ul class="links"><li id="download_HTML">What is This?</li><li id="download_HTML">Download HTML</li></ul><pre><i class="fa fa-spinner</pre>');
+	modal('Code','<ul class="links"><li id="download_HTML">Download HTML</li></ul><pre><i class="fa fa-spinner</pre>');
 
 	$('#download_HTML').click(function(){
 		download('email.html', $('.modal pre').text() );

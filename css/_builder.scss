@@ -184,8 +184,12 @@
 	}
 }
 
-.alignment{
+.text_styles{
 	float:right;
+
+	.font_styles, .alignment{
+		display:inline-block;
+	}
 
 	i{
 		padding-left:10px;
