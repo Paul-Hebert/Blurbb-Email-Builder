@@ -36,12 +36,12 @@
                   <a href="http://invoice-out.com/">
                       <?php 
                         if ($logo == ""){
-                          echo '<img src="http://www.invoice-out.com/includes/themes/Blast_Off/imgs/logo.png" id="logo">'; 
+                          echo '<img src="http://www.invoice-out.com/includes/themes/Blast_Off/imgs/logo.png" id="logo" class="image block">'; 
                         } else{
-                          echo '<img src="' . $logo . '" id="logo">'; 
+                          echo '<img src="' . $logo . '" id="logo" class="image block">'; 
                         }
                       ?> 
-                      <h1 id="title" class="business_name"><?php echo $business_name; ?></h1>
+                      <h1 id="title" class="business_name text block"><?php echo $business_name; ?></h1>
                     </a>
                 </td>
               </tr>
@@ -57,13 +57,13 @@
             <table class="email_row light">
               <tr>
                 <td>
-                  <h2 class="heading1"><?php echo $heading1; ?></h2>
-                  <div class="message1">
+                  <h2 class="heading1 text block"><?php echo $heading1; ?></h2>
+                  <div class="message1 text block">
                     <p><?php echo $message1; ?></p>
                   </div>
                 </td>
                 <td>
-                  <div id="csv_holder">
+                  <div id="csv_holder" class="chart block">
                     <?php include($base_url . 'includes/utilities/csv_as_table.php');?>
                   </div>
                 </td>
@@ -73,8 +73,8 @@
             <table class="email_row primary">
               <tr>
                 <td>
-                  <h2 class="heading2"><?php echo $heading2; ?></h2>
-                  <div class="message2">
+                  <h2 class="heading2 text block"><?php echo $heading2; ?></h2>
+                  <div class="message2 text block">
                     <p><?php echo $message2; ?></p>
                   </div>
                 </td>
@@ -85,7 +85,7 @@
               <tr>
                 <td valign="middle">
                   <div>
-                    <a href="http://invoice-out.com/">
+                    <a href="http://invoice-out.com/" class="text block">
                       <span class="website_url secondary">
                         <?php echo $website_url; ?>
                       </span>

@@ -23,6 +23,9 @@ Planned features
 - Create a better color palette for the color picker UI
 - Simplified visual design
 - Final name and logo
+- Edit CSVs as spreadsheets
+- Input tables cell by cell (No CSV required)
+
 
 Issues and Bugs
 ===============
