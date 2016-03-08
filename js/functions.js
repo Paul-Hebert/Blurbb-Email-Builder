@@ -237,6 +237,11 @@ function initialize_range_sliders(){
 
 
 function initialize_text_inputs(){
+	$('.text_input').each(function(){
+		var target = $( $(this).attr('data_target') );
+		$(this).attr('placeholder', target.text().trim() );
+	});
+
 	$('.text_input').keyup(function(){
 		var target = $($(this).attr('data_target') );
 		var target_type = target.get(0).tagName;
