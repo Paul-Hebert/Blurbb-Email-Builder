@@ -1180,7 +1180,8 @@ button, input:not([type=checkbox]), textarea, select {
       #dashboard section .content_picker .fa.selected {
         cursor: grabbing;
         position: fixed;
-        background: #E85520; }
+        background: #E85520;
+        z-index: 40; }
       #dashboard section .content_picker .fa:hover {
         background: #E85520; }
 
@@ -1445,6 +1446,9 @@ button, input:not([type=checkbox]), textarea, select {
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none; }
+
+.droppable {
+  border: 1px solid #E85520 !important; }
 
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome

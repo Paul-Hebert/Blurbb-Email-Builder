@@ -226,6 +226,13 @@ function initialize_range_sliders(){
 	$('.range-slider-wrapper input[type=text]').change(function(){
 		$(this).siblings('input').val( $(this).val() ).change();	
 	});
+
+	$('input[type=range]').each(function(){
+		var css_targets = $(this).attr('data-target').split('-')[0];
+		var start_val = $(css_targets).css('width').replace('px','');
+
+		$(this).val( start_val ).change();
+	});	
 }
 
 
@@ -314,6 +321,13 @@ function initialize_drag_and_drop(){
 				'left':e.pageX - x_offset,
 				'top':e.pageY - y_offset
 			});
+
+			$('#email *').each(function(){
+				var item_offset = $(this).offset();
+				//if ( e.pageX > offset.left && e.pageX < offset.left + $(this).width ){
+					$(this).addClass('droppable');
+				//}
+			});
 		}).mouseup(function(){
 			$('.content_picker .selected').fadeOut(200);	
 
@@ -321,7 +335,9 @@ function initialize_drag_and_drop(){
 				$('.content_picker .selected').remove();
 			}, 200);
 
-			$('body').unbind('mousemove').unbind('mouseup').removeClass('unselectable');		
+			$('body').unbind('mousemove').unbind('mouseup').removeClass('unselectable');	
+
+			$('#email *').removeClass('droppable')
 		}).addClass('unselectable');
 	})
 }

@@ -78,6 +78,8 @@
 					cursor:grabbing;
 					position:fixed;
 					background:$auxiliary-color;
+
+					z-index:40;
 				}
 
 				&:hover{
