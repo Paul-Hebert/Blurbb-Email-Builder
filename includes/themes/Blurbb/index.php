@@ -32,7 +32,7 @@
 
             <table class="email_row primary">
               <tr>
-                <td align="center" valign="middle">
+                <td align="center" valign="middle" class="column">
                   <a href="http://invoice-out.com/">
                       <?php 
                         if ($logo == ""){
@@ -56,13 +56,13 @@
 
             <table class="email_row light">
               <tr>
-                <td>
+                <td class="column">
                   <h2 class="heading1 text block"><?php echo $heading1; ?></h2>
                   <div class="message1 text block">
                     <p><?php echo $message1; ?></p>
                   </div>
                 </td>
-                <td>
+                <td class="column">
                   <div id="csv_holder" class="chart block">
                     <?php include($base_url . 'includes/utilities/csv_as_table.php');?>
                   </div>
@@ -72,7 +72,7 @@
 
             <table class="email_row primary">
               <tr>
-                <td>
+                <td class="column">
                   <h2 class="heading2 text block"><?php echo $heading2; ?></h2>
                   <div class="message2 text block">
                     <p><?php echo $message2; ?></p>
@@ -83,7 +83,7 @@
 
             <table class="email_row secondary footer">
               <tr>
-                <td valign="middle">
+                <td valign="middle" class="column">
                   <div>
                     <a href="http://invoice-out.com/" class="text block">
                       <span class="website_url secondary">

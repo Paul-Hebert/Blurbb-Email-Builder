@@ -329,7 +329,7 @@ function initialize_drag_and_drop(){
 				'top':e.pageY - y_offset
 			});
 
-			$('#email .block').each(function(){
+			$('#email .block, #email .column').each(function(){
 				if ( $(this).ismouseover() ) {
 				    $(this).addClass('droppable');
 				} else{
@@ -345,13 +345,25 @@ function initialize_drag_and_drop(){
 
 			$('body').unbind('mousemove').unbind('mouseup').removeClass('unselectable');	
 
+			var dropped = false;
+
 			$('#email .block').each(function(){
 				if ( $(this).ismouseover() ) {
-				    replace_content(this, content_type);
+				    ajax_block(this, content_type, 'replaceWith');
+				    dropped = true;
 				}
 			});
 
-			$('#email .block').removeClass('droppable');
+			if (dropped === false){
+				$('#email .column').each(function(){
+					if ( $(this).ismouseover() ) {
+					    ajax_block(this, content_type, 'append');
+					    dropped = true;
+					}
+				});			
+			}
+
+			$('#email .block, #email .column').removeClass('droppable');
 		}).addClass('unselectable');
 	})
 }
@@ -510,14 +522,22 @@ function modal(heading,content){
 }
 
 
-function replace_content(target, content_type){
+function ajax_block(target, content_type, action){
     $.ajax({
 	     type: "GET",
 	     url: 'email/' + content_type + '.php',
 		     success: function(data) {
-		     	$(target).replaceWith(data);
+		     	handle_ajax_block(target, data, action);
 	     }
 	});
+}
+
+function handle_ajax_block(target, data, action){
+	if (action === 'replaceWith'){
+		$(target).replaceWith(target, data);
+	} else{
+		$(target).append(data);		
+	}
 }
 
 //jQuery ismouseover  method

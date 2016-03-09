@@ -581,5 +581,9 @@
     padding: 0px; }
   #email .website_url {
     text-decoration: none; }
+  #email ul {
+    list-style: disc;
+    padding-left: 10px;
+    margin-left: 10px; }
 
 /*# sourceMappingURL=style.css.map */
