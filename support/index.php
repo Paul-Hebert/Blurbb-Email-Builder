@@ -29,6 +29,8 @@
 
 		      					<textarea name="Issue"></textarea>
 		      				</div>
+
+		      				<input type="submit" value="Submit Ticket">
 	      				</fieldset>
       				</form>
       			</section> 

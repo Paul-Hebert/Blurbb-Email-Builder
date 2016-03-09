@@ -20,7 +20,7 @@
         </header>
 
         <menu id="invoice_form" enctype='multipart/form-data'>
-          <section>
+          <section id="content_menu">
             <?php
               $include_name = 'Content';
               include('section_heading.php');
@@ -46,12 +46,12 @@
                   $include_name = 'Business Name';
                   $include_data = '.business_name';
                   $include_type = 'input';
-                  include('text_input.php');
+                  include('text_picker.php');
 
                   $include_name = 'Website URL';
                   $include_data = '.website_url';
                   $include_type = 'input';
-                  include('text_input.php');
+                  include('text_picker.php');
                 ?>
               </div>
 
@@ -60,12 +60,12 @@
                   $include_name = 'Heading 1';
                   $include_data = '.heading1';
                   $include_type = 'input';
-                  include('text_input.php');
+                  include('text_picker.php');
 
                   $include_name = 'Message 1';
                   $include_data = '.message1';
                   $include_type = 'textarea';
-                  include('text_input.php');
+                  include('text_picker.php');
                 ?>
               </div>
               
@@ -74,12 +74,12 @@
                   $include_name = 'Heading 2';
                   $include_data = '.heading2';
                   $include_type = 'input';
-                  include('text_input.php');
+                  include('text_picker.php');
 
                   $include_name = 'Message 2';
                   $include_data = '.message2';
                   $include_type = 'textarea';
-                  include('text_input.php');                  
+                  include('text_picker.php');                  
                 ?>
               </div>
 

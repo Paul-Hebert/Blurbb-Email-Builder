@@ -1136,10 +1136,9 @@ button, input:not([type=checkbox]), textarea, select {
   overflow: scroll; }
   #dashboard header {
     width: 100%;
-    background: #333338;
     padding: 20px; }
     #dashboard header h2 {
-      color: #f9f9f9; }
+      color: #333338; }
   #dashboard section {
     padding-top: 20px;
     margin: 0px 20px;
@@ -3527,7 +3526,7 @@ button, input:not([type=checkbox]), textarea, select {
 #landing_heading h1 {
   font-size: 48pt;
   padding-top: 30px;
-  font-family: "Sansita One";
+  font-family: "Oleo Script";
   color: #333338; }
 #landing_heading h2 {
   font-family: "Open Sans"; }
@@ -3545,8 +3544,8 @@ button, input:not([type=checkbox]), textarea, select {
   line-height: 140%; }
 
 body {
-  width: 100% !important;
-  min-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   margin: 0;
@@ -3596,7 +3595,7 @@ header#main {
     header#main a h1 {
       padding: 10px;
       margin: 0px;
-      font-family: "Sansita One";
+      font-family: "Oleo Script";
       float: right; }
     header#main a #blurbb_logo {
       height: 60px; }

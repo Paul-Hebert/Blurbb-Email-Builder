@@ -524,11 +524,19 @@ function modal(heading,content){
 
 function ajax_block(target, content_type, action){
     $.ajax({
-	     type: "GET",
-	     url: 'email/' + content_type + '.php',
-		     success: function(data) {
-		     	handle_ajax_block(target, data, action);
-	     }
+	    type: "GET",
+	    url: 'email/' + content_type + '.php',
+		success: function(data) {
+		    handle_ajax_block(target, data, action);
+		}
+	});
+
+	$.ajax({
+		type: "GET",
+		url: content_type + '_picker.php',
+		success: function(data) {
+		    $('#content_menu fieldset').append(data);
+	    }
 	});
 }
 

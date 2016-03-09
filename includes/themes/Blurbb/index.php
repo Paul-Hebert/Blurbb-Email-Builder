@@ -38,10 +38,10 @@
                         if ($logo == ""){
                           echo '<img src="http://www.invoice-out.com/includes/themes/Blast_Off/imgs/logo.png" id="logo" class="image block">'; 
                         } else{
-                          echo '<img src="' . $logo . '" id="logo" class="image block">'; 
+                          echo '<img src="' . $logo . '" id="logo" class="image block n1">'; 
                         }
                       ?> 
-                      <h1 id="title" class="business_name text block"><?php echo $business_name; ?></h1>
+                      <h1 id="title" class="business_name text block n1"><?php echo $business_name; ?></h1>
                     </a>
                 </td>
               </tr>
@@ -57,13 +57,13 @@
             <table class="email_row light">
               <tr>
                 <td class="column">
-                  <h2 class="heading1 text block"><?php echo $heading1; ?></h2>
-                  <div class="message1 text block">
+                  <h2 class="heading1 text block n2"><?php echo $heading1; ?></h2>
+                  <div class="message1 text block n3">
                     <p><?php echo $message1; ?></p>
                   </div>
                 </td>
                 <td class="column">
-                  <div id="csv_holder" class="chart block">
+                  <div id="csv_holder" class="chart block n1">
                     <?php include($base_url . 'includes/utilities/csv_as_table.php');?>
                   </div>
                 </td>
@@ -73,8 +73,8 @@
             <table class="email_row primary">
               <tr>
                 <td class="column">
-                  <h2 class="heading2 text block"><?php echo $heading2; ?></h2>
-                  <div class="message2 text block">
+                  <h2 class="heading2 text block n4"><?php echo $heading2; ?></h2>
+                  <div class="message2 text block n5">
                     <p><?php echo $message2; ?></p>
                   </div>
                 </td>
@@ -85,11 +85,9 @@
               <tr>
                 <td valign="middle" class="column">
                   <div>
-                    <a href="http://invoice-out.com/" class="text block">
-                      <span class="website_url secondary">
-                        <?php echo $website_url; ?>
-                      </span>
-                    </a>
+                    <span class="website_url secondary" class="text block n6">
+                      <?php echo $website_url; ?>
+                    </span>
                   </div>
                 </td>
               </tr>
