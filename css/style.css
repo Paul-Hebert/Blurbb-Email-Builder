@@ -1276,24 +1276,6 @@ button, input:not([type=checkbox]), textarea, select {
     .text_styles i.selected {
       color: #333338; }
 
-.preview {
-  position: absolute;
-  top: 20%;
-  z-index: 30; }
-  .preview div {
-    display: inline-block;
-    margin: 50px;
-    overflow: scroll; }
-  .preview .desktop {
-    width: 576px;
-    height: 360px; }
-  .preview .tablet {
-    width: 154px;
-    height: 205px; }
-  .preview .mobile {
-    width: 64px;
-    height: 96px; }
-
 .toggled_text {
   display: none; }
 

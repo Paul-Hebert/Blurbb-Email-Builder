@@ -126,31 +126,8 @@
             </fieldset>
           </section>
 
-          <!--<section>
-            <h3 class="open">Email</h3>
-
-            <fieldset>
-              <div class="subsection">
-                <label for="to_email">To (Separate multiple emails with commas) <span class="required_asterisk">*</span></label>
-                <input type='text' placeholder="johndoe@mildwestdesigns.com" name="to_email" id="to_email" required>
-
-                <label for="from_email">From <span class="required_asterisk">*</span></label>
-                <input type='email' placeholder="invoices@invoice-out.com" name="from_email" id="from_email" required>
-
-                <input type="checkbox" checked name="copy_me" id="copy_me" value="copy"><span>Email yourself a copy</span>
-              </div>
-
-              <div class="subsection">
-                <label for="subject">Subject <span class="required_asterisk">*</span></label>
-                <input type='text' placeholder="Invoice Out" name="subject" id="subject" required>
-              </div>
-            </fieldset> 
-          </section>-->
-
           <section>
-            <!--<button id="preview_HTML">Preview HTML</button>-->
             <button id="export_HTML">Export HTML</button>
-            <!--<input type="submit" value="Send Invoice">-->
           </section>
         </menu>
       </div>
