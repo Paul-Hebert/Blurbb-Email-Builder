@@ -528,6 +528,10 @@ function ajax_block(target, content_type, action){
 	    url: 'email/' + content_type + '.php',
 		success: function(data) {
 		    handle_ajax_block(target, data, action);
+
+		    var element_count = $('.block.' + content_type).length - 1;
+
+		    $('.block.' + content_type).eq( element_count ).addClass( 'n' + parseFloat(element_count + 1) );
 		}
 	});
 

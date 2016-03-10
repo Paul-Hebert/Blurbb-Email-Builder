@@ -15,10 +15,6 @@
       </div>
 
       <div id="dashboard" class="col-lg-4 container">
-        <header>
-          <h2>Email Dashboard</h1>
-        </header>
-
         <menu id="invoice_form" enctype='multipart/form-data'>
           <section id="content_menu">
             <?php
