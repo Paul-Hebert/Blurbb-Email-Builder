@@ -9,20 +9,28 @@
 $(function(){
 	initialize_dashboard();
 
-	$('.icon_toggle').click(function(){
-		modal( $(this).attr('data-heading'), $(this).children('.toggled_text').html() );
-	});
+	initialize_toggle_icons();
+
+	initialize_theme_selection_page();
 
 	$('.input_toggle').click(function(){
 		$(this).parent().children('.input_toggle').toggleClass('selected');
 		$(this).siblings('input').toggleClass('hidden');
 	});
+});
 
+
+function initialize_toggle_icons(){
+	$('.icon_toggle').click(function(){
+		modal( $(this).attr('data-heading'), $(this).children('.toggled_text').html() );
+	});
+}
+
+function initialize_theme_selection_page(){
 	$('#theme_selection_button').click(function(){
 		window.location = 'dashboard/?theme=' + $('#theme_picker').val();
 	});
-});
-
+}
 
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,7 +59,7 @@ function initialize_dashboard(){
 
 	initialize_font_selector();
 
-	initialize_csv_reader();
+	initialize_spreadsheet_picker();
 
 	initialize_drag_and_drop();
 }
@@ -173,26 +181,32 @@ function initialize_colorpickers(){
 
 
 	$('.color-swatch').each(function(){
-		if ( $(this).attr('data-color') != 'picker' ){
-			$(this).css('background',$(this).attr('data-color')).click( function(){
-				var css_targets = $(this).parent().attr('data-target').split('-');
-				
-				$('#addedCSS').append('#email ' + css_targets[0] + '{' + css_targets[1] + ':' + $(this).attr('data-color') + '}');
-				
-				if(! $(this).siblings('p').children('.colorpicker').hasClass('hidden_y') ){
-					$(this).siblings('p').children('.colorpicker').addClass('hidden_y')
-				}
+		$(this).css('background',$(this).attr('data-color')).click( function(){
+			var css_targets = $(this).parent().attr('data-target').split('-');
+			
+			$('#addedCSS').append('#email ' + css_targets[0] + '{' + css_targets[1] + ':' + $(this).attr('data-color') + '}');
+		});
+	});
 
-				$(this).siblings('.selected').removeClass('selected');
-				$(this).addClass('selected');
-			});
-		} else{
-			$(this).click(function(){
-				$(this).siblings('p').children('.colorpicker').toggleClass('hidden_y');
-				$(this).siblings('.selected').removeClass('selected');
-				$(this).addClass('selected');
-			})
-		}
+	$('.color-selector-wrapper .fa-cog').click(function(){
+		$(this).siblings('p').children('.colorpicker').toggleClass('hidden_y');
+	});
+
+	$('.color-selector-wrapper .fa-picture-o').click(function(){
+		if(! $(this).siblings('p').children('.colorpicker').hasClass('hidden_y') ){
+			$(this).siblings('p').children('.colorpicker').addClass('hidden_y')
+		}	
+	});	
+
+	$('.color-selector-wrapper .fa-picture-o, .color-swatch').click(function(){
+		if(! $(this).siblings('p').children('.colorpicker').hasClass('hidden_y') ){
+			$(this).siblings('p').children('.colorpicker').addClass('hidden_y')
+		}	
+	});	
+
+	$('.color-selector-wrapper .fa-cog, .color-selector-wrapper .fa-picture-o, .color-swatch').click(function(){
+		$(this).siblings('.selected').removeClass('selected');
+		$(this).addClass('selected');		
 	});
 }
 
@@ -301,9 +315,13 @@ function initialize_font_selector(){
 }
 
 
-function initialize_csv_reader(){
-	$('#csv_input').change(function(){
-		readURL2(this);
+function initialize_spreadsheet_picker(){
+	$('.spreadsheet_picker input[type=file]').change(function(){
+		CSV_from_file( this, $(this).parent().attr('data-target') );
+	});
+
+	$('.spreadsheet_picker input[type=text]').keyup(function(){
+		// Need to reformat spreadsheet php script to accept external URL
 	});
 }
 
@@ -368,35 +386,6 @@ function initialize_drag_and_drop(){
 	})
 }
 
-function submit_invoice() {
-	if ( $('#copy_me').is(":checked") ){
-		var checked = 'true';
-	} else{
-		var checked = 'false';
-	}
-
-    var request = $.ajax({
-	     type: "POST",
-	     url: '../../includes/utilities/send_mail.php',
-  		 data: { 
-  		 	message: '<div id="email">' + $('#email').html() + '</div>', 
-  		 	theme: theme_name,
-  		 	addedCSS: $('#addedCSS').text(),
-  		 	subject: $('#subject').val(), 
-  		 	from_email: $('#from_email').val(), 
-  		 	to_email: $('#to_email').val(),
-  		 	copy_me: checked
-  		 },
-	     success: function() {
-			modal('Success','<p>Your email has been sent.</p><p>If you do not receive payment make sure to follow up. It\'s possible this email was blocked by a spam filter.');			
-		}
-	});
-
-	request.fail(function(jqXHR, textStatus) {
-		console.log( "Request failed: " + textStatus );
-	});
-}
-
 
 function readURL(input,target) {
     if (input.files && input.files[0]) {
@@ -412,7 +401,7 @@ function readURL(input,target) {
 
 // Super sloppy. Needs cleaning up
 
-function readURL2(input) {
+function CSV_from_file(input,target) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
@@ -422,7 +411,7 @@ function readURL2(input) {
 			     url: '../../includes/utilities/csv_as_table.php',
 			     data: "path=" + e.target.result,
 			     success: function(data) {
-			          $('#csv_holder').html(data);
+			          $(target).html(data);
 			     }
 			});
         }
@@ -439,27 +428,6 @@ function readURL2(input) {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /***********************************************************************************************************************/
-
-function preview_HTML(){
-	$('body').append('<div class="modal background transparent"></div><div class="preview"><div class="desktop"></div><div class="tablet"></div><div class="mobile"></div></div>');
-
-	$('.preview div').each(function(){
-		$(this).html('<span id="email">' + $('#email').html() + '</span>');
-	});
-
-	setTimeout(function(){
-		$('.modal, .preview').removeClass('transparent');
-	},1);
-	
-	$('.modal.background').click(function(){
-		$('.modal, .preview').addClass('transparent');
-
-		setTimeout(function(){
-			$('.modal, .preview').remove();
-		},300);
-	})
-}
-
 
 function export_HTML(){
 	modal('Code','<ul class="links"><li id="download_HTML">Download HTML</li></ul><pre><i class="fa fa-spinner</pre>');

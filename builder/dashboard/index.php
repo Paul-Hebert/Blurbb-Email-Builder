@@ -81,7 +81,9 @@
 
               <div class="subsection">
                 <?php
-                  include('csv_picker.php');
+                  $include_name = 'Upload a spreadsheet';
+                  $include_data = '.chart.block.n1';
+                  include('spreadsheet_picker.php');
                 ?>
               </div>
             </fieldset>

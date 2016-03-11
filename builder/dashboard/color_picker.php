@@ -8,9 +8,12 @@
 	        	echo '<div data-color="' . $swatch . '" class="color-swatch"></div>';
 	        }
 
-	        echo '<div data-color="picker" class="color-swatch picker"></div>
+	        echo '<i class="fa fa-cog"></i>';
 
-	        <p class="colorpicker-wrapper">
-	        </p>
+	        if ($include_data[1] === 'background'){
+	        	echo '<i class="fa fa-picture-o"></i>';
+	        }
+
+	    	echo '<p class="colorpicker-wrapper"></p>
 	    </div>';
     ?>

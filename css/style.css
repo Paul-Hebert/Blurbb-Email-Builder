@@ -1126,7 +1126,8 @@ button, input:not([type=checkbox]), textarea, select {
 #email.main_preview {
   float: left;
   width: 60%;
-  overflow: scroll; }
+  overflow: scroll;
+  padding-right: 0px; }
 
 #dashboard {
   width: 40%;
@@ -1220,11 +1221,16 @@ button, input:not([type=checkbox]), textarea, select {
   -ms-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px; }
-  .color-selector-wrapper .color-swatch.picker {
-    background: url("../imgs/colorpicker/slider.png");
-    background-size: 25px 25px; }
   .color-selector-wrapper .color-swatch.selected {
     border: 1px solid #222; }
+.color-selector-wrapper .fa {
+  padding: 0px 5px;
+  position: relative;
+  top: -5px;
+  cursor: pointer;
+  color: #ACACAC; }
+  .color-selector-wrapper .fa.selected {
+    color: #333338; }
 
 #theme_picker {
   width: 100%; }
@@ -1428,7 +1434,7 @@ button, input:not([type=checkbox]), textarea, select {
   -webkit-user-select: none;
   user-select: none; }
 
-.droppable {
+.droppable, .block:hover {
   border: 1px solid #E85520 !important; }
 
 /*!

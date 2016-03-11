@@ -1,2 +1,10 @@
-				<label for="csv_input">Upload your CSV</label>
-                <input type='file' name="csv_input" id="csv_input">
+
+<?php
+	echo '<div class="spreadsheet_picker" data-target="' . $include_data . '">
+		<label>' . $include_name . '</label>';
+
+	    $include_type = 'file';
+ 
+		include('file_picker.php'); 
+	echo '</div>';
+?>

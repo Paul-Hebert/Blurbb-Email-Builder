@@ -8,6 +8,11 @@
 	float:left;
 	width:60%;
 	overflow:scroll;
+	padding-right: 0px;
+}
+
+.block:hover{
+	@extend .droppable;
 }
 
 #dashboard{
@@ -136,15 +141,22 @@
 		cursor:pointer;
 		margin-right:2.5px;
 		@include radius(3px);
-	
-		&.picker{
-			background:url("../imgs/colorpicker/slider.png");
-			background-size:25px 25px;
-		}
 
 		&.selected{
 			border:1px solid $off-black;
 		}
+	}
+
+	.fa{
+		padding:0px 5px;
+		position:relative;
+		top:-5px;
+		cursor:pointer;
+		color:$mid-tone;
+
+			&.selected{
+				color:$main-color;
+			}
 	}
 }
 
