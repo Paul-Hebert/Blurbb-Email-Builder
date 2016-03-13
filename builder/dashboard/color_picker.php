@@ -14,6 +14,10 @@
 	        	echo '<i class="fa fa-picture-o"></i>';
 	        }
 
-	    	echo '<p class="colorpicker-wrapper"></p>
-	    </div>';
+	    	echo '<p class="colorpicker-wrapper"></p>';
+
+	    	$include_type = 'text';
+	    	include('file_picker.php');
+
+	    	echo '</div>';
     ?>

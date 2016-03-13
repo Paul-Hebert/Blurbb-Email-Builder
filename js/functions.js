@@ -177,7 +177,7 @@ function initialize_colorpickers(){
 		}
 	});
 
-	$('.colorpicker').addClass('hidden_y');
+	$('.colorpicker, .color-selector-wrapper .file-picker').addClass('hidden_y');
 
 
 	$('.color-swatch').each(function(){
@@ -189,20 +189,24 @@ function initialize_colorpickers(){
 	});
 
 	$('.color-selector-wrapper .fa-cog').click(function(){
-		$(this).siblings('p').children('.colorpicker').toggleClass('hidden_y');
+		$(this).siblings('p').children('.colorpicker').removeClass('hidden_y');
 	});
 
 	$('.color-selector-wrapper .fa-picture-o').click(function(){
-		if(! $(this).siblings('p').children('.colorpicker').hasClass('hidden_y') ){
-			$(this).siblings('p').children('.colorpicker').addClass('hidden_y')
-		}	
-	});	
+		$(this).siblings('.file-picker').removeClass('hidden_y');
+	});
 
 	$('.color-selector-wrapper .fa-picture-o, .color-swatch').click(function(){
 		if(! $(this).siblings('p').children('.colorpicker').hasClass('hidden_y') ){
-			$(this).siblings('p').children('.colorpicker').addClass('hidden_y')
+			$(this).siblings('p').children('.colorpicker').addClass('hidden_y');
 		}	
 	});	
+
+	$('.color-selector-wrapper .fa-cog, .color-swatch').click(function(){
+		if(! $(this).siblings('.file-picker').hasClass('hidden_y') ){
+			$(this).siblings('.file-picker').addClass('hidden_y');
+		}	
+	});
 
 	$('.color-selector-wrapper .fa-cog, .color-selector-wrapper .fa-picture-o, .color-swatch').click(function(){
 		$(this).siblings('.selected').removeClass('selected');
@@ -213,15 +217,15 @@ function initialize_colorpickers(){
 
 function initialize_image_pickers(){
 	$(".image_picker input[type=file]").change(function(){
-	    readURL( this , $(this).parent().attr('data-target') );
+	    readURL( this , $(this).parent().parent().attr('data-target') );
 	});
 
 	$(".image_picker input[type=text]").keyup(function(){
-	    $( $(this).parent().attr('data-target') ).attr('src', $(this).val()); 
+	    $( $(this).parent().parent().attr('data-target') ).attr('src', $(this).val()); 
 	});
 
 	$(".image_picker input[type=text]").each(function(){
-		$(this).attr( 'placeholder', $( $(this).parent().attr("data-target") ).attr('src') );
+		$(this).attr( 'placeholder', $( $(this).parent().parent().attr("data-target") ).attr('src') );
 	});
 }
 
