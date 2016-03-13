@@ -11,8 +11,28 @@
 	padding-right: 0px;
 }
 
+.block{
+	cursor:pointer;
+	position:relative;
+}
+
 .block:hover{
 	@extend .droppable;
+
+	&:after{
+		content: "\f00d";
+		@extend .fa;
+		@extend .fa-close;
+		font-size:14px;
+	}
+
+	&:before{
+		content: "\f044";
+		@extend .fa;
+		@extend .fa-close;
+		right:60px;
+		font-size:14px;
+	}
 }
 
 #dashboard{

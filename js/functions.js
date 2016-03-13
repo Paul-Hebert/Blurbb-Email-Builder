@@ -188,7 +188,7 @@ function initialize_colorpickers(){
 		});
 	});
 
-	$('.color-selector-wrapper .fa-cog').click(function(){
+	$('.color-selector-wrapper .fa-eyedropper').click(function(){
 		$(this).siblings('p').children('.colorpicker').removeClass('hidden_y');
 	});
 
@@ -202,13 +202,13 @@ function initialize_colorpickers(){
 		}	
 	});	
 
-	$('.color-selector-wrapper .fa-cog, .color-swatch').click(function(){
+	$('.color-selector-wrapper .fa-eyedropper, .color-swatch').click(function(){
 		if(! $(this).siblings('.file-picker').hasClass('hidden_y') ){
 			$(this).siblings('.file-picker').addClass('hidden_y');
 		}	
 	});
 
-	$('.color-selector-wrapper .fa-cog, .color-selector-wrapper .fa-picture-o, .color-swatch').click(function(){
+	$('.color-selector-wrapper .fa-eyedropper, .color-selector-wrapper .fa-picture-o, .color-swatch').click(function(){
 		$(this).siblings('.selected').removeClass('selected');
 		$(this).addClass('selected');		
 	});
@@ -511,7 +511,8 @@ function ajax_block(target, content_type, action){
 		type: "GET",
 		url: content_type + '_picker.php',
 		success: function(data) {
-		    $('#content_menu fieldset').append(data);
+		    $('#current_picker').html(data);
+		    //initialize_dashboard();
 	    }
 	});
 }

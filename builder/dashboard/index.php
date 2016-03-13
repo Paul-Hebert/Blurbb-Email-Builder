@@ -29,62 +29,7 @@
                 ?>
               </div>
 
-              <div class="subsection">
-                <?php
-                  $include_name = 'Logo';
-                  $include_data = '#logo';
-                  include('image_picker.php')
-                ?>
-              </div>
-
-              <div class="subsection">
-                <?php
-                  $include_name = 'Business Name';
-                  $include_data = '.business_name';
-                  $include_type = 'input';
-                  include('text_picker.php');
-
-                  $include_name = 'Website URL';
-                  $include_data = '.website_url';
-                  $include_type = 'input';
-                  include('text_picker.php');
-                ?>
-              </div>
-
-              <div class="subsection">
-                <?php 
-                  $include_name = 'Heading 1';
-                  $include_data = '.heading1';
-                  $include_type = 'input';
-                  include('text_picker.php');
-
-                  $include_name = 'Message 1';
-                  $include_data = '.message1';
-                  $include_type = 'textarea';
-                  include('text_picker.php');
-                ?>
-              </div>
-              
-              <div class="subsection">
-                <?php 
-                  $include_name = 'Heading 2';
-                  $include_data = '.heading2';
-                  $include_type = 'input';
-                  include('text_picker.php');
-
-                  $include_name = 'Message 2';
-                  $include_data = '.message2';
-                  $include_type = 'textarea';
-                  include('text_picker.php');                  
-                ?>
-              </div>
-
-              <div class="subsection">
-                <?php
-                  $include_name = 'Upload a spreadsheet';
-                  $include_data = '.chart.block.n1';
-                  include('spreadsheet_picker.php');
-                ?>
+              <div id="current_picker">
               </div>
             </fieldset>
           </section>

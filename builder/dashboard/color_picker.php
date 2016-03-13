@@ -8,7 +8,7 @@
 	        	echo '<div data-color="' . $swatch . '" class="color-swatch"></div>';
 	        }
 
-	        echo '<i class="fa fa-cog"></i>';
+	        echo '<i class="fa fa-eyedropper"></i>';
 
 	        if ($include_data[1] === 'background'){
 	        	echo '<i class="fa fa-picture-o"></i>';
