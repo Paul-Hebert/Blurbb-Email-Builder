@@ -9,6 +9,8 @@
 $(function(){
 	initialize_dashboard();
 
+	initialize_drag_and_drop();	
+
 	initialize_toggle_icons();
 
 	initialize_theme_selection_page();
@@ -60,9 +62,8 @@ function initialize_dashboard(){
 	initialize_font_selector();
 
 	initialize_spreadsheet_picker();
-
-	initialize_drag_and_drop();
 }
+
 
 /************************************************************************************************************************
 	Dashboard Sections
@@ -507,12 +508,18 @@ function ajax_block(target, content_type, action){
 		}
 	});
 
+
+
 	$.ajax({
 		type: "GET",
 		url: content_type + '_picker.php',
+		data: {
+			include_name : content_type,
+			include_data : target
+		},
 		success: function(data) {
 		    $('#current_picker').html(data);
-		    //initialize_dashboard();
+		    initialize_dashboard();
 	    }
 	});
 }

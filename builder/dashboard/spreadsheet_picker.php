@@ -1,7 +1,7 @@
 
 <?php
-	echo '<div class="spreadsheet_picker" data-target="' . $include_data . '">
-		<label>' . $include_name . '</label>';
+	echo '<div class="spreadsheet_picker" data-target="' . $_GET['include_data'] . '">
+		<label>' . $_GET['include_name'] . '</label>';
 
 	    $include_type = 'file';
  

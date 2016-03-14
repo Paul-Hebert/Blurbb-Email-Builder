@@ -1,5 +1,5 @@
 <?php
-                echo '<div class="text_styles" data_target="' . $include_data . '">
+                echo '<div class="text_styles" data_target="' . $_GET['include_data'][0] . '">
                 	<div class="font_styles hidden_x_y">       
 	                	<i class="fa fa-bold"></i> 
 	                	<i class="fa fa-italic"></i> 
@@ -14,10 +14,10 @@
 
                     <i class="fa fa-cog"></i>
                 </div>';
-                echo '<label for="' . $include_name . '">' . $include_name . '</label>';
-                if ($include_type === 'input'){
-                 	echo'<input type="text" name="' . $include_name . '" class="text_input" data_target="' . $include_data . '">';
+                echo '<label for="' . $_GET['include_name'] . '">' . $_GET['include_name'] . '</label>';
+                if ($_GET['include_type'] === 'input'){
+                 	echo'<input type="text" name="' . $_GET['include_name'] . '" class="text_input" data_target="' . $_GET['include_data'][0] . '">';
                 } else{
-                 	echo'<textarea name="' . $include_name . '" class="text_input" data_target="' . $include_data . '">' . $include_name . '</textarea>';                	
+                 	echo'<textarea name="' . $_GET['include_name'] . '" class="text_input" data_target="' . $_GET['include_data'][0] . '">' . $_GET['include_name'] . '</textarea>';                	
                 }
 ?>
