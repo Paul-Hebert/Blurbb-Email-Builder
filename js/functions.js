@@ -52,7 +52,7 @@ function initialize_dashboard(){
 
 	initialize_range_sliders();
 
-	initialize_text_inputs();
+	initialize_text_pickers();
 
 	initialize_font_selector();
 
@@ -218,15 +218,15 @@ function initialize_colorpickers(){
 
 function initialize_image_pickers(){
 	$(".image_picker input[type=file]").change(function(){
-	    readURL( this , $(this).parent().parent().attr('data-target') );
+	    readURL( this , $('.image_picker').attr('data-target'));
 	});
 
 	$(".image_picker input[type=text]").keyup(function(){
-	    $( $(this).parent().parent().attr('data-target') ).attr('src', $(this).val()); 
+	    $( $('.image_picker').attr('data-target') ).attr('src', $(this).val()); 
 	});
 
 	$(".image_picker input[type=text]").each(function(){
-		$(this).attr( 'placeholder', $( $(this).parent().parent().attr("data-target") ).attr('src') );
+		$(this).attr( 'placeholder', $( $('.image_picker').attr("data-target") ).attr('src') );
 	});
 }
 
@@ -255,13 +255,13 @@ function initialize_range_sliders(){
 }
 
 
-function initialize_text_inputs(){
-	$('.text_input').each(function(){
+function initialize_text_pickers(){
+	$('.text_picker').each(function(){
 		var target = $( $(this).attr('data_target') );
 		$(this).attr('placeholder', target.text().trim() );
 	});
 
-	$('.text_input').keyup(function(){
+	$('.text_picker').keyup(function(){
 		var target = $($(this).attr('data_target') );
 		var target_type = target.get(0).tagName;
 		var text =  $(this).val();
@@ -283,16 +283,16 @@ function initialize_text_inputs(){
 
 		$(this).addClass('selected');		
 
-		$('#addedCSS').append('#email ' + $(this).parent().parent().attr('data_target') + ', #email ' + $(this).parent().parent().attr('data_target') + ' *{text-align:' + alignment + '}');
+		$('#addedCSS').append('#email ' + $('.text_picker').attr('data_target') + ', #email ' + $('.text_picker').attr('data_target') + ' *{text-align:' + alignment + '}');
 	});
 
 	$('.fa-bold').click(function(){
 		$(this).toggleClass('selected');
 
 		if( $(this).hasClass('selected') ){
-			$('#addedCSS').append('#email ' + $(this).parent().parent().attr('data_target') + ', #email ' + $(this).parent().parent().attr('data_target') + ' *{font-weight:bold}');			
+			$('#addedCSS').append('#email ' + $('.text_picker').attr('data_target') + ', #email ' + $('.text_picker').attr('data_target') + ' *{font-weight:bold}');			
 		}	else{
-			$('#addedCSS').append('#email ' + $(this).parent().parent().attr('data_target') + ', #email ' + $(this).parent().parent().attr('data_target') + ' *{font-weight:normal}');						
+			$('#addedCSS').append('#email ' + $('.text_picker').attr('data_target') + ', #email ' + $('.text_picker').attr('data_target') + ' *{font-weight:normal}');						
 		}
 	});
 
@@ -300,9 +300,9 @@ function initialize_text_inputs(){
 		$(this).toggleClass('selected');
 
 		if( $(this).hasClass('selected') ){
-			$('#addedCSS').append('#email ' + $(this).parent().parent().attr('data_target') + ', #email ' + $(this).parent().parent().attr('data_target') + ' *{font-style:italic}');			
+			$('#addedCSS').append('#email ' + $('.text_picker').attr('data_target') + ', #email ' + $('.text_picker').attr('data_target') + ' *{font-style:italic}');			
 		}	else{
-			$('#addedCSS').append('#email ' + $(this).parent().parent().attr('data_target') + ', #email ' + $(this).parent().parent().attr('data_target') + ' *{font-style:normal}');						
+			$('#addedCSS').append('#email ' + $('.text_picker').attr('data_target') + ', #email ' + $('.text_picker').attr('data_target') + ' *{font-style:normal}');						
 		}	
 	});
 }
@@ -322,7 +322,7 @@ function initialize_font_selector(){
 
 function initialize_spreadsheet_picker(){
 	$('.spreadsheet_picker input[type=file]').change(function(){
-		CSV_from_file( this, $(this).parent().parent().attr('data-target') );
+		CSV_from_file( this, $('.spreadsheet_picker').attr('data-target') );
 	});
 
 	$('.spreadsheet_picker input[type=text]').keyup(function(){

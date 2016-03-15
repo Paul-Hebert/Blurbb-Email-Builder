@@ -15,6 +15,6 @@
                     <i class="fa fa-cog"></i>
                 </div>
                 <label>Build Your List</label>
-                <input type="text"class="text_input" data_target="' . $_GET['include_data'][0] . '">';
+                <input type="text"class="text_picker" data_target="' . $_GET['include_data'][0] . '">';
 
 ?>

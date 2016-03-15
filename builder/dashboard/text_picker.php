@@ -16,8 +16,8 @@
                 </div>';
                 echo '<label>Input Your Text</label>';
                 if ($_GET['include_type'] === 'input'){
-                 	echo'<input type="text" class="text_input" data_target="' . $_GET['include_data'][0] . '">';
+                 	echo'<input type="text" class="text_picker" data_target="' . $_GET['include_data'][0] . '">';
                 } else{
-                 	echo'<textarea class="text_input" data_target="' . $_GET['include_data'][0] . '"></textarea>';                	
+                 	echo'<textarea class="text_picker" data_target="' . $_GET['include_data'][0] . '"></textarea>';                	
                 }
 ?>
