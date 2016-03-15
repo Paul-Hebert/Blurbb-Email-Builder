@@ -14,23 +14,21 @@
 .block{
 	cursor:pointer;
 	position:relative;
+
+	.fa-close, .fa-pencil{
+		opacity:0;
+	}
+
+	.fa-pencil{
+		right:60px;
+	}	
 }
 
 .block:hover{
 	@extend .droppable;
 
-	&:after{
-		content: "\f00d";
-		@extend .fa;
-		@extend .fa-close;
-		font-size:14px;
-	}
-
-	&:before{
-		content: "\f044";
-		@extend .fa;
-		@extend .fa-close;
-		right:60px;
+	.fa-close, .fa-pencil{
+		opacity:1;
 		font-size:14px;
 	}
 }
@@ -226,7 +224,7 @@
 .text_styles{
 	float:right;
 
-	.font_styles, .alignment{
+	.font_styles, .alignment, .links{
 		display:inline-block;
 		padding-right:15px;
 		border-right:1px solid $subtle-color-2;

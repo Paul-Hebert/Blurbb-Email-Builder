@@ -33,5 +33,4 @@ Issues and Bugs
 - Where to host images? When exporting HTML how will the user know to host and link their images?
 - Exported code is formatted badly
 - Chosen theme needs to be in view
-- Range sliders need to start with theme values
 - Height transitions got broken

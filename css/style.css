@@ -1155,7 +1155,7 @@ button, input:not([type=checkbox]), textarea, select {
     float: left;
     font-size: 40pt; }
 
-.fa-close, .block:hover:after, .block:hover:before {
+.fa-close, .fa-pencil {
   -o-transition: all 300ms;
   -ms-transition: all 300ms;
   -webkit-transition: all 300ms;
@@ -1172,7 +1172,7 @@ button, input:not([type=checkbox]), textarea, select {
   position: absolute;
   right: 20px;
   top: 15px; }
-  .fa-close:hover, .block:hover:after, .block:hover:before {
+  .fa-close:hover, .fa-pencil:hover {
     background: #F78336; }
 
 .hidden {
@@ -1239,7 +1239,7 @@ button, input:not([type=checkbox]), textarea, select {
     background: #ddd;
     padding: 10px 20px;
     position: fixed; }
-  .modal.content .fa-close, .modal.content .block:hover:after, .modal.content .block:hover:before {
+  .modal.content .fa-close {
     position: fixed;
     top: 27%;
     right: 21%; }
@@ -1255,7 +1255,7 @@ button, input:not([type=checkbox]), textarea, select {
       .modal.content .links li:hover {
         color: #F78336; }
 
-.fa.fa-spinner, .fa-spinner.block:hover:after, .fa-spinner.block:hover:before {
+.fa.fa-spinner {
   position: absolute;
   width: 100%;
   top: 40%;
@@ -1271,7 +1271,9 @@ button, input:not([type=checkbox]), textarea, select {
   user-select: none; }
 
 .droppable, .block:hover {
-  border: 1px solid #E85520 !important; }
+  box-shadow: 0 0 8px 1px #000;
+  opacity: .8 !important;
+  z-index: 10; }
 
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -1285,7 +1287,7 @@ button, input:not([type=checkbox]), textarea, select {
   src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-.fa, .block:hover:after, .block:hover:before {
+.fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -1342,9 +1344,9 @@ button, input:not([type=checkbox]), textarea, select {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.block:hover:after, .fa-pull-left.block:hover:before {
+.fa.fa-pull-left {
   margin-right: .3em; }
-.fa.fa-pull-right, .fa-pull-right.block:hover:after, .fa-pull-right.block:hover:before {
+.fa.fa-pull-right {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -1354,9 +1356,9 @@ button, input:not([type=checkbox]), textarea, select {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.block:hover:after, .pull-left.block:hover:before {
+.fa.pull-left {
   margin-right: .3em; }
-.fa.pull-right, .pull-right.block:hover:after, .pull-right.block:hover:before {
+.fa.pull-right {
   margin-left: .3em; }
 
 .fa-spin {
@@ -1484,7 +1486,6 @@ button, input:not([type=checkbox]), textarea, select {
 
 .fa-remove:before,
 .fa-close:before,
-.block:hover:before,
 .fa-times:before {
   content: ""; }
 
@@ -3362,13 +3363,13 @@ button, input:not([type=checkbox]), textarea, select {
 .block {
   cursor: pointer;
   position: relative; }
+  .block .fa-close, .block .fa-pencil {
+    opacity: 0; }
+  .block .fa-pencil {
+    right: 60px; }
 
-.block:hover:after {
-  content: "\f00d";
-  font-size: 14px; }
-.block:hover:before {
-  content: "\f044";
-  right: 60px;
+.block:hover .fa-close, .block:hover .fa-pencil {
+  opacity: 1;
   font-size: 14px; }
 
 #dashboard {
@@ -3400,16 +3401,16 @@ button, input:not([type=checkbox]), textarea, select {
       transition: all 300ms; }
       #dashboard section h3:hover {
         background: #F78336; }
-        #dashboard section h3:hover + .fa-close, #dashboard section h3:hover + .block:hover:after, #dashboard section h3:hover + .block:hover:before {
+        #dashboard section h3:hover + .fa-close {
           background: #F78336; }
       #dashboard section h3.open {
         left: -2.5%;
         width: 102.5%; }
-    #dashboard section .fa-close, #dashboard section .block:hover:after, #dashboard section .block:hover:before {
+    #dashboard section .fa-close {
       top: 36px; }
     #dashboard section .theme_thumbnails_wrapper {
       width: 250px; }
-    #dashboard section .content_picker .fa, #dashboard section .content_picker .block:hover:after, #dashboard section .content_picker .block:hover:before {
+    #dashboard section .content_picker .fa {
       margin: 2px;
       padding: 10px;
       background: #333338;
@@ -3419,12 +3420,12 @@ button, input:not([type=checkbox]), textarea, select {
       -ms-transition: background 200ms;
       -webkit-transition: background 200ms;
       transition: background 200ms; }
-      #dashboard section .content_picker .fa.selected, #dashboard section .content_picker .selected.block:hover:after, #dashboard section .content_picker .selected.block:hover:before {
+      #dashboard section .content_picker .fa.selected {
         cursor: grabbing;
         position: fixed;
         background: #E85520;
         z-index: 40; }
-      #dashboard section .content_picker .fa:hover, #dashboard section .content_picker .block:hover:after, #dashboard section .content_picker .block:hover:before {
+      #dashboard section .content_picker .fa:hover {
         background: #E85520; }
 
 #dashboard .range-slider-wrapper input {
@@ -3465,13 +3466,13 @@ button, input:not([type=checkbox]), textarea, select {
   border-radius: 3px; }
   .color-selector-wrapper .color-swatch.selected {
     border: 1px solid #222; }
-.color-selector-wrapper .fa, .color-selector-wrapper .block:hover:after, .color-selector-wrapper .block:hover:before {
+.color-selector-wrapper .fa {
   padding: 0px 5px;
   position: relative;
   top: -5px;
   cursor: pointer;
   color: #ACACAC; }
-  .color-selector-wrapper .fa.selected, .color-selector-wrapper .selected.block:hover:after, .color-selector-wrapper .selected.block:hover:before {
+  .color-selector-wrapper .fa.selected {
     color: #333338; }
 
 #theme_picker {
@@ -3509,7 +3510,7 @@ button, input:not([type=checkbox]), textarea, select {
 
 .text_styles {
   float: right; }
-  .text_styles .font_styles, .text_styles .alignment {
+  .text_styles .font_styles, .text_styles .alignment, .text_styles .links {
     display: inline-block;
     padding-right: 15px;
     border-right: 1px solid #ccc;
