@@ -13,11 +13,8 @@
 	                </div>
 
                     <i class="fa fa-cog"></i>
-                </div>';
-                echo '<label for="' . $_GET['include_name'] . '">' . $_GET['include_name'] . '</label>';
-                if ($_GET['include_type'] === 'input'){
-                 	echo'<input type="text" name="' . $_GET['include_name'] . '" class="text_input" data_target="' . $_GET['include_data'][0] . '">';
-                } else{
-                 	echo'<textarea name="' . $_GET['include_name'] . '" class="text_input" data_target="' . $_GET['include_data'][0] . '">' . $_GET['include_name'] . '</textarea>';                	
-                }
+                </div>
+                <label>Build Your List</label>
+                <input type="text"class="text_input" data_target="' . $_GET['include_data'][0] . '">';
+
 ?>

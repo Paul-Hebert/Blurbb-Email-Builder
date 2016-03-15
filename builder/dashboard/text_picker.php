@@ -14,10 +14,10 @@
 
                     <i class="fa fa-cog"></i>
                 </div>';
-                echo '<label for="' . $_GET['include_name'] . '">' . $_GET['include_name'] . '</label>';
+                echo '<label>Input Your Text</label>';
                 if ($_GET['include_type'] === 'input'){
-                 	echo'<input type="text" name="' . $_GET['include_name'] . '" class="text_input" data_target="' . $_GET['include_data'][0] . '">';
+                 	echo'<input type="text" class="text_input" data_target="' . $_GET['include_data'][0] . '">';
                 } else{
-                 	echo'<textarea name="' . $_GET['include_name'] . '" class="text_input" data_target="' . $_GET['include_data'][0] . '">' . $_GET['include_name'] . '</textarea>';                	
+                 	echo'<textarea class="text_input" data_target="' . $_GET['include_data'][0] . '"></textarea>';                	
                 }
 ?>

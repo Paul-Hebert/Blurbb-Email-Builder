@@ -85,7 +85,7 @@
               <tr>
                 <td valign="middle" class="column">
                   <div>
-                    <span class="website_url secondary" class="text block n6">
+                    <span class="secondary text block n6">
                       <?php echo $website_url; ?>
                     </span>
                   </div>

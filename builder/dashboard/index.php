@@ -28,9 +28,6 @@
                   include('content_picker.php');
                 ?>
               </div>
-
-              <div id="current_picker">
-              </div>
             </fieldset>
           </section>
           

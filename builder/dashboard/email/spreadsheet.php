@@ -1,4 +1,6 @@
-<div id="csv_holder" class="chart block">
+<?php
+  echo '<div id="csv_holder" class="spreadsheet block n' . $_GET['include_number'] . '">';
+?>
                     <table id="invoice_details">
           <thead>
           <tr class="columns"><th class="secondary">Description</th><th class="secondary">Hours</th><th class="secondary">Pay</th></tr>
@@ -10,4 +12,4 @@
 
               <tr><td>Total:</td><td>43.57</td><td>$871.40</td></tr>
               </tfoot></table>                  
-</div>
+  </div>

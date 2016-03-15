@@ -1,5 +1,5 @@
             <?php echo '<div class="subsection video_picker" data-target="' . $_GET['include_data'][0] .'">'; ?>              
-                <label>Choose Your Video <?php echo $_GET['include_name']; ?></label>
+                <label>Choose Your Video</label>
                 
                 <?php 
                   $include_type = 'text';
@@ -9,7 +9,7 @@
 
                 <div class="range-slider-wrapper">
                   <?php 
-                  echo '<label for="' . $_GET['include_name'] . '_size">' . $_GET['include_name'] . ' size</label>
+                  echo '<label>Video Size</label>
                   	<input type="range" min="20" max="580" value="0" data-target="' . $_GET['include_data'][0] .'-width">'; 
                   ?>
                   <input type="text" value="20"><span> px</span>

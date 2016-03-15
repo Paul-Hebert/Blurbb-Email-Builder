@@ -14,11 +14,6 @@ $(function(){
 	initialize_toggle_icons();
 
 	initialize_theme_selection_page();
-
-	$('.input_toggle').click(function(){
-		$(this).parent().children('.input_toggle').toggleClass('selected');
-		$(this).siblings('input').toggleClass('hidden');
-	});
 });
 
 
@@ -62,6 +57,11 @@ function initialize_dashboard(){
 	initialize_font_selector();
 
 	initialize_spreadsheet_picker();
+
+	$('.input_toggle').click(function(){
+		$(this).parent().children('.input_toggle').toggleClass('selected');
+		$(this).siblings('input').toggleClass('hidden');
+	});
 }
 
 
@@ -322,7 +322,7 @@ function initialize_font_selector(){
 
 function initialize_spreadsheet_picker(){
 	$('.spreadsheet_picker input[type=file]').change(function(){
-		CSV_from_file( this, $(this).parent().attr('data-target') );
+		CSV_from_file( this, $(this).parent().parent().attr('data-target') );
 	});
 
 	$('.spreadsheet_picker input[type=text]').keyup(function(){
@@ -496,29 +496,32 @@ function modal(heading,content){
 
 
 function ajax_block(target, content_type, action){
+	var element_count = $('.block.' + content_type).length + 1;
+
     $.ajax({
 	    type: "GET",
 	    url: 'email/' + content_type + '.php',
+	    data: {
+	    	include_number : element_count
+	    },
 		success: function(data) {
 		    handle_ajax_block(target, data, action);
-
-		    var element_count = $('.block.' + content_type).length - 1;
-
-		    $('.block.' + content_type).eq( element_count ).addClass( 'n' + parseFloat(element_count + 1) );
 		}
 	});
-
-
 
 	$.ajax({
 		type: "GET",
 		url: content_type + '_picker.php',
 		data: {
-			include_name : content_type,
-			include_data : target
+			include_data : ['.' + content_type + '.block.n' + element_count]
 		},
 		success: function(data) {
+			if( $('#current_picker').length === 0 ){
+				$('#content_menu fieldset').append('<div id="current_picker"></div>');
+			}
+
 		    $('#current_picker').html(data);
+
 		    initialize_dashboard();
 	    }
 	});

@@ -1,4 +1,6 @@
-<ul class="list block" >
+<?php
+	echo '<ul class="list block n' . $_GET['include_number'] . '">';
+?>
 	<li>
 		Alpha
 	</li>
