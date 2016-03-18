@@ -2,15 +2,12 @@
 	echo '<ul class="list block n' . $_GET['include_number'] . '">';
 ?>
 	<li>
-		Alpha
+		Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis.
 	</li>
 	<li>
-		Beta
+		Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.
 	</li>
 	<li>
-		Ceta
-	</li>
-	<li>
-		Deta
+		Temporibus autem quibusdam.
 	</li>
 </ul>

@@ -9,6 +9,8 @@
 $(function(){
 	$('.block').append('<i class="fa fa-close"></i><i class="fa fa-pencil">');
 
+	initialize_modular_sections();
+
 	initialize_dashboard();
 
 	initialize_drag_and_drop();	
@@ -42,8 +44,6 @@ function initialize_theme_selection_page(){
 function initialize_dashboard(){
 	theme_name = window.location.href.split('?theme=')[1];
 
-	initialize_modular_sections();
-
 	initialize_html_export();
 
 	initialize_theme_picker();
@@ -56,6 +56,8 @@ function initialize_dashboard(){
 
 	initialize_text_pickers();
 
+	initialize_list_pickers();
+
 	initialize_font_selector();
 
 	initialize_spreadsheet_picker();
@@ -67,6 +69,10 @@ function initialize_dashboard(){
 
 	$('.block .fa-close').click(function(){
 		$(this).parent().remove();
+	});
+
+	$('#email a').click(function(){
+		return false;
 	});
 }
 
@@ -298,6 +304,12 @@ function initialize_text_pickers(){
 	});
 }
 
+function initialize_list_pickers(){
+	$('.list_picker textarea').keyup(function(){
+		$( $(this).parent().attr('data_target') + ' li:nth-of-type(' + $(this).attr('class')[1] + ')' ).text( 'ddd' );
+		console.log( $(this).parent().attr('data_target') + ' li:nth-of-type(' + $(this).attr('class')[1] + ')' );
+	});
+}
 
 function initialize_font_selector(){
 	$('#font option').each(function(){
