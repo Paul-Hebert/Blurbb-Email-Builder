@@ -109,6 +109,22 @@
 				}
 			}
 		}
+
+		#picker_controls{
+			font-size:10pt;
+			color:$auxiliary-color;
+
+			#remove_block{
+				float:right;
+				cursor:pointer;
+
+				@include transition_mixin(color 200ms);
+
+				&:hover{
+					color:$auxiliary-color;
+				}				
+			}
+		}
 	}
 }
 

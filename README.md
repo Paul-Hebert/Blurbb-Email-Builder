@@ -15,16 +15,17 @@ Planned features
 
 - More CSS export options. Inlined CSS and Sass
 - Click an email section to edit it
-- Add and remove email sections via AJAX
+- Append blocks between blocks
 - Blurred modal background (Not good enough support. Might need to rethink)
 - One script for email build, export and send
 - Format code for export (format text and format code modal)
 - More resources in resource page
-- Create a better color palette for the color picker UI
+- Create a better color palette for the color picker UI / Switch to gradient picker?
 - Simplified visual design
 - Final name and logo
 - Edit CSVs as spreadsheets
 - Input tables cell by cell (No CSV required)
+- Duplicate block
 
 
 Issues and Bugs

@@ -29,13 +29,6 @@
   .ExternalClass td, 
   .ExternalClass div { 
     line-height: 100%; 
-  } 
-
-  #backgroundTable { 
-    margin:0; 
-    padding:0; 
-    width:100% !important; 
-    line-height: 100% !important; 
   }
 
   img { 
@@ -44,9 +37,6 @@
     -ms-interpolation-mode: bicubic;
     width: auto;
     max-width: 100%; 
-    float: left; 
-    clear: both; 
-    display: block;
   }
 
   center {
@@ -342,181 +332,8 @@
   h6 {font-size: 20px;}
   body, table.body, p, td {font-size: 14px;line-height:19px;}
 
-  p.lead, p.lede, p.leed {
-    font-size: 18px;
-    line-height:21px;
-  }
-
   p { 
     margin-bottom: 10px;
-  }
-
-  small {
-    font-size: 10px;
-  }
-
-  /* Panels */
-
-  .panel {
-    background: #f2f2f2;
-    border: 1px solid #d9d9d9;
-    padding: 10px !important;
-  }
-
-  .sub-grid table {
-    width: 100%;
-  }
-
-  .sub-grid td.sub-columns {
-    padding-bottom: 0;
-  }
-
-  /* Buttons */
-
-  table.button,
-  table.tiny-button,
-  table.small-button,
-  table.medium-button,
-  table.large-button {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  table.button td,
-  table.tiny-button td,
-  table.small-button td,
-  table.medium-button td,
-  table.large-button td {
-    display: block;
-    width: auto !important;
-    text-align: center;
-    background: #2ba6cb;
-    border: 1px solid #2284a1;
-    color: #ffffff;
-    padding: 8px 0;
-  }
-
-  table.tiny-button td {
-    padding: 5px 0 4px;
-  }
-
-  table.small-button td {
-    padding: 8px 0 7px;
-  }
-
-  table.medium-button td {
-    padding: 12px 0 10px;
-  }
-
-  table.large-button td {
-    padding: 21px 0 18px;
-  }
-
-  table.button td a,
-  table.tiny-button td a,
-  table.small-button td a,
-  table.medium-button td a,
-  table.large-button td a {
-    font-weight: bold;
-    text-decoration: none;
-    font-family: Helvetica, Arial, sans-serif;
-    color: #ffffff;
-    font-size: 16px;
-  }
-
-  table.tiny-button td a {
-    font-size: 12px;
-    font-weight: normal;
-  }
-
-  table.small-button td a {
-    font-size: 16px;
-  }
-
-  table.medium-button td a {
-    font-size: 20px;
-  }
-
-  table.large-button td a {
-    font-size: 24px;
-  }
-
-  table.button:hover td,
-  table.button:visited td,
-  table.button:active td {
-    background: #2795b6 !important;
-  }
-
-  table.button:hover td a,
-  table.button:visited td a,
-  table.button:active td a {
-    color: #fff !important;
-  }
-
-  table.button:hover td,
-  table.tiny-button:hover td,
-  table.small-button:hover td,
-  table.medium-button:hover td,
-  table.large-button:hover td {
-    background: #2795b6 !important;
-  }
-
-  table.button:hover td a,
-  table.button:active td a,
-  table.button td a:visited,
-  table.tiny-button:hover td a,
-  table.tiny-button:active td a,
-  table.tiny-button td a:visited,
-  table.small-button:hover td a,
-  table.small-button:active td a,
-  table.small-button td a:visited,
-  table.medium-button:hover td a,
-  table.medium-button:active td a,
-  table.medium-button td a:visited,
-  table.large-button:hover td a,
-  table.large-button:active td a,
-  table.large-button td a:visited {
-    color: #ffffff !important; 
-  }
-
-  table.secondary td {
-    border-color: #d0d0d0;
-  }
-
-  table.secondary:hover td a,
-  table.secondary td a:visited,
-  table.secondary:active td a {
-    color: #555 !important;
-  }
-
-  table.success td {
-    background: #5da423;
-    border-color: #457a1a;
-  }
-
-  table.success:hover td {
-    background: #457a1a !important;
-  }
-
-  table.alert td {
-    background: #c60f13;
-    border-color: #970b0e;
-  }
-
-  table.alert:hover td {
-    background: #970b0e !important;
-  }
-
-  table.radius td {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-  }
-
-  table.round td {
-    -webkit-border-radius: 500px;
-    -moz-border-radius: 500px;
-    border-radius: 500px;
   }
 
   /* Outlook First */
@@ -652,31 +469,7 @@
     line-height:150%;
   }
 
-  #logo{
-    width:65px;
-  }
 
-  h1, h2{
-    font-weight:bold;
-  }
-
-  h1{
-    font-size:30pt;
-  }
-
-  h2{
-    font-size:24pt;
-    margin-bottom: 12px;
-  }
-
-  p{
-    font-size:13pt;
-  }
-
-  #title{
-    float:right;
-    padding-left:20px;
-  }
 
   .primary{
     background:#EB7F00;
@@ -701,28 +494,28 @@
     padding:20px;
   }
 
-  #invoice_details{
+  .chart{
     margin:20px auto;
   }
 
-  #invoice_details th, #invoice_details td{
+  .chart th, .chart td{
     padding:5px;
     text-align:right;
   }
 
-  #invoice_details th:first-of-type, #invoice_details td:first-of-type{
+  .chart th:first-of-type, .chart td:first-of-type{
     text-align:left;
   }
 
-  #invoice_details tr{
+  .chart tr{
     background:#eee;
   }
 
-  #invoice_details tr:nth-of-type(even){
+  .chart tr:nth-of-type(even){
     background:#ddd;
   }
 
-  #invoice_details tfoot td{
+  .chart tfoot td{
     font-weight:bold;
   }
 
@@ -737,12 +530,8 @@
     text-decoration: none;
   }
 
-  #invoice_details .false_border{
+  .chart .false_border{
     padding:0px;
-  }
-
-  .website_url{
-    text-decoration:none;
   }
 
   ul{

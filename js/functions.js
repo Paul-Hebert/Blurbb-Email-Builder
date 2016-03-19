@@ -536,12 +536,23 @@ function switch_picker(content_type, element_count){
 		},
 		success: function(data) {
 			if( $('#current_picker').length === 0 ){
-				$('#content_menu fieldset').append('<div id="current_picker"></div>');
+				$('#content_menu fieldset').append('<div id="current_picker" class="subsection"></div>');
+				append_picker_controls();
 			}
 
 		    $('#current_picker').html(data);
 
 		    initialize_dashboard();
+	    }
+	});
+}
+
+function append_picker_controls(){
+	$.ajax({
+		type: "GET",
+		url:'picker_controls.php',
+		success: function(data) {
+			$('#content_menu fieldset').append(data);
 	    }
 	});
 }

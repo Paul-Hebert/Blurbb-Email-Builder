@@ -7,8 +7,6 @@
   /* Block Grid */
   /* text_styles & Visibility Classes */
   /* Typography */
-  /* Panels */
-  /* Buttons */
   /* Outlook First */
   /*  Media Queries */ }
   #email #outlook a {
@@ -29,20 +27,12 @@
   #email .ExternalClass td,
   #email .ExternalClass div {
     line-height: 100%; }
-  #email #backgroundTable {
-    margin: 0;
-    padding: 0;
-    width: 100% !important;
-    line-height: 100% !important; }
   #email img {
     outline: none;
     text-decoration: none;
     -ms-interpolation-mode: bicubic;
     width: auto;
-    max-width: 100%;
-    float: left;
-    clear: both;
-    display: block; }
+    max-width: 100%; }
   #email center {
     width: 100%;
     min-width: 580px; }
@@ -313,121 +303,8 @@
   #email body, #email table.body, #email p, #email td {
     font-size: 14px;
     line-height: 19px; }
-  #email p.lead, #email p.lede, #email p.leed {
-    font-size: 18px;
-    line-height: 21px; }
   #email p {
     margin-bottom: 10px; }
-  #email small {
-    font-size: 10px; }
-  #email .panel {
-    background: #f2f2f2;
-    border: 1px solid #d9d9d9;
-    padding: 10px !important; }
-  #email .sub-grid table {
-    width: 100%; }
-  #email .sub-grid td.sub-columns {
-    padding-bottom: 0; }
-  #email table.button,
-  #email table.tiny-button,
-  #email table.small-button,
-  #email table.medium-button,
-  #email table.large-button {
-    width: 100%;
-    overflow: hidden; }
-  #email table.button td,
-  #email table.tiny-button td,
-  #email table.small-button td,
-  #email table.medium-button td,
-  #email table.large-button td {
-    display: block;
-    width: auto !important;
-    text-align: center;
-    background: #2ba6cb;
-    border: 1px solid #2284a1;
-    color: #ffffff;
-    padding: 8px 0; }
-  #email table.tiny-button td {
-    padding: 5px 0 4px; }
-  #email table.small-button td {
-    padding: 8px 0 7px; }
-  #email table.medium-button td {
-    padding: 12px 0 10px; }
-  #email table.large-button td {
-    padding: 21px 0 18px; }
-  #email table.button td a,
-  #email table.tiny-button td a,
-  #email table.small-button td a,
-  #email table.medium-button td a,
-  #email table.large-button td a {
-    font-weight: bold;
-    text-decoration: none;
-    font-family: Helvetica, Arial, sans-serif;
-    color: #ffffff;
-    font-size: 16px; }
-  #email table.tiny-button td a {
-    font-size: 12px;
-    font-weight: normal; }
-  #email table.small-button td a {
-    font-size: 16px; }
-  #email table.medium-button td a {
-    font-size: 20px; }
-  #email table.large-button td a {
-    font-size: 24px; }
-  #email table.button:hover td,
-  #email table.button:visited td,
-  #email table.button:active td {
-    background: #2795b6 !important; }
-  #email table.button:hover td a,
-  #email table.button:visited td a,
-  #email table.button:active td a {
-    color: #fff !important; }
-  #email table.button:hover td,
-  #email table.tiny-button:hover td,
-  #email table.small-button:hover td,
-  #email table.medium-button:hover td,
-  #email table.large-button:hover td {
-    background: #2795b6 !important; }
-  #email table.button:hover td a,
-  #email table.button:active td a,
-  #email table.button td a:visited,
-  #email table.tiny-button:hover td a,
-  #email table.tiny-button:active td a,
-  #email table.tiny-button td a:visited,
-  #email table.small-button:hover td a,
-  #email table.small-button:active td a,
-  #email table.small-button td a:visited,
-  #email table.medium-button:hover td a,
-  #email table.medium-button:active td a,
-  #email table.medium-button td a:visited,
-  #email table.large-button:hover td a,
-  #email table.large-button:active td a,
-  #email table.large-button td a:visited {
-    color: #ffffff !important; }
-  #email table.secondary td {
-    border-color: #d0d0d0; }
-  #email table.secondary:hover td a,
-  #email table.secondary td a:visited,
-  #email table.secondary:active td a {
-    color: #555 !important; }
-  #email table.success td {
-    background: #5da423;
-    border-color: #457a1a; }
-  #email table.success:hover td {
-    background: #457a1a !important; }
-  #email table.alert td {
-    background: #c60f13;
-    border-color: #970b0e; }
-  #email table.alert:hover td {
-    background: #970b0e !important; }
-  #email table.radius td {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px; }
-  #email table.round td {
-    -webkit-border-radius: 500px;
-    -moz-border-radius: 500px;
-    border-radius: 500px; }
   #email body.outlook p {
     display: inline !important; }
   @media only screen and (max-width: 600px) {
@@ -530,20 +407,6 @@
     margin-bottom: 20px; }
   #email * {
     line-height: 150%; }
-  #email #logo {
-    width: 65px; }
-  #email h1, #email h2 {
-    font-weight: bold; }
-  #email h1 {
-    font-size: 30pt; }
-  #email h2 {
-    font-size: 24pt;
-    margin-bottom: 12px; }
-  #email p {
-    font-size: 13pt; }
-  #email #title {
-    float: right;
-    padding-left: 20px; }
   #email .primary {
     background: #EB7F00;
     color: #fff; }
@@ -557,18 +420,18 @@
     color: #fff; }
   #email table.email_row {
     padding: 20px; }
-  #email #invoice_details {
+  #email .chart {
     margin: 20px auto; }
-  #email #invoice_details th, #email #invoice_details td {
+  #email .chart th, #email .chart td {
     padding: 5px;
     text-align: right; }
-  #email #invoice_details th:first-of-type, #email #invoice_details td:first-of-type {
+  #email .chart th:first-of-type, #email .chart td:first-of-type {
     text-align: left; }
-  #email #invoice_details tr {
+  #email .chart tr {
     background: #eee; }
-  #email #invoice_details tr:nth-of-type(even) {
+  #email .chart tr:nth-of-type(even) {
     background: #ddd; }
-  #email #invoice_details tfoot td {
+  #email .chart tfoot td {
     font-weight: bold; }
   #email .footer td div {
     font-size: 14pt;
@@ -577,10 +440,8 @@
   #email .primary a[href^=tel], #email .primary a[href^=tel]:hover {
     color: #fff;
     text-decoration: none; }
-  #email #invoice_details .false_border {
+  #email .chart .false_border {
     padding: 0px; }
-  #email .website_url {
-    text-decoration: none; }
   #email ul {
     list-style: disc;
     padding-left: 10px;

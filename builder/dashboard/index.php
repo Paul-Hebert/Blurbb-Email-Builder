@@ -23,11 +23,9 @@
             ?>
 
             <fieldset>
-              <div class="subsection">
-                <?php
-                  include('content_picker.php');
-                ?>
-              </div>
+              <?php
+                include('content_picker.php');
+              ?>
             </fieldset>
           </section>
           
@@ -58,6 +56,16 @@
 
                   $include_name = 'Secondary text color';
                   $include_data = ['.secondary','color'];
+                  include('color_picker.php');                
+                echo '</div>';
+
+                echo '<div class="subsection">';
+                  $include_name = 'Light background';
+                  $include_data = ['.light','background'];
+                  include('color_picker.php');
+
+                  $include_name = 'Light text color';
+                  $include_data = ['.light','color'];
                   include('color_picker.php');                
                 echo '</div>';
 

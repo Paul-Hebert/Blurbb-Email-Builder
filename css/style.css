@@ -3427,6 +3427,18 @@ button, input:not([type=checkbox]), textarea, select {
         z-index: 40; }
       #dashboard section .content_picker .fa:hover {
         background: #E85520; }
+    #dashboard section #picker_controls {
+      font-size: 10pt;
+      color: #E85520; }
+      #dashboard section #picker_controls #remove_block {
+        float: right;
+        cursor: pointer;
+        -o-transition: color 200ms;
+        -ms-transition: color 200ms;
+        -webkit-transition: color 200ms;
+        transition: color 200ms; }
+        #dashboard section #picker_controls #remove_block:hover {
+          color: #E85520; }
 
 #dashboard .range-slider-wrapper input {
   display: inline-block; }
