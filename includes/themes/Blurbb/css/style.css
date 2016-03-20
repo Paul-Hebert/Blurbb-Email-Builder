@@ -407,6 +407,8 @@
     margin-bottom: 20px; }
   #email * {
     line-height: 150%; }
+  #email .column {
+    padding: 10px; }
   #email .primary {
     background: #EB7F00;
     color: #fff; }
@@ -418,10 +420,9 @@
   #email .secondary {
     background: #736A6A;
     color: #fff; }
-  #email table.email_row {
-    padding: 20px; }
   #email .chart {
-    margin: 20px auto; }
+    margin: 20px auto;
+    color: #000; }
   #email .chart th, #email .chart td {
     padding: 5px;
     text-align: right; }
@@ -433,10 +434,6 @@
     background: #ddd; }
   #email .chart tfoot td {
     font-weight: bold; }
-  #email .footer td div {
-    font-size: 14pt;
-    text-align: center;
-    width: 540px; }
   #email .primary a[href^=tel], #email .primary a[href^=tel]:hover {
     color: #fff;
     text-decoration: none; }
@@ -446,5 +443,13 @@
     list-style: disc;
     padding-left: 10px;
     margin-left: 10px; }
+  #email .image.block.n1 {
+    width: 50px; }
+  #email .header.block.n1 {
+    float: right;
+    padding-left: 20px; }
+  #email .text.block.n3 {
+    width: 100%;
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

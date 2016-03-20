@@ -471,6 +471,10 @@
 
 
 
+  .column{
+    padding:10px;
+  }
+
   .primary{
     background:#EB7F00;
     color:#fff;
@@ -490,12 +494,9 @@
     color:#fff;
   }
 
-  table.email_row{
-    padding:20px;
-  }
-
   .chart{
     margin:20px auto;
+    color:#000;
   }
 
   .chart th, .chart td{
@@ -519,12 +520,6 @@
     font-weight:bold;
   }
 
-  .footer td div{
-    font-size:14pt;
-    text-align:center;
-    width:540px;
-  }
-
   .primary a[href^=tel], .primary a[href^=tel]:hover{
     color:#fff;
     text-decoration: none;
@@ -538,5 +533,20 @@
     list-style:disc;
     padding-left:10px;
     margin-left:10px;
+  }
+
+
+  .image.block.n1{
+    width:50px;
+  }
+
+  .header.block.n1{
+    float:right;
+    padding-left:20px;
+  }
+
+  .text.block.n3{
+    width:100%;
+    text-align:center;
   }
 }

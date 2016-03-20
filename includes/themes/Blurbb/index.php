@@ -41,7 +41,7 @@
                           echo '<img src="' . $logo . '" id="logo" class="image block n1">'; 
                         }
                       ?> 
-                      <h1 class="text block n1"><?php echo $business_name; ?></h1>
+                      <h1 class="header block n1"><?php echo $business_name; ?></h1>
                     </a>
                 </td>
               </tr>
@@ -57,8 +57,8 @@
             <table class="email_row light">
               <tr>
                 <td class="column">
-                  <h2 class="text block n2"><?php echo $heading1; ?></h2>
-                  <div class="text block n3">
+                  <h2 class="header block n2"><?php echo $heading1; ?></h2>
+                  <div class="text block n1">
                     <p><?php echo $message1; ?></p>
                   </div>
                 </td>
@@ -73,8 +73,8 @@
             <table class="email_row primary">
               <tr>
                 <td class="column">
-                  <h2 class="text block n4"><?php echo $heading2; ?></h2>
-                  <div class="text block n5">
+                  <h2 class="header block n3"><?php echo $heading2; ?></h2>
+                  <div class="text block n2">
                     <p><?php echo $message2; ?></p>
                   </div>
                 </td>
@@ -84,11 +84,9 @@
             <table class="email_row secondary footer">
               <tr>
                 <td valign="middle" class="column secondary">
-                  <div>
-                    <span class="text block n6">
-                      <?php echo $website_url; ?>
-                    </span>
-                  </div>
+                  <p class="text block n3">
+                    <?php echo $website_url; ?>
+                  </p>
                 </td>
               </tr>
             </table>

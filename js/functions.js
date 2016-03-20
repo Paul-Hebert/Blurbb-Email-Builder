@@ -7,7 +7,9 @@
 /***********************************************************************************************************************/
 
 $(function(){
-	$('.block').append('<i class="fa fa-close"></i><i class="fa fa-pencil">');
+	$('.block').each(function(){
+		append_controls(this);
+	})
 
 	initialize_modular_sections();
 
@@ -389,6 +391,15 @@ function initialize_drag_and_drop(){
 				});			
 			}
 
+			if (dropped === false){
+				$('#email tr').each(function(){
+					if ( $(this).ismouseover() ) {
+					    ajax_block(this, content_type, 'append');
+					    dropped = true;
+					}
+				});			
+			}
+
 			$('#email .block, #email .column').removeClass('droppable');
 		}).addClass('unselectable');
 	})
@@ -510,8 +521,10 @@ function ajax_block(target, content_type, action){
 		success: function(data) {
 		    if (action === 'replaceWith'){
 				switch_block(target, data);
+				append_controls('.' + content_type + '.block.n' + element_count);
 			} else{
 				append_block(target, data);		
+				append_controls('.' + content_type + '.block.n' + element_count);
 			}
 		}
 	});
@@ -525,6 +538,10 @@ function append_block(target, data){
 
 function switch_block(target, data){
 	$(target).replaceWith(target, data);
+}
+
+function append_controls(target){
+	$(target).append('<i class="fa fa-close"></i><i class="fa fa-pencil">');
 }
 
 function switch_picker(content_type, element_count){
