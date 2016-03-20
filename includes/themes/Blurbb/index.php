@@ -34,13 +34,15 @@
               <tr>
                 <td align="center" valign="middle" class="column">
                   <a href="http://invoice-out.com/">
-                      <?php 
-                        if ($logo == ""){
-                          echo '<img src="http://www.invoice-out.com/includes/themes/Blast_Off/imgs/logo.png" id="logo" class="image block">'; 
-                        } else{
-                          echo '<img src="' . $logo . '" id="logo" class="image block n1">'; 
-                        }
-                      ?> 
+                      <span class="image block n1">
+                        <?php 
+                          if ($logo == ""){
+                            echo '<img src="http://www.invoice-out.com/includes/themes/Blast_Off/imgs/logo.png">'; 
+                          } else{
+                            echo '<img src="' . $logo . '">'; 
+                          }
+                        ?> 
+                      </span>
                       <h1 class="header block n1"><?php echo $business_name; ?></h1>
                     </a>
                 </td>

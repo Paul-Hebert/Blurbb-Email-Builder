@@ -3368,6 +3368,11 @@ button, input:not([type=checkbox]), textarea, select {
   .block .fa-pencil {
     right: 60px; }
 
+.image.block {
+  display: inline-block; }
+  .image.block img {
+    width: 100%; }
+
 .block:hover .fa-close, .block:hover .fa-pencil {
   opacity: 1;
   font-size: 14px; }
