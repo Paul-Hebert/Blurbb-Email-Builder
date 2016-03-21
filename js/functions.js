@@ -33,6 +33,8 @@ function initialize_theme_selection_page(){
 	$('#theme_selection_button').click(function(){
 		window.location = 'dashboard/?theme=' + $('#theme_picker').val();
 	});
+
+	initialize_theme_picker();	
 }
 
 /***********************************************************************************************************************/
@@ -47,8 +49,6 @@ function initialize_dashboard(){
 	theme_name = window.location.href.split('?theme=')[1];
 
 	initialize_html_export();
-
-	initialize_theme_picker();
 
 	initialize_colorpickers();
 
@@ -131,50 +131,8 @@ function initialize_theme_picker(){
 	$('.arrow.right').click(function(){
 		$('.theme_thumbnail:first-of-type').insertBefore( $('.theme_thumbnail:last-of-type') ) ;
 		$('.theme_thumbnails').css('left', parseFloat($('.theme_thumbnails').css('left').replace('px','')) + 120 + 'px' );
-		$('.theme_thumbnails').animate({'left': parseFloat($('.theme_thumbnails').css('left').replace('px','')) - 120 + 'px' },300);	});	
-}
-
-
-function pick_theme(){
-	$('.theme_thumbnail.selected').removeClass('selected');
-		$('#' + theme_name).addClass('selected')
-		$('#theme_picker option').prop('selected','false').filter('[value="' + theme_name.replace(' ','_') + '"]').prop('selected', 'true');
-
-		var old_spreadsheet = $('#csv_holder').html();
-
-		if ( $('#logo_input').val() !== "" ){
-			var logo_src = $('#logo').attr('src');
-		} else{
-			var logo_src = null;
-		}
-
-        $.ajax({
-		     type: "GET",
-		     url: '../../includes/themes/' + theme_name + '/index.php',
-	  		 data: { 
-	  		 	heading1: $('.heading1').html(), 
-	  		 	message1: $('.message1').html(), 
-	  		 	heading2: $('.heading2').html(), 
-	  		 	message2: $('.message2').html(),
-	  		 	business_name: $('.business_name').html(),
-	  		 	website_url: $('.website_url').html(),
-	  		 	logo: logo_src
-	  		 },
-  		     success: function(data) {
-  		     		$('#email').css({'display':'none','opacity':'0'});
-  		     		setTimeout(function(){
-			            $('#email').html(data);
-			            $('#csv_holder').html(old_spreadsheet);
-			            $('#email').css('display','block');
-
-			            setTimeout(function(){
-	  		     			$('#email').animate({'opacity':'1'},300);
-	  		     		},300);
-  		     		},300);
-		     }
-		});
-
-		$('#theme_CSS').attr('href','../../includes/themes/' + theme_name + '/css/style.css');
+		$('.theme_thumbnails').animate({'left': parseFloat($('.theme_thumbnails').css('left').replace('px','')) - 120 + 'px' },300);	
+	});	
 }
 
 
