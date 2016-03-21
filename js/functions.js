@@ -89,8 +89,6 @@ function initialize_dashboard(){
 		append_block_controls(this);
 	});
 
-	$('.block:first-of-type').before('<div class="spacer hidden_x_y"></div>');
-
 	initialize_blocks_and_pickers();
 
 	initialize_drag_and_drop();		
@@ -110,6 +108,8 @@ function initialize_blocks_and_pickers(){
 
 	initialize_spreadsheet_picker();
 
+	append_spacers();
+
 	$('.input_toggle').click(function(){
 		$(this).parent().children('.input_toggle').toggleClass('selected');
 		$(this).siblings('input').toggleClass('hidden');
@@ -117,6 +117,7 @@ function initialize_blocks_and_pickers(){
 
 	$('.block .fa-close').click(function(){
 		$(this).parents('.block').remove();
+		append_spacers();
 	});
 
 	$('.block .fa-pencil').click(function(){
@@ -503,7 +504,15 @@ function ajax_block(target, content_type){
 
 function append_block_controls(target){
 	$(target).append('<span class="controls"><span class="background"></span><i class="fa fa-close"></i><i class="fa fa-pencil"></span>');
-	$(target).after('<div class="spacer hidden_x_y"></div>');
+}
+
+
+function append_spacers(){
+	var spacer = '<div class="spacer hidden_x_y"></div>';
+
+	$('.spacer').remove();
+	$(' .column .block:first').before(spacer);
+	$('.block').after(spacer);
 }
 
 
