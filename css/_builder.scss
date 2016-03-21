@@ -9,6 +9,10 @@
 	width:60%;
 	overflow:scroll;
 	padding-right: 0px;
+
+	*{
+		box-sizing:content-box;
+	}
 }
 
 .spacer{

@@ -3359,6 +3359,8 @@ button, input:not([type=checkbox]), textarea, select {
   width: 60%;
   overflow: scroll;
   padding-right: 0px; }
+  #email * {
+    box-sizing: content-box; }
 
 .spacer {
   background: #000;

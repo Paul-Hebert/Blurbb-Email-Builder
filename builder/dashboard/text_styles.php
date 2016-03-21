@@ -1,5 +1,5 @@
 <?php
-                echo '<div class="text_styles" data_target="' . $_GET['include_data'][0] . '">
+                echo '<div class="text_styles" data_target="' . $_GET['include_data'][0] . ' .content">
                 	<div class="font_styles">       
 	                	<i class="fa fa-bold"></i> 
 	                	<i class="fa fa-italic"></i> 
