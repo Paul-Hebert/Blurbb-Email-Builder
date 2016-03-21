@@ -9,7 +9,7 @@ $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="width=device-width"/>
       <meta name="format-detection" content="telephone=no">
-        <style type="text/css">'. $css . $_POST['addedCSS'] . '</style>
+        <style type="text/css">'. $css . $_POST['added_CSS'] . '</style>
   </head> 
 ' .
                 $_POST['message'] . '

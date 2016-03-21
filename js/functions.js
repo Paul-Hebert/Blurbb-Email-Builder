@@ -7,15 +7,7 @@
 /***********************************************************************************************************************/
 
 $(function(){
-	$('.block').each(function(){
-		append_block_controls(this);
-	});
-
-	$('.block:first-of-type').before('<div class="spacer hidden_x_y"></div>');
-
 	initialize_dashboard();
-
-	initialize_drag_and_drop();	
 
 	initialize_toggle_icons();
 
@@ -93,6 +85,19 @@ function initialize_dashboard(){
 
 	initialize_colorpickers();
 
+	$('.block').each(function(){
+		append_block_controls(this);
+	});
+
+	$('.block:first-of-type').before('<div class="spacer hidden_x_y"></div>');
+
+	initialize_blocks_and_pickers();
+
+	initialize_drag_and_drop();		
+}
+
+
+function initialize_blocks_and_pickers(){
 	initialize_image_pickers();
 
 	initialize_range_sliders();
@@ -127,7 +132,6 @@ function initialize_dashboard(){
 	});
 }
 
-
 /************************************************************************************************************************
 	Color Pickers
 /***********************************************************************************************************************/
@@ -144,7 +148,6 @@ function initialize_colorpickers(){
 	});
 
 	$('.colorpicker, .color-selector-wrapper .file-picker').addClass('hidden_y');
-
 
 	$('.color-swatch').each(function(){
 		$(this).css('background',$(this).attr('data-color')).click( function(){
@@ -367,7 +370,7 @@ function CSV_from_file(input,target) {
 
 
 function initialize_html_export(){
-$('#export_HTML').click(function(){
+	$('#export_HTML').click(function(){
 		export_HTML();
 		return false;
 	});
@@ -467,6 +470,7 @@ function initialize_drag_and_drop(){
 			$('.spacer').each(function(){
 				if ( $(this).ismouseover() ) {
 				    ajax_block(this, content_type);
+				    console.log('d');
 				}
 			});
 
@@ -518,7 +522,7 @@ function switch_picker(content_type, new_block){
 
 		    $('#current_picker').html(data);
 
-		    initialize_dashboard();
+		    initialize_blocks_and_pickers();
 	    }
 	});
 }
@@ -535,7 +539,7 @@ function append_picker_controls(){
 }
 
 
-//jQuery ismouseover  method
+//jQuery ismouseover method
 (function($){ 
     $.mlp = {x:0,y:0}; // Mouse Last Position
     function documentHandler(){

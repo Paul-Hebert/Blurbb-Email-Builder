@@ -1,4 +1,4 @@
-            <?php echo '<div class="subsection image_picker" data-target="' . $_GET['include_data'][0] .' img">'; ?>              
+            <?php echo '<div class="image_picker" data-target="' . $_GET['include_data'][0] .' img">'; ?>              
                 <label>Choose An Image</label>
                 
                 <?php 

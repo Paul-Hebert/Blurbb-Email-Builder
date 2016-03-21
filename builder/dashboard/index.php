@@ -13,7 +13,7 @@
           echo '<link id="theme_CSS" rel="stylesheet" type="text/css" href="' . $base_url . 'includes/themes/' . $theme . '/css/style.css">';    
         ?>
 
-        <style id="addedCSS"></style>
+        <style id="added_CSS"></style>
 
         <?php
           include($base_url . 'includes/themes/' . $theme . '/index.php');
