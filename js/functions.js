@@ -13,11 +13,6 @@ $(function(){
 
 	$('.block:first-of-type').before('<div class="spacer hidden_x_y"></div>');
 
-	/*$('.column').after('<td class="spacer hidden_x_y"></td>');
-
-	$('.column:first-of-type').before('<td class="spacer hidden_x_y"></td>');*/
-
-
 	initialize_modular_sections();
 
 	initialize_dashboard();
@@ -35,6 +30,15 @@ function initialize_toggle_icons(){
 		modal( $(this).attr('data-heading'), $(this).children('.toggled_text').html() );
 	});
 }
+
+/***********************************************************************************************************************/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	Theme Selector
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/***********************************************************************************************************************/
+
 
 function initialize_theme_selection_page(){
 	$('#theme_selection_button').click(function(){
@@ -66,10 +70,11 @@ function initialize_theme_selection_page(){
 		$('.theme_thumbnails').animate({'left': parseFloat($('.theme_thumbnails').css('left').replace('px','')) - 120 + 'px' },300);	
 	});	
 }
+
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	Initialize Dashboard
+	Dashboard
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /***********************************************************************************************************************/
@@ -117,8 +122,9 @@ function initialize_dashboard(){
 
 
 /************************************************************************************************************************
-	Dashboard Sections
+	Modular Sections
 /***********************************************************************************************************************/
+
 
 function initialize_modular_sections(){
 	$('#dashboard .fa-close, #dashboard h3').click(function(){
@@ -127,6 +133,11 @@ function initialize_modular_sections(){
 		$(this).siblings('fieldset').toggleClass('hidden_y');
 	});
 }
+
+
+/************************************************************************************************************************
+	Color Pickers
+/***********************************************************************************************************************/
 
 
 function initialize_colorpickers(){
@@ -179,43 +190,26 @@ function initialize_colorpickers(){
 }
 
 
-function initialize_image_pickers(){
-	$(".image_picker input[type=file]").change(function(){
-	    image_from_file( this , $('.image_picker').attr('data-target'));
-	});
+/************************************************************************************************************************
+	Font Selector
+/***********************************************************************************************************************/
 
-	$(".image_picker input[type=text]").keyup(function(){
-	    $( $('.image_picker').attr('data-target') ).attr('src', $(this).val()); 
-	});
 
-	$(".image_picker input[type=text]").each(function(){
-		$(this).attr( 'placeholder', $( $('.image_picker').attr("data-target") ).attr('src') );
+function initialize_font_selector(){
+	$('#font option').each(function(){
+		$(this).css('font-family',$(this).text());
+	})
+
+	$('#font').change(function(){
+		$('#email *').css('font-family', $(this).val());
+		$(this).css('font-family', $(this).val());
 	});
 }
 
 
-function initialize_range_sliders(){
-	$('input[type=range]').change(function(){
-		var range_value = $(this).val();
-
-		var css_targets = $(this).attr('data-target').split('-');
-
-		$( css_targets[0] ).css( css_targets[1], range_value + 'px' );
-
-		$(this).siblings('input').val(range_value);
-	});
-
-	$('.range-slider-wrapper input[type=text]').change(function(){
-		$(this).siblings('input').val( $(this).val() ).change();	
-	});
-
-	$('input[type=range]').each(function(){
-		var css_targets = $(this).attr('data-target').split('-')[0];
-		var start_val = $(css_targets).css('width').replace('px','');
-
-		$(this).val( start_val ).change();
-	});	
-}
+/************************************************************************************************************************
+	Text Pickers
+/***********************************************************************************************************************/
 
 
 function initialize_text_pickers(){
@@ -265,6 +259,12 @@ function initialize_text_pickers(){
 	});
 }
 
+
+/************************************************************************************************************************
+	List Pickers
+/***********************************************************************************************************************/
+
+
 function initialize_list_pickers(){
 	$('.list_picker textarea').keyup(function(){
 		$( $(this).parent().attr('data_target') + ' li:nth-of-type(' + $(this).attr('class')[1] + ')' ).text( 'ddd' );
@@ -272,25 +272,22 @@ function initialize_list_pickers(){
 	});
 }
 
-function initialize_font_selector(){
-	$('#font option').each(function(){
-		$(this).css('font-family',$(this).text());
-	})
-
-	$('#font').change(function(){
-		$('#email *').css('font-family', $(this).val());
-		$(this).css('font-family', $(this).val());
-	});
-}
+/************************************************************************************************************************
+	Image Pickers
+/***********************************************************************************************************************/
 
 
-function initialize_spreadsheet_picker(){
-	$('.spreadsheet_picker input[type=file]').change(function(){
-		CSV_from_file( this, $('.spreadsheet_picker').attr('data-target') );
+function initialize_image_pickers(){
+	$(".image_picker input[type=file]").change(function(){
+	    image_from_file( this , $('.image_picker').attr('data-target'));
 	});
 
-	$('.spreadsheet_picker input[type=text]').keyup(function(){
-		// Need to reformat spreadsheet php script to accept external URL
+	$(".image_picker input[type=text]").keyup(function(){
+	    $( $('.image_picker').attr('data-target') ).attr('src', $(this).val()); 
+	});
+
+	$(".image_picker input[type=text]").each(function(){
+		$(this).attr( 'placeholder', $( $('.image_picker').attr("data-target") ).attr('src') );
 	});
 }
 
@@ -307,6 +304,45 @@ function image_from_file(input,target) {
     }
 }
 
+
+function initialize_range_sliders(){
+	$('input[type=range]').change(function(){
+		var range_value = $(this).val();
+
+		var css_targets = $(this).attr('data-target').split('-');
+
+		$( css_targets[0] ).css( css_targets[1], range_value + 'px' );
+
+		$(this).siblings('input').val(range_value);
+	});
+
+	$('.range-slider-wrapper input[type=text]').change(function(){
+		$(this).siblings('input').val( $(this).val() ).change();	
+	});
+
+	$('input[type=range]').each(function(){
+		var css_targets = $(this).attr('data-target').split('-')[0];
+		var start_val = $(css_targets).css('width').replace('px','');
+
+		$(this).val( start_val ).change();
+	});	
+}
+
+
+/************************************************************************************************************************
+	Spreadsheet Pickers
+/***********************************************************************************************************************/
+
+
+function initialize_spreadsheet_picker(){
+	$('.spreadsheet_picker input[type=file]').change(function(){
+		CSV_from_file( this, $('.spreadsheet_picker').attr('data-target') );
+	});
+
+	$('.spreadsheet_picker input[type=text]').keyup(function(){
+		// Need to reformat spreadsheet php script to accept external URL
+	});
+}
 
 function CSV_from_file(input,target) {
     if (input.files && input.files[0]) {
