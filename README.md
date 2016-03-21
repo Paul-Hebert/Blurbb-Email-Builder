@@ -30,3 +30,4 @@ Issues and Bugs
 
 - Where to host images? When exporting HTML how will the user know to host and link their images?
 - Exported code is formatted badly
+- Can't scroll preview when dragging blocks

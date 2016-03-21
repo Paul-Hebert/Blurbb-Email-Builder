@@ -31,6 +31,7 @@ function initialize_toggle_icons(){
 	});
 }
 
+
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -71,6 +72,13 @@ function initialize_theme_selection_page(){
 	});	
 }
 
+function pick_theme(){
+	$('.theme_thumbnail.selected').removeClass('selected');
+	$('#' + theme_name).addClass('selected');
+	$('#theme_picker option').prop('selected','false').filter('[value="' + theme_name.replace(' ','_') + '"]').prop('selected', 'true');
+}
+
+
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -78,6 +86,7 @@ function initialize_theme_selection_page(){
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /***********************************************************************************************************************/
+
 
 function initialize_dashboard(){
 	theme_name = window.location.href.split('?theme=')[1];
@@ -272,6 +281,7 @@ function initialize_list_pickers(){
 	});
 }
 
+
 /************************************************************************************************************************
 	Image Pickers
 /***********************************************************************************************************************/
@@ -343,6 +353,7 @@ function initialize_spreadsheet_picker(){
 		// Need to reformat spreadsheet php script to accept external URL
 	});
 }
+
 
 function CSV_from_file(input,target) {
     if (input.files && input.files[0]) {
@@ -423,7 +434,6 @@ function download(filename, text){
 }
 
 
-
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -472,17 +482,13 @@ function initialize_drag_and_drop(){
 
 			$('body').unbind('mousemove').unbind('mouseup').removeClass('unselectable');	
 
-			var dropped = false;
-
 			$('.spacer').each(function(){
 				if ( $(this).ismouseover() ) {
 				    ajax_block(this, content_type);
-				    dropped = true;
 				}
 			});
 
 			$('.spacer').addClass('hidden_x_y');
-			$('#email .block, #email .column').removeClass('droppable');
 		}).addClass('unselectable');
 	})
 }
@@ -490,7 +496,7 @@ function initialize_drag_and_drop(){
 
 function ajax_block(target, content_type){
 	var element_count = $('.block.' + content_type).length + 1;
-	var new_content = '.' + content_type + '.block.n' + element_count;
+	var new_block = '.' + content_type + '.block.n' + element_count;
 
     $.ajax({
 	    type: "GET",
@@ -499,18 +505,13 @@ function ajax_block(target, content_type){
 	    	include_number : element_count
 	    },
 		success: function(data) {
-			switch_block(target, data);
-			append_block_controls(new_content);
-			$(new_content).before('<div class="spacer hidden_x_y"></div>');
+			$(target).replaceWith(target, data);
+			append_block_controls(new_block);
+			$(new_block).before('<div class="spacer hidden_x_y"></div>');
 		}
 	});
 
-    switch_picker(content_type, element_count);
-}
-
-
-function switch_block(target, data){
-	$(target).replaceWith(target, data);
+    switch_picker(content_type, new_block);
 }
 
 
@@ -520,12 +521,12 @@ function append_block_controls(target){
 }
 
 
-function switch_picker(content_type, element_count){
+function switch_picker(content_type, new_block){
 		$.ajax({
 		type: "GET",
 		url: content_type + '_picker.php',
 		data: {
-			include_data : ['.' + content_type + '.block.n' + element_count]
+			include_data : [new_block]
 		},
 		success: function(data) {
 			if( $('#current_picker').length === 0 ){
@@ -540,6 +541,7 @@ function switch_picker(content_type, element_count){
 	});
 }
 
+
 function append_picker_controls(){
 	$.ajax({
 		type: "GET",
@@ -549,6 +551,7 @@ function append_picker_controls(){
 	    }
 	});
 }
+
 
 //jQuery ismouseover  method
 (function($){ 

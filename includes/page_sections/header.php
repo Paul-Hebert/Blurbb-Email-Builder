@@ -11,7 +11,6 @@
 
         <?php
             echo '<link rel="stylesheet" type="text/css" href="' . $base_url . 'css/style.css">';
-            echo '<link id="theme_CSS" rel="stylesheet" type="text/css" href="' . $base_url . 'includes/themes/' . $theme . '/css/style.css">';    
         ?>
     </head>
 

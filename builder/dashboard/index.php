@@ -10,6 +10,8 @@
     <div class="row">
       <div id="email" class="main_preview col-lg-8 container">
         <?php 
+          echo '<link id="theme_CSS" rel="stylesheet" type="text/css" href="' . $base_url . 'includes/themes/' . $theme . '/css/style.css">';    
+
           include($base_url . 'includes/themes/' . $theme . '/index.php');
         ?>
       </div>
