@@ -6,6 +6,7 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /***********************************************************************************************************************/
 
+
 $(function(){
 	initialize_dashboard();
 
@@ -125,7 +126,7 @@ function initialize_blocks_and_pickers(){
 		var content_type = class_list[0];
 		var element_count = class_list[2].replace('n','')
 
-		switch_picker(content_type, element_count);
+		switch_picker(content_type, '.' + $(this).parents('.block').attr('class').replace(/\s/g,".") );
 	});
 
 	$('#email a').click(function(){
@@ -221,6 +222,10 @@ function initialize_text_pickers(){
 		target.text( text );
 	});
 
+	initialize_text_styles();
+}
+
+function initialize_text_styles(){
 	$('.alignment i').click(function(){
 		$(this).parent().children('.alignment i').removeClass('selected');
 
@@ -254,7 +259,6 @@ function initialize_text_pickers(){
 	});
 }
 
-
 /************************************************************************************************************************
 	List Pickers
 /***********************************************************************************************************************/
@@ -263,7 +267,6 @@ function initialize_text_pickers(){
 function initialize_list_pickers(){
 	$('.list_picker textarea').keyup(function(){
 		$( $(this).parent().attr('data_target') + ' li:nth-of-type(' + $(this).attr('class')[1] + ')' ).text( 'ddd' );
-		console.log( $(this).parent().attr('data_target') + ' li:nth-of-type(' + $(this).attr('class')[1] + ')' );
 	});
 }
 
@@ -471,7 +474,6 @@ function initialize_drag_and_drop(){
 			$('.spacer').each(function(){
 				if ( $(this).ismouseover() ) {
 				    ajax_block(this, content_type);
-				    console.log('d');
 				}
 			});
 
@@ -484,7 +486,7 @@ function initialize_drag_and_drop(){
 function ajax_block(target, content_type){
 	var element_count = $('.block.' + content_type).length + 1;
 	var new_block = '.' + content_type + '.block.n' + element_count;
-
+	console.log(new_block)
     $.ajax({
 	    type: "GET",
 	    url: 'email/' + content_type + '.php',
@@ -511,7 +513,11 @@ function append_spacers(){
 	var spacer = '<div class="spacer hidden_x_y"></div>';
 
 	$('.spacer').remove();
-	$(' .column .block:first').before(spacer);
+
+	$('.column').each(function(){
+		$(this).children('.block:first').before(spacer);
+	}); 
+
 	$('.block').after(spacer);
 }
 

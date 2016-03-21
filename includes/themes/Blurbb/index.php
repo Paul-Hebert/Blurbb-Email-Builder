@@ -33,20 +33,20 @@
             <table class="email_row primary">
               <tr>
                 <td align="center" valign="middle" class="column">
-                  <a href="http://invoice-out.com/">
-                      <span class="image block n1">
-                        <?php 
-                          if ($logo == ""){
-                            echo '<img src="http://www.invoice-out.com/includes/themes/Blast_Off/imgs/logo.png">'; 
-                          } else{
-                            echo '<img src="' . $logo . '">'; 
-                          }
-                        ?> 
-                      </span>
-                      <div class="header block n1">
-                        <h1 class="content"><?php echo $business_name; ?></h1>
-                      </div>
-                    </a>
+                    <span class="image block n1">
+                      <?php 
+                        if ($logo == ""){
+                          echo '<img src="http://www.invoice-out.com/includes/themes/Blast_Off/imgs/logo.png">'; 
+                        } else{
+                          echo '<img src="' . $logo . '">'; 
+                        }
+                      ?> 
+                    </span>
+                </td>
+                <td align="center" valign="middle" class="column">
+                    <div class="header block n1">
+                      <h1 class="content"><?php echo $business_name; ?></h1>
+                    </div>
                 </td>
               </tr>
             </table>

@@ -1170,8 +1170,8 @@ button, input:not([type=checkbox]), textarea, select {
   cursor: pointer;
   color: #f9f9f9;
   position: absolute;
-  right: 20px;
-  top: 15px; }
+  right: 5px;
+  top: 5px; }
   .fa-close:hover, .fa-pencil:hover {
     background: #F78336; }
 
@@ -3380,7 +3380,7 @@ button, input:not([type=checkbox]), textarea, select {
   .block .fa-close, .block .fa-pencil, .block .controls .background {
     opacity: 0; }
   .block .fa-pencil {
-    right: 60px; }
+    right: 45px; }
 
 .block:hover .controls .background {
   position: absolute;
