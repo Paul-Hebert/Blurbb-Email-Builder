@@ -14,9 +14,6 @@ Planned features
 ================
 
 - More CSS export options. Inlined CSS and Sass
-- Click an email section to edit it
-- Append blocks between blocks
-- Blurred modal background (Not good enough support. Might need to rethink)
 - One script for email build, export and send
 - Format code for export (format text and format code modal)
 - More resources in resource page
@@ -33,5 +30,3 @@ Issues and Bugs
 
 - Where to host images? When exporting HTML how will the user know to host and link their images?
 - Exported code is formatted badly
-- Chosen theme needs to be in view
-- Height transitions got broken

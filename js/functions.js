@@ -129,14 +129,6 @@ function initialize_modular_sections(){
 }
 
 
-function initialize_html_export(){
-$('#export_HTML').click(function(){
-		export_HTML();
-		return false;
-	});
-}
-
-
 function initialize_colorpickers(){
     $('head').append('<style id="addedCSS" type="text/css"></style>');
 
@@ -189,7 +181,7 @@ function initialize_colorpickers(){
 
 function initialize_image_pickers(){
 	$(".image_picker input[type=file]").change(function(){
-	    readURL( this , $('.image_picker').attr('data-target'));
+	    image_from_file( this , $('.image_picker').attr('data-target'));
 	});
 
 	$(".image_picker input[type=text]").keyup(function(){
@@ -303,62 +295,7 @@ function initialize_spreadsheet_picker(){
 }
 
 
-function initialize_drag_and_drop(){
-	$('.content_picker .fa').mousedown(function(e){
-		var content_type = $(this).attr('data-type');
-
-		$('.spacer').removeClass('hidden_x_y');
-
-		var offset = $(this).offset();
-		var x_offset = e.pageX - offset.left;
-		var y_offset = e.pageY - offset.top;		
-		
-		$('.content_picker').append('<i class="selected"></i>');
-		$('.content_picker .selected').attr( 'class', $(this).attr('class') + ' selected' );
-		$('.content_picker .selected').css({
-			'left':e.pageX - x_offset,
-			'top':e.pageY - y_offset
-		});
-
-		$('body').mousemove(function(e){
-			$('.content_picker .selected').css({
-				'left':e.pageX - x_offset,
-				'top':e.pageY - y_offset
-			});
-
-			$('.spacer').each(function(){
-				if ( $(this).ismouseover() ) {
-				    $(this).addClass('droppable');
-				} else{
-				    $(this).removeClass('droppable');					
-				}
-			});
-		}).mouseup(function(){
-			$('.content_picker .selected').fadeOut(200);	
-
-			setTimeout(function(){
-				$('.content_picker .selected').remove();
-			}, 200);
-
-			$('body').unbind('mousemove').unbind('mouseup').removeClass('unselectable');	
-
-			var dropped = false;
-
-			$('.spacer').each(function(){
-				if ( $(this).ismouseover() ) {
-				    ajax_block(this, content_type, 'replaceWith');
-				    dropped = true;
-				}
-			});
-
-			$('.spacer').addClass('hidden_x_y');
-			$('#email .block, #email .column').removeClass('droppable');
-		}).addClass('unselectable');
-	})
-}
-
-
-function readURL(input,target) {
+function image_from_file(input,target) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
@@ -370,7 +307,6 @@ function readURL(input,target) {
     }
 }
 
-// Super sloppy. Needs cleaning up
 
 function CSV_from_file(input,target) {
     if (input.files && input.files[0]) {
@@ -395,10 +331,19 @@ function CSV_from_file(input,target) {
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	Utility Functions
+	Exporting HTML
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /***********************************************************************************************************************/
+
+
+function initialize_html_export(){
+$('#export_HTML').click(function(){
+		export_HTML();
+		return false;
+	});
+}
+
 
 function export_HTML(){
 	modal('Code','<ul class="links"><li id="download_HTML">Download HTML</li></ul><pre><i class="fa fa-spinner</pre>');
@@ -442,26 +387,72 @@ function download(filename, text){
 }
 
 
-function modal(heading,content){
-	$('body').append('<div class="modal background transparent"></div><div class="modal content transparent"></div>');
 
-	$('.modal.content').html('<h1>' + heading + '</h1><i class="fa fa-close"></i>' + content);		
+/***********************************************************************************************************************/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	setTimeout(function(){
-		$('.modal').removeClass('transparent');
-	},1);
-	
-	$('.modal.background, .modal .fa-close').click(function(){
-		$('.modal').addClass('transparent');
+	Drag and Drop
 
-		setTimeout(function(){
-			$('.modal').remove();
-		},300);
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/***********************************************************************************************************************/
+
+
+function initialize_drag_and_drop(){
+	$('.content_picker .fa').mousedown(function(e){
+		var content_type = $(this).attr('data-type');
+
+		$('.spacer').removeClass('hidden_x_y');
+
+		var offset = $(this).offset();
+		var x_offset = e.pageX - offset.left;
+		var y_offset = e.pageY - offset.top;		
+		
+		$('.content_picker').append('<i class="selected"></i>');
+		$('.content_picker .selected').attr( 'class', $(this).attr('class') + ' selected' );
+		$('.content_picker .selected').css({
+			'left':e.pageX - x_offset,
+			'top':e.pageY - y_offset
+		});
+
+		$('body').mousemove(function(e){
+			$('.content_picker .selected').css({
+				'left':e.pageX - x_offset,
+				'top':e.pageY - y_offset
+			});
+
+			$('.spacer').each(function(){
+				if ( $(this).ismouseover() ) {
+				    $(this).addClass('droppable');
+				} else{
+				    $(this).removeClass('droppable');					
+				}
+			});
+		}).mouseup(function(){
+			$('.content_picker .selected').fadeOut(200);	
+
+			setTimeout(function(){
+				$('.content_picker .selected').remove();
+			}, 200);
+
+			$('body').unbind('mousemove').unbind('mouseup').removeClass('unselectable');	
+
+			var dropped = false;
+
+			$('.spacer').each(function(){
+				if ( $(this).ismouseover() ) {
+				    ajax_block(this, content_type);
+				    dropped = true;
+				}
+			});
+
+			$('.spacer').addClass('hidden_x_y');
+			$('#email .block, #email .column').removeClass('droppable');
+		}).addClass('unselectable');
 	})
 }
 
 
-function ajax_block(target, content_type, action){
+function ajax_block(target, content_type){
 	var element_count = $('.block.' + content_type).length + 1;
 	var new_content = '.' + content_type + '.block.n' + element_count;
 
@@ -472,32 +463,26 @@ function ajax_block(target, content_type, action){
 	    	include_number : element_count
 	    },
 		success: function(data) {
-		    if (action === 'replaceWith'){
-				switch_block(target, data);
-				append_block_controls(new_content);
-				$(new_content).before('<div class="spacer hidden_x_y"></div>');
-			} else{
-				append_block(target, data);		
-				append_block_controls('.' + content_type + '.block.n' + element_count);
-			}
+			switch_block(target, data);
+			append_block_controls(new_content);
+			$(new_content).before('<div class="spacer hidden_x_y"></div>');
 		}
 	});
 
     switch_picker(content_type, element_count);
 }
 
-function append_block(target, data){
-	$(target).append(data);		
-}
 
 function switch_block(target, data){
 	$(target).replaceWith(target, data);
 }
 
+
 function append_block_controls(target){
 	$(target).append('<span class="controls"><span class="background"></span><i class="fa fa-close"></i><i class="fa fa-pencil"></span>');
 	$(target).after('<div class="spacer hidden_x_y"></div>');
 }
+
 
 function switch_picker(content_type, element_count){
 		$.ajax({
@@ -551,20 +536,29 @@ function append_picker_controls(){
 })(jQuery);
 
 
-var MAP = { '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            "'": '&#39;'};
+/***********************************************************************************************************************/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	Utility Functions
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/***********************************************************************************************************************/
 
 
+function modal(heading,content){
+	$('body').append('<div class="modal background transparent"></div><div class="modal content transparent"></div>');
 
-function escapeHTML(s, forAttribute) {
-    return s.replace(forAttribute ? /[&<>'"]/g : /[&<>]/g, function(c) {
-        return MAP[c];
-    });
+	$('.modal.content').html('<h1>' + heading + '</h1><i class="fa fa-close"></i>' + content);		
+
+	setTimeout(function(){
+		$('.modal').removeClass('transparent');
+	},1);
+	
+	$('.modal.background, .modal .fa-close').click(function(){
+		$('.modal').addClass('transparent');
+
+		setTimeout(function(){
+			$('.modal').remove();
+		},300);
+	})
 }
-
-
-
-
