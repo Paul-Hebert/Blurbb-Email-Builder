@@ -134,14 +134,12 @@ function initialize_dashboard(){
 
 
 function initialize_colorpickers(){
-    $('head').append('<style id="addedCSS" type="text/css"></style>');
-
 	$('.colorpicker-wrapper').ColorPicker({
 		flat: true,
 		onChange: function (hsb, hex, rgb) {
 			var css_targets = $(this).parent().parent().attr('data-target').split('-');
 
-			$('#addedCSS').append('#email ' + css_targets[0] + '{' + css_targets[1] + ': #' + hex + ';}');
+			$('#added_CSS').append('#email ' + css_targets[0] + '{' + css_targets[1] + ': #' + hex + ';}');
 		}
 	});
 
@@ -152,7 +150,7 @@ function initialize_colorpickers(){
 		$(this).css('background',$(this).attr('data-color')).click( function(){
 			var css_targets = $(this).parent().attr('data-target').split('-');
 			
-			$('#addedCSS').append('#email ' + css_targets[0] + '{' + css_targets[1] + ':' + $(this).attr('data-color') + '}');
+			$('#added_CSS').append('#email ' + css_targets[0] + '{' + css_targets[1] + ':' + $(this).attr('data-color') + '}');
 		});
 	});
 
@@ -228,16 +226,16 @@ function initialize_text_pickers(){
 
 		$(this).addClass('selected');		
 
-		$('#addedCSS').append('#email ' + $('.text_picker, .header_picker').attr('data_target') + ', #email ' + $('.text_picker, .header_picker').attr('data_target') + ' *{text-align:' + alignment + '}');
+		$('#added_CSS').append('#email ' + $('.text_picker, .header_picker').attr('data_target') + ', #email ' + $('.text_picker, .header_picker').attr('data_target') + ' *{text-align:' + alignment + '}');
 	});
 
 	$('.fa-bold').click(function(){
 		$(this).toggleClass('selected');
 
 		if( $(this).hasClass('selected') ){
-			$('#addedCSS').append('#email ' + $('.text_picker, .header_picker').attr('data_target') + ', #email ' + $('.text_picker, .header_picker').attr('data_target') + ' *{font-weight:bold}');			
+			$('#added_CSS').append('#email ' + $('.text_picker, .header_picker').attr('data_target') + ', #email ' + $('.text_picker, .header_picker').attr('data_target') + ' *{font-weight:bold}');			
 		}	else{
-			$('#addedCSS').append('#email ' + $('.text_picker, .header_picker').attr('data_target') + ', #email ' + $('.text_picker, .header_picker').attr('data_target') + ' *{font-weight:normal}');						
+			$('#added_CSS').append('#email ' + $('.text_picker, .header_picker').attr('data_target') + ', #email ' + $('.text_picker, .header_picker').attr('data_target') + ' *{font-weight:normal}');						
 		}
 	});
 
@@ -245,9 +243,9 @@ function initialize_text_pickers(){
 		$(this).toggleClass('selected');
 
 		if( $(this).hasClass('selected') ){
-			$('#addedCSS').append('#email ' + $('.text_picker, .header_picker').attr('data_target') + ', #email ' + $('.text_picker, .header_picker').attr('data_target') + ' *{font-style:italic}');			
+			$('#added_CSS').append('#email ' + $('.text_picker, .header_picker').attr('data_target') + ', #email ' + $('.text_picker, .header_picker').attr('data_target') + ' *{font-style:italic}');			
 		}	else{
-			$('#addedCSS').append('#email ' + $('.text_picker, .header_picker').attr('data_target') + ', #email ' + $('.text_picker, .header_picker').attr('data_target') + ' *{font-style:normal}');						
+			$('#added_CSS').append('#email ' + $('.text_picker, .header_picker').attr('data_target') + ', #email ' + $('.text_picker, .header_picker').attr('data_target') + ' *{font-style:normal}');						
 		}	
 	});
 }
@@ -389,7 +387,7 @@ function export_HTML(){
   		 data: { 
   		 	message: '<div id="email">' + $('#email').html() + '</div>', 
   		 	theme: theme_name,
-  		 	addedCSS: $('#addedCSS').text()
+  		 	added_CSS: $('#added_CSS').text()
   		 },
 	     success: function(data) {
 			$('.modal.content pre').html(data);			

@@ -8,10 +8,14 @@
       include($base_url . 'includes/themes/' . $theme . '/settings.php');
     ?>
     <div class="row">
-      <div id="email" class="main_preview col-lg-8 container">
+      <div id="email" class="col-lg-8 container">
         <?php 
           echo '<link id="theme_CSS" rel="stylesheet" type="text/css" href="' . $base_url . 'includes/themes/' . $theme . '/css/style.css">';    
+        ?>
 
+        <style id="addedCSS"></style>
+
+        <?php
           include($base_url . 'includes/themes/' . $theme . '/index.php');
         ?>
       </div>

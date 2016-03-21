@@ -3349,12 +3349,12 @@ button, input:not([type=checkbox]), textarea, select {
 .fa-percent:before {
   content: ""; }
 
-#email.main_preview, #dashboard {
+#email, #dashboard {
   padding-top: 80px;
   height: 100vh;
   z-index: 0; }
 
-#email.main_preview {
+#email {
   float: left;
   width: 60%;
   overflow: scroll;
@@ -3401,7 +3401,7 @@ button, input:not([type=checkbox]), textarea, select {
   width: 40%;
   overflow: scroll;
   float: right;
-  background: #f0f0f0;
+  background: #f9f9f9;
   overflow: scroll; }
   #dashboard header {
     width: 100%;
