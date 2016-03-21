@@ -11,6 +11,14 @@
 	padding-right: 0px;
 }
 
+.spacer{
+	height:30px;
+
+	&.droppable{
+
+	}
+}
+
 .block{
 	cursor:pointer;
 	position:relative;

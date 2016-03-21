@@ -348,6 +348,8 @@ function initialize_drag_and_drop(){
 	$('.content_picker .fa').mousedown(function(e){
 		var content_type = $(this).attr('data-type');
 
+		$('.spacer').removeClass('hidden_x_y');
+
 		var offset = $(this).offset();
 		var x_offset = e.pageX - offset.left;
 		var y_offset = e.pageY - offset.top;		
@@ -365,7 +367,7 @@ function initialize_drag_and_drop(){
 				'top':e.pageY - y_offset
 			});
 
-			$('#email .block, #email .column').each(function(){
+			$('.spacer').each(function(){
 				if ( $(this).ismouseover() ) {
 				    $(this).addClass('droppable');
 				} else{
@@ -383,31 +385,14 @@ function initialize_drag_and_drop(){
 
 			var dropped = false;
 
-			$('#email .block').each(function(){
+			$('.spacer').each(function(){
 				if ( $(this).ismouseover() ) {
 				    ajax_block(this, content_type, 'replaceWith');
 				    dropped = true;
 				}
 			});
 
-			if (dropped === false){
-				$('#email .column').each(function(){
-					if ( $(this).ismouseover() ) {
-					    ajax_block(this, content_type, 'append');
-					    dropped = true;
-					}
-				});			
-			}
-
-			if (dropped === false){
-				$('#email tr').each(function(){
-					if ( $(this).ismouseover() ) {
-					    ajax_block(this, content_type, 'append');
-					    dropped = true;
-					}
-				});			
-			}
-
+			$('.spacer').addClass('hidden_x_y');
 			$('#email .block, #email .column').removeClass('droppable');
 		}).addClass('unselectable');
 	})
@@ -519,6 +504,7 @@ function modal(heading,content){
 
 function ajax_block(target, content_type, action){
 	var element_count = $('.block.' + content_type).length + 1;
+	var new_content = '.' + content_type + '.block.n' + element_count;
 
     $.ajax({
 	    type: "GET",
@@ -529,7 +515,8 @@ function ajax_block(target, content_type, action){
 		success: function(data) {
 		    if (action === 'replaceWith'){
 				switch_block(target, data);
-				append_block_controls('.' + content_type + '.block.n' + element_count);
+				append_block_controls(new_content);
+				$(new_content).before('<div class="spacer hidden_x_y"></div>');
 			} else{
 				append_block(target, data);		
 				append_block_controls('.' + content_type + '.block.n' + element_count);
@@ -550,6 +537,7 @@ function switch_block(target, data){
 
 function append_block_controls(target){
 	$(target).append('<span class="controls"><span class="background"></span><i class="fa fa-close"></i><i class="fa fa-pencil"></span>');
+	$(target).after('<div class="spacer hidden_x_y"></div>');
 }
 
 function switch_picker(content_type, element_count){

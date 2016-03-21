@@ -3360,6 +3360,9 @@ button, input:not([type=checkbox]), textarea, select {
   overflow: scroll;
   padding-right: 0px; }
 
+.spacer {
+  height: 30px; }
+
 .block {
   cursor: pointer;
   position: relative; }
