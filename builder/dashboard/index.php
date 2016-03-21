@@ -19,10 +19,7 @@
       <div id="dashboard" class="col-lg-4 container">
         <menu id="invoice_form" enctype='multipart/form-data'>
           <section id="content_menu">
-            <?php
-              $include_name = 'Content';
-              include('section_heading.php');
-            ?>
+            <h3>Content</h3>
 
             <fieldset>
               <?php
@@ -32,10 +29,7 @@
           </section>
           
           <section>
-            <?php
-              $include_name = 'Design';
-              include('section_heading.php');
-            ?>
+            <h3>Design</h3>
             
             <fieldset>
               <?php

@@ -86,36 +86,12 @@
 		position:relative;
 
 		h3{
-			cursor:pointer;
-			width:100%;
 			background:	$main-color;
 			color:$off-white;
 			padding:20px;
 			position:relative;
-			left:0%;
-			@include transition_mixin(all 300ms);
-
-			&:hover{
-				background:$interacting-color;
-
-				&+ .fa-close{
-					background:$interacting-color;
-				}
-			}
-
-			&.open{
-				left:-2.5%;
-				width:102.5%;
-
-			}
-		}
-
-		.fa-close{
-			top:36px;
-		}
-
-		.theme_thumbnails_wrapper{
-			width:250px;
+			left:-3%;
+			width:103%;
 		}	
 
 		.content_picker{

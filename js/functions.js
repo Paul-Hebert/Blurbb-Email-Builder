@@ -13,8 +13,6 @@ $(function(){
 
 	$('.block:first-of-type').before('<div class="spacer hidden_x_y"></div>');
 
-	initialize_modular_sections();
-
 	initialize_dashboard();
 
 	initialize_drag_and_drop();	
@@ -126,20 +124,6 @@ function initialize_dashboard(){
 
 	$('#email a').click(function(){
 		return false;
-	});
-}
-
-
-/************************************************************************************************************************
-	Modular Sections
-/***********************************************************************************************************************/
-
-
-function initialize_modular_sections(){
-	$('#dashboard .fa-close, #dashboard h3').click(function(){
-		$(this).parent().children('.fa-close').toggleClass('rotated');
-		$(this).parent().children('h3').toggleClass('open');		
-		$(this).siblings('fieldset').toggleClass('hidden_y');
 	});
 }
 
