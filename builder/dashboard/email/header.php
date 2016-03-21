@@ -1,3 +1,5 @@
 <?php
-	echo '<h1 class="header block n' . $_GET['include_number'] . '">Header</h1>';
+	echo '<div class="header block n' . $_GET['include_number'] . '">
+		<h1 class="content">Header</h1>
+	</div>';
 ?>

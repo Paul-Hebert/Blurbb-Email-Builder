@@ -420,24 +420,24 @@
   #email .secondary {
     background: #736A6A;
     color: #fff; }
-  #email .chart {
+  #email .spreadsheet table {
     margin: 20px auto;
     color: #000; }
-  #email .chart th, #email .chart td {
+  #email .spreadsheet table th, #email .spreadsheet table td {
     padding: 5px;
     text-align: right; }
-  #email .chart th:first-of-type, #email .chart td:first-of-type {
+  #email .spreadsheet table th:first-of-type, #email .spreadsheet table td:first-of-type {
     text-align: left; }
-  #email .chart tr {
+  #email .spreadsheet table tr {
     background: #eee; }
-  #email .chart tr:nth-of-type(even) {
+  #email .spreadsheet table tr:nth-of-type(even) {
     background: #ddd; }
-  #email .chart tfoot td {
+  #email .spreadsheet table tfoot td {
     font-weight: bold; }
   #email .primary a[href^=tel], #email .primary a[href^=tel]:hover {
     color: #fff;
     text-decoration: none; }
-  #email .chart .false_border {
+  #email .spreadsheet table .false_border {
     padding: 0px; }
   #email ul {
     list-style: disc;

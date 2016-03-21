@@ -43,7 +43,9 @@
                           }
                         ?> 
                       </span>
-                      <h1 class="header block n1"><?php echo $business_name; ?></h1>
+                      <div class="header block n1">
+                        <h1 class="content"><?php echo $business_name; ?></h1>
+                      </div>
                     </a>
                 </td>
               </tr>
@@ -59,13 +61,15 @@
             <table class="email_row light">
               <tr>
                 <td class="column">
-                  <h2 class="header block n2"><?php echo $heading1; ?></h2>
+                  <div class="header block n2">
+                    <h2 class="content"><?php echo $heading1; ?></h2>
+                  </div>
                   <div class="text block n1">
-                    <p><?php echo $message1; ?></p>
+                    <p class="content"><?php echo $message1; ?></p>
                   </div>
                 </td>
                 <td class="column">
-                  <div class="chart block n1">
+                  <div class="spreadsheet block n1">
                     <?php include($base_url . 'includes/utilities/csv_as_table.php');?>
                   </div>
                 </td>
@@ -75,9 +79,11 @@
             <table class="email_row primary">
               <tr>
                 <td class="column">
-                  <h2 class="header block n3"><?php echo $heading2; ?></h2>
+                  <div class="header block n3">
+                    <h2 class="content"><?php echo $heading2; ?></h2>
+                  </div>
                   <div class="text block n2">
-                    <p><?php echo $message2; ?></p>
+                    <p class="content"><?php echo $message2; ?></p>
                   </div>
                 </td>
               </tr>
@@ -86,9 +92,9 @@
             <table class="email_row secondary footer">
               <tr>
                 <td valign="middle" class="column secondary">
-                  <p class="text block n3">
-                    <?php echo $website_url; ?>
-                  </p>
+                  <div class="text block n3">
+                    <p class="content"><?php echo $website_url; ?></p>
+                  </div>
                 </td>
               </tr>
             </table>

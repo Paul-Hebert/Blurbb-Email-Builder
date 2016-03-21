@@ -8,7 +8,7 @@
 
 $(function(){
 	$('.block').each(function(){
-		append_controls(this);
+		append_block_controls(this);
 	})
 
 	initialize_modular_sections();
@@ -70,7 +70,15 @@ function initialize_dashboard(){
 	});
 
 	$('.block .fa-close').click(function(){
-		$(this).parent().remove();
+		$(this).parents('.block').remove();
+	});
+
+	$('.block .fa-pencil').click(function(){
+		var class_list = $(this).parents('.block').attr('class').split(' ');
+		var content_type = class_list[0];
+		var element_count = class_list[2].replace('n','')
+
+		switch_picker(content_type, element_count);
 	});
 
 	$('#email a').click(function(){
@@ -266,11 +274,11 @@ function initialize_text_pickers(){
 	});
 
 	$('.text_picker, .header_picker').keyup(function(){
-		var target = $($(this).attr('data_target') );
+		var target = $( $(this).attr('data_target') );
 		var target_type = target.get(0).tagName;
 		var text =  $(this).val();
 		text = text.replace(/\n\r?/g, '</' + target_type + '>' + '<' + target_type + '>');
-		target.html( text );
+		target.text( text );
 	});
 
 	$('.alignment i').click(function(){
@@ -521,10 +529,10 @@ function ajax_block(target, content_type, action){
 		success: function(data) {
 		    if (action === 'replaceWith'){
 				switch_block(target, data);
-				append_controls('.' + content_type + '.block.n' + element_count);
+				append_block_controls('.' + content_type + '.block.n' + element_count);
 			} else{
 				append_block(target, data);		
-				append_controls('.' + content_type + '.block.n' + element_count);
+				append_block_controls('.' + content_type + '.block.n' + element_count);
 			}
 		}
 	});
@@ -540,8 +548,8 @@ function switch_block(target, data){
 	$(target).replaceWith(target, data);
 }
 
-function append_controls(target){
-	$(target).append('<i class="fa fa-close"></i><i class="fa fa-pencil">');
+function append_block_controls(target){
+	$(target).append('<span class="controls"><span class="background"></span><i class="fa fa-close"></i><i class="fa fa-pencil"></span>');
 }
 
 function switch_picker(content_type, element_count){

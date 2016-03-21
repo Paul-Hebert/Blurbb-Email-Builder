@@ -9,7 +9,7 @@
     $csvRows = array_map('str_getcsv', $contents);
 
 
-    echo '<table class="chart">
+    echo '<table>
           <thead>
           <tr class="columns">';
             foreach($csvRows[0] as $column){

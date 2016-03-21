@@ -15,7 +15,7 @@
 	cursor:pointer;
 	position:relative;
 
-	.fa-close, .fa-pencil{
+	.fa-close, .fa-pencil, .controls .background{
 		opacity:0;
 	}
 
@@ -24,20 +24,32 @@
 	}	
 }
 
+.block:hover{
+	@extend .droppable;
+
+	.controls{
+		.background{
+			position:absolute;
+			left:0px;
+			top:0px;
+			right:0px;
+			bottom:0px;
+			background:#000;
+			opacity: .3;
+		}
+	}
+
+	.fa-close, .fa-pencil{
+		opacity:1;
+		font-size:14px;
+	}
+}
+
 .image.block {
 	display:inline-block;
 
 	img{
 		width:100%;
-	}
-}
-
-.block:hover{
-	@extend .droppable;
-
-	.fa-close, .fa-pencil{
-		opacity:1;
-		font-size:14px;
 	}
 }
 

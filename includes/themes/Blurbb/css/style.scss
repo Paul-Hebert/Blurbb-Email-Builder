@@ -494,29 +494,29 @@
     color:#fff;
   }
 
-  .chart{
+  .spreadsheet table{
     margin:20px auto;
     color:#000;
   }
 
-  .chart th, .chart td{
+  .spreadsheet table th, .spreadsheet table td{
     padding:5px;
     text-align:right;
   }
 
-  .chart th:first-of-type, .chart td:first-of-type{
+  .spreadsheet table th:first-of-type, .spreadsheet table td:first-of-type{
     text-align:left;
   }
 
-  .chart tr{
+  .spreadsheet table tr{
     background:#eee;
   }
 
-  .chart tr:nth-of-type(even){
+  .spreadsheet table tr:nth-of-type(even){
     background:#ddd;
   }
 
-  .chart tfoot td{
+  .spreadsheet table tfoot td{
     font-weight:bold;
   }
 
@@ -525,7 +525,7 @@
     text-decoration: none;
   }
 
-  .chart .false_border{
+  .spreadsheet table .false_border{
     padding:0px;
   }
 

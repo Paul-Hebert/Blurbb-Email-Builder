@@ -3363,19 +3363,27 @@ button, input:not([type=checkbox]), textarea, select {
 .block {
   cursor: pointer;
   position: relative; }
-  .block .fa-close, .block .fa-pencil {
+  .block .fa-close, .block .fa-pencil, .block .controls .background {
     opacity: 0; }
   .block .fa-pencil {
     right: 60px; }
+
+.block:hover .controls .background {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #000;
+  opacity: .3; }
+.block:hover .fa-close, .block:hover .fa-pencil {
+  opacity: 1;
+  font-size: 14px; }
 
 .image.block {
   display: inline-block; }
   .image.block img {
     width: 100%; }
-
-.block:hover .fa-close, .block:hover .fa-pencil {
-  opacity: 1;
-  font-size: 14px; }
 
 #dashboard {
   width: 40%;
