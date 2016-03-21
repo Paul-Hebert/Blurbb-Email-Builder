@@ -13,6 +13,11 @@ $(function(){
 
 	$('.block:first-of-type').before('<div class="spacer hidden_x_y"></div>');
 
+	/*$('.column').after('<td class="spacer hidden_x_y"></td>');
+
+	$('.column:first-of-type').before('<td class="spacer hidden_x_y"></td>');*/
+
+
 	initialize_modular_sections();
 
 	initialize_dashboard();

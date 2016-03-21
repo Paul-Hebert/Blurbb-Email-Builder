@@ -1185,8 +1185,8 @@ button, input:not([type=checkbox]), textarea, select {
   overflow: hidden; }
 
 .hidden_x_y {
-  width: 0px !important;
-  height: 0px !important;
+  max-width: 0px !important;
+  max-height: 0px !important;
   padding-left: 0px !important;
   padding-right: 0px !important;
   padding-top: 0px !important;
@@ -3361,7 +3361,16 @@ button, input:not([type=checkbox]), textarea, select {
   padding-right: 0px; }
 
 .spacer {
-  height: 30px; }
+  background: #000;
+  opacity: .3;
+  max-height: 30px;
+  max-width: 1000px;
+  height: 30px;
+  width: 100%;
+  -o-transition: all 300ms;
+  -ms-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
 
 .block {
   cursor: pointer;
@@ -3476,8 +3485,7 @@ button, input:not([type=checkbox]), textarea, select {
     -ms-transition: all 300ms;
     -webkit-transition: all 300ms;
     transition: all 300ms;
-    max-height: 100%;
-    max-width: 100%;
+    max-height: 180px;
     padding: 15px; }
 .color-selector-wrapper .color-swatch {
   display: inline-block;
@@ -3494,6 +3502,13 @@ button, input:not([type=checkbox]), textarea, select {
   border-radius: 3px; }
   .color-selector-wrapper .color-swatch.selected {
     border: 1px solid #222; }
+.color-selector-wrapper .file-picker {
+  max-height: 80px;
+  overflow: hidden;
+  -o-transition: all 300ms;
+  -ms-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
 .color-selector-wrapper .fa {
   padding: 0px 5px;
   position: relative;

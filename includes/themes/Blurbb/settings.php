@@ -1,5 +1,5 @@
 <?php
-	$business_name = 'Invoice Out';
+	$business_name = 'Blurbb';
 	$website_url = 'www.invoice-out.com';
 
 	$heading1 = 'Contracting Invoice';
