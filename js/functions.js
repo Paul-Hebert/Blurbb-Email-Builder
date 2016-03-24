@@ -117,8 +117,7 @@ function initialize_blocks_and_pickers(){
 	});
 
 	$('.block .fa-close').click(function(){
-		$(this).parents('.block').remove();
-		append_spacers();
+		remove_block(this);
 	});
 
 	$('.block .fa-pencil').click(function(){
@@ -505,14 +504,13 @@ function append_spacers(){
 	$('.block').after(spacer);
 
 
-	var spacer_column = '<td class="email_column spacer hidden_x_y"><div width="30"></div></td>';
-
-	$('.email_row').each(function(){
-		$(this).children('.email_column:first').before(spacer_column);
-	}); 
+	var spacer_column = '<td class="email_column spacer hidden_x_y"><div width="10"></div></td>';
 
 	$('.email_column').after(spacer_column);
 
+	$('.email_row tr').each(function(){
+		$(this).children('.email_column:first').before(spacer_column);
+	}); 
 
 	var spacer_row = '<table class="email_row light spacer hidden_x_y"><tr><td class="email_column"><div width="600"></td></tr></table>'
 
@@ -592,6 +590,26 @@ function append_picker_controls(){
 	    }
 	});
 }
+
+
+function remove_block(target){
+	var block = $(target).parents('.block');
+	var column = block.parents('.email_column');
+
+	block.remove();
+
+	$('.spacer').remove();
+
+	var column_contents = column.html().replace(/\s/g,"");
+
+
+	if ( column_contents == '' ){
+		column.remove();
+	}
+
+	append_spacers();
+}
+
 
 
 /***********************************************************************************************************************/

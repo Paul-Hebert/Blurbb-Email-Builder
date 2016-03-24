@@ -5,7 +5,6 @@
       $theme = $_GET['theme'];
 
       include($base_url . 'includes/page_sections/header.php');
-      include($base_url . 'includes/themes/' . $theme . '/settings.php');
     ?>
     <div class="row">
       <div id="email" class="col-lg-8 container">

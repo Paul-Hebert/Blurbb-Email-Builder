@@ -1270,10 +1270,12 @@ button, input:not([type=checkbox]), textarea, select {
   -webkit-user-select: none;
   user-select: none; }
 
-.droppable, .block:hover {
+.droppable {
   box-shadow: 0 0 8px 1px #000;
   opacity: .8 !important;
-  z-index: 10; }
+  z-index: 10;
+  min-height: 30px;
+  min-width: 30px; }
 
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -3367,7 +3369,7 @@ button, input:not([type=checkbox]), textarea, select {
   opacity: .3;
   max-height: 30px;
   max-width: 1000px;
-  height: 30px;
+  height: 10px;
   -o-transition: all 300ms;
   -ms-transition: all 300ms;
   -webkit-transition: all 300ms;
@@ -3381,17 +3383,21 @@ button, input:not([type=checkbox]), textarea, select {
   .block .fa-pencil {
     right: 45px; }
 
-.block:hover .controls .background {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  background: #000;
-  opacity: .3; }
-.block:hover .fa-close, .block:hover .fa-pencil {
-  opacity: 1;
-  font-size: 14px; }
+.block:hover {
+  box-shadow: 0 0 8px 1px #000;
+  opacity: .8 !important;
+  z-index: 10; }
+  .block:hover .controls .background {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #000;
+    opacity: .3; }
+  .block:hover .fa-close, .block:hover .fa-pencil {
+    opacity: 1;
+    font-size: 14px; }
 
 .image.block {
   display: inline-block; }
