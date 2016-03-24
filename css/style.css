@@ -1193,11 +1193,6 @@ button, input:not([type=checkbox]), textarea, select {
   padding-bottom: 0px !important;
   overflow: hidden; }
 
-.visible_x_y {
-  width: 100%;
-  width: 100px !important;
-  height: auto; }
-
 .transparent {
   opacity: 0 !important; }
 
@@ -3373,7 +3368,6 @@ button, input:not([type=checkbox]), textarea, select {
   max-height: 30px;
   max-width: 1000px;
   height: 30px;
-  width: 100%;
   -o-transition: all 300ms;
   -ms-transition: all 300ms;
   -webkit-transition: all 300ms;

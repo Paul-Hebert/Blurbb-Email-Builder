@@ -436,11 +436,16 @@ function download(filename, text){
 /***********************************************************************************************************************/
 
 
+/************************************************************************************************************************
+	Drag
+/***********************************************************************************************************************/
+
+
 function initialize_drag_and_drop(){
 	$('.content_picker .fa').mousedown(function(e){
 		var content_type = $(this).attr('data-type');
 
-		$('.spacer').removeClass('hidden_x_y').addClass('visible_x_y');
+		$('.spacer').removeClass('hidden_x_y');
 
 		var offset = $(this).offset();
 		var x_offset = e.pageX - offset.left;
@@ -481,10 +486,45 @@ function initialize_drag_and_drop(){
 				}
 			});
 
-			$('.spacer').addClass('hidden_x_y').removeClass('visible_x_y');
+			$('.spacer').addClass('hidden_x_y');
 		}).addClass('unselectable');
 	})
 }
+
+
+
+function append_spacers(){
+	var spacer = '<div class="spacer hidden_x_y"></div>';
+
+	$('.spacer').remove();
+
+	$('.email_column').each(function(){
+		$(this).children('.block:first').before(spacer);
+	}); 
+
+	$('.block').after(spacer);
+
+
+	var spacer_column = '<td class="email_column spacer hidden_x_y"><div width="30"></div></td>';
+
+	$('.email_row').each(function(){
+		$(this).children('.email_column:first').before(spacer_column);
+	}); 
+
+	$('.email_column').after(spacer_column);
+
+
+	var spacer_row = '<table class="email_row light spacer hidden_x_y"><tr><td class="email_column"><div width="600"></td></tr></table>'
+
+	$('.email_row').after(spacer_row);
+
+	$('.email_row:first-of-type').before(spacer_row);	
+}
+
+
+/************************************************************************************************************************
+	Drop
+/***********************************************************************************************************************/
 
 
 function ajax_block(target, content_type){
@@ -501,7 +541,10 @@ function ajax_block(target, content_type){
 			if ( $(target).hasClass('email_row') ){
 				$(target).children().children().children().html(data);
 				$(target).removeClass('spacer').removeClass('hidden_x_y').removeClass('droppable');
-			} else{
+			} else if ( $(target).hasClass('email_column') ){
+				$(target).html(data);
+				$(target).removeClass('spacer').removeClass('hidden_x_y').removeClass('droppable');				
+			}else{
 				$(target).replaceWith(target, data);
 			}
 
@@ -516,26 +559,6 @@ function ajax_block(target, content_type){
 
 function append_block_controls(target){
 	$(target).append('<span class="controls"><span class="background"></span><i class="fa fa-close"></i><i class="fa fa-pencil"></span>');
-}
-
-
-function append_spacers(){
-	var spacer = '<div class="spacer hidden_x_y"></div>';
-
-	$('.spacer').remove();
-
-	$('.email_column').each(function(){
-		$(this).children('.block:first').before(spacer);
-	}); 
-
-	$('.block').after(spacer);
-
-
-	var spacer_row = '<table class="email_row light spacer hidden_x_y"><tr><td class="email_column"></td></tr></table>'
-
-	$('.email_row').after(spacer_row);
-
-	$('.email_row:first-of-type').before(spacer_row);	
 }
 
 
@@ -571,28 +594,6 @@ function append_picker_controls(){
 }
 
 
-//jQuery ismouseover method
-(function($){ 
-    $.mlp = {x:0,y:0}; // Mouse Last Position
-    function documentHandler(){
-        var $current = this === document ? $(this) : $(this).contents();
-        $current.mousemove(function(e){jQuery.mlp = {x:e.pageX,y:e.pageY}});
-        $current.find("iframe").load(documentHandler);
-    }
-    $(documentHandler);
-    $.fn.ismouseover = function(overThis) {  
-        var result = false;
-        this.eq(0).each(function() {  
-                var $current = $(this).is("iframe") ? $(this).contents().find("body") : $(this);
-                var offset = $current.offset();             
-                result =    offset.left<=$.mlp.x && offset.left + $current.outerWidth() > $.mlp.x &&
-                            offset.top<=$.mlp.y && offset.top + $current.outerHeight() > $.mlp.y;
-        });  
-        return result;
-    };  
-})(jQuery);
-
-
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -619,3 +620,26 @@ function modal(heading,content){
 		},300);
 	})
 }
+
+
+//jQuery ismouseover method
+(function($){ 
+    $.mlp = {x:0,y:0}; // Mouse Last Position
+    function documentHandler(){
+        var $current = this === document ? $(this) : $(this).contents();
+        $current.mousemove(function(e){jQuery.mlp = {x:e.pageX,y:e.pageY}});
+        $current.find("iframe").load(documentHandler);
+    }
+    $(documentHandler);
+    $.fn.ismouseover = function(overThis) {  
+        var result = false;
+        this.eq(0).each(function() {  
+                var $current = $(this).is("iframe") ? $(this).contents().find("body") : $(this);
+                var offset = $current.offset();             
+                result =    offset.left<=$.mlp.x && offset.left + $current.outerWidth() > $.mlp.x &&
+                            offset.top<=$.mlp.y && offset.top + $current.outerHeight() > $.mlp.y;
+        });  
+        return result;
+    };  
+})(jQuery);
+
