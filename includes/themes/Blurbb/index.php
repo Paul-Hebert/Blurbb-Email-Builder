@@ -1,18 +1,3 @@
-<?php
-  if (! isset($heading1)){
-    $heading1 = $_GET['heading1'];
-  }
-  if (! isset($message1)){
-    $message1 = $_GET['message1'];
-  }
-  if (! isset($heading2)){
-    $heading2 = $_GET['heading2'];
-  }
-  if (! isset($message2)){
-    $message2 = $_GET['message2'];
-  }
-?>
-
 <!--~~~~~~~~~~~~~~~~ Begin Code ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <table class="body">

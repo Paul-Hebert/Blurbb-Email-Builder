@@ -284,11 +284,11 @@ function initialize_image_pickers(){
 	    image_from_file( this , $('.image_picker').attr('data-target'));
 	});
 
-	$(".image_picker input[type=text]").keyup(function(){
+	$(".image_picker .file-picker input[type=text]").keyup(function(){
 	    $( $('.image_picker').attr('data-target') ).attr('src', $(this).val()); 
 	});
 
-	$(".image_picker input[type=text]").each(function(){
+	$(".image_picker .file-picker input[type=text]").each(function(){
 		$(this).attr( 'placeholder', $( $('.image_picker').attr("data-target") ).attr('src') );
 	});
 }
