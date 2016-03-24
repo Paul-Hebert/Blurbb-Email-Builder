@@ -404,7 +404,7 @@
   #email * {
     line-height: 150%; }
 
-#email .column {
+#email .email_column {
   padding: 10px; }
 #email .primary {
   background: #EB7F00;

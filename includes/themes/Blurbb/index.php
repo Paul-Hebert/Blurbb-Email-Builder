@@ -32,7 +32,7 @@
 
             <table class="email_row primary">
               <tr>
-                <td align="center" valign="middle" class="column">
+                <td align="center" valign="middle" class="email_column">
                     <span class="image block n1">
                       <?php 
                         if ($logo == ""){
@@ -43,7 +43,7 @@
                       ?> 
                     </span>
                 </td>
-                <td align="center" valign="middle" class="column">
+                <td align="center" valign="middle" class="email_column">
                     <div class="header block n1">
                       <h1 class="content"><?php echo $business_name; ?></h1>
                     </div>
@@ -51,16 +51,9 @@
               </tr>
             </table>
 
-            <table>
-              <tr>
-                <td height="5" width="580" class="secondary">
-                </td>
-              </tr>
-            </table>
-
             <table class="email_row light">
               <tr>
-                <td class="column">
+                <td class="email_column">
                   <div class="header block n2">
                     <h2 class="content"><?php echo $heading1; ?></h2>
                   </div>
@@ -68,7 +61,7 @@
                     <p class="content"><?php echo $message1; ?></p>
                   </div>
                 </td>
-                <td class="column">
+                <td class="email_column">
                   <div class="spreadsheet block n1">
                     <?php include($base_url . 'includes/utilities/csv_as_table.php');?>
                   </div>
@@ -78,7 +71,7 @@
 
             <table class="email_row primary">
               <tr>
-                <td class="column">
+                <td class="email_column">
                   <div class="header block n3">
                     <h2 class="content"><?php echo $heading2; ?></h2>
                   </div>
@@ -91,7 +84,7 @@
 
             <table class="email_row secondary footer">
               <tr>
-                <td valign="middle" class="column secondary">
+                <td valign="middle" class="email_column secondary">
                   <div class="text block n3">
                     <p class="content"><?php echo $website_url; ?></p>
                   </div>

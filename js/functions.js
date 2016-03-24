@@ -223,6 +223,8 @@ function initialize_text_pickers(){
 	});
 
 	initialize_text_styles();
+
+	$('.text_picker, .header_picker').focus();
 }
 
 function initialize_text_styles(){
@@ -266,8 +268,10 @@ function initialize_text_styles(){
 
 function initialize_list_pickers(){
 	$('.list_picker textarea').keyup(function(){
-		$( $(this).parent().attr('data_target') + ' li:nth-of-type(' + $(this).attr('class')[1] + ')' ).text( 'ddd' );
+		$( $(this).parent().attr('data_target') + ' li:nth-of-type(' + $(this).attr('class')[1] + ')' ).text( $(this).val() );
 	});
+
+	$('.list_picker textarea:first-of-type').focus();
 }
 
 
@@ -436,7 +440,7 @@ function initialize_drag_and_drop(){
 	$('.content_picker .fa').mousedown(function(e){
 		var content_type = $(this).attr('data-type');
 
-		$('.spacer').removeClass('hidden_x_y');
+		$('.spacer').removeClass('hidden_x_y').addClass('visible_x_y');
 
 		var offset = $(this).offset();
 		var x_offset = e.pageX - offset.left;
@@ -477,7 +481,7 @@ function initialize_drag_and_drop(){
 				}
 			});
 
-			$('.spacer').addClass('hidden_x_y');
+			$('.spacer').addClass('hidden_x_y').removeClass('visible_x_y');
 		}).addClass('unselectable');
 	})
 }
@@ -486,7 +490,7 @@ function initialize_drag_and_drop(){
 function ajax_block(target, content_type){
 	var element_count = $('.block.' + content_type).length + 1;
 	var new_block = '.' + content_type + '.block.n' + element_count;
-	console.log(new_block)
+
     $.ajax({
 	    type: "GET",
 	    url: 'email/' + content_type + '.php',
@@ -494,7 +498,13 @@ function ajax_block(target, content_type){
 	    	include_number : element_count
 	    },
 		success: function(data) {
-			$(target).replaceWith(target, data);
+			if ( $(target).hasClass('email_row') ){
+				$(target).children().children().children().html(data);
+				$(target).removeClass('spacer').removeClass('hidden_x_y').removeClass('droppable');
+			} else{
+				$(target).replaceWith(target, data);
+			}
+
 			append_block_controls(new_block);
 			$(new_block).before('<div class="spacer hidden_x_y"></div>');
 		}
@@ -514,11 +524,18 @@ function append_spacers(){
 
 	$('.spacer').remove();
 
-	$('.column').each(function(){
+	$('.email_column').each(function(){
 		$(this).children('.block:first').before(spacer);
 	}); 
 
 	$('.block').after(spacer);
+
+
+	var spacer_row = '<table class="email_row light spacer hidden_x_y"><tr><td class="email_column"></td></tr></table>'
+
+	$('.email_row').after(spacer_row);
+
+	$('.email_row:first-of-type').before(spacer_row);	
 }
 
 

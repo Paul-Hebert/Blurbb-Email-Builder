@@ -1,6 +1,6 @@
 <div class="subsection">
 	<div class="content_picker">
-		<label>Drag and Drop Content Sections</label>
+		<label>Drag and drop content blocks to add them to your email</label>
 		<i class="fa fa-table" data-type='spreadsheet'></i>
 		<i class="fa fa-paragraph" data-type='text'></i>
 		<i class="fa fa-header" data-type='header'></i>
