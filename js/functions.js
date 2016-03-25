@@ -595,21 +595,27 @@ function append_picker_controls(){
 function remove_block(target){
 	var block = $(target).parents('.block');
 	var column = block.parents('.email_column');
+	var row = column.parents('.email_row');
 
 	block.remove();
 
 	$('.spacer').remove();
 
-	var column_contents = column.html().replace(/\s/g,"");
-
-
-	if ( column_contents == '' ){
-		column.remove();
-	}
+	remove_parent(column,'');
+	remove_parent(row,'<tbody><tr></tr></tbody>');
 
 	append_spacers();
 }
 
+function remove_parent(type,empty){
+	if (type.length > 0){
+		var contents = type.html().replace(/\s/g,"");
+
+		if (contents == empty ){
+			type.remove();
+		}
+	}
+}
 
 
 /***********************************************************************************************************************/
