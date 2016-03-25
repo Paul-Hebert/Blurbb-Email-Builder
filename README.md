@@ -23,6 +23,7 @@ Planned features
 - Edit CSVs as spreadsheets
 - Input tables cell by cell (No CSV required)
 - Duplicate block
+- When the gradient colorpicker is selected set its value to that of the current styling.
 
 
 Issues and Bugs
@@ -33,3 +34,5 @@ Issues and Bugs
 - Can't scroll preview when dragging blocks
 - Alignment controls don't work well when parent is width:auto
 - Removing a block doesn't remove a spacer
+
+webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919

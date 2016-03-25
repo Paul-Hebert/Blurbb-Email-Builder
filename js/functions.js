@@ -150,6 +150,18 @@ function initialize_colorpickers(){
 
 	$('.colorpicker, .color-selector-wrapper .file-picker').addClass('hidden_y');
 
+
+
+	$(".color-selector-wrapper .file-picker input[type=text]").keyup(function(){
+	    $( $(this).parents('.color-selector-wrapper').attr('data-target').split('-')[0] ).css('background', 'url("' + $(this).val() + '")'); 
+	});
+
+	$(".color-selector-wrapper .file-picker input[type=file]").change(function(){
+	    image_from_file( this , $(this).parents('.color-selector-wrapper').attr('data-target').split('-')[0], 'background');
+	});
+
+
+
 	$('.color-swatch').each(function(){
 		$(this).css('background',$(this).attr('data-color')).click( function(){
 			var css_targets = $(this).parent().attr('data-target').split('-');
@@ -159,11 +171,11 @@ function initialize_colorpickers(){
 	});
 
 	$('.color-selector-wrapper .fa-eyedropper').click(function(){
-		$(this).siblings('p').children('.colorpicker').removeClass('hidden_y');
+		$(this).siblings('p').children('.colorpicker').toggleClass('hidden_y');
 	});
 
 	$('.color-selector-wrapper .fa-picture-o').click(function(){
-		$(this).siblings('.file-picker').removeClass('hidden_y');
+		$(this).siblings('.file-picker').toggleClass('hidden_y');
 	});
 
 	$('.color-selector-wrapper .fa-picture-o, .color-swatch').click(function(){
@@ -281,7 +293,7 @@ function initialize_list_pickers(){
 
 function initialize_image_pickers(){
 	$(".image_picker input[type=file]").change(function(){
-	    image_from_file( this , $('.image_picker').attr('data-target'));
+	    image_from_file( this , $('.image_picker').attr('data-target'), 'src');
 	});
 
 	$(".image_picker .file-picker input[type=text]").keyup(function(){
@@ -294,12 +306,18 @@ function initialize_image_pickers(){
 }
 
 
-function image_from_file(input,target) {
+function image_from_file(input,target,attribute) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
+
         reader.onload = function (e) {
-            $(target).attr('src', e.target.result);
+        	if (attribute === 'src'){
+            	$(target).attr('src', e.target.result);
+            } else if(attribute === 'background'){
+            	$(target).css('background', 'url("' + e.target.result +'")');
+            	console.log('d');
+            }
         }
 
         reader.readAsDataURL(input.files[0]);
