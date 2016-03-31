@@ -1057,10 +1057,9 @@ body:after,
 #dashboard .colorpicker_slider {
   background-position: bottom; }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Slab";
-  font-weight: lighter;
-  margin: 0px; }
+  font-weight: lighter; }
 
 h1 {
   font-size: 34pt; }
@@ -3436,16 +3435,11 @@ button, input:not([type=checkbox]), textarea, select {
   float: right;
   background: #f9f9f9;
   overflow: scroll; }
-  #dashboard header {
-    width: 100%;
-    padding: 20px; }
-    #dashboard header h2 {
-      color: #333338; }
   #dashboard section {
     padding-top: 20px;
     margin: 0px 20px;
     position: relative; }
-    #dashboard section h3 {
+    #dashboard section h2 {
       background: #333338;
       color: #f9f9f9;
       padding: 20px;

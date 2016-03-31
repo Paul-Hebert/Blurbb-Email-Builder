@@ -22,7 +22,7 @@
       <div id="dashboard" class="col-lg-4 container">
         <menu id="invoice_form" enctype='multipart/form-data'>
           <section id="content_menu">
-            <h3>Content</h3>
+            <h2>Content</h2>
 
             <fieldset>
               <?php
@@ -32,38 +32,41 @@
           </section>
           
           <section>
-            <h3>Design</h3>
+            <h2>Design</h2>
             
             <fieldset>
               <?php
                 include('font_picker.php'); 
 
                 echo '<div class="subsection">';
-                  $include_name = 'Primary background';
+                echo '<h3>Style 1</h3>';
+                  $include_name = 'Background';
                   $include_data = ['.primary','background'];
                   include('color_picker.php');
 
-                  $include_name = 'Primary text color';
+                  $include_name = 'Text color';
                   $include_data = ['.primary','color'];
                   include('color_picker.php');
                 echo '</div>';
 
                 echo '<div class="subsection">';
-                  $include_name = 'Secondary background';
+                echo '<h3>Style 2</h3>';                
+                  $include_name = 'Background';
                   $include_data = ['.secondary','background'];
                   include('color_picker.php');
 
-                  $include_name = 'Secondary text color';
+                  $include_name = 'Text color';
                   $include_data = ['.secondary','color'];
                   include('color_picker.php');                
                 echo '</div>';
 
                 echo '<div class="subsection">';
-                  $include_name = 'Light background';
+                echo '<h3>Style 3</h3>';                
+                  $include_name = 'Background';
                   $include_data = ['.light','background'];
                   include('color_picker.php');
 
-                  $include_name = 'Light text color';
+                  $include_name = 'Text color';
                   $include_data = ['.light','color'];
                   include('color_picker.php');                
                 echo '</div>';

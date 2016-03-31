@@ -79,22 +79,13 @@
 	float:right;
 	background:$off-white;
 	overflow:scroll;
-
-	header{
-		width:100%;
-		padding:20px;
-
-		h2{
-			color:$main-color;
-		}
-	}
 	
 	section{
 		padding-top:20px;
 		margin:0px 20px;
 		position:relative;
 
-		h3{
+		h2{
 			background:	$main-color;
 			color:$off-white;
 			padding:20px;

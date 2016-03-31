@@ -35,4 +35,9 @@ Issues and Bugs
 - Alignment controls don't work well when parent is width:auto
 - Block numbering breaks after you delete blocks, causing duplicate blocks
 
+Partially Complete Tasks
+========================
+
+- Remove Block buttons
+
 webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
