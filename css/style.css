@@ -2,17 +2,22 @@
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	Variables
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/***********************************************************************************************************************/
-/***********************************************************************************************************************/
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 	Imports
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /***********************************************************************************************************************/
+/*/////////////////////////////////////////////////////////////////////////////
+    Colors
+//////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////
+    Fonts
+//////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////
+    Sizing
+//////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////
+    Animation
+//////////////////////////////////////////////////////////////////////////////*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -1052,18 +1057,37 @@ body:after,
 #dashboard .colorpicker_slider {
   background-position: bottom; }
 
+h1, h2, h3 {
+  font-family: "Roboto Slab";
+  font-weight: lighter;
+  margin: 0px; }
+
+h1 {
+  font-size: 34pt; }
+
+h2 {
+  font-size: 21pt; }
+
+h3 {
+  font-size: 16pt; }
+
+p {
+  font-size: 13pt;
+  padding: 10pt 0px; }
+
 label {
   padding-bottom: 2px;
-  display: block; }
+  display: block;
+  font-size: 13pt; }
 
 fieldset {
   border: 0px;
   padding: 20px;
   background: #ddd;
-  -o-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -webkit-transition: all 300ms;
-  transition: all 300ms; }
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out; }
   fieldset .subsection:not(:last-of-type) {
     padding-bottom: 10px;
     margin-bottom: 10px;
@@ -1073,7 +1097,7 @@ input:not([type=checkbox]):not([type=range]):not([type=submit]), textarea, selec
   padding: 5px;
   margin: 5px auto;
   font-family: sans-serif;
-  font-size: 11pt;
+  font-size: 10pt;
   border: 1px solid #ccc;
   background: #f9f9f9;
   -o-border-radius: 6px;
@@ -1150,16 +1174,16 @@ button, input:not([type=checkbox]), textarea, select {
   color: #ACACAC; }
   .arrow.fa-chevron-right {
     float: right;
-    font-size: 40pt; }
+    font-size: 34pt; }
   .arrow.fa-chevron-left {
     float: left;
-    font-size: 40pt; }
+    font-size: 34pt; }
 
 .fa-close, .fa-pencil {
-  -o-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  -o-transition: all 250ms ease-in-out;
+  -ms-transition: all 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   -o-border-radius: 50%;
   -ms-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -1212,10 +1236,10 @@ button, input:not([type=checkbox]), textarea, select {
   opacity: .85;
   position: fixed;
   z-index: 20;
-  -o-transition: opacity 150ms;
-  -ms-transition: opacity 150ms;
-  -webkit-transition: opacity 150ms;
-  transition: opacity 150ms; }
+  -o-transition: opacity 250ms ease-in-out;
+  -ms-transition: opacity 250ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out; }
 
 .modal.content {
   position: fixed;
@@ -1228,10 +1252,10 @@ button, input:not([type=checkbox]), textarea, select {
   overflow: scroll;
   padding: 20px;
   padding-top: 70px;
-  -o-transition: opacity 300ms;
-  -ms-transition: opacity 300ms;
-  -webkit-transition: opacity 300ms;
-  transition: opacity 300ms; }
+  -o-transition: opacity 500ms ease-in-out;
+  -ms-transition: opacity 500ms ease-in-out;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out; }
   .modal.content h1 {
     left: 20%;
     right: 20%;
@@ -1260,7 +1284,7 @@ button, input:not([type=checkbox]), textarea, select {
   width: 100%;
   top: 40%;
   text-align: center;
-  font-size: 48pt;
+  font-size: 34pt;
   color: #ccc;
   cursor: default; }
 
@@ -3370,10 +3394,10 @@ button, input:not([type=checkbox]), textarea, select {
   max-height: 30px;
   max-width: 1000px;
   height: 10px;
-  -o-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -webkit-transition: all 300ms;
-  transition: all 300ms; }
+  -o-transition: all 250ms ease-in-out;
+  -ms-transition: all 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out; }
 
 .block {
   cursor: pointer;
@@ -3432,10 +3456,10 @@ button, input:not([type=checkbox]), textarea, select {
       background: #333338;
       color: #f9f9f9;
       cursor: grab;
-      -o-transition: background 200ms;
-      -ms-transition: background 200ms;
-      -webkit-transition: background 200ms;
-      transition: background 200ms; }
+      -o-transition: background 250ms ease-in-out;
+      -ms-transition: background 250ms ease-in-out;
+      -webkit-transition: background 250ms ease-in-out;
+      transition: background 250ms ease-in-out; }
       #dashboard section .content_picker .fa.selected {
         cursor: grabbing;
         position: fixed;
@@ -3449,10 +3473,10 @@ button, input:not([type=checkbox]), textarea, select {
       #dashboard section #picker_controls #remove_block {
         float: right;
         cursor: pointer;
-        -o-transition: color 200ms;
-        -ms-transition: color 200ms;
-        -webkit-transition: color 200ms;
-        transition: color 200ms; }
+        -o-transition: color 500ms ease-in-out;
+        -ms-transition: color 500ms ease-in-out;
+        -webkit-transition: color 500ms ease-in-out;
+        transition: color 500ms ease-in-out; }
         #dashboard section #picker_controls #remove_block:hover {
           color: #E85520; }
 
@@ -3472,10 +3496,10 @@ button, input:not([type=checkbox]), textarea, select {
 .color-selector-wrapper .colorpicker-wrapper {
   margin: 0px; }
   .color-selector-wrapper .colorpicker-wrapper .colorpicker {
-    -o-transition: all 300ms;
-    -ms-transition: all 300ms;
-    -webkit-transition: all 300ms;
-    transition: all 300ms;
+    -o-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
     max-height: 180px;
     padding: 15px; }
 .color-selector-wrapper .color-swatch {
@@ -3496,10 +3520,10 @@ button, input:not([type=checkbox]), textarea, select {
 .color-selector-wrapper .file-picker {
   max-height: 80px;
   overflow: hidden;
-  -o-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -webkit-transition: all 300ms;
-  transition: all 300ms; }
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out; }
 .color-selector-wrapper .fa {
   padding: 0px 5px;
   position: relative;
@@ -3547,11 +3571,7 @@ button, input:not([type=checkbox]), textarea, select {
   .text_styles .font_styles, .text_styles .alignment, .text_styles .links {
     display: inline-block;
     padding-right: 15px;
-    border-right: 1px solid #ccc;
-    -o-transition: all 1500ms;
-    -ms-transition: all 1500ms;
-    -webkit-transition: all 1500ms;
-    transition: all 1500ms; }
+    border-right: 1px solid #ccc; }
   .text_styles i {
     padding-left: 10px;
     cursor: pointer;
@@ -3560,12 +3580,11 @@ button, input:not([type=checkbox]), textarea, select {
       color: #333338; }
 
 #landing_heading h1 {
-  font-size: 48pt;
   padding-top: 30px;
-  font-family: "Oleo Script";
+  font-family: "Roboto Slab";
   color: #333338; }
 #landing_heading h2 {
-  font-family: "Open Sans"; }
+  font-family: "Roboto"; }
 
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -3575,7 +3594,7 @@ button, input:not([type=checkbox]), textarea, select {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /***********************************************************************************************************************/
 * {
-  font-family: "Open Sans";
+  font-family: "Roboto";
   box-sizing: border-box;
   line-height: 140%; }
 
@@ -3587,23 +3606,6 @@ body {
   margin: 0;
   padding: 0;
   background: #f9f9f9; }
-
-h1, h2, h3 {
-  font-family: "Open Sans";
-  font-weight: lighter;
-  margin: 0px; }
-
-h1 {
-  font-size: 24pt; }
-
-h2 {
-  font-size: 21pt; }
-
-h3 {
-  font-size: 16pt; }
-
-p {
-  padding: 6pt 0px; }
 
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -3631,7 +3633,7 @@ header#main {
     header#main a h1 {
       padding: 10px;
       margin: 0px;
-      font-family: "Oleo Script";
+      font-family: "Roboto Slab";
       float: right; }
     header#main a #blurbb_logo {
       height: 60px; }
@@ -3655,36 +3657,31 @@ header#main {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /***********************************************************************************************************************/
-.interactable, input[type=submit], button, .button, .icon_toggle .icon {
+.interactable, input[type=submit], button, .button {
   background: #E85520;
   color: #f9f9f9;
   cursor: pointer;
-  -o-transition: background 300ms;
-  -ms-transition: background 300ms;
-  -webkit-transition: background 300ms;
-  transition: background 300ms; }
-  .interactable:hover, input[type=submit]:hover, button:hover, .button:hover, .icon_toggle .icon:hover {
+  -o-transition: background 500ms ease-in-out;
+  -ms-transition: background 500ms ease-in-out;
+  -webkit-transition: background 500ms ease-in-out;
+  transition: background 500ms ease-in-out; }
+  .interactable:hover, input[type=submit]:hover, button:hover, .button:hover {
     background: #F78336; }
 
 .icon_toggle * {
   color: #f9f9f9; }
-.icon_toggle .icon {
-  text-align: center;
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  -o-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%; }
-  .icon_toggle .icon.toggled {
-    content: 'X'; }
+.icon_toggle .fa {
+  color: #E85520;
+  font-size: 16pt;
+  cursor: pointer; }
+  .icon_toggle .fa:hover {
+    color: #F78336; }
 .icon_toggle .toggled_text {
   background: #E85520;
-  -o-transition: all 300ms;
-  -ms-transition: all 300ms;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
   overflow: hidden;
   padding: 15px;
   -o-border-radius: 6px;

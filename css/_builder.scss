@@ -1,5 +1,5 @@
 #email, #dashboard{
-	padding-top:$header-height;
+	padding-top:80px;
 	height:100vh;
 	z-index:0;
 }
@@ -22,7 +22,7 @@
 	max-height:30px;
 	max-width:1000px;
 	height:10px;
-	@include transition_mixin(all 300ms);	
+	@include transition_mixin(all $fast-duration $base-easing);	
 }
 
 .block{
@@ -106,7 +106,7 @@
 				background:$main-color;
 				color:$off-white;
 				cursor:grab;
-				@include transition_mixin(background 200ms);
+				@include transition_mixin(background $fast-duration $base-easing);
 
 				&.selected{
 					cursor:grabbing;
@@ -123,14 +123,14 @@
 		}
 
 		#picker_controls{
-			font-size:10pt;
+			font-size:$extra-small;
 			color:$auxiliary-color;
 
 			#remove_block{
 				float:right;
 				cursor:pointer;
 
-				@include transition_mixin(color 200ms);
+				@include transition_mixin(color $medium-duration $base-easing);
 
 				&:hover{
 					color:$auxiliary-color;
@@ -170,7 +170,7 @@
 		margin:0px;
 
 		.colorpicker{
-			@include transition_mixin(all 300ms);
+			@include transition_mixin(all $medium-duration $base-easing);
 			max-height:180px;
 			padding:15px;
 		}
@@ -195,7 +195,7 @@
 	.file-picker{
 		max-height:80px;
 		overflow: hidden;
-		@include transition_mixin(all 300ms);
+		@include transition_mixin(all $medium-duration $base-easing);
 	}
 
 	.fa{
@@ -261,7 +261,6 @@
 		display:inline-block;
 		padding-right:15px;
 		border-right:1px solid $subtle-color-2;
-		@include transition_mixin(all 1500ms);		
 	}
 
 	i{

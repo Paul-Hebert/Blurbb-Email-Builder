@@ -1,0 +1,22 @@
+h1,h2,h3{
+	font-family:$second-font;
+	font-weight:lighter;
+	margin:0px;
+}
+
+h1{
+	font-size:$extra-large;;
+}
+
+h2{
+	font-size:$large;
+}
+
+h3{
+	font-size:$medium;
+}
+
+p{
+	font-size:$small;
+	padding:$extra-small 0px;
+}

@@ -1,6 +1,7 @@
 label{
 	padding-bottom:2px;
 	display:block;
+	font-size:$small;
 }
 
 
@@ -8,7 +9,7 @@ fieldset{
 	border:0px;
 	padding:20px;
 	background:$subtle-color-1;
-	@include transition_mixin(all 300ms);
+	@include transition_mixin(all $medium-duration $base-easing);
 
 	.subsection:not(:last-of-type){
 		padding-bottom:10px;
@@ -23,7 +24,7 @@ input:not([type=checkbox]):not([type=range]):not([type=submit]), textarea, selec
 	padding:5px;
 	margin:5px auto;
 	font-family: sans-serif;
-	font-size:11pt;
+	font-size:$extra-small;
 	border:1px solid $subtle-color-2;
 	background:$off-white;
 	@include radius(6px);
@@ -54,7 +55,7 @@ select{
 input[type=submit], button, .button{
 	padding:20px;
 	cursor:pointer;
-	font-size:16pt;
+	font-size:$medium;
 	margin:5px auto;
 	color:$off-white;
 	background:$interactable-color;

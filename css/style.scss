@@ -1,51 +1,17 @@
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	Variables
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/***********************************************************************************************************************/
-
-$main-color:#333338;
-
-$auxiliary-color:#E85520;
-
-$interactable-color:$auxiliary-color;
-
-$interacting-color:#F78336;
-
-$error-color:$interactable-color;
-
-$subtle-color-1:#ddd;
-
-$subtle-color-2:#ccc;
-
-$off-white:#f9f9f9;
-
-$off-black:#222;
-
-$mid-tone:#ACACAC;
-
-
-$main-font:'Open Sans';
-
-$second-font:'Oleo Script';
-
-
-$header-height:80px;
-
-/***********************************************************************************************************************/
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 	Imports
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /***********************************************************************************************************************/
 
+@import 'vars';
 @import 'mixins';
 @import 'reset';
 @import 'bootstrap-grid';
 @import 'colorpicker';
+@import 'typography';
 @import 'forms';
 @import 'javascript';
 @import 'font-awesome/font-awesome';
@@ -80,28 +46,6 @@ body{
 	@extend .container-fluid;
 }
 
-h1,h2,h3{
-	font-family:$main-font;
-	font-weight:lighter;
-	margin:0px;
-}
-
-h1{
-	font-size:24pt;
-}
-
-h2{
-	font-size:21pt;
-}
-
-h3{
-	font-size:16pt;
-}
-
-p{
-	padding:6pt 0px;
-}
-
 /***********************************************************************************************************************/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -111,7 +55,7 @@ p{
 /***********************************************************************************************************************/
 
 header#main{
-	height:$header-height;
+	height:80px;
 	background:$main-color;
 	position:absolute;
 	z-index:10;
@@ -175,7 +119,7 @@ header#main{
 	background:$interactable-color;
 	color:$off-white;	
 	cursor:pointer;
-	@include transition_mixin(background 300ms);
+	@include transition_mixin(background $medium-duration $base-easing);
 
 	&:hover{
 		background:$interacting-color;
@@ -187,21 +131,19 @@ header#main{
 		color:$off-white;
 	}
 
-	.icon{
-		@extend .interactable;
-		text-align:center;
-		width:20px;
-		height:20px;
-		display:inline-block;
-		@include radius(50%);
+	.fa{
+		color: $interactable-color;
+		font-size: $medium;
+		cursor:pointer;
 
-		&.toggled{
-			content:'X';
+		&:hover{
+			color:$interacting-color;
 		}
 	}
+
 	.toggled_text{
 		background:$interactable-color;
-		@include transition_mixin(all 300ms);
+		@include transition_mixin(all $medium-duration $base-easing);
 		overflow:hidden;
 		padding:15px;
 		@include radius(6px);
