@@ -3509,38 +3509,64 @@ button, input:not([type=checkbox]), textarea, select {
   .color-selector-wrapper .fa.selected {
     color: #333338; }
 
-#theme_picker {
-  width: 100%; }
-
-.theme_thumbnails_wrapper {
-  width: 500px;
-  height: 190px;
-  margin: 0px auto;
-  overflow: hidden; }
-  .theme_thumbnails_wrapper .theme_thumbnails {
-    position: relative;
-    width: 8000px;
-    left: -110px; }
-    .theme_thumbnails_wrapper .theme_thumbnails .theme_thumbnail {
-      margin: 10px;
-      width: 100px;
-      height: 161.8px;
-      position: relative;
-      background: #333338;
+.theme_thumbnail {
+  width: 230px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 30px;
+  position: relative;
+  border: 1px solid #8E8E8E;
+  -o-transition: all 300ms;
+  -ms-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  -webkit-box-shadow: 0px 0px 4px 4px rgba(50, 50, 50, 0.3);
+  -moz-box-shadow: 0px 0px 4px 4px rgba(50, 50, 50, 0.3);
+  box-shadow: 0px 0px 4px 4px rgba(50, 50, 50, 0.3);
+  -o-border-radius: 8px 8px 0px 0px;
+  -ms-border-radius: 8px 8px 0px 0px;
+  -webkit-border-radius: 8px 8px 0px 0px;
+  border-radius: 8px 8px 0px 0px;
+  top: -5px; }
+  .theme_thumbnail:hover {
+    width: 240px;
+    margin: 25px;
+    top: 0px;
+    -webkit-box-shadow: 0px 0px 8px 8px rgba(50, 50, 50, 0.3);
+    -moz-box-shadow: 0px 0px 8px 8px rgba(50, 50, 50, 0.3);
+    box-shadow: 0px 0px 8px 8px rgba(50, 50, 50, 0.3); }
+  .theme_thumbnail .fake_controls {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$color1+0,8aa31a+99 */
+    background: #ddd;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ddd 0%, #ccc 99%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ddd 0%, #ccc 99%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ddd 0%, #ccc 99%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
+    /* IE6-9 */
+    padding: 3px; }
+    .theme_thumbnail .fake_controls div {
+      height: 8px;
+      width: 8px;
+      -o-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      background: #fff;
       display: inline-block;
-      cursor: pointer;
-      background-size: 100px; }
-      .theme_thumbnails_wrapper .theme_thumbnails .theme_thumbnail.selected {
-        border: 1px solid #E85520; }
-      .theme_thumbnails_wrapper .theme_thumbnails .theme_thumbnail div {
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-        left: 0px;
-        background: #f9f9f9;
-        text-align: center;
-        padding: 5px 0px;
-        border: 1px solid #ccc; }
+      border: 1px solid #8E8E8E; }
+      .theme_thumbnail .fake_controls div.close {
+        background: #FC635F; }
+      .theme_thumbnail .fake_controls div.minimize {
+        background: #FDC23E; }
+      .theme_thumbnail .fake_controls div.maximize {
+        background: #3BCD51; }
+  .theme_thumbnail img {
+    width: 100%; }
 
 .text_styles {
   float: right; }

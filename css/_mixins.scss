@@ -11,3 +11,18 @@
 	-webkit-transition: $transition;
 	transition: $transition;
 }
+
+@mixin gradient($color1,$color2){
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$color1+0,8aa31a+99 */
+	background: $color1; /* Old browsers */
+	background: -moz-linear-gradient(top,  $color1 0%, $color2 99%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  $color1 0%,$color2 99%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  $color1 0%,$color2 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin box_shadow($shadow){
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow:    $shadow;
+	box-shadow:         $shadow;
+}
