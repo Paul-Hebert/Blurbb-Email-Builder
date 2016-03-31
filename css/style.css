@@ -3402,6 +3402,8 @@ button, input:not([type=checkbox]), textarea, select {
 .block {
   cursor: pointer;
   position: relative; }
+  .block .fa-close, .block .fa-pencil {
+    font-family: FontAwesome !important; }
   .block .fa-close, .block .fa-pencil, .block .controls .background {
     opacity: 0; }
   .block .fa-pencil {
@@ -3632,6 +3634,7 @@ header#main {
       color: #fff; }
     header#main a h1 {
       padding: 10px;
+      padding-top: 0px;
       margin: 0px;
       font-family: "Roboto Slab";
       float: right; }

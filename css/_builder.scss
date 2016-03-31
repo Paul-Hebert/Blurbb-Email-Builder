@@ -29,6 +29,10 @@
 	cursor:pointer;
 	position:relative;
 
+	.fa-close, .fa-pencil{
+		font-family:FontAwesome !important;
+	}
+
 	.fa-close, .fa-pencil, .controls .background{
 		opacity:0;
 	}

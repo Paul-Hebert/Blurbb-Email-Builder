@@ -33,7 +33,6 @@ Issues and Bugs
 - Exported code is formatted badly
 - Can't scroll preview when dragging blocks
 - Alignment controls don't work well when parent is width:auto
-- Removing a block doesn't remove a spacer
 - Block numbering breaks after you delete blocks, causing duplicate blocks
 
 webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
