@@ -406,15 +406,15 @@
 
 #email .email_column {
   padding: 10px; }
-#email .primary {
+#email .style1 {
   background: #EB7F00;
   color: #fff; }
-#email .secondary a, #email .primary a {
+#email .style2 a, #email .style1 a {
   color: inherit; }
-#email .light {
+#email .style3 {
   background: #fff;
   color: #000; }
-#email .secondary {
+#email .style2 {
   background: #736A6A;
   color: #fff; }
 #email .spreadsheet table {
@@ -431,7 +431,7 @@
   background: #ddd; }
 #email .spreadsheet table tfoot td {
   font-weight: bold; }
-#email .primary a[href^=tel], #email .primary a[href^=tel]:hover {
+#email .style1 a[href^=tel], #email .style1 a[href^=tel]:hover {
   color: #fff;
   text-decoration: none; }
 #email .spreadsheet table .false_border {

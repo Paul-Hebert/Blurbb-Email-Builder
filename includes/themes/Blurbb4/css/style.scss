@@ -8,21 +8,21 @@
     padding:10px;
   }
 
-  .primary{
+  .style1{
     background:#EB7F00;
     color:#fff;
   }
 
-  .secondary a, .primary a{
+  .style2 a, .style1 a{
     color:inherit;
   }
 
-  .light{
+  .style3{
     background:#fff;
     color:#000;
   }
 
-  .secondary{
+  .style2{
     background:#736A6A;
     color:#fff;
   }
@@ -53,7 +53,7 @@
     font-weight:bold;
   }
 
-  .primary a[href^=tel], .primary a[href^=tel]:hover{
+  .style1 a[href^=tel], .style1 a[href^=tel]:hover{
     color:#fff;
     text-decoration: none;
   }

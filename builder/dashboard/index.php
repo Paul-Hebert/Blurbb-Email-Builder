@@ -41,33 +41,33 @@
                 echo '<div class="subsection">';
                 echo '<h3>Style 1</h3>';
                   $include_name = 'Background';
-                  $include_data = ['.primary','background'];
+                  $include_data = ['.style1','background'];
                   include('color_picker.php');
 
                   $include_name = 'Text color';
-                  $include_data = ['.primary','color'];
+                  $include_data = ['.style1','color'];
                   include('color_picker.php');
                 echo '</div>';
 
                 echo '<div class="subsection">';
                 echo '<h3>Style 2</h3>';                
                   $include_name = 'Background';
-                  $include_data = ['.secondary','background'];
+                  $include_data = ['.style2','background'];
                   include('color_picker.php');
 
                   $include_name = 'Text color';
-                  $include_data = ['.secondary','color'];
+                  $include_data = ['.style2','color'];
                   include('color_picker.php');                
                 echo '</div>';
 
                 echo '<div class="subsection">';
                 echo '<h3>Style 3</h3>';                
                   $include_name = 'Background';
-                  $include_data = ['.light','background'];
+                  $include_data = ['.style3','background'];
                   include('color_picker.php');
 
                   $include_name = 'Text color';
-                  $include_data = ['.light','color'];
+                  $include_data = ['.style3','color'];
                   include('color_picker.php');                
                 echo '</div>';
 

@@ -530,7 +530,7 @@ function append_spacers(){
 		$(this).children('.email_column:first').before(spacer_column);
 	}); 
 
-	var spacer_row = '<table class="email_row light spacer hidden_x_y"><tr><td class="email_column"><div width="600"></td></tr></table>'
+	var spacer_row = '<table class="email_row style3 spacer hidden_x_y"><tr><td class="email_column"><div width="600"></td></tr></table>'
 
 	$('.email_row').after(spacer_row);
 

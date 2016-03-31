@@ -10,7 +10,7 @@
 
 <!--~~~~~~~~~~~~~~~~ Start Row 1 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-              <table class="email_row primary">
+              <table class="email_row style1">
                 <tr>
                   <td align="center" valign="middle" class="email_column">
                       <span class="image block n1">
@@ -29,7 +29,7 @@
 
 <!--~~~~~~~~~~~~~~~~ Start Row 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-              <table class="email_row light">
+              <table class="email_row style3">
                 <tr>
                   <td class="email_column">
                     <div class="header block n2">
@@ -51,7 +51,7 @@
 
 <!--~~~~~~~~~~~~~~~~ Start Row 3 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
             
-              <table class="email_row primary">
+              <table class="email_row style1">
                 <tr>
                   <td class="email_column">
                     <div class="header block n3">
@@ -68,9 +68,9 @@
 
 <!--~~~~~~~~~~~~~~~~ Start Row 4 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-              <table class="email_row secondary footer">
+              <table class="email_row style2 footer">
                 <tr>
-                  <td valign="middle" class="email_column secondary">
+                  <td valign="middle" class="email_column style2">
                     <div class="text block n3">
                       <p class="content">www.blurbb.email</p>
                     </div>

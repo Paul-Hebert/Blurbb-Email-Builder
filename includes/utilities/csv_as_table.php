@@ -13,7 +13,7 @@
           <thead>
           <tr class="columns">';
             foreach($csvRows[0] as $column){
-              echo '<th class="secondary">' . htmlspecialchars($column) . '</th>';
+              echo '<th class="style2">' . htmlspecialchars($column) . '</th>';
             }     
     echo '</tr>
           </thead>';
@@ -29,7 +29,7 @@
         echo '</tr>';
       } else{
         echo '<tr>
-                <td height="2" width="540" class="secondary false_border" colspan="3">
+                <td height="2" width="540" class="style2 false_border" colspan="3">
               </tr>
           </tbody>
               <tfoot>
