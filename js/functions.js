@@ -316,7 +316,6 @@ function image_from_file(input,target,attribute) {
             	$(target).attr('src', e.target.result);
             } else if(attribute === 'background'){
             	$(target).css('background', 'url("' + e.target.result +'")');
-            	console.log('d');
             }
         }
 

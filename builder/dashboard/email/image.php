@@ -15,6 +15,6 @@
 	);
 
 	echo '<div class="image block n' . $_GET['include_number'] . '">
-		<img src="' . $images[array_rand($images)] . '">
+		<img src="' . $images[array_rand($images)] . '" style="width:200px;">
 	</div>';
 ?>
