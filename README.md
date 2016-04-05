@@ -26,15 +26,6 @@ Planned features
 - When the gradient colorpicker is selected set its value to that of the current styling.
 
 
-Issues and Bugs
-===============
-
-- Where to host images? When exporting HTML how will the user know to host and link their images?
-- Exported code is formatted badly
-- Can't scroll preview when dragging blocks
-- Alignment controls don't work well when parent is width:auto
-- Block numbering breaks after you delete blocks, causing duplicate blocks
-
 Partially Complete Tasks
 ========================
 
