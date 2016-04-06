@@ -7,13 +7,10 @@
                 <?php 
                         echo '<div class="theme_thumbnails_wrapper">
                                 <div class="theme_thumbnails">';
-                                        if ( isset($_GET['theme']) ){
-                                                $set_theme = $_GET['theme'];
-                                        } else{
-                                                $set_theme = 'Board_in_hand';
-                                        }
-
                                         $theme_array = glob($base_url . 'includes/themes/*' , GLOB_ONLYDIR);
+                                        
+                                        $set_theme = $theme_array[1];
+
                                         foreach($theme_array as $theme_name){
                                                 $theme_name = str_replace($base_url . 'includes/themes/', '', $theme_name);                                        
                   
