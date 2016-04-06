@@ -34,7 +34,7 @@ function initialize_toggle_icons(){
 
 function initialize_theme_selection_page(){
 	$('#theme_selection_button').click(function(){
-		window.location = 'dashboard/?theme=' + $('#theme_picker').val();
+		window.location = '?theme=' + $('#theme_picker').val();
 	});
 
 	$('#theme_picker').change(function(){

@@ -61,7 +61,7 @@ Reorganization plan
 		support/
 
 
-dashboard
+	builder
 		if (theme is set){
 			load dashboard
 		} else{
