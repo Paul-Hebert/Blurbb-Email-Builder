@@ -4,7 +4,7 @@
                $title = 'Builder';
                $base_url = '../';
 
-               include('../includes/page_sections/header.php');
+               include('../assets/page_sections/header.php');
 
                if( isset( $_GET['theme'] ) ){
                     $theme = $_GET['theme'];
@@ -14,7 +14,7 @@
                     include('theme_picker/index.php');
                }
 
-               include($base_url . 'includes/page_sections/scripts.php');
+               include($base_url . 'assets/page_sections/scripts.php');
           ?>
      </body>
 </html>

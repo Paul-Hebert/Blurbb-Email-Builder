@@ -17,7 +17,7 @@
     <?php echo '<body id="' . strtolower( str_replace(' ', '_', $title) ) . '">'; ?>
         <header id="main">
         	<?php 
-                include($base_url . 'includes/page_sections/nav.php'); 
+                include($base_url . 'assets/page_sections/nav.php'); 
                 echo '<a href="' . $base_url . '">';
                 echo '<img src="' . $base_url . 'assets/imgs/blurbb_logo.svg" id="blurbb_logo">';
             ?>

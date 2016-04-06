@@ -2,7 +2,7 @@
       $title = 'Blurbb Email Builder';
       $base_url = '';
 
-      include('includes/page_sections/header.php');
+      include('assets/page_sections/header.php');
     ?>
     
     <div class="main_content">
@@ -26,7 +26,7 @@
       </div>
     </div>
     <?php
-      include($base_url . 'includes/page_sections/scripts.php');
+      include($base_url . 'assets/page_sections/scripts.php');
     ?>
   </body>
 </html>
