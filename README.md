@@ -46,6 +46,7 @@ Reorganization plan
 
 		builder/
 			dashboard/
+			theme_picker/
 			utilities/
 			email/
 				themes/
@@ -60,13 +61,6 @@ Reorganization plan
 
 		support/
 
-
-	builder
-		if (theme is set){
-			load dashboard
-		} else{
-			load theme_picker
-		}
 
 
 webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919

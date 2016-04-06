@@ -355,7 +355,7 @@ function initialize_range_sliders(){
 
 function initialize_spreadsheet_picker(){
 	$('.spreadsheet_picker input[type=file]').change(function(){
-		CSV_from_file( this, $('.spreadsheet_picker').attr('data-target') );
+		csv_as_table( this, $('.spreadsheet_picker').attr('data-target') );
 	});
 
 	$('.spreadsheet_picker input[type=text]').keyup(function(){
@@ -364,14 +364,14 @@ function initialize_spreadsheet_picker(){
 }
 
 
-function CSV_from_file(input,target) {
+function csv_as_table(input,target) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
         reader.onload = function (e) {
             $.ajax({
 			     type: "GET",
-			     url: '../../includes/utilities/csv_as_table.php',
+			     url: 'utilities/csv_as_table.php',
 			     data: "path=" + e.target.result,
 			     success: function(data) {
 			          $(target).html(data);
@@ -410,7 +410,7 @@ function export_HTML(){
 
     var request = $.ajax({
 	     type: "POST",
-	     url: '../../includes/utilities/return_html.php',
+	     url: 'utilities/return_html.php',
   		 data: { 
   		 	message: '<div id="email">' + $('#email').html() + '</div>', 
   		 	theme: theme_name,
