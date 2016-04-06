@@ -30,6 +30,7 @@ Partially Complete Tasks
 ========================
 
 - Remove Block buttons
+- Adding links to content
 
 
 Reorganization plan
