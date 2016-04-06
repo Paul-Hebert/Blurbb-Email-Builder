@@ -31,4 +31,37 @@ Partially Complete Tasks
 
 - Remove Block buttons
 
+
+Reorganization plan
+===================
+
+	/
+		assets/
+			css/
+			js/
+			imgs/
+			fonts/
+
+		builder/
+			dashboard/
+				if (theme is set){
+					load dashboard
+				} else{
+					load theme_picker
+				}
+
+			email/
+				themes/
+					example_theme/
+						css/
+						imgs/
+				universal/
+					css/
+					blocks/
+
+		resources/
+
+		support/
+
+
 webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
