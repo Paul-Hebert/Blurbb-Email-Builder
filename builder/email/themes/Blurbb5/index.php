@@ -39,11 +39,6 @@
                       <p class="content">For contract work on the Invoice-Out invoice creation and delivery web-app.</p>
                     </div>
                   </td>
-                  <td class="email_column">
-                    <div class="spreadsheet block n1">
-                      <?php include($base_url . 'includes/utilities/csv_as_table.php');?>
-                    </div>
-                  </td>
                 </tr>
               </table>
 
