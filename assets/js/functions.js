@@ -548,7 +548,7 @@ function ajax_block(target, content_type){
 
     $.ajax({
 	    type: "GET",
-	    url: 'email/' + content_type + '.php',
+	    url: 'email/universal/blocks/' + content_type + '.php',
 	    data: {
 	    	include_number : element_count
 	    },
@@ -580,7 +580,7 @@ function append_block_controls(target){
 function switch_picker(content_type, new_block){
 		$.ajax({
 		type: "GET",
-		url: content_type + '_picker.php',
+		url: 'dashboard/' + content_type + '_picker.php',
 		data: {
 			include_data : [new_block]
 		},
@@ -601,7 +601,7 @@ function switch_picker(content_type, new_block){
 function append_picker_controls(){
 	$.ajax({
 		type: "GET",
-		url:'picker_controls.php',
+		url: 'dashboard/' + 'picker_controls.php',
 		success: function(data) {
 			$('#content_menu fieldset').append(data);
 	    }
