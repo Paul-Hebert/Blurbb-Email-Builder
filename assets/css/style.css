@@ -901,7 +901,7 @@ body:after,
   height: 176px;
   overflow: hidden;
   position: absolute;
-  background: url(../assets/imgs/colorpicker/colorpicker_background.png);
+  background: url(../imgs/colorpicker/colorpicker_background.png);
   font-family: Arial, Helvetica, sans-serif;
   display: none; }
 
@@ -921,7 +921,7 @@ body:after,
   left: 0;
   width: 150px;
   height: 150px;
-  background: url(../assets/imgs/colorpicker/colorpicker_overlay.png); }
+  background: url(../imgs/colorpicker/colorpicker_overlay.png); }
 
 #dashboard .colorpicker_color div div {
   position: absolute;
@@ -930,7 +930,7 @@ body:after,
   width: 11px;
   height: 11px;
   overflow: hidden;
-  background: url(../assets/imgs/colorpicker/colorpicker_select.gif);
+  background: url(../imgs/colorpicker/colorpicker_select.gif);
   margin: -5px 0 0 -5px; }
 
 #dashboard .colorpicker_hue {
@@ -946,7 +946,7 @@ body:after,
   width: 35px;
   height: 9px;
   overflow: hidden;
-  background: url(../assets/imgs/colorpicker/colorpicker_indic.gif) left top;
+  background: url(../imgs/colorpicker/colorpicker_indic.gif) left top;
   margin: -4px 0 0 0;
   left: 0px; }
 
@@ -984,7 +984,7 @@ body:after,
   position: absolute;
   width: 72px;
   height: 22px;
-  background: url(../assets/imgs/colorpicker/colorpicker_hex.png) top;
+  background: url(../imgs/colorpicker/colorpicker_hex.png) top;
   left: 212px;
   top: 142px; }
 
@@ -1007,32 +1007,32 @@ body:after,
   cursor: n-resize; }
 
 #dashboard .colorpicker_rgb_r {
-  background-image: url(../assets/imgs/colorpicker/colorpicker_rgb_r.png);
+  background-image: url(../imgs/colorpicker/colorpicker_rgb_r.png);
   top: 52px;
   left: 212px; }
 
 #dashboard .colorpicker_rgb_g {
-  background-image: url(../assets/imgs/colorpicker/colorpicker_rgb_g.png);
+  background-image: url(../imgs/colorpicker/colorpicker_rgb_g.png);
   top: 82px;
   left: 212px; }
 
 #dashboard .colorpicker_rgb_b {
-  background-image: url(../assets/imgs/colorpicker/colorpicker_rgb_b.png);
+  background-image: url(../imgs/colorpicker/colorpicker_rgb_b.png);
   top: 112px;
   left: 212px; }
 
 #dashboard .colorpicker_hsb_h {
-  background-image: url(../assets/imgs/colorpicker/colorpicker_hsb_h.png);
+  background-image: url(../imgs/colorpicker/colorpicker_hsb_h.png);
   top: 52px;
   left: 282px; }
 
 #dashboard .colorpicker_hsb_s {
-  background-image: url(../assets/imgs/colorpicker/colorpicker_hsb_s.png);
+  background-image: url(../imgs/colorpicker/colorpicker_hsb_s.png);
   top: 82px;
   left: 282px; }
 
 #dashboard .colorpicker_hsb_b {
-  background-image: url(../assets/imgs/colorpicker/colorpicker_hsb_b.png);
+  background-image: url(../imgs/colorpicker/colorpicker_hsb_b.png);
   top: 112px;
   left: 282px; }
 
@@ -1040,7 +1040,7 @@ body:after,
   position: absolute;
   width: 22px;
   height: 22px;
-  background: url(../assets/imgs/colorpicker/colorpicker_submit.png) top;
+  background: url(../imgs/colorpicker/colorpicker_submit.png) top;
   left: 322px;
   top: 142px;
   overflow: hidden; }
@@ -1308,8 +1308,8 @@ button, input:not([type=checkbox]), textarea, select {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../assets/fonts/fontawesome-webfont.eot?v=4.5.0");
-  src: url("../assets/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../assets/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../assets/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../assets/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../assets/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 .fa {

@@ -10,7 +10,7 @@
         <link href='https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab' rel='stylesheet' type='text/css'>
 
         <?php
-            echo '<link rel="stylesheet" type="text/css" href="' . $base_url . 'css/style.css">';
+            echo '<link rel="stylesheet" type="text/css" href="' . $base_url . 'assets/css/style.css">';
         ?>
     </head>
 
