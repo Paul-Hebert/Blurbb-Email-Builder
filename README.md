@@ -33,34 +33,6 @@ Partially Complete Tasks
 - Adding links to content
 
 
-Reorganization plan
-===================
-
-	/
-		assets/
-			css/
-			js/
-			imgs/
-			fonts/
-			template_sections/
-
-		builder/
-			dashboard/
-			theme_picker/
-			utilities/
-			email/
-				themes/
-					example_theme/
-						css/
-						imgs/
-				universal/
-					css/
-					blocks/
-
-		resources/
-
-		support/
-
 
 
 webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
