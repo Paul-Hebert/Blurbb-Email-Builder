@@ -3,3 +3,5 @@
     echo '<script src="' . $base_url . 'assets/js/colorpicker.js"></script>';
     echo '<script src="' . $base_url . 'assets/js/functions.js"></script>';    
 ?>
+	</body>
+</html>

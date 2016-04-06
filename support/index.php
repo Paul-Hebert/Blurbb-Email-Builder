@@ -3,41 +3,41 @@
     $base_url = '../';    
 	include('../assets/page_sections/header.php'); 
 ?>
-		<div class="main_content">
-      		<div class="col-lg-6 col-lg-offset-3">  
-      			<h1>Submit your Support ticket</h1>   
 
-      			<section>
-      				<form>
-      					<fieldset>
-      						<div class='subsection'>
-		      					<label for="from_name">Name:</label>
+<div class="main_content">
+		<div class="col-lg-6 col-lg-offset-3">  
+			<h1>Submit your Support ticket</h1>   
 
-		      					<input name="from_name" type="text">
+			<section>
+				<form>
+					<fieldset>
+						<div class='subsection'>
+      					<label for="from_name">Name:</label>
 
-		      					<label for="from_email">Email:</label>
+      					<input name="from_name" type="text">
 
-		      					<input name="from_email" type="email">
-		      				</div>
+      					<label for="from_email">Email:</label>
 
-      						<div class='subsection'>
-		      					<label for="subject">Subject:</label>
+      					<input name="from_email" type="email">
+      				</div>
 
-		      					<input name="subject" type="email">
+						<div class='subsection'>
+      					<label for="subject">Subject:</label>
 
-		      					<label for="issues">Issue:</label>
+      					<input name="subject" type="email">
 
-		      					<textarea name="Issue"></textarea>
-		      				</div>
+      					<label for="issues">Issue:</label>
 
-		      				<input type="submit" value="Submit Ticket">
-	      				</fieldset>
-      				</form>
-      			</section> 
-      		</div>
-		</div>    
-	<?php
-      include($base_url . 'assets/page_sections/scripts.php');
-    ?>
-  </body>		
-</html>
+      					<textarea name="Issue"></textarea>
+      				</div>
+
+      				<input type="submit" value="Submit Ticket">
+  				</fieldset>
+				</form>
+			</section> 
+		</div>
+</div> 
+
+<?php
+	include($base_url . 'assets/page_sections/scripts.php');
+?>
