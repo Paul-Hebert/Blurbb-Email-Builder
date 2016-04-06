@@ -39,5 +39,5 @@
 </div> 
 
 <?php
-	include($base_url . 'assets/page_sections/scripts.php');
+	include('../assets/page_sections/scripts.php');
 ?>

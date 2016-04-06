@@ -15,7 +15,6 @@ Planned features
 
 - More CSS export options. Inlined CSS and Sass
 - One script for email build, export and send
-- Format code for export (format text and format code modal)
 - More resources in resource page
 - Create a better color palette for the color picker UI / Switch to gradient picker?
 - Simplified visual design
