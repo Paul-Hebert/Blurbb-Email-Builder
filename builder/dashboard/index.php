@@ -1,21 +1,13 @@
-    <?php
-      $title = 'Email Builder';
-      $base_url = '../../';
-
-      $theme = $_GET['theme'];
-
-      include($base_url . 'includes/page_sections/header.php');
-    ?>
     <div class="row">
       <div id="email" class="col-lg-8 container">
         <?php 
-          echo '<link id="theme_CSS" rel="stylesheet" type="text/css" href="' . $base_url . 'includes/themes/' . $theme . '/css/style.css">';    
+          echo '<link id="theme_CSS" rel="stylesheet" type="text/css" href="email/themes/' . $theme . '/css/style.css">';    
         ?>
 
         <style id="added_CSS"></style>
 
         <?php
-          include($base_url . 'includes/themes/' . $theme . '/index.php');
+          include('email/themes/' . $theme . '/index.php');
         ?>
       </div>
 
@@ -26,7 +18,7 @@
 
             <fieldset>
               <?php
-                include('content_picker.php');
+                include('dashboard/content_picker.php');
               ?>
             </fieldset>
           </section>
@@ -36,45 +28,45 @@
             
             <fieldset>
               <?php
-                include('font_picker.php'); 
+                include('dashboard/font_picker.php'); 
 
                 echo '<div class="subsection">';
                 echo '<h3>Style 1</h3>';
                   $include_name = 'Background';
                   $include_data = ['.style1','background'];
-                  include('color_picker.php');
+                  include('dashboard/color_picker.php');
 
                   $include_name = 'Text color';
                   $include_data = ['.style1','color'];
-                  include('color_picker.php');
+                  include('dashboard/color_picker.php');
                 echo '</div>';
 
                 echo '<div class="subsection">';
                 echo '<h3>Style 2</h3>';                
                   $include_name = 'Background';
                   $include_data = ['.style2','background'];
-                  include('color_picker.php');
+                  include('dashboard/color_picker.php');
 
                   $include_name = 'Text color';
                   $include_data = ['.style2','color'];
-                  include('color_picker.php');                
+                  include('dashboard/color_picker.php');                
                 echo '</div>';
 
                 echo '<div class="subsection">';
                 echo '<h3>Style 3</h3>';                
                   $include_name = 'Background';
                   $include_data = ['.style3','background'];
-                  include('color_picker.php');
+                  include('dashboard/color_picker.php');
 
                   $include_name = 'Text color';
                   $include_data = ['.style3','color'];
-                  include('color_picker.php');                
+                  include('dashboard/color_picker.php');                
                 echo '</div>';
 
                 echo '<div class="subsection">';
                   $include_name = 'Body background';
                   $include_data = ['table.body','background'];
-                  include('color_picker.php');
+                  include('dashboard/color_picker.php');
                 echo '</div>';
               ?>
             </fieldset>
@@ -85,9 +77,4 @@
           </section>
         </menu>
       </div>
-    </div>
-    <?php
-      include($base_url . 'includes/page_sections/scripts.php');
-    ?>
-  </body>
-</html>    
+    </div> 

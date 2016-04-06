@@ -1,0 +1,83 @@
+@import '../../../universal/css/defaults';
+
+#email{
+
+  // General
+
+  .email_column{
+    padding:10px;
+  }
+
+  .style1{
+    background:#EB7F00;
+    color:#fff;
+  }
+
+  .style2 a, .style1 a{
+    color:inherit;
+  }
+
+  .style3{
+    background:#fff;
+    color:#000;
+  }
+
+  .style2{
+    background:#736A6A;
+    color:#fff;
+  }
+
+  .spreadsheet table{
+    margin:20px auto;
+    color:#000;
+  }
+
+  .spreadsheet table th, .spreadsheet table td{
+    padding:5px;
+    text-align:right;
+  }
+
+  .spreadsheet table th:first-of-type, .spreadsheet table td:first-of-type{
+    text-align:left;
+  }
+
+  .spreadsheet table tr{
+    background:#eee;
+  }
+
+  .spreadsheet table tr:nth-of-type(even){
+    background:#ddd;
+  }
+
+  .spreadsheet table tfoot td{
+    font-weight:bold;
+  }
+
+  .style1 a[href^=tel], .style1 a[href^=tel]:hover{
+    color:#fff;
+    text-decoration: none;
+  }
+
+  .spreadsheet table .false_border{
+    padding:0px;
+  }
+
+  ul{
+    list-style:disc;
+    padding-left:10px;
+    margin-left:10px;
+  }
+
+
+  //Specific sections
+
+  .image.block.n1{
+    width:50px;
+    padding:10px;
+  }
+
+  .text.block.n3{
+    width:100%;
+    text-align:center;
+  }
+}

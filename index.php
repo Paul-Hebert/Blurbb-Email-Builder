@@ -2,11 +2,11 @@
       $title = 'Blurbb Email Builder';
       $base_url = '';
 
-      include('includes/page_sections/header.php');
+      include('assets/page_sections/header.php');
     ?>
     
     <div class="main_content">
-      <img src="imgs/blurbb_logo.svg" class="col-lg-2 col-lg-offset-3 col-xs-6">
+      <img src="assets/imgs/blurbb_logo.svg" class="col-lg-2 col-lg-offset-3 col-xs-6">
 
       <div class="col-lg-4 col-sm-6" id="landing_heading">
         <h1>Blurbb</h1>
@@ -26,7 +26,7 @@
       </div>
     </div>
     <?php
-      include($base_url . 'includes/page_sections/scripts.php');
+      include($base_url . 'assets/page_sections/scripts.php');
     ?>
   </body>
 </html>
