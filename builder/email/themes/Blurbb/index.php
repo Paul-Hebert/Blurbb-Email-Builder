@@ -1,6 +1,4 @@
 <?php
-  include('utilities/functions.php');
-
   start_email();
     start_row('style1');
       start_column('style1'); 
@@ -35,5 +33,4 @@
       end_column();
     end_row();         
   end_email();
-
 ?>

@@ -7,6 +7,8 @@
         <style id="added_CSS"></style>
 
         <?php
+          include('utilities/functions.php');
+
           include('email/themes/' . $theme . '/index.php');
         ?>
       </div>
