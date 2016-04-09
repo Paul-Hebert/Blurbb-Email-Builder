@@ -1,4 +1,8 @@
 <?php
+	if ( isset($_GET['include_number']) ){
+		$include_number = $_GET['include_number'];
+	}
+	
 	$images = array(
 		'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Kitten_in_Rizal_Park%2C_Manila.jpg/460px-Kitten_in_Rizal_Park%2C_Manila.jpg',
 		'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Laitche-P013.jpg/440px-Laitche-P013.jpg',
@@ -14,7 +18,7 @@
 		'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Louis-%26-Chanel-taking-a-nap.jpg/1920px-Louis-%26-Chanel-taking-a-nap.jpg'
 	);
 
-	echo '<div class="image block n' . $_GET['include_number'] . '">
+	echo '<div class="image block n' . $include_number . '">
 		<img src="' . $images[array_rand($images)] . '" style="width:200px;">
 	</div>';
 ?>

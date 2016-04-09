@@ -1,5 +1,9 @@
 <?php
-	echo '<ul class="list block n' . $_GET['include_number'] . '">';
+	if ( isset($_GET['include_number']) ){
+		$include_number = $_GET['include_number'];
+	}
+	
+	echo '<ul class="list block n' . $include_number . '">';
 ?>
 	<li>
 		Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis.
