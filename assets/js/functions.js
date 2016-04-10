@@ -120,6 +120,12 @@ function initialize_blocks_and_pickers(){
 		remove_block(this);
 	});
 
+	$('.block .fa-copy').click(function(){
+		var parent_block = $(this).parents('.block');
+
+		parent_block.clone().insertAfter(parent_block);
+	});
+
 	$('.block .fa-pencil').click(function(){
 		var class_list = $(this).parents('.block').attr('class').split(' ');
 		var content_type = class_list[0];
@@ -574,7 +580,7 @@ function ajax_block(target, content_type){
 
 
 function append_block_controls(target){
-	$(target).append('<span class="controls"><span class="background"></span><i class="fa fa-close"></i><i class="fa fa-pencil"></span>');
+	$(target).append('<span class="controls"><span class="background"></span><i class="fa fa-close"></i><i class="fa fa-pencil"></i><i class="fa fa-copy"></i></span>');
 }
 
 

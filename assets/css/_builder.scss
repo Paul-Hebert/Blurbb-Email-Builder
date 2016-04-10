@@ -29,17 +29,22 @@
 	cursor:pointer;
 	position:relative;
 
-	.fa-close, .fa-pencil{
+	.fa-close, .fa-pencil, .fa-copy{
 		font-family:FontAwesome !important;
 	}
 
-	.fa-close, .fa-pencil, .controls .background{
+	.fa-copy, .fa-close, .fa-pencil, .controls .background{
 		opacity:0;
 	}
 
 	.fa-pencil{
 		right:45px;
 	}	
+
+	.fa-copy{
+		right:86px;
+	}	
+
 }
 
 .block:hover{
@@ -59,7 +64,7 @@
 		}
 	}
 
-	.fa-close, .fa-pencil{
+	.fa-close, .fa-pencil, .fa-copy{
 		opacity:1;
 		font-size:14px;
 	}

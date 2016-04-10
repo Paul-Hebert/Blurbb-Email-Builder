@@ -44,7 +44,7 @@
 	}
 }
 
-.fa-close, .fa-pencil{
+.fa-close, .fa-pencil, .fa-copy{
 	@include transition_mixin(all $fast-duration $base-easing);
 	@include radius(50%);
 	padding:10px 12px;
