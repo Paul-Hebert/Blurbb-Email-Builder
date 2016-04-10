@@ -6,7 +6,10 @@
 
   table.body{
     background:#1A2330;
-    font-family:Helvetica, sans-serif;    
+
+    *{
+      font-family:'Helvetica';    
+    }
   }
 
   .email_column{

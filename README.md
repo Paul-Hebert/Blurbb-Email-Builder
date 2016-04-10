@@ -30,6 +30,3 @@ Partially Complete Tasks
 
 - Remove Block buttons
 - Adding links to content
-
-
-webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919

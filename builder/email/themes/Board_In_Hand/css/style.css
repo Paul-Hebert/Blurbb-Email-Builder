@@ -402,8 +402,9 @@
     line-height: 150%; }
 
 #email table.body {
-  background: #1A2330;
-  font-family: Helvetica, sans-serif; }
+  background: #1A2330; }
+  #email table.body * {
+    font-family: 'Helvetica'; }
 #email .email_column {
   padding: 10px; }
 #email .style1 {
