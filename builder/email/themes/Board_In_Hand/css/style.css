@@ -393,16 +393,17 @@
     #email table[class="body"] .hide-for-desktop {
       display: inherit !important; } }
   #email table.body {
-    background: #225378;
     width: 100%;
-    min-width: 760px;
-    font-family: Open Sans, sans-serif; }
+    min-width: 760px; }
   #email table.container {
     margin-top: 20px;
     margin-bottom: 20px; }
   #email * {
     line-height: 150%; }
 
+#email table.body {
+  background: #1A2330;
+  font-family: Helvetica, sans-serif; }
 #email .email_column {
   padding: 10px; }
 #email .style1 {
@@ -414,8 +415,8 @@
   background: #000;
   color: #000; }
 #email .style2 {
-  background: #fff;
-  color: #333; }
+  background: #225378;
+  color: #fff; }
 #email .spreadsheet table {
   margin: 20px auto;
   color: #000; }

@@ -56,17 +56,6 @@
                 echo '</div>';
 
                 echo '<div class="subsection">';
-                echo '<h3>Style 3</h3>';                
-                  $include_name = 'Background';
-                  $include_data = ['.style3','background'];
-                  include('dashboard/color_picker.php');
-
-                  $include_name = 'Text color';
-                  $include_data = ['.style3','color'];
-                  include('dashboard/color_picker.php');                
-                echo '</div>';
-
-                echo '<div class="subsection">';
                   $include_name = 'Body background';
                   $include_data = ['table.body','background'];
                   include('dashboard/color_picker.php');
