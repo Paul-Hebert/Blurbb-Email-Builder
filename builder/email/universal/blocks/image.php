@@ -14,7 +14,12 @@
 		'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Louis-%26-Chanel-taking-a-nap.jpg/1920px-Louis-%26-Chanel-taking-a-nap.jpg'
 	);
 
-	echo '<div class="image block n' . $include_number . '">
-		<img src="' . $images[array_rand($images)] . '" style="width:200px;">
-	</div>';
+	echo '<div class="image block n' . $include_number . '">';
+		if ( isset($content) ){
+			echo '<img src="' . $content . '" style="width:100px;">';
+		} else{
+			echo '<img src="' . $images[array_rand($images)] . '" style="width:100px;">';
+		}
+		
+	echo '</div>';
 ?>

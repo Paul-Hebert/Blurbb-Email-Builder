@@ -44,7 +44,7 @@
 	}
 
 
-	function append_block($type,$include_number){
+	function append_block($type, $include_number, $content){
 		comment('Start ' . $type . ' block ' . $include_number);
 
 		echo '<!--~~~~~~~~~~~~~~~~ Start ' . $type . ' block ' . $include_number . ' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->';
