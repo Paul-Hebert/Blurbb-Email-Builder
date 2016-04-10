@@ -116,8 +116,14 @@ function initialize_blocks_and_pickers(){
 		$(this).siblings('input').toggleClass('hidden');
 	});
 
-	$('.block .fa-close').click(function(){
+	$('.block .fa-trash').click(function(){
 		remove_block(this);
+	});
+
+	$('.block .fa-copy').click(function(){
+		var parent_block = $(this).parents('.block');
+
+		parent_block.clone().insertAfter(parent_block);
 	});
 
 	$('.block .fa-pencil').click(function(){
@@ -574,7 +580,7 @@ function ajax_block(target, content_type){
 
 
 function append_block_controls(target){
-	$(target).append('<span class="controls"><span class="background"></span><i class="fa fa-close"></i><i class="fa fa-pencil"></span>');
+	$(target).append('<span class="controls"><span class="background"></span><i class="fa fa-trash"></i><i class="fa fa-pencil"></i><i class="fa fa-copy"></i></span>');
 }
 
 
@@ -648,13 +654,13 @@ function remove_parent(type,empty){
 function modal(heading,content){
 	$('body').append('<div class="modal background transparent"></div><div class="modal content transparent"></div>');
 
-	$('.modal.content').html('<h1>' + heading + '</h1><i class="fa fa-close"></i>' + content);		
+	$('.modal.content').html('<h1>' + heading + '</h1><i class="fa fa-trash"></i>' + content);		
 
 	setTimeout(function(){
 		$('.modal').removeClass('transparent');
 	},1);
 	
-	$('.modal.background, .modal .fa-close').click(function(){
+	$('.modal.background, .modal .fa-trash').click(function(){
 		$('.modal').addClass('transparent');
 
 		setTimeout(function(){

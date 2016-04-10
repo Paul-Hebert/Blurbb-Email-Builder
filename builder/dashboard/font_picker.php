@@ -11,9 +11,15 @@
           <select id="font" name="font">
             <option>Helvetica</option>
             <option>Arial</option>
+            <option>Arial Black</option>
             <option>Trebuchet MS</option>
+            <option>Tahoma</option>
             <option>Verdana</option>
             <option>Georgia</option>
             <option>Palatino Linotype</option>
+            <option>Courier</option>
+            <option>Courier New</option>
+            <option>Times</option>
+            <option>Times New Roman</option>
           </select>
         </div>

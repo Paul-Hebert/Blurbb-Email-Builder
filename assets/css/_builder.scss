@@ -29,17 +29,36 @@
 	cursor:pointer;
 	position:relative;
 
-	.fa-close, .fa-pencil{
+	.fa-trash, .fa-pencil, .fa-copy{
 		font-family:FontAwesome !important;
+		@include transition_mixin(all $fast-duration $base-easing);
+		@include radius(50%);
+		padding:10px 12px;
+		text-align:center;
+		background:$interactable-color;
+		cursor:pointer;
+		color:$off-white;
+		position:absolute;
+		right:5px;
+		top:5px;
+		
+		&:hover{
+			background:$interacting-color;
+		}
 	}
 
-	.fa-close, .fa-pencil, .controls .background{
+	.fa-copy, .fa-trash, .fa-pencil, .controls .background{
 		opacity:0;
 	}
 
 	.fa-pencil{
 		right:45px;
 	}	
+
+	.fa-copy{
+		right:86px;
+	}	
+
 }
 
 .block:hover{
@@ -59,10 +78,12 @@
 		}
 	}
 
-	.fa-close, .fa-pencil{
+	.fa-trash, .fa-pencil, .fa-copy{
 		opacity:1;
 		font-size:14px;
 	}
+
+
 }
 
 #dashboard{

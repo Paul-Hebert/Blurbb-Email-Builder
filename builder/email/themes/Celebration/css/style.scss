@@ -5,20 +5,16 @@
   // General styles
 
   table.body{
-    background:#1A2330;
+    background:#580608;
 
     *{
-      font-family:'Helvetica';    
+      font-family:'Trebuchet MS';    
     }
   }
 
-  .email_column{
-    padding:10px;
-  }
-
   .style1{
-    background:#71B8E5;
-    color:#000;
+    background:#BEC6D9;
+    color:#580608;
   }
 
   .style2 a, .style1 a{
@@ -26,7 +22,7 @@
   }
 
   .style2{
-    background:#225378;
+    background:#99ACCC;
     color:#fff;
   }
 
@@ -71,16 +67,44 @@
     margin-left:10px;
   }
 
-
-  //Specific sections
-
-  .image.block.n1{
-    width:50px;
+  .block{
     padding:10px;
   }
 
-  .text.block.n3{
+
+  //Specific sections
+
+  .image.block.n1, .image.block.n2{
     width:100%;
-    text-align:center;
+    padding:0px;
+    display:block;
+
+      img{
+        display:block;
+      }
+  }
+
+  .text.block.n1{
+    .content{
+      text-align:center;
+    }
+  }
+
+  .header.block.n1{
+    width:580px;
+
+    .content{
+      text-align:center;
+      font-weight:bold;
+    }
+  }
+
+  .header.block.n2{
+    width:580px;
+
+    .content{
+      text-align:center;
+      font-style:italic;
+    }
   }
 }

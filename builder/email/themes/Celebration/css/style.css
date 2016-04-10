@@ -406,18 +406,16 @@
       width: 100%; }
 
 #email table.body {
-  background: #1A2330; }
+  background: #580608; }
   #email table.body * {
-    font-family: 'Helvetica'; }
-#email .email_column {
-  padding: 10px; }
+    font-family: 'Trebuchet MS'; }
 #email .style1 {
-  background: #71B8E5;
-  color: #000; }
+  background: #BEC6D9;
+  color: #580608; }
 #email .style2 a, #email .style1 a {
   color: inherit; }
 #email .style2 {
-  background: #225378;
+  background: #99ACCC;
   color: #fff; }
 #email .spreadsheet table {
   margin: 20px auto;
@@ -442,11 +440,25 @@
   list-style: disc;
   padding-left: 10px;
   margin-left: 10px; }
-#email .image.block.n1 {
-  width: 50px;
+#email .block {
   padding: 10px; }
-#email .text.block.n3 {
+#email .image.block.n1, #email .image.block.n2 {
   width: 100%;
+  padding: 0px;
+  display: block; }
+  #email .image.block.n1 img, #email .image.block.n2 img {
+    display: block; }
+#email .text.block.n1 .content {
   text-align: center; }
+#email .header.block.n1 {
+  width: 580px; }
+  #email .header.block.n1 .content {
+    text-align: center;
+    font-weight: bold; }
+#email .header.block.n2 {
+  width: 580px; }
+  #email .header.block.n2 .content {
+    text-align: center;
+    font-style: italic; }
 
 /*# sourceMappingURL=style.css.map */
