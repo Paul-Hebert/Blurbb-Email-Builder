@@ -1,8 +1,4 @@
 <?php
-  if ( isset($_GET['include_number']) ){
-    $include_number = $_GET['include_number'];
-  }
-  
   echo '<div id="csv_holder" class="spreadsheet block n' . $include_number . '">';
 ?>
         <table id="invoice_details">

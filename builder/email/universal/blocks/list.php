@@ -1,8 +1,4 @@
 <?php
-	if ( isset($_GET['include_number']) ){
-		$include_number = $_GET['include_number'];
-	}
-	
 	echo '<ul class="list block n' . $include_number . '">';
 ?>
 	<li>

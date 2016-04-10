@@ -1,8 +1,4 @@
 <?php
-	if ( isset($_GET['include_number']) ){
-		$include_number = $_GET['include_number'];
-	}
-	
 	$images = array(
 		'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Kitten_in_Rizal_Park%2C_Manila.jpg/460px-Kitten_in_Rizal_Park%2C_Manila.jpg',
 		'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Laitche-P013.jpg/440px-Laitche-P013.jpg',
