@@ -1,7 +1,7 @@
 <?php
 	function start_email(){
-		echo '<!--~~~~~~~~~~~~~~~~ Start Email ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-		<table class="body">
+		comment('Start email content');
+		echo '<table class="body">
 				  <tr>
 				    <td class="center" align="center">
 				      <center>
@@ -17,37 +17,43 @@
 		      </center>
 		    </td>
 		  </tr>
-		</table>
-		<!--~~~~~~~~~~~~~~~~ End Email ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->';
+		</table>';
+		comment('End email content');
 	}	
 
 
 	function start_row($class){
-		echo '<!--~~~~~~~~~~~~~~~~ Start Row ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-		<table class="email_row ' . $class . '"><tr>';
+		comment('Start row');
+		echo '<table class="email_row ' . $class . '"><tr>';
 	}
 
 	function end_row(){
-		echo '</tr></table>
-		<!--~~~~~~~~~~~~~~~~ End Row ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->';
+		echo '</tr></table>';
+		comment('End row');
 	}
 
 
 	function start_column($class){
-		echo '<!--~~~~~~~~~~~~~~~~ Start Column ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-		<td class="email_column ' . $class . '">';
+		comment('Start column');
+		echo '<td class="email_column ' . $class . '">';
 	}
 
 	function end_column(){
-		echo '</td>
-		<!--~~~~~~~~~~~~~~~~ End Column ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->';
+		echo '</td>';
+		comment('End column');
 	}
 
 
 	function append_block($type,$include_number){
+		comment('Start ' . $type . ' block ' . $include_number);
+
 		echo '<!--~~~~~~~~~~~~~~~~ Start ' . $type . ' block ' . $include_number . ' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->';
 		include('email/universal/blocks/' . $type . '.php');
 		echo '<!--~~~~~~~~~~~~~~~~ End ' . $type . ' block ' . $include_number . ' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->';
+	}
+
+	function comment($content){
+		echo '<!--~~~~~~~~~~~~~~~~ ' . $content . ' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->';
 	}
 ?>
 

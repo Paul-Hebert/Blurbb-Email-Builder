@@ -1,13 +1,14 @@
     <div class="row">
       <div id="email" class="col-lg-8 container">
         <?php 
-          echo '<link id="theme_CSS" rel="stylesheet" type="text/css" href="email/themes/' . $theme . '/css/style.css">';    
-        ?>
-
-        <style id="added_CSS"></style>
-
-        <?php
           include('utilities/functions.php');
+          
+          comment('Start theme CSS');
+
+          echo '<link id="theme_CSS" rel="stylesheet" type="text/css" href="email/themes/' . $theme . '/css/style.css">   
+                <style id="added_CSS"></style>';
+
+          comment('End theme CSS');
 
           include('email/themes/' . $theme . '/index.php');
         ?>
