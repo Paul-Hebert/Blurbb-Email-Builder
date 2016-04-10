@@ -12,12 +12,8 @@
     }
   }
 
-  .email_column{
-    padding:10px;
-  }
-
   .style1{
-    background:#71B8E5;
+    background:#BEC6D9;
     color:#000;
   }
 
@@ -26,7 +22,7 @@
   }
 
   .style2{
-    background:#225378;
+    background:#99ACCC;
     color:#fff;
   }
 
@@ -71,12 +67,21 @@
     margin-left:10px;
   }
 
+  .block{
+    padding:10px;
+  }
+
 
   //Specific sections
 
   .image.block.n1{
-    width:50px;
-    padding:10px;
+    width:100%;
+    padding:0px;
+    display:block;
+
+      img{
+        display:block;
+      }
   }
 
   .text.block.n3{

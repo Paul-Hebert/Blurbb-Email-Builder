@@ -409,15 +409,13 @@
   background: #1A2330; }
   #email table.body * {
     font-family: 'Helvetica'; }
-#email .email_column {
-  padding: 10px; }
 #email .style1 {
-  background: #71B8E5;
+  background: #BEC6D9;
   color: #000; }
 #email .style2 a, #email .style1 a {
   color: inherit; }
 #email .style2 {
-  background: #225378;
+  background: #99ACCC;
   color: #fff; }
 #email .spreadsheet table {
   margin: 20px auto;
@@ -442,9 +440,14 @@
   list-style: disc;
   padding-left: 10px;
   margin-left: 10px; }
-#email .image.block.n1 {
-  width: 50px;
+#email .block {
   padding: 10px; }
+#email .image.block.n1 {
+  width: 100%;
+  padding: 0px;
+  display: block; }
+  #email .image.block.n1 img {
+    display: block; }
 #email .text.block.n3 {
   width: 100%;
   text-align: center; }

@@ -24,3 +24,13 @@ Planned features
 - Duplicate block
 - When the gradient colorpicker is selected set its value to that of the current styling.
 - API to integrate Blurbb with other systems
+
+Theme Ideas
+===========
+
+- Board in Hand
+- Mild West Designs 
+- Celebration (using celebration photo)
+- Blurbb
+- Local Branch
+- Gridley
