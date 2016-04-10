@@ -10,7 +10,7 @@
                 <div class="range-slider-wrapper">
                   <?php 
                   echo '<label>Image Size</label>
-                  	<input type="range" min="20" max="580" value="200" data-target="' . $_GET['include_data'][0] .'-width">'; 
+                  	<input type="range" min="20" max="600" value="200" data-target="' . $_GET['include_data'][0] .'-width">'; 
                   ?>
                   <input type="text" value="200"><span> px</span>
                 </div>

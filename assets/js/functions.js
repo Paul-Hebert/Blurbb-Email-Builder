@@ -247,7 +247,6 @@ function initialize_text_pickers(){
 function initialize_text_styles(){
 	var target = $('.text_picker, .header_picker, .list_picker').attr('data_target');
 
-
 	$('.alignment i').click(function(){
 		$(this).parent().children('.alignment i').removeClass('selected');
 
@@ -257,16 +256,16 @@ function initialize_text_styles(){
 
 		$(this).addClass('selected');		
 
-		$('#added_CSS').append('#email ' + target + ', #email ' + $('.text_picker, .header_picker, .list_picker').attr('data_target') + ' *{text-align:' + alignment + '}');
+		$('#added_CSS').append('#email ' + target + ', #email ' + target + ' *{text-align:' + alignment + '}');
 	});
 
 	$('.fa-bold').click(function(){
 		$(this).toggleClass('selected');
 
 		if( $(this).hasClass('selected') ){
-			$('#added_CSS').append('#email ' + target + ', #email ' + $('.text_picker, .header_picker, .list_picker').attr('data_target') + ' *{font-weight:bold}');			
+			$('#added_CSS').append('#email ' + target + ', #email ' + target + ' *{font-weight:bold}');			
 		}	else{
-			$('#added_CSS').append('#email ' + target + ', #email ' + $('.text_picker, .header_picker, .list_picker').attr('data_target') + ' *{font-weight:normal}');						
+			$('#added_CSS').append('#email ' + target + ', #email ' + target + ' *{font-weight:normal}');						
 		}
 	});
 
@@ -274,9 +273,9 @@ function initialize_text_styles(){
 		$(this).toggleClass('selected');
 
 		if( $(this).hasClass('selected') ){
-			$('#added_CSS').append('#email ' + target + ', #email ' + $('.text_picker, .header_picker, .list_picker').attr('data_target') + ' *{font-style:italic}');			
+			$('#added_CSS').append('#email ' + target + ', #email ' + target + ' *{font-style:italic}');			
 		}	else{
-			$('#added_CSS').append('#email ' + target + ', #email ' + $('.text_picker, .header_picker, .list_picker').attr('data_target') + ' *{font-style:normal}');						
+			$('#added_CSS').append('#email ' + target + ', #email ' + target + ' *{font-style:normal}');						
 		}	
 	});
 }
