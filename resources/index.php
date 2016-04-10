@@ -1,5 +1,5 @@
 <?php 
-    $title = 'Resources';
+    $title = 'Resources - Blurbb';
     $base_url = '../';    
 	include('../assets/page_sections/header.php'); 
 ?>

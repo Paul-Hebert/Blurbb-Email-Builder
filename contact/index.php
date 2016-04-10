@@ -1,12 +1,12 @@
 <?php 
-    $title = 'Support - Blurbb';
+    $title = 'Contact - Blurbb';
     $base_url = '../';    
 	include('../assets/page_sections/header.php'); 
 ?>
 
 <div class="main_content">
 		<div class="col-lg-6 col-lg-offset-3">  
-			<h1>Submit your Support ticket</h1>   
+			<h1>Get in Touch</h1>   
 
 			<section>
 				<form>
@@ -26,7 +26,7 @@
 
       					<input name="subject" type="email">
 
-      					<label for="issues">Issue:</label>
+      					<label for="issues">Message:</label>
 
       					<textarea name="Issue"></textarea>
       				</div>

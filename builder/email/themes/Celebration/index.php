@@ -1,9 +1,15 @@
 <?php
-  start_email();  
+  start_email(); 
+
+    start_row('style2');
+      start_column('style2'); 
+        append_block('text', 1, 'Blurbb\'s turning 2 months old!');        
+      end_column();                   
+    end_row();    
 
     start_row('style1');      
       start_column('style1'); 
-        append_block('header', 1, 'A Holiday Celebration');        
+        append_block('header', 1, 'A Birthday Celebration');        
       end_column();
     end_row();    
 
@@ -16,7 +22,7 @@
     start_row('style2');
       start_column('style2'); 
         append_block('header', 2, 'You&rsquo;re Invited!');      
-        append_block('text', 1, 'Come over this Sunday for a day of friends, family and fun!');        
+        append_block('text', 2, 'Come over this Sunday for a day of friends, family and fun!');        
       end_column();                   
     end_row();   
 
@@ -30,19 +36,19 @@
 
     start_row('style1');
       start_column('style1'); 
-        append_block('text', 2, 'Bla');        
+        append_block('text', 3, 'Bla');        
       end_column();  
       start_column('style1'); 
-        append_block('text', 3, 'Bla');        
+        append_block('text', 4, 'Bla');        
       end_column();   
       start_column('style1'); 
-        append_block('text', 4, 'Bla');        
+        append_block('text', 5, 'Bla');        
       end_column();                    
     end_row();
 
     start_row('style2');
       start_column('style2'); 
-        append_block('text', 5, 'Come over this Sunday for a day of friends, family and fun!');        
+        append_block('text', 6, 'Come over this Sunday for a day of friends, family and fun!');        
       end_column();                   
     end_row();   
 
