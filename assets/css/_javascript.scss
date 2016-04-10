@@ -44,23 +44,6 @@
 	}
 }
 
-.fa-close, .fa-pencil, .fa-copy{
-	@include transition_mixin(all $fast-duration $base-easing);
-	@include radius(50%);
-	padding:10px 12px;
-	text-align:center;
-	background:$interactable-color;
-	cursor:pointer;
-	color:$off-white;
-	position:absolute;
-	right:5px;
-	top:5px;
-	
-	&:hover{
-		background:$interacting-color;
-	}
-}
-
 .hidden{
 	display:none;
 }
@@ -128,7 +111,7 @@
 		position:fixed;
 	}
 
-	.fa-close{
+	.fa-trash{
 		position:fixed;
 		top:27%;
 		right:21%;
