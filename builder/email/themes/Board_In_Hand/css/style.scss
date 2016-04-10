@@ -75,12 +75,14 @@
   //Specific sections
 
   .image.block.n1{
-    width:50px;
-    padding:10px;
+    width:100px;
+
+    .content{
+      padding:10px;
+    }
   }
 
-  .text.block.n3{
-    width:100%;
-    text-align:center;
+  .text.block.n2 .content{
+    text-align:justify;
   }
 }

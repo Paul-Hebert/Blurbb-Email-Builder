@@ -247,6 +247,23 @@ function initialize_text_pickers(){
 function initialize_text_styles(){
 	var target = $('.text_picker, .header_picker, .list_picker').attr('data_target');
 
+	if( $(target).css('font-weight') === 'bold' || $(target).css('font-weight') > 400 ){
+		$('.fa-bold').addClass('selected');
+	}
+
+	if( $(target).css('font-style') === 'italic' ){
+		$('.fa-italic').addClass('selected');
+	}	
+
+	if( $(target).css('text-align') === 'left' || $(target).css('text-align') === undefined ){
+		$('.fa-align-left').addClass('selected');
+	} else if( $(target).css('text-align') === 'center' ){
+		$('.fa-align-center').addClass('selected');
+	} else if( $(target).css('text-align') === 'right' ){
+		$('.fa-align-right').addClass('selected');
+	} else if( $(target).css('text-align') === 'justify' ){
+		$('.fa-align-justify').addClass('selected');
+	}
 	$('.alignment i').click(function(){
 		$(this).parent().children('.alignment i').removeClass('selected');
 

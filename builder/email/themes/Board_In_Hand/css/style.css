@@ -443,10 +443,10 @@
   padding-left: 10px;
   margin-left: 10px; }
 #email .image.block.n1 {
-  width: 50px;
-  padding: 10px; }
-#email .text.block.n3 {
-  width: 100%;
-  text-align: center; }
+  width: 100px; }
+  #email .image.block.n1 .content {
+    padding: 10px; }
+#email .text.block.n2 .content {
+  text-align: justify; }
 
 /*# sourceMappingURL=style.css.map */

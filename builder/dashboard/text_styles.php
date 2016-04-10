@@ -6,7 +6,7 @@
 	                </div>
 
                 	<div class="alignment">
-	                	<i class="fa fa-align-left selected"></i> 
+	                	<i class="fa fa-align-left"></i> 
 	                	<i class="fa fa-align-center"></i> 
 	                	<i class="fa fa-align-right"></i> 
 	                	<i class="fa fa-align-justify"></i>
