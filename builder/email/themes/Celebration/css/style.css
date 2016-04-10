@@ -411,7 +411,7 @@
     font-family: 'Trebuchet MS'; }
 #email .style1 {
   background: #BEC6D9;
-  color: #000; }
+  color: #580608; }
 #email .style2 a, #email .style1 a {
   color: inherit; }
 #email .style2 {
@@ -442,14 +442,23 @@
   margin-left: 10px; }
 #email .block {
   padding: 10px; }
-#email .image.block.n1 {
+#email .image.block.n1, #email .image.block.n2 {
   width: 100%;
   padding: 0px;
   display: block; }
-  #email .image.block.n1 img {
+  #email .image.block.n1 img, #email .image.block.n2 img {
     display: block; }
-#email .text.block.n3 {
-  width: 100%;
+#email .text.block.n1 .content {
   text-align: center; }
+#email .header.block.n1 {
+  width: 580px; }
+  #email .header.block.n1 .content {
+    text-align: center;
+    font-weight: bold; }
+#email .header.block.n2 {
+  width: 580px; }
+  #email .header.block.n2 .content {
+    text-align: center;
+    font-style: italic; }
 
 /*# sourceMappingURL=style.css.map */

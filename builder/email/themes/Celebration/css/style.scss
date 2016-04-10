@@ -14,7 +14,7 @@
 
   .style1{
     background:#BEC6D9;
-    color:#000;
+    color:#580608;
   }
 
   .style2 a, .style1 a{
@@ -74,7 +74,7 @@
 
   //Specific sections
 
-  .image.block.n1{
+  .image.block.n1, .image.block.n2{
     width:100%;
     padding:0px;
     display:block;
@@ -84,8 +84,27 @@
       }
   }
 
-  .text.block.n3{
-    width:100%;
-    text-align:center;
+  .text.block.n1{
+    .content{
+      text-align:center;
+    }
+  }
+
+  .header.block.n1{
+    width:580px;
+
+    .content{
+      text-align:center;
+      font-weight:bold;
+    }
+  }
+
+  .header.block.n2{
+    width:580px;
+
+    .content{
+      text-align:center;
+      font-style:italic;
+    }
   }
 }
