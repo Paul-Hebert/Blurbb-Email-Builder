@@ -66,8 +66,7 @@
   #email table.email_row {
     padding: 0px;
     width: 100%;
-    position: relative; }
-  #email table.container table.email_row {
+    position: relative;
     display: block; }
   #email td.wrapper {
     padding: 10px 20px 0px 0px;

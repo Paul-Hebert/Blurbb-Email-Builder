@@ -25,6 +25,10 @@
         append_block('header', 3);
         append_block('text', 2);        
       end_column();
+
+      start_column('style3');
+        append_block('image', 2);        
+      end_column();      
     end_row();    
 
     start_row('style2');
