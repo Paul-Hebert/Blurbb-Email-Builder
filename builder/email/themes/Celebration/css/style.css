@@ -448,7 +448,7 @@
   display: block; }
   #email .image.block.n1 img, #email .image.block.n2 img {
     display: block; }
-#email .text.block.n1 .content {
+#email .text.block.n2 .content {
   text-align: center; }
 #email .header.block.n1 {
   width: 580px; }

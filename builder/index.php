@@ -1,5 +1,5 @@
 <?php
-     $title = 'Builder';
+     $title = 'Builder - Blurbb';
      $base_url = '../';
 
      include('../assets/page_sections/header.php');
