@@ -531,7 +531,7 @@ function append_spacers(){
 
 	var spacer_row = '<table class="email_row style3 spacer hidden_x_y"><tr><td class="email_column"><div width="600"></td></tr></table>'
 
-	$('.email_row').after(spacer_row);
+	$('.email_row').after(spacer_row); 
 
 	$('.email_row:first-of-type').before(spacer_row);	
 }
@@ -548,9 +548,10 @@ function ajax_block(target, content_type){
 
     $.ajax({
 	    type: "GET",
-	    url: 'email/universal/blocks/' + content_type + '.php',
+	    url: 'email/universal/blocks/ajax_block.php',
 	    data: {
-	    	include_number : element_count
+	    	include_number : element_count,
+	    	include_type : content_type
 	    },
 		success: function(data) {
 			if ( $(target).hasClass('email_row') ){

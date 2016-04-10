@@ -13,13 +13,4 @@
 		'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/2006-07-09_katze2.jpg/2560px-2006-07-09_katze2.jpg',
 		'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Louis-%26-Chanel-taking-a-nap.jpg/1920px-Louis-%26-Chanel-taking-a-nap.jpg'
 	);
-
-	echo '<div class="image block n' . $include_number . '">';
-		if ( isset($content) ){
-			echo '<img src="' . $content . '" style="width:100px;">';
-		} else{
-			echo '<img src="' . $images[array_rand($images)] . '" style="width:100px;">';
-		}
-		
-	echo '</div>';
 ?>
