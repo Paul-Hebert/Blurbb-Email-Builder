@@ -400,6 +400,10 @@
     margin-bottom: 20px; }
   #email * {
     line-height: 150%; }
+  #email .image.block {
+    display: inline-block; }
+    #email .image.block img {
+      width: 100%; }
 
 #email table.body {
   background: #1A2330; }

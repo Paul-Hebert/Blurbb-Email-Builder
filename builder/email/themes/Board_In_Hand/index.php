@@ -22,14 +22,14 @@
       end_column();      
 
       start_column('style2');
-        append_block('image', 2, 'http://boardinhand.com/imgs/decks/thumb/Decktrio.png');      
+        append_block('image', 3, 'http://boardinhand.com/imgs/decks/thumb/Decktrio.png');      
       end_column();                         
 
     end_row();    
 
     start_row('style1');
       start_column('style1');
-        append_block('image', 2, 'http://boardinhand.com/imgs/cart.png');      
+        append_block('image', 4, 'http://boardinhand.com/imgs/cart.png');      
       end_column();         
       start_column('style1'); 
         append_block('header', 3, 'View Our Shop');        

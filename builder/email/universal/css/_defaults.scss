@@ -457,4 +457,12 @@
   *{
     line-height:150%;
   }
+
+  .image.block {
+    display:inline-block;
+
+    img{
+      width:100%;
+    }
+  }
 }

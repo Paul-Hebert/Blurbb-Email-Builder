@@ -16,9 +16,9 @@
 
 	echo '<div class="image block n' . $include_number . '">';
 		if ( isset($content) ){
-			echo '<img src="' . $content . '" style="width:100px;">';
+			echo '<img src="' . $content . '">';
 		} else{
-			echo '<img src="' . $images[array_rand($images)] . '" style="width:100px;">';
+			echo '<img src="' . $images[array_rand($images)] . '">';
 		}
 		
 	echo '</div>';
