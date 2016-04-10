@@ -23,3 +23,4 @@ Planned features
 - Input tables cell by cell (No CSV required)
 - Duplicate block
 - When the gradient colorpicker is selected set its value to that of the current styling.
+- API to integrate Blurbb with other systems
