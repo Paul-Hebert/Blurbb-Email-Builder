@@ -14,6 +14,7 @@
 				<li><a href="https://www.campaignmonitor.com/" target="_BLANK">Campaign Monitor</a></li>				
 				<li><a href="https://www.campaignmonitor.com/css/" target="_BLANK">Campaign Monitor's Ultimate Guide to CSS</a></li>
 				<li><a href="http://templates.mailchimp.com/resources/inline-css/" target="_BLANK">Mailchimp's CSS inliner</a></li>
+				<li><a href="http://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919" target="_BLANK">Creating a responsive email without media queries.</a>
 			</ul>
 		</section>
 		<section>
