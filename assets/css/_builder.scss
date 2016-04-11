@@ -29,27 +29,26 @@
 	cursor:pointer;
 	position:relative;
 
-	.controls{
+	 .controls, .background{
 		position:absolute;
 		right:0px;
 		top:0px;
-		bottom:0px;
-		left:0px;
 		opacity:0;
+	}
+
+	.controls{
 
 		.fa{
-			font-family:FontAwesome !important;			
-			@include transition_mixin(all $fast-duration $base-easing);
-			@include radius(50%);
-			padding:10px 12px;
-			margin-right:5px;
-			text-align:center;
-			background:$interactable-color;
 			cursor:pointer;
-			color:$off-white;	
-			float:right;
-			position:relative;
 			z-index:20;
+			font-family: $main-font;
+			position:relative;
+			display: block;
+			width:60px;
+
+			&:before{
+				font-family:FontAwesome !important;			
+			}
 
 			&:hover{
 				background:$interacting-color;
@@ -60,23 +59,19 @@
 
 .block:hover{
 	box-shadow: 0 0 8px 1px #000;
-	opacity:.8 !important;
 	z-index:10;
 
-	.controls{
+	.controls, .background{
 		opacity:1;
-
-		.background{
-			position:absolute;
-			left:0px;
-			top:0px;
-			right:0px;
-			bottom:0px;
-			background:#000;
-			opacity: .3;
-			z-index:15;
-		}
 	}
+
+	.background{
+		background:#000;
+		opacity: .3;
+		z-index:15;
+		bottom:0px;
+		left:0px;		
+	}	
 }
 
 #dashboard{
@@ -102,29 +97,32 @@
 
 		.content_picker{
 			.fa{
-				margin:2px;
-				padding:10px;
-				background:$main-color;
-				color:$off-white;
-				cursor:grab;
-				@include transition_mixin(background $fast-duration $base-easing);
+				cursor:grab;				
 
 				&.selected{
 					cursor:grabbing;
 					position:fixed;
 					background:$auxiliary-color;
-
 					z-index:40;
-				}
-
-				&:hover{
-					background:$auxiliary-color;
 				}
 			}
 		}
 	}
 }
 
+.content_picker, .controls{
+	.fa{
+		margin:2px;
+		padding:10px;
+		background:$main-color;
+		color:$off-white;
+		@include transition_mixin(background $fast-duration $base-easing);
+
+		&:hover{
+			background:$auxiliary-color;
+		}							
+	}
+}
 
 #dashboard .range-slider-wrapper{
 	input{

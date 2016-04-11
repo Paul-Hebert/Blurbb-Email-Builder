@@ -611,7 +611,7 @@ function ajax_block(target, content_type){
 
 
 function append_block_controls(target){
-	$(target).append('<span class="controls"><span class="background"></span><i class="fa fa-trash"></i><i class="fa fa-pencil"></i><i class="fa fa-copy"></i></span>');
+	$(target).append('<span class="background"></span><span class="controls"><i class="fa fa-pencil">&nbsp;&nbsp;Edit</i><i class="fa fa-copy">&nbsp;&nbsp;Clone</i><i class="fa fa-trash">&nbsp;&nbsp;Delete</i></span>');
 }
 
 
