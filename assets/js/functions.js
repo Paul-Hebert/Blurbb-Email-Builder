@@ -625,23 +625,11 @@ function switch_picker(content_type, new_block){
 		success: function(data) {
 			if( $('#current_picker').length === 0 ){
 				$('#content_menu fieldset').append('<div id="current_picker" class="subsection"></div>');
-				append_picker_controls();
 			}
 
 		    $('#current_picker').html(data);
 
 		    initialize_blocks_and_pickers();
-	    }
-	});
-}
-
-
-function append_picker_controls(){
-	$.ajax({
-		type: "GET",
-		url: 'dashboard/' + 'picker_controls.php',
-		success: function(data) {
-			$('#content_menu fieldset').append(data);
 	    }
 	});
 }
