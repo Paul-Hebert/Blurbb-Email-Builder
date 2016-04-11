@@ -673,13 +673,13 @@ function remove_parent(type,empty){
 function modal(heading,content){
 	$('body').append('<div class="modal background transparent"></div><div class="modal content transparent"></div>');
 
-	$('.modal.content').html('<h1>' + heading + '</h1><i class="fa fa-trash"></i>' + content);		
+	$('.modal.content').html('<h1>' + heading + '</h1><i class="fa fa-close"></i>' + content);		
 
 	setTimeout(function(){
 		$('.modal').removeClass('transparent');
 	},1);
 	
-	$('.modal.background, .modal .fa-trash').click(function(){
+	$('.modal.background, .modal .fa-close').click(function(){
 		$('.modal').addClass('transparent');
 
 		setTimeout(function(){
