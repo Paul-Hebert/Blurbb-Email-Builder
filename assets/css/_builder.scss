@@ -29,36 +29,33 @@
 	cursor:pointer;
 	position:relative;
 
-	.fa-trash, .fa-pencil, .fa-copy{
-		font-family:FontAwesome !important;
-		@include transition_mixin(all $fast-duration $base-easing);
-		@include radius(50%);
-		padding:10px 12px;
-		text-align:center;
-		background:$interactable-color;
-		cursor:pointer;
-		color:$off-white;
+	.controls{
 		position:absolute;
-		right:5px;
-		top:5px;
-		
-		&:hover{
-			background:$interacting-color;
+		right:0px;
+		top:0px;
+		bottom:0px;
+		left:0px;
+		opacity:0;
+
+		.fa{
+			font-family:FontAwesome !important;			
+			@include transition_mixin(all $fast-duration $base-easing);
+			@include radius(50%);
+			padding:10px 12px;
+			margin-right:5px;
+			text-align:center;
+			background:$interactable-color;
+			cursor:pointer;
+			color:$off-white;	
+			float:right;
+			position:relative;
+			z-index:20;
+
+			&:hover{
+				background:$interacting-color;
+			}					
 		}
 	}
-
-	.fa-copy, .fa-trash, .fa-pencil, .controls .background{
-		opacity:0;
-	}
-
-	.fa-pencil{
-		right:45px;
-	}	
-
-	.fa-copy{
-		right:86px;
-	}	
-
 }
 
 .block:hover{
@@ -67,6 +64,8 @@
 	z-index:10;
 
 	.controls{
+		opacity:1;
+
 		.background{
 			position:absolute;
 			left:0px;
@@ -75,15 +74,9 @@
 			bottom:0px;
 			background:#000;
 			opacity: .3;
+			z-index:15;
 		}
 	}
-
-	.fa-trash, .fa-pencil, .fa-copy{
-		opacity:1;
-		font-size:14px;
-	}
-
-
 }
 
 #dashboard{
@@ -127,22 +120,6 @@
 				&:hover{
 					background:$auxiliary-color;
 				}
-			}
-		}
-
-		#picker_controls{
-			font-size:$extra-small;
-			color:$auxiliary-color;
-
-			#remove_block{
-				float:right;
-				cursor:pointer;
-
-				@include transition_mixin(color $medium-duration $base-easing);
-
-				&:hover{
-					color:$auxiliary-color;
-				}				
 			}
 		}
 	}
