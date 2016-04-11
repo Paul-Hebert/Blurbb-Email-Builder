@@ -111,11 +111,19 @@ function initialize_blocks_and_pickers(){
 
 	append_spacers();
 
+	initialize_block_controls();
+
 	$('.input_toggle').click(function(){
 		$(this).parent().children('.input_toggle').toggleClass('selected');
 		$(this).siblings('input').toggleClass('hidden');
 	});
 
+	$('#email a').click(function(){
+		return false;
+	});
+}
+
+function initialize_block_controls(){
 	$('.block .fa-trash').click(function(){
 		remove_block(this);
 	});
@@ -124,6 +132,8 @@ function initialize_blocks_and_pickers(){
 		var parent_block = $(this).parents('.block');
 
 		parent_block.clone().insertAfter(parent_block);
+
+		initialize_block_controls();
 	});
 
 	$('.block .fa-pencil').click(function(){
@@ -132,10 +142,6 @@ function initialize_blocks_and_pickers(){
 		var element_count = class_list[2].replace('n','')
 
 		switch_picker(content_type, '.' + $(this).parents('.block').attr('class').replace(/\s/g,".") );
-	});
-
-	$('#email a').click(function(){
-		return false;
 	});
 }
 
@@ -245,8 +251,10 @@ function initialize_text_pickers(){
 }
 
 function initialize_text_styles(){
+	// Get target
 	var target = $('.text_picker, .header_picker, .list_picker').attr('data_target');
 
+	// Determine current styling
 	if( $(target).css('font-weight') === 'bold' || $(target).css('font-weight') > 400 ){
 		$('.fa-bold').addClass('selected');
 	}
@@ -264,6 +272,8 @@ function initialize_text_styles(){
 	} else if( $(target).css('text-align') === 'justify' ){
 		$('.fa-align-justify').addClass('selected');
 	}
+
+	// Set click events for alignment
 	$('.alignment i').click(function(){
 		$(this).parent().children('.alignment i').removeClass('selected');
 
@@ -276,6 +286,7 @@ function initialize_text_styles(){
 		$('#added_CSS').append('#email ' + target + ', #email ' + target + ' *{text-align:' + alignment + '}');
 	});
 
+	// Set click events for font weight
 	$('.fa-bold').click(function(){
 		$(this).toggleClass('selected');
 
@@ -286,6 +297,7 @@ function initialize_text_styles(){
 		}
 	});
 
+	// Set click events for font style
 	$('.fa-italic').click(function(){
 		$(this).toggleClass('selected');
 
