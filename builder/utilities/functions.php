@@ -23,33 +23,31 @@
 
 
 	function start_row($class){
-		comment('Start row');
+		//comment('Start row');
 		echo '<table class="email_row ' . $class . '"><tr>';
 	}
 
 	function end_row(){
 		echo '</tr></table>';
-		comment('End row');
+		//comment('End row');
 	}
 
 
 	function start_column($class){
-		comment('Start column');
+		//comment('Start column');
 		echo '<td class="email_column ' . $class . '">';
 	}
 
 	function end_column(){
 		echo '</td>';
-		comment('End column');
+		//comment('End column');
 	}
 
 
 	function append_block($type, $include_number, $content){
-		comment('Start ' . $type . ' block ' . $include_number);
-
-		echo '<!--~~~~~~~~~~~~~~~~ Start ' . $type . ' block ' . $include_number . ' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->';
+		//comment('Start ' . $type . ' block ' . $include_number);
 		include('email/universal/blocks/' . $type . '.php');
-		echo '<!--~~~~~~~~~~~~~~~~ End ' . $type . ' block ' . $include_number . ' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->';
+		//comment('End ' . $type . ' block ' . $include_number);
 	}
 
 	function comment($content){
