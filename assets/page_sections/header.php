@@ -7,7 +7,7 @@
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <link href='https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:100,300,400,700' rel='stylesheet' type='text/css'>
 
         <?php
             echo '<link rel="stylesheet" type="text/css" href="' . $base_url . 'assets/css/style.css">';
