@@ -4,7 +4,7 @@ Blurbb
 Making HTML Email Easy
 ----------------------
 
-Coding HTML emails that look good in all the major email clients is hard and time consuming. Blurbb is a drag-and-drop email builder that makes it easy to build beautiful cross-client emails without ever having to touch code.
+Coding HTML emails that look good in all the major email clients, browsers and devices is hard and time consuming. Blurbb is a drag-and-drop email builder that makes it easy to build beautiful cross-client emails without ever having to touch code.
 
 Start with one of our many themes and then customize it to your heart's content. Blurbb is perfect for newsletters and invitations as well as automated and transactional emails.
 
