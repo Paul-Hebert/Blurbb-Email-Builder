@@ -1,7 +1,7 @@
 .fa-close{
-	position:absolute;
-	right:5px;
-	top:23px;
+	position: fixed;
+	right: 21%;
+	top: 29%;
 	@include transition_mixin(all $fast-duration $base-easing);
 	@include radius(50%);
 	padding:10px 12px;
