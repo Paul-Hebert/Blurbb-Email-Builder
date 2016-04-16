@@ -81,16 +81,20 @@ header#main{
 			font-family:$second-font;
 			float:right;
 		}
-
-		#blurbb_logo{
-			height:60px;
-		}
 	}
 
 	nav{
 		float:right;
 		padding:20px;
 
+	}
+}
+
+.logo{
+	width:50px;
+
+	*{
+		fill:$auxiliary-color;
 	}
 }
 

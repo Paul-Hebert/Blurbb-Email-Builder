@@ -19,7 +19,7 @@
         	<?php 
                 include($base_url . 'assets/page_sections/nav.php'); 
                 echo '<a href="' . $base_url . '">';
-                echo '<img src="' . $base_url . 'assets/imgs/blurbb_logo.svg" id="blurbb_logo">';
+                include($base_url . 'assets/page_sections/logo.php');
             ?>
             	<h1>
     	    		Blurbb
