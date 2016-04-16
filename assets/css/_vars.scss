@@ -41,6 +41,24 @@ $large          	:   21pt;
 $extra-large    	:   34pt;
 $extra-extra-large  :   42pt;
 
+.extra-small{
+	font-size:$extra-small;
+}
+.small{
+	font-size:$small;
+}
+.medium{
+	font-size:$medium;
+}
+.large{
+	font-size:$large;
+}
+.extra-large{
+	font-size:$extra-large;
+}
+.extra-extra-large{
+	font-size:$extra-extra-large;
+}
 
 /*/////////////////////////////////////////////////////////////////////////////
     Animation

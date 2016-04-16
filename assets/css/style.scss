@@ -81,6 +81,10 @@ header#main{
 			font-family:$second-font;
 			float:right;
 		}
+
+		.logo{
+			width:50px;
+		}
 	}
 
 	nav{
@@ -91,8 +95,6 @@ header#main{
 }
 
 .logo{
-	width:50px;
-
 	*{
 		fill:$auxiliary-color;
 	}

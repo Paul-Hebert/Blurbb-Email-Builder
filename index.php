@@ -6,10 +6,12 @@
   ?>
   
   <div class="main_content">
-    <img src="assets/imgs/blurbb_logo.svg" class="col-lg-2 col-lg-offset-3 col-xs-6">
+    <div class="col-lg-2 col-lg-offset-3 col-xs-6">
+      <?php include('assets/page_sections/logo.php'); ?>
+    </div>
 
     <div class="col-lg-4 col-sm-6" id="landing_heading">
-      <h1>Blurbb</h1>
+      <h1 class="extra-extra-large">Blurbb</h1>
       <section>
          <h2>Making HTML Email Easy</h2>
       </section>
