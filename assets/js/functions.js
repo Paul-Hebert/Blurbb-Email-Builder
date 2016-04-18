@@ -147,9 +147,13 @@ function initialize_block_controls(){
 	});
 
 	$('.block .fa-copy').click(function(){
+		var class_list = $(this).parents('.block').attr('class').split(' ');
+
+		block_count[class_list[0]] ++;
+
 		var parent_block = $(this).parents('.block');
 
-		parent_block.clone().insertAfter(parent_block);
+		parent_block.clone().insertAfter(parent_block).attr('class' , class_list[0] + ' ' + class_list[1] + ' n' + block_count[class_list[0]] );
 
 		initialize_block_controls();
 	});
