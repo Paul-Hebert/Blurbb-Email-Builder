@@ -1,16 +1,26 @@
 <?php
 	$images = array(
-		'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Kitten_in_Rizal_Park%2C_Manila.jpg/460px-Kitten_in_Rizal_Park%2C_Manila.jpg',
-		'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Laitche-P013.jpg/440px-Laitche-P013.jpg',
-		'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Youngkitten.JPG/440px-Youngkitten.JPG',
-		'https://upload.wikimedia.org/wikipedia/commons/c/c9/Cat-MaineCoon-Cookie.png',
-		'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Kitten_and_partial_reflection_in_mirror.jpg/594px-Kitten_and_partial_reflection_in_mirror.jpg',
-		'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Bobcat-Texas-9110.jpg/800px-Bobcat-Texas-9110.jpg',
-		'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Persian_Cat_%28kitten%29.jpg/1280px-Persian_Cat_%28kitten%29.jpg',
-		'https://upload.wikimedia.org/wikipedia/commons/7/7f/Macicky.jpg',
-		'https://upload.wikimedia.org/wikipedia/commons/c/c1/Six_weeks_old_cat_%28aka%29.jpg',
-		'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Poezenbeesten.JPG/1280px-Poezenbeesten.JPG',
-		'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/2006-07-09_katze2.jpg/2560px-2006-07-09_katze2.jpg',
-		'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Louis-%26-Chanel-taking-a-nap.jpg/1920px-Louis-%26-Chanel-taking-a-nap.jpg'
+		'http://boardinhand.com/imgs/decks/thumb/Hypnosis.png',
+		'http://boardinhand.com/imgs/decks/thumb/Star_Wars.png',
+		'http://boardinhand.com/imgs/decks/thumb/Decktrio.png',
+		'http://boardinhand.com/imgs/decks/thumb/Board_In_Hand.png',
+		'http://boardinhand.com/imgs/decks/thumb/Space_Race.png',
+		'http://boardinhand.com/imgs/decks/thumb/Home_Sweet_Home.png',
+		'http://boardinhand.com/imgs/decks/thumb/Fairy_Dust.png',
+		'http://boardinhand.com/imgs/decks/thumb/Blank_Decks.png'
 	);
+
+	$text = array(
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+		'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+		'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
+		'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'
+	);	
+
+	$headers = array(
+		'At vero eos et accusamus',
+		'Et harum quidem',
+		'Quis autem vel eum'
+	);	
 ?>

@@ -3,7 +3,7 @@
 		if ( isset($content) ){
 			echo '<h1 class="content">' . $content . '</h1>';
 		} else{
-			echo '<h1 class="content">Header</h1>';
+			echo '<h1 class="content">' . $headers[array_rand($headers)] . '</h1>';
 		}
 	echo '</div>';
 ?>
