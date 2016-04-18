@@ -3,52 +3,52 @@
 
     start_row('style2');
       start_column('style2'); 
-        append_block('text', 1, 'Blurbb\'s turning 2 months old!');        
+        append_block('text', 'Blurbb\'s turning 2 months old!');        
       end_column();                   
     end_row();    
 
     start_row('style1');      
       start_column('style1'); 
-        append_block('header', 1, 'A Birthday Celebration');        
+        append_block('header', 'A Birthday Celebration');        
       end_column();
     end_row();    
 
     start_row('style1');
       start_column('style1'); 
-        append_block('image', 1, 'email/themes/Celebration/imgs/celebration2.jpg');
+        append_block('image', 'email/themes/Celebration/imgs/celebration2.jpg');
       end_column();
     end_row();
 
     start_row('style2');
       start_column('style2'); 
-        append_block('header', 2, 'You&rsquo;re Invited!');      
-        append_block('text', 2, 'Come over this Sunday for a day of friends, family and fun!');        
+        append_block('header', 'You&rsquo;re Invited!');      
+        append_block('text', 'Come over this Sunday for a day of friends, family and fun!');        
       end_column();                   
     end_row();   
 
 
     start_row('style2');
       start_column('style2'); 
-        append_block('image', 2, 'email/themes/Celebration/imgs/map.png');        
+        append_block('image', 'email/themes/Celebration/imgs/map.png');        
       end_column();                   
     end_row();   
 
 
     start_row('style1');
       start_column('style1'); 
-        append_block('text', 3, 'Bla');        
+        append_block('text', 'Bla');        
       end_column();  
       start_column('style1'); 
-        append_block('text', 4, 'Bla');        
+        append_block('text', 'Bla');        
       end_column();   
       start_column('style1'); 
-        append_block('text', 5, 'Bla');        
+        append_block('text', 'Bla');        
       end_column();                    
     end_row();
 
     start_row('style2');
       start_column('style2'); 
-        append_block('text', 6, 'Come over this Sunday for a day of friends, family and fun!');        
+        append_block('text', 'Come over this Sunday for a day of friends, family and fun!');        
       end_column();                   
     end_row();   
 

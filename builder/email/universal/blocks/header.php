@@ -1,5 +1,5 @@
 <?php
-	echo '<div class="header block n' . $include_number . '">';	
+	echo '<div class="header block n' . $block_count[$type] . '">';	
 		if ( isset($content) ){
 			echo '<h1 class="content">' . $content . '</h1>';
 		} else{

@@ -1,5 +1,5 @@
 <?php
-	echo '<div class="text block n' . $include_number . '">';
+	echo '<div class="text block n' . $block_count[$type] . '">';
 		if ( isset($content) ){
 			echo '<p class="content">' . $content . '</p>';
 		} else{

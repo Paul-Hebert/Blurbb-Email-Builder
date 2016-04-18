@@ -14,7 +14,7 @@
 		'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Louis-%26-Chanel-taking-a-nap.jpg/1920px-Louis-%26-Chanel-taking-a-nap.jpg'
 	);
 
-	echo '<div class="image block n' . $include_number . '">';
+	echo '<div class="image block n' . $block_count[$type] . '">';
 		if ( isset($content) ){
 			echo '<img src="' . $content . '">';
 		} else{

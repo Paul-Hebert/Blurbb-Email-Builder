@@ -1,5 +1,5 @@
 <?php
-	echo '<ul class="list block n' . $include_number . '">';
+	echo '<ul class="list block n' . $block_count[$type] . '">';
 ?>
 	<li>
 		Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis.

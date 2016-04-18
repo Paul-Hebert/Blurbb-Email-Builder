@@ -1,5 +1,5 @@
 <?php
-  echo '<div id="csv_holder" class="spreadsheet block n' . $include_number . '">';
+  echo '<div id="csv_holder" class="spreadsheet block n' . $block_count[$type] . '">';
 ?>
         <table id="invoice_details">
           <thead>
