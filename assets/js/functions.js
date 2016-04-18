@@ -610,7 +610,8 @@ function ajax_block(target, content_type){
 	    url: 'email/universal/blocks/ajax_block.php',
 	    data: {
 	    	include_number : block_count[content_type],
-	    	include_type : content_type
+	    	include_type : content_type,
+	    	theme : theme_name
 	    },
 		success: function(data) {
 			if ( $(target).hasClass('email_row') ){
