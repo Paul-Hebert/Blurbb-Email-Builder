@@ -82,6 +82,8 @@ function pick_theme(){
 function initialize_dashboard(){
 	theme_name = window.location.href.split('?theme=')[1];
 
+	initialize_block_count();
+
 	initialize_html_export();
 
 	initialize_colorpickers();
@@ -93,6 +95,22 @@ function initialize_dashboard(){
 	initialize_blocks_and_pickers();
 
 	initialize_drag_and_drop();		
+}
+
+
+function initialize_block_count(){
+	block_count = new Array()
+
+	count_blocks('image');
+	count_blocks('text');
+	count_blocks('list');
+	count_blocks('header');
+	count_blocks('spreadsheet');
+	count_blocks('video');
+}
+
+function count_blocks(content_type){
+    block_count[content_type] = $('.block.' + content_type).length;
 }
 
 
@@ -580,14 +598,14 @@ function append_spacers(){
 
 
 function ajax_block(target, content_type){
-	var element_count = $('.block.' + content_type).length + 1;
-	var new_block = '.' + content_type + '.block.n' + element_count;
+	block_count[content_type] ++;
+	var new_block = '.' + content_type + '.block.n' + block_count[content_type];
 
     $.ajax({
 	    type: "GET",
 	    url: 'email/universal/blocks/ajax_block.php',
 	    data: {
-	    	include_number : element_count,
+	    	include_number : block_count[content_type],
 	    	include_type : content_type
 	    },
 		success: function(data) {

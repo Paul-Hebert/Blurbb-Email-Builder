@@ -44,21 +44,21 @@
 	}
 
 
-	$block_count = array(
+	$block_count = [
 	    'image'  		=> 0,
 	    'text' 			=> 0,
 	    'list' 			=> 0,
 	    'header' 		=> 0,
 	    'spreadsheet' 	=> 0,
 	    'video' 		=> 0
-	);
+	];
 
 	function append_block($type, $content){
 		//comment('Start ' . $type . ' block ' . $block_count[$type]);
 		global $block_count;
-
 		$block_count[$type] ++;
 		$block_count[$type] = $block_count[$type];
+
 		include('email/universal/blocks/' . $type . '.php');
 		//comment('End ' . $type . ' block ' . $block_count[$type]);
 	}
